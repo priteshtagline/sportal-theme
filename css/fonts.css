@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Outfit Black';
+  src: url('/fonts/Outfit-Black.eot');
+  src: url('/fonts/Outfit-Black.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Black.woff2') format('woff2'),
+    url('/fonts/Outfit-Black.woff') format('woff'),
+    url('/fonts/Outfit-Black.ttf') format('truetype'),
+    url('/fonts/Outfit-Black.svg#Outfit Black') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit ExtraBold';
+  src: url('/fonts/Outfit-ExtraBold.eot');
+  src: url('/fonts/Outfit-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-ExtraBold.woff2') format('woff2'),
+    url('/fonts/Outfit-ExtraBold.woff') format('woff'),
+    url('/fonts/Outfit-ExtraBold.ttf') format('truetype'),
+    url('/fonts/Outfit-ExtraBold.svg#Outfit ExtraBold') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit ExtraLight';
+  src: url('/fonts/Outfit-ExtraLight.eot');
+  src: url('/fonts/Outfit-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-ExtraLight.woff2') format('woff2'),
+    url('/fonts/Outfit-ExtraLight.woff') format('woff'),
+    url('/fonts/Outfit-ExtraLight.ttf') format('truetype'),
+    url('/fonts/Outfit-ExtraLight.svg#Outfit ExtraLight') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit Bold';
+  src: url('/fonts/Outfit-Bold.eot');
+  src: url('/fonts/Outfit-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Bold.woff2') format('woff2'),
+    url('/fonts/Outfit-Bold.woff') format('woff'),
+    url('/fonts/Outfit-Bold.ttf') format('truetype'),
+    url('/fonts/Outfit-Bold.svg#Outfit') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit Light';
+  src: url('/fonts/Outfit-Light.eot');
+  src: url('/fonts/Outfit-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Light.woff2') format('woff2'),
+    url('/fonts/Outfit-Light.woff') format('woff'),
+    url('/fonts/Outfit-Light.ttf') format('truetype'),
+    url('/fonts/Outfit-Light.svg#Outfit Light') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit Medium';
+  src: url('/fonts/Outfit-Medium.eot');
+  src: url('/fonts/Outfit-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Medium.woff2') format('woff2'),
+    url('/fonts/Outfit-Medium.woff') format('woff'),
+    url('/fonts/Outfit-Medium.ttf') format('truetype'),
+    url('/fonts/Outfit-Medium.svg#Outfit Medium') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit Regular';
+  src: url('/fonts/Outfit-Regular.eot');
+  src: url('/fonts/Outfit-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Regular.woff2') format('woff2'),
+    url('/fonts/Outfit-Regular.woff') format('woff'),
+    url('/fonts/Outfit-Regular.ttf') format('truetype'),
+    url('/fonts/Outfit-Regular.svg#Outfit') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit SemiBold';
+  src: url('/fonts/Outfit-SemiBold.eot');
+  src: url('/fonts/Outfit-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-SemiBold.woff2') format('woff2'),
+    url('/fonts/Outfit-SemiBold.woff') format('woff'),
+    url('/fonts/Outfit-SemiBold.ttf') format('truetype'),
+    url('/fonts/Outfit-SemiBold.svg#Outfit SemiBold') format('svg');
+}
+
+@font-face {
+  font-family: 'Outfit Thin';
+  src: url('/fonts/Outfit-Thin.eot');
+  src: url('/fonts/Outfit-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Outfit-Thin.woff2') format('woff2'),
+    url('/fonts/Outfit-Thin.woff') format('woff'),
+    url('/fonts/Outfit-Thin.ttf') format('truetype'),
+    url('/fonts/Outfit-Thin.svg#Outfit Thin') format('svg');
+}

@@ -29,3 +29,53 @@ function includeHTML() {
 };
 
 includeHTML();
+
+  //  Sign in form 
+  $(document).ready(function () {
+    $("#do_not_account").click(function () {
+      $("#sign_in").addClass("d-none");
+      $("#sign_up").removeClass("d-none");
+    });
+  });
+
+  // sign up form
+  $(document).ready(function () {
+    $("#already_member").click(function () {
+      $("#sign_in").removeClass("d-none");
+      $("#sign_up").addClass("d-none");
+    });
+  });
+  //forgotten link
+  $(document).ready(function () {
+    $("#forgotten_password").click(function () {
+      $("#sign_in").addClass("d-none");
+      $("#forgotten_form").removeClass("d-none");
+    });
+  });
+  // back_Sign_in forgottent form
+  $(document).ready(function () {
+    $("#back_signin").click(function () {
+      $("#forgotten_form").addClass("d-none");
+      $("#sign_in").removeClass("d-none");
+    });
+  });
+  // back_Sign_in change password
+  $(document).ready(function () {
+    $("#password_to_signin").click(function () {
+      $("#change_password").addClass("d-none");
+      $("#sign_in").removeClass("d-none");
+    });
+  });
+
+// Sidebar collapse
+
+$(document).ready(function() {
+  $("#side_nav_btn").on("click", function() {
+    $(".sidebar").toggleClass("active");
+    $("header").toggleClass("active");
+    $(".main-content").toggleClass("active");
+    $(this).toggleClass("active");
+  });
+});
+
+
