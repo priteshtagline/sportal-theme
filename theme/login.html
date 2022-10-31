@@ -1,131 +1,340 @@
-<div class="admin_signin">
-  <div class="admin_container">
-    <div class="container-fluid px-0">
-      <div class="row gx-0 align-items-center">
-        <div class="col-lg-6">
+<!DOCTYPE html>
+<html lang="en">
 
-          <div class="login_panel sign_in" id="sign_in">
-            <a href="javascript:void(0)" class="brand">
-              <img src="/images/logo.png" alt="brand_logo">
-              <img src="/images/logo-name.png" alt="brand_name">
-            </a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportal</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-            <div class="login_form">
-              <form action="">
-                <h6 class="heading">Sign in</h6>
-                <div class="mb-3 row align-items-center">
-                  <label for="inputemail" class="col-form-label">Email Address</label>
-                  <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
-                </div>
-                <div class="mb-3 row align-items-center">
-                  <label for="inputPassword" class="col-form-label">Password</label>
-                  <input type="password" class="form-control" id="inputPassword" placeholder="at least 8 character">
-                </div>
-                <div class="row mb-3 text-end">
-                  <a href="javascript:void(0)" class="forgotten_password" id="forgotten_password">Forgotten
-                    Password?</a>
-                </div>
-                <div class="row text-end">
-                  <input type="submit" value="Sign In" class="btn">
-                </div>
-                <div class="row mb-3 text-center">
-                  <a href="javascript:void(0)" class="form_link" id="do_not_account">Don't have an account? Sign Up!</a>
-                </div>
-              </form>
+</head>
+
+<body>
+  <!-- <div class="admin_signin">
+    <div class="admin_container">
+      <div class="container-fluid px-0">
+        <div class="row gx-0 align-items-center">
+          <div class="col-lg-6">
+
+            <div class="login_panel sign_in" id="sign_in">
+              <a href="javascript:void(0)" class="brand">
+                <img src="../images/logo.png" alt="brand_logo">
+                <img src="../images/logo-name.png" alt="brand_name">
+              </a>
+
+              <div class="login_form">
+                <form action="">
+                  <h6 class="heading">Sign in</h6>
+                  <div class="mb-3 row align-items-center">
+                    <label for="inputemail" class="col-form-label">Email Address</label>
+                    <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
+                  </div>
+                  <div class="mb-3 row align-items-center">
+                    <label for="inputPassword" class="col-form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="at least 8 character">
+                  </div>
+                  <div class="row mb-3 text-end">
+                    <a href="javascript:void(0)" class="forgotten_password" id="forgotten_password">Forgotten
+                      Password?</a>
+                  </div>
+                  <div class="row text-end">
+                    <input type="submit" value="Sign In" class="btn">
+                  </div>
+                  <div class="row mb-3 text-center">
+                    <a href="javascript:void(0)" class="form_link" id="do_not_account">Don't have an account? Sign
+                      Up!</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="login_panel sign_up d-none" id="sign_up">
+              <a href="javascript:void(0)" class="brand">
+                <img src="../images/logo.png" alt="brand_logo">
+                <img src="../images/logo-name.png" alt="brand_name">
+              </a>
+              <div class="login_form">
+                <form action="">
+                  <h6 class="heading">Sign up</h6>
+                  <div class="mb-3 row align-items-center">
+                    <label for="inputname" class="col-form-label">Full Name</label>
+                    <input type="text" class="form-control" id="inputname" placeholder="Your Name">
+                  </div>
+                  <div class="mb-3 row align-items-center">
+                    <label for="inputemail" class="col-form-label">Email Address</label>
+                    <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
+                  </div>
+                  <div class="mb-3 row align-items-center">
+                    <label for="input_password" class="col-form-label">Password</label>
+                    <input type="password" class="form-control" id="input_password" placeholder="at least 8 character">
+                  </div>
+                  <div class="mb-3 row align-items-center">
+                    <label for="input_c_password" class="col-form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="input_c_password"
+                      placeholder="at least 8 character">
+                  </div>
+                  <div class="row text-end">
+                    <input type="submit" value="Sign Up" class="btn">
+                  </div>
+                  <div class="row mb-3 text-center">
+                    <a href="javascript:void(0)" class="form_link" id="already_member">Are you already member?</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="login_panel d-none" id="forgotten_form">
+              <a href="javascript:void(0)" class="brand">
+                <img src="../images/logo.png" alt="brand_logo">
+                <img src="../images/logo-name.png" alt="brand_name">
+              </a>
+              <div class="login_form">
+                <form action="">
+                  <h6 class="heading">Get validation code</h6>
+                  <p class="details">To get a validation code, enter the e-mail address associated to your account.</p>
+                  <div class="mb-3 row align-items-center">
+                    <label for="inputemail" class="col-form-label">Email Address</label>
+                    <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
+                  </div>
+                  <div class="row text-end">
+                    <input type="submit" value="Send Confirmation" class="btn" id="send_confirm">
+                  </div>
+                  <div class="row mb-3 text-center">
+                    <a href="javascript:void(0)" class="form_link" id="back_signin">Back to sign in</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="login_panel" id="change_password">
+              <a href="javascript:void(0)" class="brand">
+                <img src="../images/logo.png" alt="brand_logo">
+                <img src="../images/logo-name.png" alt="brand_name">
+              </a>
+              <div class="login_form">
+                <form action="">
+                  <h6 class="heading">Create new password</h6>
+                  <p class="details">Your new password must be different from previous used passwords</p>
+                  <div class="mb-3 row align-items-center">
+                    <label for="input_password" class="col-form-label">Password</label>
+                    <input type="password" class="form-control" id="input_password" placeholder="at least 8 character">
+                  </div>
+                  <div class="mb-3 row align-items-center">
+                    <label for="input_c_password" class="col-form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="input_c_password"
+                      placeholder="at least 8 character">
+                  </div>
+                  <div class="row text-end">
+                    <input type="submit" value="Reset password" class="btn">
+                  </div>
+                  <div class="row mb-3 text-center">
+                    <a href="javascript:void(0)" class="form_link" id="password_to_signin">Sign in</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="login_dashboard">
+              <img src="../images/Dashboard.png" alt="dashboard">
             </div>
           </div>
-
-          <div class="login_panel sign_up d-none" id="sign_up">
-            <a href="javascript:void(0)" class="brand">
-              <img src="/images/logo.png" alt="brand_logo">
-              <img src="/images/logo-name.png" alt="brand_name">
-            </a>
-            <div class="login_form">
-              <form action="">
-                <h6 class="heading">Sign up</h6>
-                <div class="mb-3 row align-items-center">
-                  <label for="inputname" class="col-form-label">Full Name</label>
-                  <input type="text" class="form-control" id="inputname" placeholder="Your Name">
-                </div>
-                <div class="mb-3 row align-items-center">
-                  <label for="inputemail" class="col-form-label">Email Address</label>
-                  <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
-                </div>
-                <div class="mb-3 row align-items-center">
-                  <label for="input_password" class="col-form-label">Password</label>
-                  <input type="password" class="form-control" id="input_password" placeholder="at least 8 character">
-                </div>
-                <div class="mb-3 row align-items-center">
-                  <label for="input_c_password" class="col-form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="input_c_password" placeholder="at least 8 character">
-                </div>
-                <div class="row text-end">
-                  <input type="submit" value="Sign Up" class="btn">
-                </div>
-                <div class="row mb-3 text-center">
-                  <a href="javascript:void(0)" class="form_link" id="already_member">Are you already member?</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div class="login_panel d-none" id="forgotten_form">
-            <a href="javascript:void(0)" class="brand">
-              <img src="/images/logo.png" alt="brand_logo">
-              <img src="/images/logo-name.png" alt="brand_name">
-            </a>
-            <div class="login_form">
-              <form action="">
-                <h6 class="heading">Get validation code</h6>
-                <p class="details">To get a validation code, enter the e-mail address associated to your account.</p>
-                <div class="mb-3 row align-items-center">
-                  <label for="inputemail" class="col-form-label">Email Address</label>
-                  <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com">
-                </div>
-                <div class="row text-end">
-                  <input type="submit" value="Send Confirmation" class="btn" id="send_confirm">
-                </div>
-                <div class="row mb-3 text-center">
-                  <a href="javascript:void(0)" class="form_link" id="back_signin">Back to sign in</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div class="login_panel sign_up d-none" id="change_password">
-            <a href="javascript:void(0)" class="brand">
-              <img src="/images/logo.png" alt="brand_logo">
-              <img src="/images/logo-name.png" alt="brand_name">
-            </a>
-            <div class="login_form">
-              <form action="">
-                <h6 class="heading">Create new password</h6>
-                <p class="details">Your new password must be different from previous used passwords</p>
-                <div class="mb-3 row align-items-center">
-                  <label for="input_password" class="col-form-label">Password</label>
-                  <input type="password" class="form-control" id="input_password" placeholder="at least 8 character">
-                </div>
-                <div class="mb-3 row align-items-center">
-                  <label for="input_c_password" class="col-form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="input_c_password" placeholder="at least 8 character">
-                </div>
-                <div class="row text-end">
-                  <input type="submit" value="Reset password" class="btn">
-                </div>
-                <div class="row mb-3 text-center">
-                  <a href="javascript:void(0)" class="form_link" id="password_to_signin">Sign in</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
         </div>
-        <div class="col-lg-6 d-none d-lg-block">
-          <div class="login_dashboard">
-            <img src="/images/Dashboard.png" alt="dashboard">
+      </div>
+    </div>
+  </div> -->
+
+  <div class="admin_singin_portal">
+    <div class="signin_container">
+      <div class="singin_wrapper col-lg-6 col-12">
+        <div class="form_wrapper" id="SignIn_form">
+          <form action="">
+            <div class="form_header">
+              <h3 class="form_title">Sign In</h3>
+              <span class="form_sub_title">Your Social Campaigns</span>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-12 pe-sm-1">
+                <a href="javascript:void(0)" class="singin_link">
+                  <img src="../images/google-icon.svg" alt="" />
+                  Sign in with Google
+                </a>
+              </div>
+              <div class="col-sm-6 col-12 ps-sm-1">
+                <a href="javascript:void(0)" class="singin_link">
+                  <img src="../images/apple-black.svg" alt="" />
+                  Sign in with Apple
+                </a>
+              </div>
+            </div>
+            <div class="form_divider">
+              <span>Or with email</span>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <input type="email" placeholder="Email" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <input type="password" placeholder="Password" class="form-input" />
+                <a href="" class="forgot-pass-link">Forgot Password ?</a>
+              </div>
+              <div class="col-12 form-group">
+                <button type="button" class="btn btn-primary w-100"  data-bs-toggle="modal" data-bs-target="#successModal">Sign In</button>
+              </div>
+              <div class="col-12">
+                <h6 class="to_be_member_link">Not a Member yet? <a href="">Sign up</a></h6>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form_wrapper d-none" id="SignUp_form">
+          <form action="">
+            <div class="form_header">
+              <h3 class="form_title">Sign Up</h3>
+              <span class="form_sub_title">Your Social Campaigns</span>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-12 pe-sm-1">
+                <a href="javascript:void(0)" class="singin_link">
+                  <img src="../images/google-icon.svg" alt="" />
+                  Sign in with Google
+                </a>
+              </div>
+              <div class="col-sm-6 col-12 ps-sm-1">
+                <a href="javascript:void(0)" class="singin_link">
+                  <img src="../images/apple-black.svg" alt="" />
+                  Sign in with Apple
+                </a>
+              </div>
+            </div>
+            <div class="form_divider">
+              <span>Or with email</span>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <input type="email" placeholder="Email" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <input type="password" placeholder="Password" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <input type="password" placeholder="Repeat Password" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <div class="custom_checkbox">
+                  <input type="checkbox" />
+                  <p>I Agree & <a href="javascript:void(0)">Terms and conditions.</a></p>
+                </div>
+              </div>
+              <div class="col-12 form-group">
+                <button type="button" class="btn btn-primary w-100">Sign Up</button>
+              </div>
+              <div class="col-12">
+                <h6 class="to_be_member_link">Already have an Account? <a href="">Sign in</a></h6>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form_wrapper d-none" id="Forgot_password">
+          <form action="">
+            <div class="form_header">
+              <h3 class="form_title">Forgot Password ?</h3>
+              <span class="form_sub_title">Enter your email to reset your password.</span>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <input type="email" placeholder="Email" class="form-input" />
+              </div>
+              <div class="col-12 form-group text-center">
+                <button type="button" class="btn btn-primary me-1">Submit</button>
+                <button type="button" class="btn btn-secondary ms-1">Back</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form_wrapper d-none" id="reset_password">
+          <form action="">
+            <div class="form_header">
+              <h3 class="form_title">Setup New Password</h3>
+              <span class="form_sub_title">Have you already reset the password ? <a href="javascript:void(0)">Sign in</a></span>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <input type="password" placeholder="Password" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <input type="password" placeholder="Repeat Password" class="form-input" />
+              </div>
+              <div class="col-12 form-group">
+                <div class="custom_checkbox">
+                  <input type="checkbox" />
+                  <p>I Agree & <a href="javascript:void(0)">Terms and conditions.</a></p>
+                </div>
+              </div>
+              <div class="col-12 form-group">
+                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#errorModal">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="singin_wrapper signin_image_container col-lg-6 col-12">
+        <div class="about_company_detail">
+          <div class="auth_logo">
+            <img src="../images/logo.svg" alt="">
+          </div>
+          <div class="auth_detail_image">
+            <img src="../images/Dashboard.png" alt="">
+          </div>
+          <div class="auth_detail">
+            <h4>Fast, Efficient and Productive</h4>
+            <p>In this kind of post, the bloggerintroduces a person they’ve interviewed
+              and provides some background information about the intervieweeand their
+              work following this is a transcript of the interview.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="modal fade alert_modal" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          You have successfully logged in!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok, got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade alert_modal" id="errorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          Sorry, looks like there are some errors detected, please try again.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok, got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
