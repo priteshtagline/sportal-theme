@@ -318,6 +318,9 @@ textarea {
   tbody{
     tr{
       background-color: $white;
+      &:nth-child(even){
+        background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
+      }
       td{
         border: 0;
         font-size: 14px;

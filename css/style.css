@@ -348,6 +348,10 @@ textarea[type="radio"] {
   background-color: #ffffff;
 }
 
+.table tbody tr:nth-child(even) {
+  background-color: rgba(236, 236, 236, 0.1);
+}
+
 .table tbody tr td {
   border: 0;
   font-size: 14px;
