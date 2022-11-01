@@ -1168,10 +1168,151 @@ header.active .side-nav-btn img {
      object-fit: contain;
 }
 
+.court-popup .modal {
+  border-radius: 12px;
+}
+@media screen and (min-width: 576px) {
+  .court-popup .modal {
+    --bs-modal-margin: 9.70rem;
+  }
+}
+.court-popup .modal .modal-dialog {
+  width: 419px;
+}
+@media screen and (min-width: 576px) {
+  .court-popup .modal .modal-dialog {
+    margin-right: 21px;
+    margin-left: auto;
+    margin-bottom: 59px;
+  }
+}
+.court-popup .modal .modal-dialog .modal-content {
+  border-radius: 12px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-header {
+  padding: 23px 18px 20px;
+  border-bottom: 0.6px solid #E4E4E4;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #000000;
+  font-family: "Outfit Medium";
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body {
+  padding: 20px 18px 24px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .label-form {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  color: #a4a9bc;
+  margin-bottom: 8px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .m-top-15 {
+  margin-top: 15px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .input {
+  padding: 14px 10px;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  color: #000000;
+  background-color: #F9F9F9;
+  border-color: rgba(0, 0, 0, 0.1607843137);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0588235294);
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .styled-select {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  background-image: url(/images/select-arrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: right 20px top 18px;
+  background-size: 8px;
+  position: relative;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body select:focus {
+  outline: none;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body textarea {
+  resize: none;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich {
+  height: 0px;
+  margin-top: -25px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich label {
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 16px;
+  height: 9px;
+  background: #a4a9bc;
+  border-radius: 100px;
+  position: relative;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich input:checked + label {
+  background: #764AF3;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich input:checked + label:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .swich label:active:after {
+  width: 7px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .add-court-btn {
+  margin-top: 15px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-body .court-btn button {
+  padding: 14px 11px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-footer {
+  padding: 20px 18px 18px 17px;
+  border-top: 0.6px solid #E4E4E4;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-footer button {
+  padding: 14px 70px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-footer button:last-child {
+  color: #a4a9bc;
+}
+.court-popup .modal .modal-dialog .modal-content .modal-footer button:last-child:hover {
+  color: #ffffff;
+}
+
 .Pricing-page table thead tr th {
   padding: 15px 10px 16px 15px;
   font-size: 14px;
-  border-right: 0.5px solid #A4A9BC;
+  border-right: 0.5px solid #a4a9bc;
   width: 26%;
 }
 .Pricing-page table thead tr th:nth-child(1) {
@@ -1219,7 +1360,7 @@ header.active .side-nav-btn img {
   text-indent: -9999px;
   width: 16px;
   height: 9px;
-  background: #A4A9BC;
+  background: #a4a9bc;
   border-radius: 100px;
   position: relative;
 }
@@ -1248,13 +1389,13 @@ header.active .side-nav-btn img {
   background-color: #ffffff;
 }
 .Pricing-page table tbody tr td {
-  border-right: 0.5px solid #A4A9BC;
+  border-right: 0.5px solid #a4a9bc;
   text-align: center;
   padding: 15px 20px 0 20px;
 }
 .Pricing-page table tbody tr td:first-child {
   text-align: left;
-  color: #A4A9BC;
+  color: #a4a9bc;
 }
 .Pricing-page table tbody tr td:last-child {
   border-right: none;

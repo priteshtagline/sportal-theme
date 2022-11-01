@@ -1354,6 +1354,152 @@ header {
 }
 
 // Courts Page Css
+.court-popup {
+  .modal {
+    border-radius: 12px;
+    @media screen and (min-width: 576px) {
+      --bs-modal-margin: 9.70rem;
+    }
+    .modal-dialog {
+      width: 419px;
+      @media screen and (min-width: 576px) {
+        margin-right: 21px; 
+        margin-left: auto;
+        margin-bottom: 59px;
+      }
+      .modal-content {
+        border-radius: 12px;
+        .modal-header {
+          padding: 23px 18px 20px;
+          border-bottom: 0.6px solid #E4E4E4;
+          .modal-title {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: $black;
+            font-family: 'Outfit Medium';
+          }
+        }
+        .modal-body {
+          padding: 20px 18px 24px;
+          .label-form {
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 15px;
+            color: $gray-color;
+            margin-bottom: 8px;
+          }
+          .m-top-15 {
+            margin-top: 15px;
+          }
+          .input {
+            padding: 14px 10px;
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 15px;
+            color: $black;
+            background-color: #F9F9F9;
+            border-color: $border-color;
+            border-radius: 6px;
+            box-shadow: 0px 3px 8px #0000000F;
+          }
+          .styled-select {
+            overflow: hidden;
+            overflow: -moz-hidden-unscrollable;
+            background-image: url(/images/select-arrow.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: right 20px top 18px;
+            background-size: 8px;
+            position: relative;
+          }
+          
+          select {  
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: none;
+            &:focus {
+              outline: none;
+            }
+          }
+          textarea {
+            resize: none;
+          }
+          .swich {
+            height: 0px;
+            margin-top: -25px;
+            input[type=checkbox] {
+              height: 0;
+              width: 0;
+              visibility: hidden;
+            }
+
+            label {
+              display: inline-block;
+              cursor: pointer;
+              text-indent: -9999px;
+              width: 16px;
+              height: 9px;
+              background: $gray-color;
+              border-radius: 100px;
+              position: relative;
+
+              &::after {
+                content: '';
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                width: 7px;
+                height: 7px;
+                background: $white;
+                border-radius: 90px;
+                transition: 0.3s;
+              }
+            }
+
+            input:checked+label {
+              background: #764AF3;
+            }
+
+            input:checked+label:after {
+              left: calc(100% - 1px);
+              transform: translateX(-100%);
+            }
+
+            label:active:after {
+              width: 7px;
+            }
+          }
+          .add-court-btn {
+            margin-top: 15px;
+          }
+          .court-btn {
+            button{
+              padding: 14px 11px;
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+        .modal-footer {
+          padding: 20px 18px 18px 17px;
+          border-top: 0.6px solid #E4E4E4;
+          button {
+              padding: 14px 70px;
+              font-size: 12px;
+              line-height: 15px;
+              &:last-child {
+                color: $gray-color;
+                &:hover {
+                  color: $white;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Pricing Page Css
 .Pricing-page {
@@ -1363,7 +1509,7 @@ header {
         th {
           padding: 15px 10px 16px 15px;
           font-size: 14px;
-          border-right: 0.5px solid #A4A9BC;
+          border-right: 0.5px solid $gray-color;
           width: 26%;
           &:nth-child(1) {
             width: 20%;
@@ -1414,7 +1560,7 @@ header {
                 text-indent: -9999px;
                 width: 16px;
                 height: 9px;
-                background: #A4A9BC;
+                background: $gray-color;
                 border-radius: 100px;
                 position: relative;
 
@@ -1455,12 +1601,12 @@ header {
           background-color: $white;
         }
         td {
-          border-right: 0.5px solid #A4A9BC;
+          border-right: 0.5px solid $gray-color;
           text-align: center;
           padding: 15px 20px 0 20px;
           &:first-child {
             text-align: left;
-            color: #A4A9BC;
+            color : $gray-color;
           }
           &:last-child {
             border-right: none;
