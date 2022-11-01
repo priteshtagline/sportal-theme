@@ -42,8 +42,9 @@ li {
 a {
   color: $theme-primary-color;
   text-decoration: none;
+
   &.text-info {
-    color: $theme-info !important;
+    color: $theme-info  !important;
   }
 }
 
@@ -70,14 +71,17 @@ textarea {
   font-family: "Outfit regular";
   line-height: 15px;
   color: $black;
+
   &::placeholder,
   &::-webkit-input-placeholder {
     color: $gray-color;
     opacity: 0.6;
   }
+
   &:focus {
     outline: none;
   }
+
   &[type="checkbox"],
   &[type="radio"] {
     width: inherit;
@@ -93,7 +97,7 @@ textarea {
 }
 
 .text-muted {
-  color: $gray-color !important;
+  color: $gray-color  !important;
 }
 
 .btn {
@@ -103,7 +107,7 @@ textarea {
   min-width: 100px;
 }
 
-:not(.btn-check) + .btn:active {
+:not(.btn-check)+.btn:active {
   border-color: transparent;
 }
 
@@ -115,6 +119,7 @@ textarea {
   background-color: $theme-primary-color;
   border-color: $theme-primary-color;
   color: $white;
+
   &:hover,
   &:active,
   &:disabled {
@@ -127,6 +132,7 @@ textarea {
   background-color: $theme-secodary-color;
   border-color: $theme-secodary-color;
   color: $black;
+
   &:hover,
   &:active,
   &:disabled {
@@ -139,6 +145,7 @@ textarea {
   background-color: $theme-info;
   border-color: $theme-info;
   color: $white;
+
   &:hover,
   &:active,
   &:disabled {
@@ -151,6 +158,7 @@ textarea {
 .custom_checkbox {
   position: relative;
   display: inline-block;
+
   input {
     position: absolute;
     top: 0;
@@ -161,22 +169,26 @@ textarea {
     width: 100%;
     height: 100%;
     z-index: 1;
-    &:checked ~ p {
+
+    &:checked~p {
       &::after {
         background-color: $theme-primary-color;
         border-color: $theme-primary-color;
       }
+
       &::before {
         opacity: 1;
       }
     }
   }
+
   p {
     font-size: 14px;
     color: $gray-color;
     position: relative;
     margin-bottom: 0;
     padding-left: 22px;
+
     &::after {
       position: absolute;
       content: "";
@@ -187,6 +199,7 @@ textarea {
       left: 0;
       top: 2px;
     }
+
     &::before {
       position: absolute;
       content: "";
@@ -201,6 +214,7 @@ textarea {
       opacity: 0;
     }
   }
+
   a {
     position: relative;
     z-index: 2;
@@ -210,6 +224,7 @@ textarea {
 .custom_radio {
   position: relative;
   display: inline-block;
+
   input {
     position: absolute;
     top: 0;
@@ -220,23 +235,27 @@ textarea {
     width: 100%;
     height: 100%;
     z-index: 1;
-    &:checked ~ p {
+
+    &:checked~p {
       &::after {
         background-color: $theme-primary-color;
         border-color: $theme-primary-color;
       }
+
       &::before {
         border-left: 2px solid $white;
-      border-bottom: 2px solid $white;
+        border-bottom: 2px solid $white;
       }
     }
   }
+
   p {
     font-size: 14px;
     color: $gray-color;
     position: relative;
     margin-bottom: 0;
     padding-left: 22px;
+
     &::after {
       position: absolute;
       content: "";
@@ -248,6 +267,7 @@ textarea {
       left: 0;
       top: 2px;
     }
+
     &::before {
       position: absolute;
       content: "";
@@ -261,13 +281,14 @@ textarea {
       z-index: 1;
     }
   }
+
   a {
     position: relative;
     z-index: 2;
   }
 }
 
-.page-title{
+.page-title {
   font-size: 16px;
   font-family: 'Outfit SemiBold';
   line-height: 20px;
@@ -278,19 +299,23 @@ textarea {
 .alert_modal {
   .modal-dialog {
     max-width: 400px;
+
     .modal-content {
       border: 0;
       padding: 20px;
       min-height: 300px;
       justify-content: center;
+
       .modal-header {
         border: 0;
         padding-bottom: 0;
       }
+
       .modal-body {
         text-align: center;
         flex: 0;
       }
+
       .modal-footer {
         border: 0;
         justify-content: center;
@@ -299,14 +324,16 @@ textarea {
   }
 }
 
-.table{
+.table {
   border-radius: 8px;
   overflow: hidden;
-  thead{
-    tr{
+
+  thead {
+    tr {
       background-color: rgba($color: $theme-primary-color, $alpha: 0.1);
       box-shadow: 0px 3px 8px #0000000F;
-      th{
+
+      th {
         padding: 18px 17px;
         border: 0;
         font-size: 13px;
@@ -315,20 +342,24 @@ textarea {
       }
     }
   }
-  tbody{
-    tr{
+
+  tbody {
+    tr {
       background-color: $white;
-      &:nth-child(even){
+
+      &:nth-child(even) {
         background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
       }
-      td{
+
+      td {
         border: 0;
         font-size: 14px;
         line-height: 18px;
         padding: 14px 20px;
         vertical-align: middle;
         color: $black;
-        .long_content{
+
+        .long_content {
           margin-bottom: 0;
           max-width: 70%;
           white-space: normal;
@@ -990,6 +1021,7 @@ header {
   transition: all 0.5s ease-in-out;
   padding: 36px;
   background-color: #f8fafb;
+
   &.active {
     margin-left: 93px;
     max-width: calc(100% - 93px);
@@ -1003,15 +1035,18 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   flex: 1;
+
   .signin_container {
     flex: 1 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+
     @media screen and (max-width: 991px) {
       flex-direction: column-reverse;
       flex: 0;
     }
+
     .singin_wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -1026,20 +1061,24 @@ header {
 .form_wrapper {
   max-width: 450px;
   width: 100%;
+
   .form_header {
     margin-bottom: 30px;
     text-align: center;
+
     .form_title {
       font-family: "Outfit SemiBold";
       font-size: 22px;
       color: $black;
       margin-bottom: 8px;
     }
+
     .form_sub_title {
       font-size: 14px;
       color: $light-gray-color;
     }
   }
+
   .singin_link {
     font-size: 14px;
     color: $gray-color;
@@ -1052,17 +1091,20 @@ header {
     text-decoration: none;
     border: 1px solid $border-color;
     margin-bottom: 5px;
+
     img {
       width: 16px;
       height: 16px;
       margin-right: 8px;
     }
   }
+
   .form_divider {
     width: 100%;
     text-align: center;
     position: relative;
     margin: 30px 0 35px;
+
     &::after {
       position: absolute;
       content: "";
@@ -1077,6 +1119,7 @@ header {
       margin-top: 1px;
       opacity: 0.3;
     }
+
     span {
       font-size: 14px;
       padding: 0 15px;
@@ -1085,6 +1128,7 @@ header {
       margin-bottom: 0;
     }
   }
+
   .forgot-pass-link {
     font-size: 14px;
     color: $theme-primary-color;
@@ -1093,12 +1137,14 @@ header {
     text-align: right;
     display: block;
   }
+
   .to_be_member_link {
     font-size: 14px;
     color: $gray-color;
     margin-bottom: 0;
     display: block;
     text-align: center;
+
     a {
       color: $theme-primary-color;
       text-decoration: none;
@@ -1111,35 +1157,45 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
   .about_company_detail {
     text-align: center;
+
     .auth_detail_image {
       margin: 50px 0;
+
       @media screen and (max-width: 991px) {
         display: none;
       }
+
       img {
         max-width: 60%;
       }
     }
+
     .auth_detail {
       max-width: 50%;
       margin: 0 auto;
+
       @media screen and (max-width: 1199px) {
         max-width: 70%;
       }
+
       @media screen and (max-width: 991px) {
         display: none;
       }
+
       h4 {
         font-size: 28px;
         font-family: "Outfit SemiBold";
         color: $white;
         margin-bottom: 15px;
+
         @media screen and (max-width: 1199px) {
           font-size: 24px;
         }
       }
+
       p {
         font-family: "Outfit Light";
         font-size: 15px;
@@ -1157,8 +1213,10 @@ header {
   .form-group {
     margin-bottom: 10px;
   }
+
   .form_card {
     border-color: $border-color;
+
     .card-header {
       border-bottom-color: $border-color;
       background-color: $white;
@@ -1170,33 +1228,41 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       a {
         font-size: 12px;
       }
     }
+
     .card-body {
       padding: 10px 12px;
     }
+
     .card-footer {
       border-top-color: $border-color;
       background-color: $white;
       padding: 10px 15px;
+
       .btn {
         min-width: auto;
       }
     }
+
     .schdeule_list {
       li {
         margin-bottom: 8px;
+
         &:last-child {
           margin-bottom: 0;
         }
+
         label {
           min-width: 80px;
           margin-right: 35px;
           font-size: 14px;
           line-height: 17px;
         }
+
         span {
           min-width: 140px;
           margin-right: 35px;
@@ -1204,6 +1270,7 @@ header {
           line-height: 17px;
           display: inline-block;
         }
+
         .btn {
           min-width: auto;
           font-size: 14px;
@@ -1211,12 +1278,15 @@ header {
         }
       }
     }
+
     .feature_list {
       li {
         margin-bottom: 18px;
+
         &:last-child {
           margin-bottom: 33px;
         }
+
         label {
           min-width: 120px;
           margin-right: 35px;
@@ -1239,9 +1309,10 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+
   .upload_image_text {
-    img {
-    }
+    img {}
+
     label {
       font-size: 12px;
       line-height: 14px;
@@ -1249,8 +1320,9 @@ header {
       margin: 14px 0 0;
     }
   }
-  .dragBox{
-    input{
+
+  .dragBox {
+    input {
       position: absolute;
       top: 0;
       right: 0;
@@ -1262,7 +1334,8 @@ header {
       z-index: 2;
     }
   }
-  .image_preview{
+
+  .image_preview {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1271,7 +1344,8 @@ header {
     bottom: 0;
     left: 0;
     z-index: 1;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -1280,3 +1354,131 @@ header {
 }
 
 // Courts Page Css
+
+// Pricing Page Css
+.Pricing-page {
+  table {
+    thead {
+      tr {
+        th {
+          padding: 15px 10px 16px 15px;
+          font-size: 14px;
+          border-right: 0.5px solid #A4A9BC;
+          width: 26%;
+          &:nth-child(1) {
+            width: 20%;
+          }
+          &:nth-child(2) {
+            background-color: #CFF5E5;
+          }
+          &:nth-child(3) {
+            background-color: #D2E6FF;
+          }
+          &:nth-child(4) {
+            border-right: none;
+            background-color: #DCD1FC;
+          }
+
+          .pricing-title {
+            letter-spacing: 0px;
+            font-family: 'Outfit SemiBold';
+          }
+
+          .edit-button {
+            float: right;
+            a {
+               background-color: $white;
+               padding: 1px 6px 5px 6px;
+               border-radius: 4px;
+              img {
+                width: 10px;
+              }
+            }
+          }
+
+          .swich-year {
+            margin-top: 15px;
+
+            .swich {
+              margin: 0 16px 0 10px;
+
+              input[type=checkbox] {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+              }
+
+              label {
+                display: inline-block;
+                cursor: pointer;
+                text-indent: -9999px;
+                width: 16px;
+                height: 9px;
+                background: #A4A9BC;
+                border-radius: 100px;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 1px;
+                  left: 1px;
+                  width: 7px;
+                  height: 7px;
+                  background: $white;
+                  border-radius: 90px;
+                  transition: 0.3s;
+                }
+              }
+
+              input:checked+label {
+                background: #764AF3;
+              }
+
+              input:checked+label:after {
+                left: calc(100% - 1px);
+                transform: translateX(-100%);
+              }
+
+              label:active:after {
+                width: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: $white;
+        }
+        td {
+          border-right: 0.5px solid #A4A9BC;
+          text-align: center;
+          padding: 15px 20px 0 20px;
+          &:first-child {
+            text-align: left;
+            color: #A4A9BC;
+          }
+          &:last-child {
+            border-right: none;
+          }
+          .modules {
+            font-family: 'Outfit SemiBold' !important;
+            color: $black;
+          }
+          .check-icon {
+            padding: 0px 5px 3px 5px;
+            background-color: #764AF3;
+            border-radius: 50%;
+            img {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
