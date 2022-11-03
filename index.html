@@ -17,29 +17,850 @@
 
 <body>
 
-  <header w3-include-html="/theme/header.html" id="header"></header>
+  <!-- <header w3-include-html="/theme/header.html" id="header"></header>
   <div w3-include-html="theme/sidebar.html" id="sidebar"></div>
   <div class="main-content" id="main-content">
-    <ng-container  w3-include-html="theme/courts.html"></ng-container>
+    <ng-container w3-include-html="theme/courts.html"></ng-container>
+    <ng-container w3-include-html="theme/settings.html"></ng-container>
+  </div> -->
+
+  <header id="header">
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <button class="side-nav-btn" id="side_nav_btn">
+        <img src="/images/nav-aerrow.svg" alt="nav-aerrow">
+      </button>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="javascript:void(0)">Settings</a>
+
+        <!-- <form class="d-flex" role="search">
+          <div class="input-group search_group">
+            <input type="search" class="form-control" placeholder="Search....." aria-label="search"
+              aria-describedby="search-btn">
+            <button class="btn d-flex align-items-center" type="button" id="search-btn"><img src="/images/magnify.svg"
+                alt="magnify"></button>
+          </div>
+        </form> -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="javascript:void(0)">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Courts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Admins</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <div class="btn-group">
+            <button class="btn notification-btn collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <img src="/images/notification.svg" alt="notification">
+            </button>
+            <div class="collapse notification_menu shadow-sm dropdown-menu-md-end" id="collapseExample">
+              <div class="card card-body">
+                <p class="head"> Notification</p>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                      type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                      type="button" role="tab" aria-controls="profile-tab-pane"
+                      aria-selected="false">Reservations</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                      type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Unread</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <ul class="notification-list">
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                  </div>
+                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    <ul class="notification-list">
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                  </div>
+                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                    tabindex="0">
+                    <ul class="notification-list">
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="/images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn profile-dropdown dropdown-toggle" data-bs-toggle="dropdown"
+              data-bs-display="static" aria-expanded="false">
+              <img src="/images/user-logo.png" alt="profile" class="profile_image">
+              <span>beach front</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-md-end">
+              <li><a class="dropdown-item" href="javascript:void(0)">Menu item 1</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Menu item 2</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Menu item 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="sidebar">
+    <div class="sidebar">
+      <div class="logo-wrapper">
+        <a href="javascript:void(0)" class="brand-row">
+          <img src="/images/logo.png" alt="brand" />
+          <span class="logo-name"><img src="/images/logo-name.png" alt="brand-name"></span>
+        </a>
+      </div>
+      <div class="btn-group profile-dropdown focus">
+        <button type="button" class="btn profile dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+          aria-expanded="false">
+          <img src="/images/profile.png" alt="profile" class="profile_image">
+          <span class="user_name">Shuja Khan</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-lg-end">
+          <li><a class="dropdown-item active" href="javascript:void(0)">Menu item 1</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)">Menu item 2</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)">Menu item 3</a></li>
+        </ul>
+      </div>
+      <ul class="features-list nav nav-tabs">
+        <li class="features-item dashboard nav-item main-features-list">
+          <a href="#" class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard"
+            type="button" role="tab" aria-controls="dashoboard" aria-selected="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
+              <path id="_icon__home_house_" data-name="🦆 icon _home house_"
+                d="M8.784.45a.549.549,0,0,1,.33.11l7.438,5.578a1.422,1.422,0,0,1,.566,1.132V15.7A1.416,1.416,0,0,1,15.7,17.118h-3.83A1.416,1.416,0,0,1,10.458,15.7V10.446H7.11V15.7A1.416,1.416,0,0,1,5.7,17.118H1.865A1.416,1.416,0,0,1,.45,15.7V7.27a1.422,1.422,0,0,1,.566-1.132L8.454.56A.549.549,0,0,1,8.784.45ZM15.7,16.018a.315.315,0,0,0,.315-.315V7.27a.316.316,0,0,0-.126-.252L8.784,1.688,1.676,7.018a.316.316,0,0,0-.126.252V15.7a.315.315,0,0,0,.315.315H5.7A.315.315,0,0,0,6.01,15.7V9.9a.55.55,0,0,1,.55-.55h4.448a.55.55,0,0,1,.55.55V15.7a.315.315,0,0,0,.315.315Z"
+                transform="translate(-0.45 -0.45)" fill="currentcolor" />
+            </svg>
+            <span class="feature-text">Dashboard</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item schedule nav-item">
+          <a href="#" class="nav-link" id="schedule-tab" data-bs-toggle="tab" data-bs-target="#schedule" type="button"
+            role="tab" aria-controls="schedule" aria-selected="false">
+            <span class="material-symbols-outlined">
+              calendar_today
+            </span>
+            <span class="feature-text">Schedule</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item reports nav-item">
+          <a href="#" class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports" type="button"
+            role="tab" aria-controls="reports" aria-selected="false">
+            <span class="material-symbols-outlined">
+              schedule
+            </span>
+            <span class="feature-text">Reports</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item billings nav-item">
+          <a href="#" class="nav-link" id="billings-tab" data-bs-toggle="tab" data-bs-target="#billings" type="button"
+            role="tab" aria-controls="billings" aria-selected="false">
+            <span class="material-symbols-outlined">
+              account_balance_wallet
+            </span>
+            <span class="feature-text">Billings</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item customers nav-item">
+          <a href="#" class="nav-link" id="customers-tab" data-bs-toggle="tab" data-bs-target="#customers" type="button"
+            role="tab" aria-controls="customers" aria-selected="false">
+            <span class="material-symbols-outlined">
+              group
+            </span>
+            <span class="feature-text">Customers</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item tournaments nav-item">
+          <a href="#" class="nav-link" id="tournaments-tab" data-bs-toggle="tab" data-bs-target="#tournaments"
+            type="button" role="tab" aria-controls="tournaments" aria-selected="false">
+            <span class="material-symbols-outlined">
+              military_tech
+            </span>
+            <span class="feature-text">Tournament</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+          </a>
+        </li>
+        <li class="features-item chatroom nav-item">
+          <a href="#" class="nav-link" id="chatroom-tab" data-bs-toggle="tab" data-bs-target="#chatroom" type="button"
+            role="tab" aria-controls="chatroom" aria-selected="false">
+            <span class="material-symbols-outlined">
+              chat
+            </span>
+            <span class="feature-text">Chat Room</span>
+            <span class="right-arrow"><img src="/images/right-long.svg" alt="right-long"></span>
+            <span class="feature-number">7</span>
+            <span class="feature-collapse-number">11+</span>
+          </a>
+        </li>
+        <li class="features-item information nav-item footer-feature-list">
+          <a href="#" class="nav-link" id="information-tab" data-bs-toggle="tab" data-bs-target="#information"
+            type="button" role="tab" aria-controls="#information" aria-selected="false">
+            <span class="material-symbols-outlined">
+              info
+            </span>
+            <span class="feature-text">Information</span>
+          </a>
+        </li>
+        <li class="features-item settings nav-item">
+          <a href="#" class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
+            role="tab" aria-controls="settings" aria-selected="false">
+            <span class="material-symbols-outlined">
+              settings
+            </span>
+            <span class="feature-text">Settings</span>
+          </a>
+        </li>
+        <li class="features-item logout nav-item">
+          <a href="#" class="nav-link" id="logout-tab" data-bs-toggle="tab" data-bs-target="#logout" type="button"
+            role="tab" aria-controls="logout" aria-selected="false">
+            <span class="material-symbols-outlined">
+              logout
+            </span>
+            <span class="feature-text">Logout</span>
+          </a>
+        </li>
+      </ul>
+      <span class="footer-bottom">Sportal Inc,(c) All Rights Reserved</span>
+    </div>
   </div>
 
+  <div class="main-content" id="main-content">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashboard
+      </div>
+      <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">schedule</div>
+      <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">reports</div>
+      <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">billings</div>
+      <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">Customers</div>
+      <div class="tab-pane fade" id="tournaments" role="tabpanel" aria-labelledby="tournaments-tab">tournaments</div>
+      <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
+      <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">information</div>
+      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="contact_info_form">
+          <h4 class="page-title">Contact Information</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <form action="">
+                <div class="form-group">
+                  <input type="text" placeholder="Venue Name" />
+                </div>
+                <div class="form-group">
+                  <input type="url" placeholder="Website" />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Contact Email" />
+                </div>
+                <div class="form-group">
+                  <textarea name="" id="" placeholder="Description" cols="30" rows="18"></textarea>
+                </div>
+              </form>
+              <form action="">
+                <div class="card form_card">
+                  <div class="card-header">
+                    Time & Schdeule
+                  </div>
+                  <div class="card-body">
+                    <ul class="schdeule_list">
+                      <li>
+                        <label>Monday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Tuesday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Wednesday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Thursday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Friday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Saturday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                      <li>
+                        <label>Sunday</label>
+                        <span>10:00 am - 10:00 pm</span>
+                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <input type="submit" class="btn btn-info btn-sm radius-rounded w-auto" value="Save">
+                    <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                  </div>
+                </div>
+              </form>
+              <div class="form-group mt-3">
+                <input type="submit" class="btn btn-primary" value="Update Information" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="text" placeholder="Address" />
+                </div>
+                <div class="col-12 form-group">
+                  <div class="card form_card">
+                    <div class="card-header">
+                      Location
+                    </div>
+                    <div class="card-body p-0">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8413213630624!2d72.8852744152011!3d21.238139985885308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sus!4v1667121390502!5m2!1sen!2sus"
+                        width="100%" height="296" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="card-footer">
+                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 pe-md-1 form-group">
+                  <div class="card form_card">
+                    <div class="card-header">
+                      Amneties
+                      <a href="javascript:void(0)" class="text-info">+ Add a custom feature</a>
+                    </div>
+                    <div class="card-body">
+                      <ul class="feature_list">
+                        <li>
+                          <label>Lockers</label>
+                          <div class="custom_radio">
+                            <input type="checkbox" />
+                            <p>&nbsp;</p>
+                          </div>
+                        </li>
+                        <li>
+                          <label>Bathroom</label>
+                          <div class="custom_radio">
+                            <input type="checkbox" />
+                            <p>&nbsp;</p>
+                          </div>
+                        </li>
+                        <li>
+                          <label>Changeroom</label>
+                          <div class="custom_radio">
+                            <input type="checkbox" />
+                            <p>&nbsp;</p>
+                          </div>
+                        </li>
+                        <li>
+                          <label>Lockers</label>
+                          <div class="custom_radio">
+                            <input type="checkbox" />
+                            <p>&nbsp;</p>
+                          </div>
+                        </li>
+                        <li>
+                          <label>Lockers</label>
+                          <div class="custom_radio">
+                            <input type="checkbox" />
+                            <p>&nbsp;</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-footer">
+                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 ps-md-2 form-group">
+                  <div class="card form_card">
+                    <div class="card-header">
+                      Upload Pictures
+                    </div>
+                    <div class="card-body">
+                      <div class="image_upload">
+                        <div class="upload_image_text">
+                          <img src="" alt="">
+                          <label>Add Pictures</label>
+                        </div>
+                        <span class="dragBox">
+                          <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                            id="uploadFile" />
+                        </span>
+                        <div class="image_preview" id="preview"></div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="logout-tab">Logout</div>
+    </div>
 
 
+    <!-- courts.html -->
+    <!-- <div class="courts-section">
+      <div class="">
+        <h4 class="page-title">Courts Information</h4>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Type/Name</th>
+                <th>Sport</th>
+                <th>occupancy</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Synthetic Grass 1</td>
+                <td>Football</td>
+                <td>7v7</td>
+                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                <td>
+                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                </td>
+                <td>
+                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourtPopup">+ Add
+          Court</button>
+      </div>
+      <div class="court-popup">
+        <div class="modal fade" id="addUpdatePopup" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Manage Court</h4>
+              </div>
+              <div class="modal-body">
+                <label for="Name" class="label-form mt-0">Court Name</label>
+                <input type="email" class="input" id="Name" placeholder="">
+                <label for="Name" class="label-form m-top-15">Court Type</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Synthetic</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="Name" class="label-form m-top-15">Sport</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Indoor Tennis</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="Name" class="label-form m-top-15">Court Count</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>3</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                </select>
+                <div class="d-flex justify-content-between align-items-center m-top-15">
+                  <label for="Name" class="label-form mb-0">Bookable Online</label>
+                  <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center m-top-15">
+                  <label for="Name" class="label-form mb-0">Active</label>
+                  <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
+                </div>
+                <label for="Name" class="label-form m-top-15">Description</label>
+                <textarea class="input w-100" rows="4"></textarea>
+                <div class="d-flex justify-content-between align-items-center m-top-15">
+                  <label for="Name" class="label-form mb-0">Shared Court</label>
+                  <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
+                </div>
+                <label for="Name" class="label-form m-top-15">Sport</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Synthetic Court</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <div class="court-btn col-12 m-top-15">
+                  <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary me-2">Update</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="court-popup">
+        <div class="modal fade" id="addCourtPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog model-open-margin">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Add New Court</h4>
+              </div>
+              <div class="modal-body padding-body">
+                <label for="Name" class="label-form mt-0">Court Name</label>
+                <input type="email" class="input" id="Name" placeholder="">
+                <label for="Name" class="label-form mt-3">Court Type</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Synthetic</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="Name" class="label-form mt-3">Sport</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Sport</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="Name" class="label-form mt-3">Description</label>
+                <textarea class="input w-100" rows="3"></textarea>
+                <label for="Name" class="label-form mt-3">Court Count</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>3</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                </select>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <label for="Name" class="label-form mb-0">Bookable Online</label>
+                  <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <label for="Name" class="label-form mb-0">Shared Court</label>
+                  <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
+                </div>
+                <label for="Name" class="label-form mt-3">Court</label>
+                <select class="input w-100 styled-select" aria-label="Default select example">
+                  <option selected>Synthetic Grass</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="court-btn col-12 mt-10">
+                  <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                </div>
+                <label class="label-form mt-3">Add Court Picture</label>
+                <div class="upload-img">
+                  <label class="upload-picture" for="file-input">
+                    <img src="/images/upload.svg" />
+                    <span class="upload-text">Upload Pictures</span>
+                  </label>
+                  <input id="file-input" type="file" />
+                </div>
+                <label class="label-form mt-3">Location</label>
+                <div class="location">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
+                    width="100%" height="116" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <div class="modal-footer padding-footer">
+                <button type="button" class="btn btn-primary me-2">Add Court</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Admin.html -->
+    <!-- <div class="admin-section">
+      <div class="admin-page-table">
+        <h4 class="page-title">System Admins</h4>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Shuja Khan</td>
+                <td>+97172378487284</td>
+                <td>moeed.shahid@yahoo.com</td>
+                <td>Super Admin</td>
+              </tr>
+              <tr>
+                <td>Moeed Shahid</td>
+                <td>+97172378487284</td>
+                <td>moeed.shahid@yahoo.com</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <td>Shuja Khan</td>
+                <td>+97172378487284</td>
+                <td>moeed.shahid@yahoo.com</td>
+                <td>Admin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <button type="button" class="btn btn-primary">+ Add Admin</button>
+      </div>
+    </div> -->
+    <!-- settings.html -->
 
 
-
-
-
+  </div>
 
   <!-- Script -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/script.js"></script>
-
-  <script>
-
-  </script>
 </body>
 
 </html>
