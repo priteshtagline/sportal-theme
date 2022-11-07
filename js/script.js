@@ -8,11 +8,6 @@ $(document).ready(function () {
     $(".form_card .btn-reset").click(function () {
       $(".schedule_time_list").removeClass("edit");
     });
-  // setting navbar
-  // $('.navbar .setting-nav').hide();
-  if($('.features-items.settings .nav-link').hasClass("active")){
-    $('.navbar .setting-nav').show();
-  }
 
   // sidebar profile 
   $('.sidebar .profile-dropdown').on('click', function(){

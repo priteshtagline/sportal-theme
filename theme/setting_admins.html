@@ -1,0 +1,277 @@
+<div class="admin-page-table">
+  <h4 class="page-title">System Admins</h4>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Category</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Shuja Khan</td>
+          <td>+97172378487284</td>
+          <td>moeed.shahid@yahoo.com</td>
+          <td>Super Admin</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                ...
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Edit</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </td>
+        <tr>
+          <td>Moeed Shahid</td>
+          <td>+97172378487284</td>
+          <td>moeed.shahid@yahoo.com</td>
+          <td>Admin</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                ...
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Edit</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Shuja Khan</td>
+          <td>+97172378487284</td>
+          <td>moeed.shahid@yahoo.com</td>
+          <td>Admin</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                ...
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Edit</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-12 mt-3">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#setting_admin_modal" role="button">+ Add
+    Admin</button>
+</div>
+<div class="modal fade setting_popup" id="setting_admin_modal" aria-hidden="true"
+  aria-labelledby="setting_admin_modalLabel" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Add New Admin</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-0">
+                <label for="fname" class="label-form mt-0">First Name</label>
+                <input type="text" class="input" id="Name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-0">
+                <label for="lname" class="label-form mt-0">Last Name</label>
+                <input type="text" class="input" id="Name">
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center m-top-15">
+            <div class="form-group mb-0">
+              <label for="Name" class="label-form mb-0">Email Notifications</label>
+              <span class="switch"><input type="checkbox" id="email_checkbox"><label
+                  for="email_checkbox"></label></span>
+            </div>
+          </div>
+          <label for="admin_access" class="label-form mt-3">Admin Access</label>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group mb-0">
+                <div class="form-check radio_box">
+                  <input type="radio" id="test1" name="radio-group" checked>
+                  <label for="test1" class="form-check-label">Venue 1</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mb-0">
+                <div class="form-check radio_box">
+                  <input type="radio" id="test2" name="radio-group">
+                  <label for="test2" class="form-check-label"> Venue 2</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group mb-0">
+                <div class="form-check radio_box">
+                  <input type="radio" id="test3" name="radio-group">
+                  <label for="test3" class="form-check-label">Venue 3</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label for="admin_access" class="label-form mt-3">Permissions</label>
+          <div class="admin_popup_table">
+            <table>
+              <thead>
+                <tr>
+                  <th><span class="feature_head">Features List</span></th>
+                  <th>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        View
+                      </label>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                      <label class="form-check-label" for="defaultCheck2">
+                        View & Edit
+                      </label>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="feature_head">Schedule</span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Dashboard
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Customers
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Reservations
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Wallets
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Matches
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Tournaments
+                    </span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="feature_head">Chats</span></td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary me-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+            data-bs-dismiss="modal">Add New Admin</button>
+          <button class="btn btn-secondary btn-close" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
