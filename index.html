@@ -520,7 +520,8 @@
                         <div class="card form_card">
                           <div class="card-header">
                             Amneties
-                            <a href="javascript:void(0)" class="text-info add_amneties_features">+ Add a custom
+                            <a href="javascript:void(0)" class="text-info add_amneties_features" data-bs-toggle="modal"
+                              data-bs-target="#amenties_features_model">+ Add a custom
                               feature</a>
                           </div>
                           <div class="card-body amneties_form">
@@ -568,6 +569,30 @@
                           </div>
                         </div>
                       </form>
+                      <div class="modal fade amenties_feature_model" id="amenties_features_model" aria-hidden="true"
+                        aria-labelledby="amenties_features_Label" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <form action="">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Add a New Custom features</h5>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form-group">
+                                  <label for="amenties_name" class="label-form mt-0">Amneties Name</label>
+                                  <input type="text" class="input" id="amenties_name" placeholder="">
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                  data-bs-toggle="modal" data-bs-dismiss="modal">Add features</button>
+                                <button type="button" class="btn-close btn-secondary" data-bs-dismiss="modal"
+                                  aria-label="Close">Cancel</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-6 ps-md-2 form-group">
                       <form action="">
@@ -630,9 +655,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>Synthetic Grass 1</td>
+                      <td>Synthetic Grass 2</td>
                       <td>Football</td>
                       <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 3</td>
+                      <td>Cricket</td>
+                      <td>5v5</td>
                       <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
                       <td>
                         <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
@@ -693,19 +730,7 @@
                       <td>Synthetic Grass 1</td>
                       <td>Football</td>
                       <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td><span class="btn btn-danger btn-sm radius-rounded">InActive</span></td>
                       <td>
                         <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
                       </td>
@@ -727,143 +752,185 @@
                 aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title" id="exampleModalLabel">Manage Court</h4>
-                    </div>
-                    <div class="modal-body">
-                      <label for="Name" class="label-form mt-0">Court Name</label>
-                      <input type="email" class="input" id="Name" placeholder="">
-                      <label for="select_box_1" class="label-form m-top-15">Court Type</label> </br>
-                      <select class="form-control w-100 styled-select form-control" aria-label="Default select example"
-                        id="select_box_1">
-                        <option selected="selected">Synthetic</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="select_box_2" class="label-form m-top-15">Sport</label>
-                      <select class="w-100 styled-select form-control" aria-label="Default select example"
-                        id="select_box_2">
-                        <option selected>Indoor Tennis</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="select_box_3" class="label-form m-top-15">Court Count</label>
-                      <select class="w-100 styled-select form-control" aria-label="Default select example"
-                        id="select_box_3">
-                        <option selected>3</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">4</option>
-                      </select>
-                      <div class="d-flex justify-content-between align-items-center m-top-15">
-                        <label for="Name" class="label-form mb-0">Bookable Online</label>
-                        <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
+                    <form action="">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Manage Court</h4>
                       </div>
-                      <div class="d-flex justify-content-between align-items-center m-top-15">
-                        <label for="Name" class="label-form mb-0">Active</label>
-                        <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
+                      <div class="modal-body">
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-0">Court Name</label>
+                          <input type="email" class="input" id="Name" placeholder="">
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="select_box_1" class="label-form m-top-15">Court Type</label> </br>
+                          <select class="w-100 styled-select form-control" aria-label="Default select example"
+                            id="select_box_1">
+                            <option selected="selected">Synthetic</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="select_box_2" class="label-form m-top-15">Sport</label>
+                          <select class="w-100 styled-select form-control" aria-label="Default select example"
+                            id="select_box_2">
+                            <option selected>Indoor Tennis</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="select_box_3" class="label-form m-top-15">Court Count</label>
+                          <select class="w-100 styled-select form-control" aria-label="Default select example"
+                            id="select_box_3">
+                            <option selected>3</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">4</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="d-flex justify-content-between align-items-center m-top-15">
+                            <label for="Name" class="label-form mb-0">Bookable Online</label>
+                            <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="d-flex justify-content-between align-items-center m-top-15">
+                            <label for="Name" class="label-form mb-0">Active</label>
+                            <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form m-top-15">Description</label>
+                          <textarea class="input w-100" rows="4"></textarea>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="d-flex justify-content-between align-items-center m-top-15">
+                            <label for="Name" class="label-form mb-0">Shared Court</label>
+                            <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form m-top-15">Sport</label>
+                          <select class="input w-100 styled-select" aria-label="Default select example">
+                            <option selected>Synthetic Court</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="court-btn col-12 m-top-15">
+                          <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                        </div>
                       </div>
-                      <label for="Name" class="label-form m-top-15">Description</label>
-                      <textarea class="input w-100" rows="4"></textarea>
-                      <div class="d-flex justify-content-between align-items-center m-top-15">
-                        <label for="Name" class="label-form mb-0">Shared Court</label>
-                        <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary me-2">Update</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                       </div>
-                      <label for="Name" class="label-form m-top-15">Sport</label>
-                      <select class="input w-100 styled-select" aria-label="Default select example">
-                        <option selected>Synthetic Court</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-
-                      <div class="court-btn col-12 m-top-15">
-                        <button type="button" class="btn btn-primary">+ Add Shared Court</button>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary me-2">Update</button>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="court-popup">
               <div class="modal fade" id="addCourtPopup" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog model-open-margin">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title" id="exampleModalLabel">Add New Court</h4>
-                    </div>
-                    <div class="modal-body padding-body">
-                      <label for="Name" class="label-form mt-0">Court Name</label>
-                      <input type="email" class="input" id="Name" placeholder="">
-                      <label for="Name" class="label-form mt-3">Court Type</label>
-                      <select class="input w-100 styled-select" aria-label="Default select example">
-                        <option selected>Synthetic</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="Name" class="label-form mt-3">Sport</label>
-                      <select class="input w-100 styled-select" aria-label="Default select example">
-                        <option selected>Sport</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="Name" class="label-form mt-3">Description</label>
-                      <textarea class="input w-100" rows="3"></textarea>
-                      <label for="Name" class="label-form mt-3">Court Count</label>
-                      <select class="input w-100 styled-select" aria-label="Default select example">
-                        <option selected>3</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">4</option>
-                      </select>
-                      <div class="d-flex justify-content-between align-items-center mt-3">
-                        <label for="Name" class="label-form mb-0">Bookable Online</label>
-                        <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
+                    <form action="">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Add New Court</h4>
                       </div>
-                      <div class="d-flex justify-content-between align-items-center mt-3">
-                        <label for="Name" class="label-form mb-0">Shared Court</label>
-                        <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
+                      <div class="modal-body padding-body">
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-0">Court Name</label>
+                          <input type="email" class="input" id="Name" placeholder="">
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-3">Court Type</label>
+                          <select class="input w-100 styled-select test" aria-label="Default select example">
+                            <option selected>Synthetic</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-3">Sport</label>
+                          <select class="input w-100 styled-select" aria-label="Default select example">
+                            <option selected>Sport</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-3">Description</label>
+                          <textarea class="input w-100" rows="3"></textarea>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-3">Court Count</label>
+                          <select class="input w-100 styled-select" aria-label="Default select example">
+                            <option selected>3</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">4</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="d-flex justify-content-between align-items-center mt-3">
+                            <label for="Name" class="label-form mb-0">Bookable Online</label>
+                            <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="d-flex justify-content-between align-items-center mt-3">
+                            <label for="Name" class="label-form mb-0">Shared Court</label>
+                            <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mt-3">Court</label>
+                          <select class="input w-100 styled-select" aria-label="Default select example">
+                            <option selected>Synthetic Grass</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="court-btn col-12 mt-10">
+                            <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label class="label-form mt-3">Add Court Picture</label>
+                          <div class="upload-img">
+                            <label class="upload-picture" for="file-input">
+                              <img src="/images/upload.svg" />
+                              <span class="upload-text">Upload Pictures</span>
+                            </label>
+                            <input id="file-input" type="file" />
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label class="label-form mt-3">Location</label>
+                          <div class="location">
+                            <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
+                              width="100%" height="116" style="border:0;" allowfullscreen="" loading="lazy"
+                              referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                        </div>
                       </div>
-                      <label for="Name" class="label-form mt-3">Court</label>
-                      <select class="input w-100 styled-select" aria-label="Default select example">
-                        <option selected>Synthetic Grass</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <div class="court-btn col-12 mt-10">
-                        <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                      <div class="modal-footer padding-footer">
+                        <button type="button" class="btn btn-primary me-2">Add Court</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                       </div>
-                      <label class="label-form mt-3">Add Court Picture</label>
-                      <div class="upload-img">
-                        <label class="upload-picture" for="file-input">
-                          <img src="/images/upload.svg" />
-                          <span class="upload-text">Upload Pictures</span>
-                        </label>
-                        <input id="file-input" type="file" />
-                      </div>
-                      <label class="label-form mt-3">Location</label>
-                      <div class="location">
-                        <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
-                          width="100%" height="116" style="border:0;" allowfullscreen="" loading="lazy"
-                          referrerpolicy="no-referrer-when-downgrade"></iframe>
-                      </div>
-                    </div>
-                    <div class="modal-footer padding-footer">
-                      <button type="button" class="btn btn-primary me-2">Add Court</button>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -871,7 +938,7 @@
           </div>
           <div class="tab-pane fade" id="setting_pricing_tab_pane" role="tabpanel" aria-labelledby="setting_pricing_tab"
             tabindex="0">
-            <div class="Pricing-page">
+            <div class="pricing-page">
               <h4 class="page-title">Pricing Plans</h4>
               <div class="table-responsive">
                 <table class="table">
@@ -985,6 +1052,7 @@
                       <th>Phone Number</th>
                       <th>Email</th>
                       <th>Category</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -993,18 +1061,53 @@
                       <td>+97172378487284</td>
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Super Admin</td>
-                    </tr>
+                      <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     <tr>
                       <td>Moeed Shahid</td>
                       <td>+97172378487284</td>
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Admin</td>
+                      <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td>Shuja Khan</td>
                       <td>+97172378487284</td>
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Admin</td>
+                      <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1018,191 +1121,205 @@
               aria-labelledby="setting_admin_modalLabel" tabindex="-1">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel">Add New Admin</h5>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label for="fname" class="label-form mt-0">First Name</label>
-                        <input type="text" class="input" id="Name">
-                      </div>
-                      <div class="col-md-6">
-                        <label for="lname" class="label-form mt-0">Last Name</label>
-                        <input type="text" class="input" id="Name">
-                      </div>
+                  <form action="">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">Add New Admin</h5>
                     </div>
-                    <div class="d-flex justify-content-between align-items-center m-top-15">
-                      <label for="Name" class="label-form mb-0">Email Notifications</label>
-                      <span class="switch"><input type="checkbox" id="email_checkbox"><label
-                          for="email_checkbox"></label></span>
-                    </div>
-                    <label for="admin_access" class="label-form mt-3">Admin Access</label>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-check radio_box">
-                          <input type="radio" id="test1" name="radio-group" checked>
-                          <label for="test1" class="form-check-label">Venue 1</label>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group mb-0">
+                            <label for="fname" class="label-form mt-0">First Name</label>
+                            <input type="text" class="input" id="Name">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-0">
+                            <label for="lname" class="label-form mt-0">Last Name</label>
+                            <input type="text" class="input" id="Name">
+                          </div>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-check radio_box">
-                          <input type="radio" id="test2" name="radio-group">
-                          <label for="test2" class="form-check-label"> Venue 2</label>
+                      <div class="d-flex justify-content-between align-items-center m-top-15">
+                        <div class="form-group mb-0">
+                          <label for="Name" class="label-form mb-0">Email Notifications</label>
+                          <span class="switch"><input type="checkbox" id="email_checkbox"><label
+                              for="email_checkbox"></label></span>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-check radio_box">
-                          <input type="radio" id="test3" name="radio-group">
-                          <label for="test3" class="form-check-label">Venue 3</label>
+                      <label for="admin_access" class="label-form mt-3">Admin Access</label>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group mb-0">
+                            <div class="form-check radio_box">
+                              <input type="radio" id="test1" name="radio-group" checked>
+                              <label for="test1" class="form-check-label">Venue 1</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group mb-0">
+                            <div class="form-check radio_box">
+                              <input type="radio" id="test2" name="radio-group">
+                              <label for="test2" class="form-check-label"> Venue 2</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group mb-0">
+                            <div class="form-check radio_box">
+                              <input type="radio" id="test3" name="radio-group">
+                              <label for="test3" class="form-check-label">Venue 3</label>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <label for="admin_access" class="label-form mt-3">Permissions</label>
+                      <div class="admin_popup_table">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th><span class="feature_head">Features List</span></th>
+                              <th>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    View
+                                  </label>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    View & Edit
+                                  </label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span class="feature_head">Schedule</span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Dashboard
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Customers
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Reservations
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Wallets
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Matches
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Tournaments
+                                </span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span class="feature_head">Chats</span></td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <label for="admin_access" class="label-form mt-3">Permissions</label>
-                    <div class="admin_popup_table">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th><span class="feature_head">Features List</span></th>
-                            <th>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  View
-                                </label>
-                              </div>
-                            </th>
-                            <th>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                                <label class="form-check-label" for="defaultCheck2">
-                                  View & Edit
-                                </label>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><span class="feature_head">Schedule</span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Dashboard
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Customers
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Reservations
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Wallets
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Matches
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Tournaments
-                              </span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><span class="feature_head">Chats</span></td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                              </div>
-                            </td>
-                            <td>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary me-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Add New Admin</button>
+                      <button class="btn btn-secondary btn-close" data-bs-dismiss="modal"
+                        aria-label="Close">Cancel</button>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn btn-primary me-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
-                      data-bs-dismiss="modal">Add New Admin</button>
-                    <button class="btn btn-secondary btn-close" data-bs-dismiss="modal"
-                      aria-label="Close">Cancel</button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -1227,9 +1344,9 @@
   <script src="js/popper.min.js"></script>
   <script src="js/map.js"></script>
   <script src="js/script.js"></script>
-  <script>
+  <!-- <script>
     $(".styled-select").select2();
-  </script>
+  </script> -->
 </body>
 
 </html>
