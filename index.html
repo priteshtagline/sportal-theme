@@ -10,19 +10,13 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 
 <body>
-
-  <!-- <header w3-include-html="/theme/header.html" id="header"></header>
-  <div w3-include-html="theme/sidebar.html" id="sidebar"></div>
-  <div class="main-content" id="main-content">
-    <ng-container w3-include-html="theme/courts.html"></ng-container>
-    <ng-container w3-include-html="theme/settings.html"></ng-container>
-  </div> -->
 
   <header id="header">
     <nav class="navbar navbar-expand-lg shadow-sm">
@@ -46,18 +40,27 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <ul class="navbar-nav setting-nav nav nav-tabs me-auto my-2 my-lg-0 navbar-nav-scroll" id="settings_nav_tab"
+            role="tablist" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="javascript:void(0)">Overview</a>
+              <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="setting_overview_tab"
+                data-bs-toggle="tab" data-bs-target="#setting_overview_tab_pane" type="button" role="tab"
+                aria-controls="setting_overview_tab_pane" aria-selected="true">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Courts</a>
+              <a class="nav-link" href="javascript:void(0)" id="setting_courts_tab" data-bs-toggle="tab"
+                data-bs-target="#setting_courts_tab_pane" type="button" role="tab"
+                aria-controls="setting_courts_tab_pane" aria-selected="false">Courts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-link" href="javascript:void(0)" id="setting_pricing_tab" data-bs-toggle="tab"
+                data-bs-target="#setting_pricing_tab_pane" type="button" role="tab"
+                aria-controls="setting_pricing_tab_pane" aria-selected="false">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Admins</a>
+              <a class="nav-link" href="javascript:void(0)" id="setting_admins_tab" data-bs-toggle="tab"
+                data-bs-target="#setting_admins_tab_pane" type="button" role="tab" aria-controls="setting_admins_tab"
+                aria-selected="false">Admins</a>
             </li>
           </ul>
         </div>
@@ -237,7 +240,7 @@
           <span class="logo-name"><img src="/images/logo-name.png" alt="brand-name"></span>
         </a>
       </div>
-      <div class="btn-group profile-dropdown focus">
+      <div class="btn-group profile-dropdown">
         <button type="button" class="btn profile dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
           aria-expanded="false">
           <img src="/images/profile.png" alt="profile" class="profile_image">
@@ -368,499 +371,865 @@
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
       <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">information</div>
       <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-        <div class="contact_info_form">
-          <h4 class="page-title">Contact Information</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <form action="">
-                <div class="form-group">
-                  <input type="text" placeholder="Venue Name" />
-                </div>
-                <div class="form-group">
-                  <input type="url" placeholder="Website" />
-                </div>
-                <div class="form-group">
-                  <input type="email" placeholder="Contact Email" />
-                </div>
-                <div class="form-group">
-                  <textarea name="" id="" placeholder="Description" cols="30" rows="18"></textarea>
-                </div>
-              </form>
-              <form action="">
-                <div class="card form_card">
-                  <div class="card-header">
-                    Time & Schdeule
-                  </div>
-                  <div class="card-body">
-                    <ul class="schdeule_list">
-                      <li>
-                        <label>Monday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Tuesday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Wednesday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Thursday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Friday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Saturday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                      <li>
-                        <label>Sunday</label>
-                        <span>10:00 am - 10:00 pm</span>
-                        <button type="button" class="btn btn-info btn-sm radius-rounded">Edit</button>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-footer">
-                    <input type="submit" class="btn btn-info btn-sm radius-rounded w-auto" value="Save">
-                    <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
-                  </div>
-                </div>
-              </form>
-              <div class="form-group mt-3">
-                <input type="submit" class="btn btn-primary" value="Update Information" />
-              </div>
-            </div>
-            <div class="col-md-6">
+        <div class="tab-content" id="settings_nav_tab_content">
+          <div class="tab-pane fade show active" id="setting_overview_tab_pane" role="tabpanel"
+            aria-labelledby="setting_overview_tab" tabindex="0">
+            <div class="contact_info_form">
+              <h4 class="page-title">Contact Information</h4>
               <div class="row">
-                <div class="col-12 form-group">
-                  <input type="text" placeholder="Address" />
-                </div>
-                <div class="col-12 form-group">
-                  <div class="card form_card">
-                    <div class="card-header">
-                      Location
+                <div class="col-md-6">
+                  <form action="">
+                    <div class="form-group">
+                      <input type="text" placeholder="Venue Name" />
                     </div>
-                    <div class="card-body p-0">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8413213630624!2d72.8852744152011!3d21.238139985885308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sus!4v1667121390502!5m2!1sen!2sus"
-                        width="100%" height="296" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="form-group">
+                      <input type="url" placeholder="Website" />
                     </div>
-                    <div class="card-footer">
-                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
-                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                    <div class="form-group">
+                      <input type="email" placeholder="Contact Email" />
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-6 pe-md-1 form-group">
-                  <div class="card form_card">
-                    <div class="card-header">
-                      Amneties
-                      <a href="javascript:void(0)" class="text-info">+ Add a custom feature</a>
+                    <div class="form-group">
+                      <textarea name="" id="" placeholder="Description" cols="30" rows="18"></textarea>
                     </div>
-                    <div class="card-body">
-                      <ul class="feature_list">
-                        <li>
-                          <label>Lockers</label>
-                          <div class="custom_radio">
-                            <input type="checkbox" />
-                            <p>&nbsp;</p>
-                          </div>
-                        </li>
-                        <li>
-                          <label>Bathroom</label>
-                          <div class="custom_radio">
-                            <input type="checkbox" />
-                            <p>&nbsp;</p>
-                          </div>
-                        </li>
-                        <li>
-                          <label>Changeroom</label>
-                          <div class="custom_radio">
-                            <input type="checkbox" />
-                            <p>&nbsp;</p>
-                          </div>
-                        </li>
-                        <li>
-                          <label>Lockers</label>
-                          <div class="custom_radio">
-                            <input type="checkbox" />
-                            <p>&nbsp;</p>
-                          </div>
-                        </li>
-                        <li>
-                          <label>Lockers</label>
-                          <div class="custom_radio">
-                            <input type="checkbox" />
-                            <p>&nbsp;</p>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-footer">
-                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
-                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 ps-md-2 form-group">
-                  <div class="card form_card">
-                    <div class="card-header">
-                      Upload Pictures
-                    </div>
-                    <div class="card-body">
-                      <div class="image_upload">
-                        <div class="upload_image_text">
-                          <img src="" alt="">
-                          <label>Add Pictures</label>
-                        </div>
-                        <span class="dragBox">
-                          <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                            id="uploadFile" />
-                        </span>
-                        <div class="image_preview" id="preview"></div>
+                  </form>
+                  <form action="">
+                    <div class="card form_card">
+                      <div class="card-header">
+                        Time & Schdeule
+                      </div>
+                      <div class="card-body">
+                        <ul class="schdeule_list">
+                          <li class="schedule_time_list">
+                            <label>Monday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Tuesday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Wednesday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Thursday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Friday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Saturday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                          <li class="schedule_time_list">
+                            <label>Sunday</label>
+                            <span class="schedule_time">
+                              <input type="time" />
+                              <span class="hyphen">-</span>
+                              <input type="time" />
+                              <span class="off_time" style="display: none;">Off</span>
+                            </span>
+                            <button type="button" class="btn btn-info btn-edit btn-sm radius-rounded">Edit</button>
+                            <button type="button" class="btn btn-info btn-save btn-sm radius-rounded">Save</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <input type="submit" class="btn btn-info btn-sm radius-rounded w-auto" value="Save">
+                        <input type="reset" class="btn btn-reset btn-sm radius-rounded text-muted w-auto"
+                          value="Cancel">
                       </div>
                     </div>
-                    <div class="card-footer">
-                      <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
-                      <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                  </form>
+                  <div class="form-group mt-3">
+                    <input type="submit" class="btn btn-primary" value="Update Information" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <form action="">
+                      <div class="col-12 form-group">
+                        <input id="pac-input" class="controls" type="text" placeholder="Address" />
+                        <!-- <input type="text" placeholder="Address" /> -->
+                      </div>
+                      <div class="col-12 form-group">
+                        <div class="card form_card">
+                          <div class="card-header">
+                            Location
+                          </div>
+                          <div class="card-body p-0">
+                            <div class="map" id="map"></div>
+                            <!-- <iframe
+                            src="
+                            https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8413213630624!2d72.8852744152011!3d21.238139985885308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sus!4v1667121390502!5m2!1sen!2sus"
+                            width="100%" height="296" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                          </div>
+                          <div class="card-footer">
+                            <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                            <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="col-md-6 pe-md-1 form-group">
+                      <form action="">
+                        <div class="card form_card">
+                          <div class="card-header">
+                            Amneties
+                            <a href="javascript:void(0)" class="text-info add_amneties_features">+ Add a custom
+                              feature</a>
+                          </div>
+                          <div class="card-body amneties_form">
+                            <ul class="feature_list">
+                              <li>
+                                <label>Lockers</label>
+                                <div class="custom_radio">
+                                  <input type="checkbox" />
+                                  <p>&nbsp;</p>
+                                </div>
+                              </li>
+                              <li>
+                                <label>Bathroom</label>
+                                <div class="custom_radio">
+                                  <input type="checkbox" />
+                                  <p>&nbsp;</p>
+                                </div>
+                              </li>
+                              <li>
+                                <label>Changeroom</label>
+                                <div class="custom_radio">
+                                  <input type="checkbox" />
+                                  <p>&nbsp;</p>
+                                </div>
+                              </li>
+                              <li>
+                                <label>Lockers</label>
+                                <div class="custom_radio">
+                                  <input type="checkbox" />
+                                  <p>&nbsp;</p>
+                                </div>
+                              </li>
+                              <li>
+                                <label>Lockers</label>
+                                <div class="custom_radio">
+                                  <input type="checkbox" />
+                                  <p>&nbsp;</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-footer">
+                            <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                            <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6 ps-md-2 form-group">
+                      <form action="">
+                        <div class="card form_card">
+                          <div class="card-header">
+                            Upload Pictures
+                          </div>
+                          <div class="card-body">
+                            <div class="image_upload">
+                              <div class="upload_image_text">
+                                <img src="" alt="">
+                                <label>Add Pictures</label>
+                              </div>
+                              <span class="dragBox">
+                                <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                                  id="uploadFile" />
+                              </span>
+                              <div class="image_preview" id="preview"></div>
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
+                            <input type="reset" class="btn btn-sm radius-rounded text-muted w-auto" value="Cancel">
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="setting_courts_tab_pane" role="tabpanel" aria-labelledby="setting_courts_tab"
+            tabindex="0">
+            <div class="">
+              <h4 class="page-title">Courts Information</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Type/Name</th>
+                      <th>Sport</th>
+                      <th>occupancy</th>
+                      <th>Status</th>
+                      <th>Description</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td>
+                        <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourtPopup">+
+                Add
+                Court</button>
+            </div>
+            <div class="court-popup">
+              <div class="modal fade" id="addUpdatePopup" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLabel">Manage Court</h4>
+                    </div>
+                    <div class="modal-body">
+                      <label for="Name" class="label-form mt-0">Court Name</label>
+                      <input type="email" class="input" id="Name" placeholder="">
+                      <label for="select_box_1" class="label-form m-top-15">Court Type</label> </br>
+                      <select class="form-control w-100 styled-select form-control" aria-label="Default select example"
+                        id="select_box_1">
+                        <option selected="selected">Synthetic</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="select_box_2" class="label-form m-top-15">Sport</label>
+                      <select class="w-100 styled-select form-control" aria-label="Default select example"
+                        id="select_box_2">
+                        <option selected>Indoor Tennis</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="select_box_3" class="label-form m-top-15">Court Count</label>
+                      <select class="w-100 styled-select form-control" aria-label="Default select example"
+                        id="select_box_3">
+                        <option selected>3</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">4</option>
+                      </select>
+                      <div class="d-flex justify-content-between align-items-center m-top-15">
+                        <label for="Name" class="label-form mb-0">Bookable Online</label>
+                        <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center m-top-15">
+                        <label for="Name" class="label-form mb-0">Active</label>
+                        <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
+                      </div>
+                      <label for="Name" class="label-form m-top-15">Description</label>
+                      <textarea class="input w-100" rows="4"></textarea>
+                      <div class="d-flex justify-content-between align-items-center m-top-15">
+                        <label for="Name" class="label-form mb-0">Shared Court</label>
+                        <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
+                      </div>
+                      <label for="Name" class="label-form m-top-15">Sport</label>
+                      <select class="input w-100 styled-select" aria-label="Default select example">
+                        <option selected>Synthetic Court</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                      <div class="court-btn col-12 m-top-15">
+                        <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary me-2">Update</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="court-popup">
+              <div class="modal fade" id="addCourtPopup" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog model-open-margin">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLabel">Add New Court</h4>
+                    </div>
+                    <div class="modal-body padding-body">
+                      <label for="Name" class="label-form mt-0">Court Name</label>
+                      <input type="email" class="input" id="Name" placeholder="">
+                      <label for="Name" class="label-form mt-3">Court Type</label>
+                      <select class="input w-100 styled-select" aria-label="Default select example">
+                        <option selected>Synthetic</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="Name" class="label-form mt-3">Sport</label>
+                      <select class="input w-100 styled-select" aria-label="Default select example">
+                        <option selected>Sport</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="Name" class="label-form mt-3">Description</label>
+                      <textarea class="input w-100" rows="3"></textarea>
+                      <label for="Name" class="label-form mt-3">Court Count</label>
+                      <select class="input w-100 styled-select" aria-label="Default select example">
+                        <option selected>3</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">4</option>
+                      </select>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <label for="Name" class="label-form mb-0">Bookable Online</label>
+                        <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <label for="Name" class="label-form mb-0">Shared Court</label>
+                        <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
+                      </div>
+                      <label for="Name" class="label-form mt-3">Court</label>
+                      <select class="input w-100 styled-select" aria-label="Default select example">
+                        <option selected>Synthetic Grass</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="court-btn col-12 mt-10">
+                        <button type="button" class="btn btn-primary">+ Add Shared Court</button>
+                      </div>
+                      <label class="label-form mt-3">Add Court Picture</label>
+                      <div class="upload-img">
+                        <label class="upload-picture" for="file-input">
+                          <img src="/images/upload.svg" />
+                          <span class="upload-text">Upload Pictures</span>
+                        </label>
+                        <input id="file-input" type="file" />
+                      </div>
+                      <label class="label-form mt-3">Location</label>
+                      <div class="location">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
+                          width="100%" height="116" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                    <div class="modal-footer padding-footer">
+                      <button type="button" class="btn btn-primary me-2">Add Court</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="setting_pricing_tab_pane" role="tabpanel" aria-labelledby="setting_pricing_tab"
+            tabindex="0">
+            <div class="Pricing-page">
+              <h4 class="page-title">Pricing Plans</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="pricing-title">Billing Type</div>
+                        <div class="swich-year"><span>Monthly</span> <span class="swich"><input type="checkbox"
+                              id="switch" /><label for="switch"></label></span><span>Annually</span></div>
+                      </th>
+                      <th>
+                        <div><span class="pricing-title">Free</span> <span class="edit-button"><a href="#"><img
+                                src="/images/pencil.svg" alt="pencil"></a></span></span></div>
+                        <div class="swich-year"><span class="invisible">50AED</span></div>
+                      </th>
+                      <th>
+                        <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
+                                src="/images/pencil.svg" alt="pencil"></a></span></div>
+                        <div class="swich-year">50 AED</div>
+                      </th>
+                      <th>
+                        <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
+                                src="/images/pencil.svg" alt="pencil"></a></span></div>
+                        <div class="swich-year">75 AED</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>Max Courts 10</td>
+                      <td>Unlimited Courts</td>
+                      <td>Unlimited Courts</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="modules">Main Modules</div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chats</td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Customer Support</td>
+                      <td>48h response time</td>
+                      <td>8h response time</td>
+                      <td>highest priority with tickets/chats</td>
+                    </tr>
+                    <tr>
+                      <td>Customers</td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Matches</td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Payments</td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Reports</td>
+                      <td></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Schedule</td>
+                      <td></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td>Court Information Display</td>
+                      <td></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                    <tr>
+                      <td class="pb-4">User Categories</td>
+                      <td class="pb-4"></td>
+                      <td class="pb-4"><span class="check-icon"><img src="/images/check.svg"></span></td>
+                      <td class="pb-4"><span class="check-icon"><img src="/images/check.svg"></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="setting_admins_tab_pane" role="tabpanel" aria-labelledby="setting_admins_tab"
+            tabindex="0">
+            <div class="admin-page-table">
+              <h4 class="page-title">System Admins</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Email</th>
+                      <th>Category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Shuja Khan</td>
+                      <td>+97172378487284</td>
+                      <td>moeed.shahid@yahoo.com</td>
+                      <td>Super Admin</td>
+                    </tr>
+                    <tr>
+                      <td>Moeed Shahid</td>
+                      <td>+97172378487284</td>
+                      <td>moeed.shahid@yahoo.com</td>
+                      <td>Admin</td>
+                    </tr>
+                    <tr>
+                      <td>Shuja Khan</td>
+                      <td>+97172378487284</td>
+                      <td>moeed.shahid@yahoo.com</td>
+                      <td>Admin</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#setting_admin_modal"
+                role="button">+ Add Admin</button>
+            </div>
+            <div class="modal fade setting_popup" id="setting_admin_modal" aria-hidden="true"
+              aria-labelledby="setting_admin_modalLabel" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Add New Admin</h5>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="fname" class="label-form mt-0">First Name</label>
+                        <input type="text" class="input" id="Name">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="lname" class="label-form mt-0">Last Name</label>
+                        <input type="text" class="input" id="Name">
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center m-top-15">
+                      <label for="Name" class="label-form mb-0">Email Notifications</label>
+                      <span class="switch"><input type="checkbox" id="email_checkbox"><label
+                          for="email_checkbox"></label></span>
+                    </div>
+                    <label for="admin_access" class="label-form mt-3">Admin Access</label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-check radio_box">
+                          <input type="radio" id="test1" name="radio-group" checked>
+                          <label for="test1" class="form-check-label">Venue 1</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-check radio_box">
+                          <input type="radio" id="test2" name="radio-group">
+                          <label for="test2" class="form-check-label"> Venue 2</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-check radio_box">
+                          <input type="radio" id="test3" name="radio-group">
+                          <label for="test3" class="form-check-label">Venue 3</label>
+                        </div>
+                      </div>
+                    </div>
+                    <label for="admin_access" class="label-form mt-3">Permissions</label>
+                    <div class="admin_popup_table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th><span class="feature_head">Features List</span></th>
+                            <th>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  View
+                                </label>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                  View & Edit
+                                </label>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="feature_head">Schedule</span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Dashboard
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Customers
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Reservations
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Wallets
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Matches
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Tournaments
+                              </span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><span class="feature_head">Chats</span></td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary me-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                      data-bs-dismiss="modal">Add New Admin</button>
+                    <button class="btn btn-secondary btn-close" data-bs-dismiss="modal"
+                      aria-label="Close">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
       <div class="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="logout-tab">Logout</div>
     </div>
-
-
-    <!-- courts.html -->
-    <!-- <div class="courts-section">
-      <div class="">
-        <h4 class="page-title">Courts Information</h4>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Type/Name</th>
-                <th>Sport</th>
-                <th>occupancy</th>
-                <th>Status</th>
-                <th>Description</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-              <tr>
-                <td>Synthetic Grass 1</td>
-                <td>Football</td>
-                <td>7v7</td>
-                <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                <td>
-                  <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                </td>
-                <td>
-                  <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-12 mt-3">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourtPopup">+ Add
-          Court</button>
-      </div>
-      <div class="court-popup">
-        <div class="modal fade" id="addUpdatePopup" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">Manage Court</h4>
-              </div>
-              <div class="modal-body">
-                <label for="Name" class="label-form mt-0">Court Name</label>
-                <input type="email" class="input" id="Name" placeholder="">
-                <label for="Name" class="label-form m-top-15">Court Type</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Synthetic</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label for="Name" class="label-form m-top-15">Sport</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Indoor Tennis</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label for="Name" class="label-form m-top-15">Court Count</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>3</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">4</option>
-                </select>
-                <div class="d-flex justify-content-between align-items-center m-top-15">
-                  <label for="Name" class="label-form mb-0">Bookable Online</label>
-                  <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center m-top-15">
-                  <label for="Name" class="label-form mb-0">Active</label>
-                  <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
-                </div>
-                <label for="Name" class="label-form m-top-15">Description</label>
-                <textarea class="input w-100" rows="4"></textarea>
-                <div class="d-flex justify-content-between align-items-center m-top-15">
-                  <label for="Name" class="label-form mb-0">Shared Court</label>
-                  <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
-                </div>
-                <label for="Name" class="label-form m-top-15">Sport</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Synthetic Court</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-
-                <div class="court-btn col-12 m-top-15">
-                  <button type="button" class="btn btn-primary">+ Add Shared Court</button>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary me-2">Update</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="court-popup">
-        <div class="modal fade" id="addCourtPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog model-open-margin">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">Add New Court</h4>
-              </div>
-              <div class="modal-body padding-body">
-                <label for="Name" class="label-form mt-0">Court Name</label>
-                <input type="email" class="input" id="Name" placeholder="">
-                <label for="Name" class="label-form mt-3">Court Type</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Synthetic</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label for="Name" class="label-form mt-3">Sport</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Sport</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label for="Name" class="label-form mt-3">Description</label>
-                <textarea class="input w-100" rows="3"></textarea>
-                <label for="Name" class="label-form mt-3">Court Count</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>3</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">4</option>
-                </select>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <label for="Name" class="label-form mb-0">Bookable Online</label>
-                  <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <label for="Name" class="label-form mb-0">Shared Court</label>
-                  <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
-                </div>
-                <label for="Name" class="label-form mt-3">Court</label>
-                <select class="input w-100 styled-select" aria-label="Default select example">
-                  <option selected>Synthetic Grass</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <div class="court-btn col-12 mt-10">
-                  <button type="button" class="btn btn-primary">+ Add Shared Court</button>
-                </div>
-                <label class="label-form mt-3">Add Court Picture</label>
-                <div class="upload-img">
-                  <label class="upload-picture" for="file-input">
-                    <img src="/images/upload.svg" />
-                    <span class="upload-text">Upload Pictures</span>
-                  </label>
-                  <input id="file-input" type="file" />
-                </div>
-                <label class="label-form mt-3">Location</label>
-                <div class="location">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
-                    width="100%" height="116" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-              <div class="modal-footer padding-footer">
-                <button type="button" class="btn btn-primary me-2">Add Court</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Admin.html -->
-    <!-- <div class="admin-section">
-      <div class="admin-page-table">
-        <h4 class="page-title">System Admins</h4>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Shuja Khan</td>
-                <td>+97172378487284</td>
-                <td>moeed.shahid@yahoo.com</td>
-                <td>Super Admin</td>
-              </tr>
-              <tr>
-                <td>Moeed Shahid</td>
-                <td>+97172378487284</td>
-                <td>moeed.shahid@yahoo.com</td>
-                <td>Admin</td>
-              </tr>
-              <tr>
-                <td>Shuja Khan</td>
-                <td>+97172378487284</td>
-                <td>moeed.shahid@yahoo.com</td>
-                <td>Admin</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-12 mt-3">
-        <button type="button" class="btn btn-primary">+ Add Admin</button>
-      </div>
-    </div> -->
-    <!-- settings.html -->
-
 
   </div>
 
   <!-- Script -->
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWIi_5aXlwnLrxreoh0ls6dsCTARKPNGs&callback=initAutocomplete&libraries=places&v=weekly"
+    defer></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <script src="js/map.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    $(".styled-select").select2();
+  </script>
 </body>
 
 </html>

@@ -1,14 +1,28 @@
 
 $(document).ready(function () {
-     // sidebar profile 
-     $('.profile-dropdown').on('click', function () {
-      $('.features-list li a.active').removeClass('active');
-      $('.profile-dropdown').addClass('active')
-      $('.user-detail').on('click', 'li', function () {
-        $('.features-list li a.active').removeClass('active');
-        $('.profile-dropdown').addClass('active')
-      })
+
+  // scheduletime for setting overview
+    $('.btn').on('click',function(){
+      $(this).closest('li.schedule_time_list').toggleClass('edit');
     })
+    $(".form_card .btn-reset").click(function () {
+      $(".schedule_time_list").removeClass("edit");
+    });
+  // setting navbar
+  // $('.navbar .setting-nav').hide();
+  if($('.features-items.settings .nav-link').hasClass("active")){
+    $('.navbar .setting-nav').show();
+  }
+
+  // sidebar profile 
+  $('.sidebar .profile-dropdown').on('click', function(){
+  $('.features-list li a.active').removeClass('active');
+  $('.main-content .tab-content .tab-pane').removeClass('show active');
+  $('.sidebar .profile-dropdown').addClass('active')
+  $('.features-list li a').on('click', function(){
+    $('.sidebar .profile-dropdown').removeClass('active');
+    })
+  })
   //  Sign in form
   $("#do_not_account").click(function () {
     $("#sign_in").addClass("d-none");
@@ -48,7 +62,14 @@ $(document).ready(function () {
   });
 });
 
-
+// Navbar
+jQuery(window).scroll(function () {
+  if (jQuery(window).scrollTop() >= 20) {
+    jQuery("header").addClass("fixed-header");
+  } else {
+    jQuery("header").removeClass("fixed-header");
+  }
+});
 
 // Image Upload Javascript
 ("use strict");
