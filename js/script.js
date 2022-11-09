@@ -1,13 +1,21 @@
 
 $(document).ready(function () {
+  // sidebar resize
+  $(window).resize(function() {
+    if ($(window).width() <= 1024) {
+     $('.sidebar').addClass('active');
+     $('.main-content').addClass('active');
+     $('header').addClass('active');
+    }
+  });
 
   // scheduletime for setting overview
-    $('.btn').on('click',function(){
-      $(this).closest('li.schedule_time_list').toggleClass('edit');
-    })
-    $(".form_card .btn-reset").click(function () {
-      $(".schedule_time_list").removeClass("edit");
-    });
+  $('.btn').on('click',function(){
+    $(this).closest('li.schedule_time_list').toggleClass('edit');
+  })
+  $(".form_card .btn-reset").click(function () {
+    $(".schedule_time_list").removeClass("edit");
+  });
 
   // sidebar profile 
   $('.sidebar .profile-dropdown').on('click', function(){
@@ -18,6 +26,7 @@ $(document).ready(function () {
     $('.sidebar .profile-dropdown').removeClass('active');
     })
   })
+  
   //  Sign in form
   $("#do_not_account").click(function () {
     $("#sign_in").addClass("d-none");

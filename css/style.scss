@@ -387,6 +387,8 @@ textarea {
         background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
       }
 
+
+
       td {
         border: 0;
         font-size: 14px;
@@ -394,6 +396,12 @@ textarea {
         padding: 14px 20px;
         vertical-align: middle;
         color: $black;
+
+        @media (max-width: 1024px) {
+          font-size: 12px;
+          line-height: 18px;
+          padding: 10px;
+        }
 
         .long_content {
           margin-bottom: 0;
@@ -1928,11 +1936,19 @@ header {
         th {
           padding: 15px 10px 16px 15px;
           font-size: 14px;
-          border-right: 0.5px solid $gray-color;
-          width: 26%;
+          border-right: 0.5px solid #A4A9BC;
+          width: 25%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 160px;
+          overflow-x: hidden;
 
-          &:nth-child(1) {
-            width: 20%;
+          @media (max-width: 1024px) {
+            font-size: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 160px;
+            overflow-x: hidden;
           }
 
           &:nth-child(2) {
@@ -1969,6 +1985,11 @@ header {
 
           .swich-year {
             margin-top: 15px;
+            display: flex;
+
+            @media (max-width: 1024px) {
+              margin-top: 8px;
+            }
 
             .swich {
               margin: 0 16px 0 10px;
@@ -2027,9 +2048,18 @@ header {
         }
 
         td {
-          border-right: 0.5px solid $gray-color;
+          border-right: 0.5px solid #A4A9BC;
           text-align: center;
           padding: 15px 20px 0 20px;
+
+          @media (max-width: 1024px) {
+            font-size: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 160px;
+            overflow-x: hidden;
+            padding: 8px 20px 5px 20px;
+          }
 
           &:first-child {
             text-align: left;
@@ -2046,12 +2076,20 @@ header {
           }
 
           .check-icon {
-            padding: 0px 5px 3px 5px;
+            padding: 0px 4px 3px 4px;
             background-color: #764af3;
             border-radius: 50%;
 
+            @media (max-width:1024px) {
+              padding: 0px 3px 3px 3px;
+            }
+
             img {
-              width: 10px;
+              width: 14px;
+
+              @media (max-width:1024px) {
+                width: 12px;
+              }
             }
           }
         }
