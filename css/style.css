@@ -396,6 +396,14 @@ textarea[type="radio"] {
   color: #000000;
 }
 
+@media (max-width: 1024px) {
+  .table tbody tr td {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 10px;
+  }
+}
+
 .table tbody tr td .long_content {
   margin-bottom: 0;
   max-width: 70%;
@@ -2075,12 +2083,22 @@ header.active .side-nav-btn img {
 .pricing-page table thead tr th {
   padding: 15px 10px 16px 15px;
   font-size: 14px;
-  border-right: 0.5px solid #a4a9bc;
-  width: 26%;
+  border-right: 0.5px solid #A4A9BC;
+  width: 25%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+  overflow-x: hidden;
 }
 
-.pricing-page table thead tr th:nth-child(1) {
-  width: 20%;
+@media (max-width: 1024px) {
+  .pricing-page table thead tr th {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+    overflow-x: hidden;
+  }
 }
 
 .pricing-page table thead tr th:nth-child(2) {
@@ -2117,6 +2135,15 @@ header.active .side-nav-btn img {
 
 .pricing-page table thead tr th .swich-year {
   margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .pricing-page table thead tr th .swich-year {
+    margin-top: 8px;
+  }
 }
 
 .pricing-page table thead tr th .swich-year .swich {
@@ -2172,9 +2199,20 @@ header.active .side-nav-btn img {
 }
 
 .pricing-page table tbody tr td {
-  border-right: 0.5px solid #a4a9bc;
+  border-right: 0.5px solid #A4A9BC;
   text-align: center;
   padding: 15px 20px 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .pricing-page table tbody tr td {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+    overflow-x: hidden;
+    padding: 8px 20px 5px 20px;
+  }
 }
 
 .pricing-page table tbody tr td:first-child {
@@ -2192,13 +2230,25 @@ header.active .side-nav-btn img {
 }
 
 .pricing-page table tbody tr td .check-icon {
-  padding: 0px 5px 3px 5px;
+  padding: 0px 4px 3px 4px;
   background-color: #764af3;
   border-radius: 50%;
 }
 
+@media (max-width: 1024px) {
+  .pricing-page table tbody tr td .check-icon {
+    padding: 0px 3px 3px 3px;
+  }
+}
+
 .pricing-page table tbody tr td .check-icon img {
-  width: 10px;
+  width: 14px;
+}
+
+@media (max-width: 1024px) {
+  .pricing-page table tbody tr td .check-icon img {
+    width: 12px;
+  }
 }
 
 .admin-page-table table tr td:last-child,
