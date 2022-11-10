@@ -1928,6 +1928,16 @@ header {
   }
 }
 
+.court_group {
+  display: flex;
+  max-width: 80px;
+  justify-content: space-between;
+
+  .material-symbols-outlined {
+    color: #dc3545;
+  }
+}
+
 // Pricing Page Css
 .pricing-page {
   table {
@@ -2102,6 +2112,8 @@ header {
 // Admin Page Css
 .admin-page-table {
   table {
+    min-height: 115px;
+
     tr {
 
       td:last-child,
@@ -2117,6 +2129,17 @@ header {
 
       &::after {
         display: none;
+      }
+    }
+
+    .dropdown-menu {
+      padding: 1px 0;
+      min-width: 60px;
+
+      li {
+        &:not(:last-child) {
+          border-bottom: 0.5px solid #0000001c;
+        }
       }
     }
   }
@@ -2417,5 +2440,20 @@ header {
         }
       }
     }
+  }
+}
+
+// delete model
+.delete_model {
+  .modal-body {
+    padding: 30px;
+
+    .modal-title {
+      font-size: 18px;
+    }
+  }
+
+  .button {
+    padding: 8px 16px;
   }
 }
