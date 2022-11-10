@@ -2080,6 +2080,20 @@ header.active .side-nav-btn img {
   }
 }
 
+.court_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.court_group .material-symbols-outlined {
+  color: #dc3545;
+}
+
 .pricing-page table thead tr th {
   padding: 15px 10px 16px 15px;
   font-size: 14px;
@@ -2251,6 +2265,10 @@ header.active .side-nav-btn img {
   }
 }
 
+.admin-page-table table {
+  min-height: 115px;
+}
+
 .admin-page-table table tr td:last-child,
 .admin-page-table table tr th:last-child {
   width: 75px;
@@ -2264,6 +2282,15 @@ header.active .side-nav-btn img {
 
 .admin-page-table table .dropdown-toggle::after {
   display: none;
+}
+
+.admin-page-table table .dropdown-menu {
+  padding: 1px 0;
+  min-width: 60px;
+}
+
+.admin-page-table table .dropdown-menu li:not(:last-child) {
+  border-bottom: 0.5px solid #0000001c;
 }
 
 .setting_popup .modal-dialog {
@@ -2562,5 +2589,17 @@ header.active .side-nav-btn img {
 
 .setting_popup .modal-footer button:last-child:hover {
   color: #FFFFFF;
+}
+
+.delete_model .modal-body {
+  padding: 30px;
+}
+
+.delete_model .modal-body .modal-title {
+  font-size: 18px;
+}
+
+.delete_model .button {
+  padding: 8px 16px;
 }
 /*# sourceMappingURL=style.css.map */
