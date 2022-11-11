@@ -9,6 +9,9 @@ $(document).ready(function () {
     }
   });
 
+  // hide("#setting_tab");
+  show("#setting_tab");
+
   // scheduletime for setting overview
   $('.btn').on('click',function(){
     $(this).closest('li.schedule_time_list').toggleClass('edit');

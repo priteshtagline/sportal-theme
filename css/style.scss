@@ -65,6 +65,7 @@ iframe {
 }
 
 input,
+.textinput,
 textarea {
   background: $white 0% 0% no-repeat padding-box;
   border: 1px solid $border-color;
@@ -72,7 +73,7 @@ textarea {
   padding: 12px 15px;
   width: 100%;
   font-size: 14px;
-  font-family: "Outfit regular";
+  font-family: 'Outfit Regular';
   line-height: 15px;
   color: $black;
 
@@ -90,6 +91,14 @@ textarea {
   &[type="radio"] {
     width: inherit;
   }
+}
+
+.text-primary {
+  color: $theme-primary-color  !important;
+}
+
+.text-gray {
+  color: $gray-color  !important;
 }
 
 .radius-rounded {
@@ -169,6 +178,10 @@ textarea {
   .select2-selection__arrow {
     top: 10px !important;
   }
+}
+
+.form-check .form-check-input {
+  padding: 7px;
 }
 
 
@@ -324,6 +337,61 @@ textarea {
   }
 }
 
+.custom_search_box {
+  border-radius: 50%;
+  border: none;
+  flex: 1;
+
+  .input-group {
+    border-radius: 23px;
+    overflow: hidden;
+    max-width: 369px;
+    width: 100%;
+
+    input[type=search] {
+      border: none;
+      padding: 10px 0 10px 26px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #A4A9BC;
+      font-family: "Outfit Regular";
+      background-color: #FFFFFF;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #A4A9BC;
+      }
+
+      &:-ms-input-placeholder {
+        color: #A4A9BC;
+      }
+
+      &::-ms-input-placeholder {
+        color: #A4A9BC;
+      }
+    }
+
+
+    .search-button {
+      min-width: 50px;
+      border: none;
+      padding: 14px 18px;
+      background-color: #FFFFFF;
+    }
+  }
+}
+
+.back_arrow {
+  box-shadow: inset 0px 0px 2px #00000029;
+  border-radius: 4px;
+  height: 26px;
+  width: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ECECEC;
+}
+
 .page-title {
   font-size: 16px;
   font-family: "Outfit SemiBold";
@@ -360,58 +428,76 @@ textarea {
   }
 }
 
-.table {
-  border-radius: 8px;
-  overflow: hidden;
+.table-responsive {
+  overflow-x: visible !important;
 
-  thead {
-    tr {
-      background-color: rgba($color: $theme-primary-color, $alpha: 0.1);
-      box-shadow: 0px 3px 8px #0000000f;
+  .table {
+    thead {
+      tr {
+        background-color: rgba($color: $theme-primary-color, $alpha: 0.1);
+        box-shadow: 0px 3px 8px #0000000f;
 
-      th {
-        padding: 18px 17px;
-        border: 0;
-        font-size: 13px;
-        line-height: 16px;
-        color: $black;
+        th {
+          padding: 18px 17px;
+          border: 0;
+          font-size: 13px;
+          line-height: 16px;
+          color: $black;
+
+          &:first-child {
+            border-top-left-radius: 8px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 8px;
+          }
+
+        }
       }
     }
-  }
 
-  tbody {
-    tr {
-      background-color: $white;
+    tbody {
+      tr {
+        background-color: $white;
 
-      &:nth-child(even) {
-        background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
-      }
-
-
-
-      td {
-        border: 0;
-        font-size: 14px;
-        line-height: 18px;
-        padding: 14px 20px;
-        vertical-align: middle;
-        color: $black;
-
-        @media (max-width: 1024px) {
-          font-size: 12px;
-          line-height: 18px;
-          padding: 10px;
+        &:nth-child(even) {
+          background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
         }
 
-        .long_content {
-          margin-bottom: 0;
-          max-width: 70%;
-          white-space: normal;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          text-overflow: ellipsis;
-          -webkit-box-orient: vertical;
+        &:last-child {
+          td:first-child {
+            border-bottom-left-radius: 8px;
+          }
+
+          td:last-child {
+            border-bottom-right-radius: 8px;
+          }
+        }
+
+        td {
+          border: 0;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 14px 20px;
+          vertical-align: middle;
+          color: $black;
+
+          @media (max-width: 1024px) {
+            font-size: 12px;
+            line-height: 18px;
+            padding: 10px;
+          }
+
+          .long_content {
+            margin-bottom: 0;
+            max-width: 70%;
+            white-space: normal;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+          }
         }
       }
     }
@@ -501,10 +587,17 @@ textarea {
       .profile_image {
         width: 20px;
         height: 20px;
+        margin-top: -9px;
         border-radius: 50%;
       }
 
       .user_name {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 100px;
+        width: 100%;
+        display: inline-block;
         margin-left: 10px;
         font-family: "Outfit Medium";
         font-size: 12px;
@@ -778,7 +871,7 @@ header {
               &::before {
                 position: absolute;
                 content: "";
-                width: 50%;
+                width: 70%;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
@@ -1656,7 +1749,7 @@ header {
   .modal-dialog {
     max-width: 450px;
 
-    .label-form {
+    label {
       font-size: 12px;
       letter-spacing: 0;
       line-height: 15px;
@@ -1664,7 +1757,8 @@ header {
       margin-bottom: 8px;
     }
 
-    input {
+    input,
+    .textinput {
       padding: 14px 10px;
       font-size: 12px;
       letter-spacing: 0;
@@ -1708,6 +1802,10 @@ header {
   .modal {
     border-radius: 12px;
 
+    .form-group {
+      margin-bottom: 10px;
+    }
+
     @media screen and (min-width: 576px) {
       --bs-modal-margin: 154px;
     }
@@ -1740,7 +1838,7 @@ header {
         .modal-body {
           padding: 20px 18px 24px;
 
-          .label-form {
+          label {
             font-size: 12px;
             letter-spacing: 0;
             line-height: 15px;
@@ -1752,7 +1850,7 @@ header {
             margin-top: 15px;
           }
 
-          .input {
+          .textinput {
             padding: 14px 10px;
             font-size: 12px;
             letter-spacing: 0;
@@ -1764,7 +1862,8 @@ header {
             border-radius: 6px;
           }
 
-          .styled-select {
+          select {
+            background-color: #F9F9F9;
             overflow: hidden;
             overflow: -moz-hidden-unscrollable;
             background-image: url(/images/select-arrow.svg);
@@ -1773,6 +1872,9 @@ header {
             background-position: right 20px top 18px;
             background-size: 8px;
             position: relative;
+            font-size: 12px;
+            height: 43px;
+            border: none;
           }
 
           select {
@@ -1787,9 +1889,11 @@ header {
 
           textarea {
             resize: none;
+            background: #F9F9F9;
+            border: none;
           }
 
-          .swich {
+          .switch {
             height: 0px;
             margin-top: -25px;
 
@@ -1873,7 +1977,7 @@ header {
               }
             }
 
-            input {
+            .textinput {
               display: none;
             }
           }
@@ -1993,7 +2097,7 @@ header {
             }
           }
 
-          .swich-year {
+          .switch-year {
             margin-top: 15px;
             display: flex;
 
@@ -2001,7 +2105,7 @@ header {
               margin-top: 8px;
             }
 
-            .swich {
+            .switch {
               margin: 0 16px 0 10px;
 
               input[type="checkbox"] {
@@ -2134,18 +2238,16 @@ header {
 
     .dropdown-menu {
       padding: 1px 0;
-      min-width: 60px;
 
-      li {
-        &:not(:last-child) {
-          border-bottom: 0.5px solid #0000001c;
-        }
-      }
     }
   }
 }
 
 .setting_popup {
+  @media screen and (min-width: 576px) {
+    --bs-modal-margin: 154px;
+  }
+
   .modal-dialog {
     max-width: 419px;
     width: 100%;
@@ -2157,7 +2259,11 @@ header {
   .modal-body {
     padding: 20px 18px 24px;
 
-    .label-form {
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    label {
       font-size: 12px;
       letter-spacing: 0;
       line-height: 15px;
@@ -2169,7 +2275,7 @@ header {
       margin-top: 15px;
     }
 
-    .input {
+    .textinput {
       padding: 14px 10px;
       font-size: 12px;
       letter-spacing: 0;
@@ -2247,6 +2353,7 @@ header {
       .form-check-label {
         font-size: 12px;
         color: $black;
+        margin-bottom: 0;
       }
     }
 
@@ -2291,6 +2398,7 @@ header {
             font-family: 'Outfit Regular';
             line-height: 10px;
             color: $black;
+            margin-bottom: 0;
           }
         }
 
@@ -2332,7 +2440,8 @@ header {
       background: none;
     }
 
-    .styled-select {
+    select {
+      background-color: #F9F9F9;
       overflow: hidden;
       overflow: -moz-hidden-unscrollable;
       background-image: url(/images/select-arrow.svg);
@@ -2341,6 +2450,9 @@ header {
       background-position: right 20px top 18px;
       background-size: 8px;
       position: relative;
+      font-size: 12px;
+      height: 43px;
+      border: none;
     }
 
     select {
@@ -2359,7 +2471,7 @@ header {
 
     .switch {
       height: 0px;
-      margin-top: -25px;
+      margin-top: -11px;
 
       input[type="checkbox"] {
         height: 0;
@@ -2456,4 +2568,354 @@ header {
   .button {
     padding: 8px 16px;
   }
+}
+
+// Table profile group
+.table_profile_group {
+  .user_image {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+}
+
+// .divider_dropdown-group
+.divider_dropdown_group {
+  button {
+    padding: 0;
+    border: none;
+    min-width: 30px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 104px;
+    padding: 1px 0;
+    border: none;
+    font-size: 10px;
+    box-shadow: 0px 3px 8px #0000000F;
+
+    li {
+      .dropdown-item {
+        padding: 4px 5px;
+      }
+
+      &:first-child .dropdown-item {
+        padding: 8px 7px;
+      }
+    }
+
+    .dropdown-divider {
+      color: #E4E4E4;
+    }
+  }
+}
+
+//customer_module 
+.customer_module {
+  .customer_top_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 18px;
+
+    .user_box {
+      margin-right: 27px;
+
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      .active_user {
+        color: $gray-color;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .table-responsive {
+    tr {
+      td {
+
+        &:nth-child(7),
+        &:last-child {
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+
+// Customer_modal
+.customer_modal {
+  .modal {
+    border-radius: 12px;
+
+    @media screen and (min-width: 576px) {
+      --bs-modal-margin: 154px;
+    }
+
+    .modal-dialog {
+      max-width: 420px;
+
+      @media screen and (min-width: 576px) {
+        margin-right: 21px;
+        margin-left: auto;
+        margin-bottom: 59px;
+      }
+
+      .modal-content {
+        border-radius: 12px;
+
+        .modal-header {
+          padding: 23px 18px 20px;
+          border-bottom: 0.6px solid #e4e4e4;
+
+          .modal-title {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: $black;
+            font-family: "Outfit Medium";
+          }
+        }
+
+        .modal-body {
+          padding: 20px 18px 24px;
+
+          .form-group {
+            margin-bottom: 10px;
+
+            .add_picture_btn {
+              font-size: 12px;
+
+              &.disabled {
+                background-color: #A98FF1;
+                color: $white;
+                cursor: none;
+                border: none;
+              }
+            }
+          }
+
+          label {
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 15px;
+            color: $gray-color;
+            margin-bottom: 8px;
+          }
+
+          input,
+          .textinput {
+            padding: 14px 10px;
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 15px;
+            color: $black;
+            background-color: #f9f9f9;
+            border-color: transparent;
+            box-shadow: inset 0px 0px 2px #00000029;
+            border-radius: 6px;
+          }
+
+          select {
+            background-color: #F9F9F9;
+            overflow: hidden;
+            overflow: -moz-hidden-unscrollable;
+            background-image: url(/images/select-arrow.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-position: right 20px top 18px;
+            background-size: 8px;
+            position: relative;
+            font-size: 12px;
+            height: 43px;
+            border: none;
+          }
+
+          select {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          textarea {
+            resize: none;
+          }
+
+          .upload-img {
+            .upload-picture {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              height: 116px;
+              background-color: #f9f9f9;
+              border-radius: 6px;
+              box-shadow: inset 0px 0px 2px #00000029;
+
+              img {
+                width: 21px;
+              }
+
+              .upload-text {
+                margin-top: 6px;
+                font-size: 10px;
+                color: $black;
+                line-height: 13px;
+                letter-spacing: 0px;
+              }
+            }
+
+            input,
+            .textinput {
+              display: none;
+            }
+          }
+
+          .location {
+            width: 100%;
+            height: 116px;
+
+            iframe {
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .padding-body {
+          padding: 10px 18px 16px !important;
+        }
+
+        .modal-footer {
+          padding: 20px 18px 18px 17px;
+          border-top: 0.6px solid #e4e4e4;
+          flex-wrap: nowrap;
+
+          button {
+            padding: 14px 0px;
+            max-width: 180px;
+            width: 100%;
+            font-size: 12px;
+            line-height: 15px;
+
+            &:last-child {
+              color: $gray-color;
+              background-image: none;
+
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+
+        .padding-footer {
+          padding: 16px 18px 18px 14px !important;
+        }
+      }
+    }
+
+    .model-open-margin {
+      @media screen and (min-width: 576px) {
+        margin-bottom: 38px !important;
+      }
+    }
+  }
+}
+
+// Customer Profile_info
+
+.profile_info_box {
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .upload-img {
+    .upload-picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 116px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      box-shadow: inset 0px 0px 2px #00000029;
+
+      img {
+        width: 21px;
+      }
+
+      .upload-text {
+        margin-top: 6px;
+        font-size: 10px;
+        color: $black;
+        line-height: 13px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  label {
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px;
+    color: $gray-color;
+    margin-bottom: 8px;
+  }
+
+  input,
+  .textinput {
+    padding: 14px 10px;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px;
+    color: $black;
+    background-color: #f9f9f9;
+    border-color: transparent;
+    box-shadow: inset 0px 0px 2px #00000029;
+    border-radius: 6px;
+  }
+
+  select {
+    background-color: #F9F9F9;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    background-image: url(/images/select-arrow.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: right 20px top 18px;
+    background-size: 8px;
+    position: relative;
+    font-size: 12px;
+    height: 43px;
+    border: none;
+  }
+
+  .divider {
+    border: 0.6px solid #E4E4E4;
+  }
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
 }
