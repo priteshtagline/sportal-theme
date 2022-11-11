@@ -35,30 +35,61 @@
           </div>
         </form> -->
 
+        <!-- <a href="#" class="back_arrow">
+          <img src="images/back-arrow.svg" alt="back_arrow_icon">
+        </a> -->
 
         <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav setting-nav nav nav-tabs me-auto my-2 my-lg-0 navbar-nav-scroll" id="settings_nav_tab"
             role="tablist" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="setting_overview_tab"
-                data-bs-toggle="tab" data-bs-target="#setting_overview_tab_pane" type="button" role="tab"
-                aria-controls="setting_overview_tab_pane" aria-selected="true">Overview</a>
+            <!-- For Setting Header -->
+            <li class="nav-item" id="setting_tab">
+              <div>
+                <ul class="navbar-nav setting-nav nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="setting_overview_tab"
+                      data-bs-toggle="tab" data-bs-target="#setting_overview_tab_pane" type="button" role="tab"
+                      aria-controls="setting_overview_tab_pane" aria-selected="true">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="setting_courts_tab" data-bs-toggle="tab"
+                      data-bs-target="#setting_courts_tab_pane" type="button" role="tab"
+                      aria-controls="setting_courts_tab_pane" aria-selected="false">Courts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="setting_pricing_tab" data-bs-toggle="tab"
+                      data-bs-target="#setting_pricing_tab_pane" type="button" role="tab"
+                      aria-controls="setting_pricing_tab_pane" aria-selected="false">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="setting_admins_tab" data-bs-toggle="tab"
+                      data-bs-target="#setting_admins_tab_pane" type="button" role="tab"
+                      aria-controls="setting_admins_tab" aria-selected="false">Admins</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)" id="setting_courts_tab" data-bs-toggle="tab"
-                data-bs-target="#setting_courts_tab_pane" type="button" role="tab"
-                aria-controls="setting_courts_tab_pane" aria-selected="false">Courts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)" id="setting_pricing_tab" data-bs-toggle="tab"
-                data-bs-target="#setting_pricing_tab_pane" type="button" role="tab"
-                aria-controls="setting_pricing_tab_pane" aria-selected="false">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)" id="setting_admins_tab" data-bs-toggle="tab"
-                data-bs-target="#setting_admins_tab_pane" type="button" role="tab" aria-controls="setting_admins_tab"
-                aria-selected="false">Admins</a>
-            </li>
+
+            <!-- For Customer Header -->
+            <!-- <li class="nav-item" id="customer_tab">
+              <div>
+                <ul class="navbar-nav setting-nav nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="javascript:void(0)">All Customers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_profile_info_tab"
+                      data-bs-toggle="tab" data-bs-target="customer_profile_info_tab_pane" type="button" role="tab"
+                      aria-controls="customer_profile_info_tab_pane" aria-selected="false">Profile Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_reservation_tab_pane"
+                      data-bs-toggle="tab" data-bs-target="customer_reservation_tab_pane" type="button" role="tab"
+                      aria-controls="customer_reservation_tab_pane" aria-selected="false">Reservation History</a>
+                  </li>
+                </ul>
+              </div>
+            </li> -->
           </ul>
         </div>
         <div class="nav-right">
@@ -367,7 +398,282 @@
       <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">schedule</div>
       <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">reports</div>
       <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">billings</div>
-      <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">Customers</div>
+      <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">
+        <form action="">
+          <div class="customer_module">
+            <div class="customer_top_row">
+              <div class="user_box">
+                <p>53 Total Users</p>
+                <span class="active_user">49 Active</span>
+              </div>
+              <div class="custom_search_box">
+                <div class="input-group">
+                  <input type="search" class="form-control" placeholder="Search....." aria-label="search"
+                    aria-describedby="search-btn">
+                  <button class="btn d-flex align-items-center search-button" type="button" id="search-btn"><img
+                      src="/images/magnify.svg" alt="magnify"></button>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_2.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>+97172378487284</td>
+                    <td>moeed.shahid@yahoo.com</td>
+                    <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                    <td>4 hours ago</td>
+                    <td><a href="#" class="text-primary">Show More</a></td>
+                    <td class="text-center">
+                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                    </td>
+                    <td class="text-end">
+                      <div class="btn-group divider_dropdown_group">
+                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Block
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                              data-bs-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Restricted
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_2.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>+97172378487284</td>
+                    <td>moeed.shahid@yahoo.com</td>
+                    <td><span class="btn btn-danger btn-sm radius-rounded">Blocked</span></td>
+                    <td>4 hours ago</td>
+                    <td><a href="#" class="text-primary">Show More</a></td>
+                    <td class="text-center">
+                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                    </td>
+                    <td class="text-end">
+                      <div class="btn-group divider_dropdown_group">
+                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Block
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                              data-bs-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Restricted
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_2.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>+97172378487284</td>
+                    <td>moeed.shahid@yahoo.com</td>
+                    <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                    <td>4 hours ago</td>
+                    <td><a href="#" class="text-primary">Show More</a></td>
+                    <td class="text-center">
+                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                    </td>
+                    <td class="text-end">
+                      <div class="btn-group divider_dropdown_group">
+                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Block
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                              data-bs-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Restricted
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-inline-block">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#add_new_customer"
+                role="button">+ Add New User</button>
+            </div>
+          </div>
+          <!-- <div class="tab-content" id="settings_nav_tab_content">
+            <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
+              aria-labelledby="customer_profile_info_tab_label" tabindex="0">
+              <div class="profile_info_box">
+                <h6>Overview</h6>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group mb-0">
+                                <label for="customer_fname" class=" mt-0">First Name</label>
+                                <input type="text" class="text-input form-control" id="Name" value="Moeed Shahid"
+                                  placeholder="">
+                              </div>
+                              <div class=" form-group mb-0">
+                                <label for="customer_email" class=" mt-0">Email</label>
+                                <input type="email" class="text-input" id="customer_email"
+                                  value="moeed.shahid@yahoo.com" placeholder="">
+                              </div>
+                              <div class="form-group">
+                                <label for="customer_gender" class=" m-top-15">Gender</label> </br>
+                                <select class="w-100 select  form-control" aria-label="customer_gender_label"
+                                  id="customer_gender">
+                                  <option selected="selected">Select Gender</option>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                                  <option value="other">Other</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group mb-0">
+                                <label for="customer_lname" class=" mt-0">Second Name</label>
+                                <input type="text" class="text-input" id="customer_lname" value="Awan" placeholder="">
+                              </div>
+                              <div class="form-group mb-0">
+                                <label for="customer_phoneno" class=" mt-0">Phone Number</label>
+                                <input type="tel" class="text-input" id="customer_phoneno" value="+9713336787103"
+                                  placeholder="">
+                              </div>
+                              <div class="form-group mb-0">
+                                <label for="customer_country" class="m-top-15">Select Country</label> </br>
+                                <select class="w-100 select  form-control" aria-label="customer_country_label"
+                                  id="customer_country">
+                                  <option selected="selected">Select Country</option>
+                                  <option value="UAE">United Arab Emirates</option>
+                                  <option value="USA">United states of America</option>
+                                  <option value="india">India</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="col-md-6">
+                              <div class="form-group mb-0">
+                                <label for="customer_country" class="m-top-15">Select Country</label> </br>
+                                <select class="w-100 select  form-control" aria-label="customer_country_label"
+                                  id="customer_country">
+                                  <option selected="selected">Select Country</option>
+                                  <option value="UAE">United Arab Emirates</option>
+                                  <option value="USA">United states of America</option>
+                                  <option value="india">India</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="scustomer_reservation_tab_pane" role="tabpanel"
+              aria-labelledby="customer_reservation_tab_pane" tabindex="0">
+              reservation
+            </div>
+
+          </div> -->
+        </form>
+      </div>
       <div class="tab-pane fade" id="tournaments" role="tabpanel" aria-labelledby="tournaments-tab">tournaments</div>
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
       <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">information</div>
@@ -381,16 +687,16 @@
                 <div class="col-xl-6 col-md-12">
                   <form action="">
                     <div class="form-group">
-                      <input type="text" placeholder="Venue Name" />
+                      <input type="text" class="text-input" placeholder="Venue Name" />
                     </div>
                     <div class="form-group">
-                      <input type="url" placeholder="Website" />
+                      <input type="url" class="text-input" placeholder="Website" />
                     </div>
                     <div class="form-group">
-                      <input type="email" placeholder="Contact Email" />
+                      <input type="email" class="text-input" placeholder="Contact Email" />
                     </div>
                     <div class="form-group">
-                      <textarea name="" id="" placeholder="Description" cols="30" rows="18"></textarea>
+                      <textarea name="" id="" class="textarea" placeholder="Description" cols="30" rows="18"></textarea>
                     </div>
                   </form>
                   <form action="">
@@ -493,8 +799,7 @@
                   <div class="row">
                     <form action="">
                       <div class="col-12 form-group">
-                        <input id="pac-input" class="controls" type="text" placeholder="Address" />
-                        <!-- <input type="text" placeholder="Address" /> -->
+                        <input id="pac-input" class="controls text-input" type="text" placeholder="Address" />
                       </div>
                       <div class="col-12 form-group">
                         <div class="card form_card">
@@ -503,11 +808,6 @@
                           </div>
                           <div class="card-body p-0">
                             <div class="map" id="map"></div>
-                            <!-- <iframe
-                            src="
-                            https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8413213630624!2d72.8852744152011!3d21.238139985885308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sus!4v1667121390502!5m2!1sen!2sus"
-                            width="100%" height="296" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                           </div>
                           <div class="card-footer">
                             <input type="submit" class="btn btn-info btn-sm radius-rounded" value="Save">
@@ -580,7 +880,7 @@
                               </div>
                               <div class="modal-body">
                                 <div class="form-group">
-                                  <label for="amenties_name" class="label-form mt-0">Amneties Name</label>
+                                  <label for="amenties_name" class="mt-0">Amneties Name</label>
                                   <input type="text" class="input" id="amenties_name" placeholder="">
                                 </div>
                               </div>
@@ -644,25 +944,6 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
                       <td>Synthetic Grass 2</td>
                       <td>Football</td>
                       <td>7v7</td>
@@ -670,14 +951,34 @@
                       <td>
                         <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
                       </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#addUpdatePopup">
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </td>
                     </tr>
@@ -689,90 +990,34 @@
                       <td>
                         <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
                       </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Synthetic Grass 1</td>
-                      <td>Football</td>
-                      <td>7v7</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                      <td>
-                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
-                      </td>
-                      <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#addUpdatePopup">
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </td>
                     </tr>
@@ -784,14 +1029,112 @@
                       <td>
                         <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
                       </td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#addUpdatePopup">
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
                       <td>
-                        <div class="court_group">
-                          <div class="cursor-pointer" data-bs-toggle="modal" data-bs-target="#addUpdatePopup">...</div>
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                            <span class="material-symbols-outlined">
-                              delete
-                            </span>
-                          </a>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#addUpdatePopup">
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Grass 1</td>
+                      <td>Football</td>
+                      <td>7v7</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                      <td>
+                        <p class="long_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr…..</p>
+                      </td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#addUpdatePopup">
+                                Edit
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </td>
                     </tr>
@@ -816,23 +1159,29 @@
                     <tr>
                       <th>
                         <div class="pricing-title">Billing Type</div>
-                        <div class="swich-year"><span>Monthly</span> <span class="swich"><input type="checkbox"
-                              id="switch" /><label for="switch"></label></span><span>Annually</span></div>
+                        <div class="switch-year">
+                          <span>Monthly</span>
+                          <span class="switch">
+                            <input type="checkbox" id="switch" />
+                            <label for="switch"></label>
+                          </span>
+                          <span>Annually</span>
+                        </div>
                       </th>
                       <th>
                         <div><span class="pricing-title">Free</span> <span class="edit-button"><a href="#"><img
                                 src="/images/pencil.svg" alt="pencil"></a></span></span></div>
-                        <div class="swich-year"><span class="invisible">50AED</span></div>
+                        <div class="switch-year"><span class="invisible">50AED</span></div>
                       </th>
                       <th>
                         <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
                                 src="/images/pencil.svg" alt="pencil"></a></span></div>
-                        <div class="swich-year">50 AED</div>
+                        <div class="switch-year">50 AED</div>
                       </th>
                       <th>
                         <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
                                 src="/images/pencil.svg" alt="pencil"></a></span></div>
-                        <div class="swich-year">75 AED</div>
+                        <div class="switch-year">75 AED</div>
                       </th>
                     </tr>
                   </thead>
@@ -933,24 +1282,34 @@
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Super Admin</td>
                       <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             ...
                           </button>
-                          <ul class="dropdown-menu">
+                          <ul class="dropdown-menu ">
                             <li>
                               <a class="dropdown-item" href="#">
-                                <span class="material-symbols-outlined">
-                                  edit
-                                </span>
+                                options
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                                <span class="material-symbols-outlined">
-                                  delete
-                                </span>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
                               </a>
                             </li>
                           </ul>
@@ -962,25 +1321,34 @@
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Admin</td>
                       <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             ...
                           </button>
-                          <ul class="dropdown-menu">
+                          <ul class="dropdown-menu ">
                             <li>
                               <a class="dropdown-item" href="#">
-                                <span class="material-symbols-outlined">
-                                  edit
-                                </span>
+                                options
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                                <span class="material-symbols-outlined">
-                                  delete
-                                </span>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
                               </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
                               </a>
                             </li>
                           </ul>
@@ -993,24 +1361,34 @@
                       <td>moeed.shahid@yahoo.com</td>
                       <td>Admin</td>
                       <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             ...
                           </button>
-                          <ul class="dropdown-menu">
+                          <ul class="dropdown-menu ">
                             <li>
                               <a class="dropdown-item" href="#">
-                                <span class="material-symbols-outlined">
-                                  edit
-                                </span>
+                                options
                               </a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_modal">
-                                <span class="material-symbols-outlined">
-                                  delete
-                                </span>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
                               </a>
                             </li>
                           </ul>
@@ -1034,6 +1412,7 @@
       </div>
     </div>
 
+    <!-- Setting_Court_modal -->
     <div class="court-popup">
       <div class="modal fade" id="addUpdatePopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -1044,13 +1423,12 @@
               </div>
               <div class="modal-body">
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-0">Court Name</label>
-                  <input type="email" class="input" id="Name" placeholder="">
+                  <label for="Name" class="mt-0">Court Name</label>
+                  <input type="email" class="input textinput" id="Name" placeholder="">
                 </div>
                 <div class="form-group mb-0">
-                  <label for="select_box_1" class="label-form m-top-15">Court Type</label> </br>
-                  <select class="w-100 styled-select form-control" aria-label="Default select example"
-                    id="select_box_1">
+                  <label for="select_box_1" class="m-top-15">Court Type</label> </br>
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_1">
                     <option selected="selected">Synthetic</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1058,9 +1436,8 @@
                   </select>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="select_box_2" class="label-form m-top-15">Sport</label>
-                  <select class="w-100 styled-select form-control" aria-label="Default select example"
-                    id="select_box_2">
+                  <label for="select_box_2" class="m-top-15">Sport</label>
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_2">
                     <option selected>Indoor Tennis</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1068,9 +1445,8 @@
                   </select>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="select_box_3" class="label-form m-top-15">Court Count</label>
-                  <select class="w-100 styled-select form-control" aria-label="Default select example"
-                    id="select_box_3">
+                  <label for="select_box_3" class="m-top-15">Court Count</label>
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_3">
                     <option selected>3</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -1079,29 +1455,29 @@
                 </div>
                 <div class="form-group mb-0">
                   <div class="d-flex justify-content-between align-items-center m-top-15">
-                    <label for="Name" class="label-form mb-0">Bookable Online</label>
-                    <span class="swich"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
+                    <label for="Name" class="mb-0">Bookable Online</label>
+                    <span class="switch"><input type="checkbox" id="ddd" /><label for="ddd"></label></span>
                   </div>
                 </div>
                 <div class="form-group mb-0">
                   <div class="d-flex justify-content-between align-items-center m-top-15">
-                    <label for="Name" class="label-form mb-0">Active</label>
-                    <span class="swich"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
+                    <label for="Name" class="mb-0">Active</label>
+                    <span class="switch"><input type="checkbox" id="hhh" /><label for="hhh"></label></span>
                   </div>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form m-top-15">Description</label>
-                  <textarea class="input w-100" rows="4"></textarea>
+                  <label for="Name" class="m-top-15">Description</label>
+                  <textarea class="input textarea w-100" rows="4"></textarea>
                 </div>
                 <div class="form-group mb-0">
                   <div class="d-flex justify-content-between align-items-center m-top-15">
-                    <label for="Name" class="label-form mb-0">Shared Court</label>
-                    <span class="swich"><input type="checkbox" id="lll" /><label for="lll"></label></span>
+                    <label for="Name" class="mb-0">Shared Court</label>
+                    <span class="switch"><input type="checkbox" id="lll" /><label for="lll"></label></span>
                   </div>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form m-top-15">Sport</label>
-                  <select class="input w-100 styled-select" aria-label="Default select example">
+                  <label for="Name" class="m-top-15">Sport</label>
+                  <select class="w-100 select form-control" aria-label="Default select example">
                     <option selected>Synthetic Court</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1131,12 +1507,12 @@
               </div>
               <div class="modal-body padding-body">
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-0">Court Name</label>
-                  <input type="email" class="input" id="Name" placeholder="">
+                  <label for="Name" class="mt-0">Court Name</label>
+                  <input type="email" class="textinput" id="Name" placeholder="">
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-3">Court Type</label>
-                  <select class="input w-100 styled-select test" aria-label="Default select example">
+                  <label for="Name" class="mt-3">Court Type</label>
+                  <select class="input w-100 select test form-control" aria-label="Default select example">
                     <option selected>Synthetic</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1144,8 +1520,8 @@
                   </select>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-3">Sport</label>
-                  <select class="input w-100 styled-select" aria-label="Default select example">
+                  <label for="Name" class="mt-3">Sport</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
                     <option selected>Sport</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1153,12 +1529,12 @@
                   </select>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-3">Description</label>
-                  <textarea class="input w-100" rows="3"></textarea>
+                  <label for="Name" class="mt-3">Description</label>
+                  <textarea class="input text-area w-100" rows="3"></textarea>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-3">Court Count</label>
-                  <select class="input w-100 styled-select" aria-label="Default select example">
+                  <label for="Name" class="mt-3">Court Count</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
                     <option selected>3</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -1167,19 +1543,19 @@
                 </div>
                 <div class="form-group mb-0">
                   <div class="d-flex justify-content-between align-items-center mt-3">
-                    <label for="Name" class="label-form mb-0">Bookable Online</label>
-                    <span class="swich"><input type="checkbox" id="core" /><label for="core"></label></span>
+                    <label for="Name" class="mb-0">Bookable Online</label>
+                    <span class="switch"><input type="checkbox" id="core" /><label for="core"></label></span>
                   </div>
                 </div>
                 <div class="form-group mb-0">
                   <div class="d-flex justify-content-between align-items-center mt-3">
-                    <label for="Name" class="label-form mb-0">Shared Court</label>
-                    <span class="swich"><input type="checkbox" id="shared" /><label for="shared"></label></span>
+                    <label for="Name" class="mb-0">Shared Court</label>
+                    <span class="switch"><input type="checkbox" id="shared" /><label for="shared"></label></span>
                   </div>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="Name" class="label-form mt-3">Court</label>
-                  <select class="input w-100 styled-select" aria-label="Default select example">
+                  <label for="Name" class="mt-3">Court</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
                     <option selected>Synthetic Grass</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1192,17 +1568,17 @@
                   </div>
                 </div>
                 <div class="form-group mb-0">
-                  <label class="label-form mt-3">Add Court Picture</label>
+                  <label class="mt-3">Add Court Picture</label>
                   <div class="upload-img">
                     <label class="upload-picture" for="file-input">
                       <img src="/images/upload.svg" />
                       <span class="upload-text">Upload Pictures</span>
                     </label>
-                    <input id="file-input" type="file" />
+                    <input id="file-input" class="textinput" type="file" />
                   </div>
                 </div>
                 <div class="form-group mb-0">
-                  <label class="label-form mt-3">Location</label>
+                  <label class="mt-3">Location</label>
                   <div class="location">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8411952353094!2d72.88527441514054!3d21.238144985972667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1667308856515!5m2!1sen!2sin"
@@ -1220,6 +1596,7 @@
         </div>
       </div>
     </div>
+    <!-- Setting_Admin_modal -->
     <div class="modal fade setting_popup" id="setting_admin_modal" aria-hidden="true"
       aria-labelledby="setting_admin_modalLabel" tabindex="-1">
       <div class="modal-dialog">
@@ -1232,25 +1609,27 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group mb-0">
-                    <label for="fname" class="label-form mt-0">First Name</label>
-                    <input type="text" class="input" id="Name">
+                    <label for="fname" class="mt-0">First Name</label>
+                    <input type="text" class="textinput" id="Name">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-0">
-                    <label for="lname" class="label-form mt-0">Last Name</label>
-                    <input type="text" class="input" id="Name">
+                    <label for="lname" class="mt-0">Last Name</label>
+                    <input type="text" class="textinput" id="Name">
                   </div>
                 </div>
               </div>
-              <div class="d-flex justify-content-between align-items-center m-top-15">
-                <div class="form-group mb-0">
-                  <label for="Name" class="label-form mb-0">Email Notifications</label>
-                  <span class="switch"><input type="checkbox" id="email_checkbox"><label
-                      for="email_checkbox"></label></span>
+              <div class="m-top-15">
+                <div class="form-group mb-0 d-flex justify-content-between align-items-center">
+                  <label for="Name" class="mb-0">Email Notifications</label>
+                  <span class="switch">
+                    <input type="checkbox" id="email_checkbox">
+                    <label for="email_checkbox"></label>
+                  </span>
                 </div>
               </div>
-              <label for="admin_access" class="label-form mt-3">Admin Access</label>
+              <label for="admin_access" class="mt-3">Admin Access</label>
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group mb-0">
@@ -1277,7 +1656,7 @@
                   </div>
                 </div>
               </div>
-              <label for="admin_access" class="label-form mt-3">Permissions</label>
+              <label for="admin_access" class="mt-3">Permissions</label>
               <div class="admin_popup_table">
                 <table>
                   <thead>
@@ -1426,6 +1805,7 @@
       </div>
     </div>
 
+    <!-- Custom_Delete_popup -->
     <div class="modal fade delete_model" id="delete_modal" data-bs-backdrop="static" data-bs-keyboard="false"
       tabindex="-1" aria-labelledby="delete_modal_Label" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
@@ -1441,6 +1821,85 @@
         </div>
       </div>
     </div>
+
+    <!-- Add Cusomer Modal -->
+    <div class="customer_modal">
+      <div class="modal fade" id="add_new_customer" tabindex="-1" aria-labelledby="add_new_customer_Label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Add New User</h5>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fname" class="mt-0">First Name</label>
+                      <input type="text" class="textinput" id="Name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="lname" class="mt-0">Last Name</label>
+                      <input type="text" class="textinput" id="Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="user_email" class="mt-0">Email</label>
+                  <input type="email" class="textinput" id="user_email">
+                </div>
+                <div class="form-group">
+                  <label for="user_phone_number" class="mt-0">Phone Number</label>
+                  <input type="tel" class="textinput" id="user_phone_number">
+                </div>
+                <div class="form-group">
+                  <label for="customer_gender" class="m-top-15">Gender</label> </br>
+                  <select class="w-100 select  form-control" aria-label="customer_gender_label" id="customer_gender">
+                    <option selected="selected">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0">
+                  <label for="customer_country" class="m-top-15">Select Country</label> </br>
+                  <select class="w-100 select  form-control" aria-label="customer_country_label" id="customer_country">
+                    <option selected="selected">Select Country</option>
+                    <option value="UAE">United Arab Emirates</option>
+                    <option value="USA">United states of America</option>
+                    <option value="india">India</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="mt-3">Add Profile Picture</label>
+                  <div class="upload-img">
+                    <label class="upload-picture" for="file-input">
+                      <img src="/images/upload.svg" />
+                      <span class="upload-text">Upload Picture</span>
+                    </label>
+                    <input id="file-input" class="textinput" type="file" />
+                  </div>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-inline-block">
+                    <input type="submit" value="Add Picture" class="btn btn-primary add_picture_btn disabled"
+                      id="add_picture">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary me-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                  data-bs-dismiss="modal">Add User</button>
+                <button class="btn btn-secondary btn-close" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Script -->
@@ -1450,7 +1909,6 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWIi_5aXlwnLrxreoh0ls6dsCTARKPNGs&callback=initAutocomplete&libraries=places&v=weekly"
     defer></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/map.js"></script>
