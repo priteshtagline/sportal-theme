@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+
   // sidebar resize
   $(window).resize(function() {
     if ($(window).width() <= 1024) {
@@ -9,8 +10,43 @@ $(document).ready(function () {
     }
   });
 
-  // hide("#setting_tab");
-  show("#setting_tab");
+  // sidebar - navtab
+  $("#settings-tab").on('click',function(){ 
+    $('.navbar-brand').html('Settings');
+    $('#setting_nav_tab').show();
+  });
+  $("#customers-tab").click(function(){
+    $('.navbar-brand').html('Customers');
+    $('#setting_nav_tab').hide(); 
+  });
+
+  // Setting_nav_tab
+  $('#setting_nav_tab').hide();
+  $("#settings-tab").click(function(){
+    $('.navbar-brand').html('Settings');
+    $('#customer_title').hide(); 
+  });
+
+  // Customer_nav_tab
+  $('#customer_subtab').hide();
+  $('#nav-back-arrow').hide();
+  $('#customer_subtab_content').hide();
+  $('#customer_show_more_btn').on('click',function(){
+    $('.navbar-brand').hide();
+    $('#customer_title').hide();
+    $('#customer_subtab').show();
+    $('#customer_subtab_content').show();
+    $('#customer_main_module').hide();  
+    $('#nav-back-arrow').show();
+  })
+  $('#nav-back-arrow').on('click',function(){
+    $('.navbar-brand').show();
+    $('#customer_title').show();
+    $('#customer_subtab').hide();
+    $('#customer_subtab_content').hide();
+    $('#customer_main_module').show();  
+    $('#nav-back-arrow').hide();
+  })
 
   // scheduletime for setting overview
   $('.btn').on('click',function(){
