@@ -24,7 +24,9 @@
         <img src="/images/nav-aerrow.svg" alt="nav-aerrow">
       </button>
       <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">Settings</a>
+
+        <a class="navbar-brand" href="javascript:void(0)">Customers</a>
+        <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
 
         <!-- <form class="d-flex" role="search">
           <div class="input-group search_group">
@@ -35,15 +37,18 @@
           </div>
         </form> -->
 
-        <!-- <a href="#" class="back_arrow">
+        <!-- back arrow -->
+        <a href="#" class="back_arrow" id="nav-back-arrow">
           <img src="images/back-arrow.svg" alt="back_arrow_icon">
-        </a> -->
+        </a>
+
 
         <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav setting-nav nav nav-tabs me-auto my-2 my-lg-0 navbar-nav-scroll" id="settings_nav_tab"
             role="tablist" style="--bs-scroll-height: 100px;">
             <!-- For Setting Header -->
-            <li class="nav-item" id="setting_tab">
+
+            <li class="nav-item" id="setting_nav_tab">
               <div>
                 <ul class="navbar-nav setting-nav nav nav-tabs">
                   <li class="nav-item">
@@ -71,25 +76,29 @@
             </li>
 
             <!-- For Customer Header -->
-            <!-- <li class="nav-item" id="customer_tab">
-              <div>
-                <ul class="navbar-nav setting-nav nav nav-tabs">
+            <li class="nav-item" id="customer_tab">
+              <div class="nav-item d-flex flex-wrap">
+                <ul>
                   <li class="nav-item">
-                    <a class="nav-link text-primary" href="javascript:void(0)">All Customers</a>
+                    <a class="nav-link text-primary" id="customer_title" href="javascript:void(0)">All Customers</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav nav-tabs" id="customer_subtab">
+                  <li class="nav-item">
+                    <a class="nav-link nav-tab active" aria-current="page" href="javascript:void(0)"
+                      id="customer_profile_info_tab" data-bs-toggle="tab"
+                      data-bs-target="#customer_profile_info_tab_pane" type="button" role="tab"
+                      aria-controls="customer_profile_info_tab_pane" aria-selected="true">Profile
+                      Details</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_profile_info_tab"
-                      data-bs-toggle="tab" data-bs-target="customer_profile_info_tab_pane" type="button" role="tab"
-                      aria-controls="customer_profile_info_tab_pane" aria-selected="false">Profile Details</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_reservation_tab_pane"
-                      data-bs-toggle="tab" data-bs-target="customer_reservation_tab_pane" type="button" role="tab"
+                    <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_reservation_tab"
+                      data-bs-toggle="tab" data-bs-target="#customer_reservation_tab_pane" type="button" role="tab"
                       aria-controls="customer_reservation_tab_pane" aria-selected="false">Reservation History</a>
                   </li>
                 </ul>
               </div>
-            </li> -->
+            </li>
           </ul>
         </div>
         <div class="nav-right">
@@ -286,8 +295,8 @@
       </div>
       <ul class="features-list nav nav-tabs">
         <li class="features-item dashboard nav-item main-features-list">
-          <a href="#" class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard"
-            type="button" role="tab" aria-controls="dashoboard" aria-selected="true">
+          <a href="#" class="nav-link" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button"
+            role="tab" aria-controls="dashoboard" aria-selected="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <path id="_icon__home_house_" data-name="🦆 icon _home house_"
                 d="M8.784.45a.549.549,0,0,1,.33.11l7.438,5.578a1.422,1.422,0,0,1,.566,1.132V15.7A1.416,1.416,0,0,1,15.7,17.118h-3.83A1.416,1.416,0,0,1,10.458,15.7V10.446H7.11V15.7A1.416,1.416,0,0,1,5.7,17.118H1.865A1.416,1.416,0,0,1,.45,15.7V7.27a1.422,1.422,0,0,1,.566-1.132L8.454.56A.549.549,0,0,1,8.784.45ZM15.7,16.018a.315.315,0,0,0,.315-.315V7.27a.316.316,0,0,0-.126-.252L8.784,1.688,1.676,7.018a.316.316,0,0,0-.126.252V15.7a.315.315,0,0,0,.315.315H5.7A.315.315,0,0,0,6.01,15.7V9.9a.55.55,0,0,1,.55-.55h4.448a.55.55,0,0,1,.55.55V15.7a.315.315,0,0,0,.315.315Z"
@@ -328,8 +337,8 @@
           </a>
         </li>
         <li class="features-item customers nav-item">
-          <a href="#" class="nav-link" id="customers-tab" data-bs-toggle="tab" data-bs-target="#customers" type="button"
-            role="tab" aria-controls="customers" aria-selected="false">
+          <a href="#" class="nav-link active" id="customers-tab" data-bs-toggle="tab" data-bs-target="#customers"
+            type="button" role="tab" aria-controls="customers" aria-selected="true">
             <span class="material-symbols-outlined">
               group
             </span>
@@ -393,286 +402,448 @@
 
   <div class="main-content" id="main-content">
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashboard
+      <div class="tab-pane fade" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashboard
       </div>
       <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">schedule</div>
       <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">reports</div>
       <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">billings</div>
-      <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">
-        <form action="">
-          <div class="customer_module">
-            <div class="customer_top_row">
-              <div class="user_box">
-                <p>53 Total Users</p>
-                <span class="active_user">49 Active</span>
-              </div>
-              <div class="custom_search_box">
-                <div class="input-group">
-                  <input type="search" class="form-control" placeholder="Search....." aria-label="search"
-                    aria-describedby="search-btn">
-                  <button class="btn d-flex align-items-center search-button" type="button" id="search-btn"><img
-                      src="/images/magnify.svg" alt="magnify"></button>
-                </div>
-              </div>
+      <div class="tab-pane fade show active" id="customers" role="tabpanel" aria-labelledby="customers-tab">
+        <div class="customer_module" id="customer_main_module">
+          <div class="customer_top_row">
+            <div class="user_box">
+              <p>53 Total Users</p>
+              <span class="active_user">49 Active</span>
             </div>
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Joined</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="table_profile_group">
-                        <img src="images/user_2.png" alt="User_profile" class="user_image">
-                        <span class="user_name">Moeed Shahid</span>
-                      </div>
-                    </td>
-                    <td>+97172378487284</td>
-                    <td>moeed.shahid@yahoo.com</td>
-                    <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                    <td>4 hours ago</td>
-                    <td><a href="#" class="text-primary">Show More</a></td>
-                    <td class="text-center">
-                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
-                    </td>
-                    <td class="text-end">
-                      <div class="btn-group divider_dropdown_group">
-                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          ...
-                        </button>
-                        <ul class="dropdown-menu ">
-                          <li>
-                            <a class="dropdown-item" href="#">
-                              options
-                            </a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider my-0">
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Block
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
-                              data-bs-target="#delete_modal">
-                              Delete
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Restricted
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="table_profile_group">
-                        <img src="images/user_2.png" alt="User_profile" class="user_image">
-                        <span class="user_name">Moeed Shahid</span>
-                      </div>
-                    </td>
-                    <td>+97172378487284</td>
-                    <td>moeed.shahid@yahoo.com</td>
-                    <td><span class="btn btn-danger btn-sm radius-rounded">Blocked</span></td>
-                    <td>4 hours ago</td>
-                    <td><a href="#" class="text-primary">Show More</a></td>
-                    <td class="text-center">
-                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
-                    </td>
-                    <td class="text-end">
-                      <div class="btn-group divider_dropdown_group">
-                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          ...
-                        </button>
-                        <ul class="dropdown-menu ">
-                          <li>
-                            <a class="dropdown-item" href="#">
-                              options
-                            </a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider my-0">
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Block
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
-                              data-bs-target="#delete_modal">
-                              Delete
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Restricted
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="table_profile_group">
-                        <img src="images/user_2.png" alt="User_profile" class="user_image">
-                        <span class="user_name">Moeed Shahid</span>
-                      </div>
-                    </td>
-                    <td>+97172378487284</td>
-                    <td>moeed.shahid@yahoo.com</td>
-                    <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
-                    <td>4 hours ago</td>
-                    <td><a href="#" class="text-primary">Show More</a></td>
-                    <td class="text-center">
-                      <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
-                    </td>
-                    <td class="text-end">
-                      <div class="btn-group divider_dropdown_group">
-                        <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          ...
-                        </button>
-                        <ul class="dropdown-menu ">
-                          <li>
-                            <a class="dropdown-item" href="#">
-                              options
-                            </a>
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider my-0">
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Block
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
-                              data-bs-target="#delete_modal">
-                              Delete
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item text-gray" href="#">
-                              Restricted
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="d-inline-block">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#add_new_customer"
-                role="button">+ Add New User</button>
+            <div class="custom_search_box">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search....." aria-label="search"
+                  aria-describedby="search-btn">
+                <button class="btn d-flex align-items-center search-button" type="button" id="search-btn"><img
+                    src="/images/magnify.svg" alt="magnify"></button>
+              </div>
             </div>
           </div>
-          <!-- <div class="tab-content" id="settings_nav_tab_content">
-            <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
-              aria-labelledby="customer_profile_info_tab_label" tabindex="0">
-              <div class="profile_info_box">
-                <h6>Overview</h6>
-                <form action="">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group mb-0">
-                                <label for="customer_fname" class=" mt-0">First Name</label>
-                                <input type="text" class="text-input form-control" id="Name" value="Moeed Shahid"
-                                  placeholder="">
-                              </div>
-                              <div class=" form-group mb-0">
-                                <label for="customer_email" class=" mt-0">Email</label>
-                                <input type="email" class="text-input" id="customer_email"
-                                  value="moeed.shahid@yahoo.com" placeholder="">
-                              </div>
-                              <div class="form-group">
-                                <label for="customer_gender" class=" m-top-15">Gender</label> </br>
-                                <select class="w-100 select  form-control" aria-label="customer_gender_label"
-                                  id="customer_gender">
-                                  <option selected="selected">Select Gender</option>
-                                  <option value="male">Male</option>
-                                  <option value="female">Female</option>
-                                  <option value="other">Other</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group mb-0">
-                                <label for="customer_lname" class=" mt-0">Second Name</label>
-                                <input type="text" class="text-input" id="customer_lname" value="Awan" placeholder="">
-                              </div>
-                              <div class="form-group mb-0">
-                                <label for="customer_phoneno" class=" mt-0">Phone Number</label>
-                                <input type="tel" class="text-input" id="customer_phoneno" value="+9713336787103"
-                                  placeholder="">
-                              </div>
-                              <div class="form-group mb-0">
-                                <label for="customer_country" class="m-top-15">Select Country</label> </br>
-                                <select class="w-100 select  form-control" aria-label="customer_country_label"
-                                  id="customer_country">
-                                  <option selected="selected">Select Country</option>
-                                  <option value="UAE">United Arab Emirates</option>
-                                  <option value="USA">United states of America</option>
-                                  <option value="india">India</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="col-md-6">
-                              <div class="form-group mb-0">
-                                <label for="customer_country" class="m-top-15">Select Country</label> </br>
-                                <select class="w-100 select  form-control" aria-label="customer_country_label"
-                                  id="customer_country">
-                                  <option selected="selected">Select Country</option>
-                                  <option value="UAE">United Arab Emirates</option>
-                                  <option value="USA">United states of America</option>
-                                  <option value="india">India</option>
-                                </select>
-                              </div>
-                            </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Joined</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="table_profile_group">
+                      <img src="images/user_2.png" alt="User_profile" class="user_image">
+                      <span class="user_name">Moeed Shahid</span>
+                    </div>
+                  </td>
+                  <td>+97172378487284</td>
+                  <td>moeed.shahid@yahoo.com</td>
+                  <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                  <td>4 hours ago</td>
+                  <td><a href="#" class="text-primary" id="customer_show_more_btn">Show More</a></td>
+                  <td class="text-center">
+                    <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                  </td>
+                  <td class="text-end">
+                    <div class="btn-group divider_dropdown_group">
+                      <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        ...
+                      </button>
+                      <ul class="dropdown-menu ">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            options
+                          </a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider my-0">
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Block
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                            data-bs-target="#delete_modal">
+                            Delete
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Restricted
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table_profile_group">
+                      <img src="images/user_2.png" alt="User_profile" class="user_image">
+                      <span class="user_name">Moeed Shahid</span>
+                    </div>
+                  </td>
+                  <td>+97172378487284</td>
+                  <td>moeed.shahid@yahoo.com</td>
+                  <td><span class="btn btn-danger btn-sm radius-rounded">Blocked</span></td>
+                  <td>4 hours ago</td>
+                  <td><a href="#" class="text-primary" id="customer_show_more_btn">Show More</a></td>
+                  <td class="text-center">
+                    <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                  </td>
+                  <td class="text-end">
+                    <div class="btn-group divider_dropdown_group">
+                      <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        ...
+                      </button>
+                      <ul class="dropdown-menu ">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            options
+                          </a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider my-0">
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Block
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                            data-bs-target="#delete_modal">
+                            Delete
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Restricted
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table_profile_group">
+                      <img src="images/user_2.png" alt="User_profile" class="user_image">
+                      <span class="user_name">Moeed Shahid</span>
+                    </div>
+                  </td>
+                  <td>+97172378487284</td>
+                  <td>moeed.shahid@yahoo.com</td>
+                  <td><span class="btn btn-info btn-sm radius-rounded">Active</span></td>
+                  <td>4 hours ago</td>
+                  <td><a href="#" class="text-primary" id="customer_show_more_btn">Show More</a></td>
+                  <td class="text-center">
+                    <img src="images/chat-dots.png" alt="chat-icon" class="cursor-pointer">
+                  </td>
+                  <td class="text-end">
+                    <div class="btn-group divider_dropdown_group">
+                      <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        ...
+                      </button>
+                      <ul class="dropdown-menu ">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            options
+                          </a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider my-0">
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Block
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                            data-bs-target="#delete_modal">
+                            Delete
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Restricted
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="d-inline-block">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#add_new_customer"
+              role="button">+ Add New User</button>
+          </div>
+        </div>
+        <div class="tab-content" id="customer_subtab_content">
+          <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
+            aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
+            <div class="profile_info_box">
+              <h6>Overview</h6>
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="form-group col-lg-6">
+                            <label for="customer_fname">First Name</label>
+                            <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid"
+                              placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_lname">Second Name</label>
+                            <input type="text" class="textinput form-control" id="customer_lname" value="Awan"
+                              placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_email">Email</label>
+                            <input type="email" class="textinput form-control" id="customer_email"
+                              value="moeed.shahid@yahoo.com" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_phoneno" class=" mt-0">Phone Number</label>
+                            <input type="tel" class="textinput form-control" id="customer_phoneno"
+                              value="+9713336787103" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_gender" class=" m-top-15">Gender</label> </br>
+                            <select class="w-100 select form-control" aria-label="customer_gender_label"
+                              id="customer_gender">
+                              <option selected="selected">Select Gender</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_country" class="m-top-15">Select Country</label> </br>
+                            <select class="w-100 select  form-control" aria-label="customer_country_label"
+                              id="customer_country">
+                              <option selected="selected">Select Country</option>
+                              <option value="UAE">United Arab Emirates</option>
+                              <option value="USA">United states of America</option>
+                              <option value="india">India</option>
+                            </select>
+                          </div>
+                          <div class="divider mt-4 mb-3"></div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_status" class="m-top-15">Status</label> </br>
+                            <select class="w-100 select form-control" aria-label="customer_status_label"
+                              id="customer_status" onchange="this.className=this.options[this.selectedIndex].className"
+                              class="lightGreenText">
+                              <option selected="selected" class="w-100 form-control">Select Status</option>
+                              <option value="Active" class="lightGreenText w-100 form-control">Active</option>
+                              <option value="Inactive" class="lightRedText w-100 form-control">Inactive</option>
+                            </select>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="image_upload">
+                          <div class="upload_image_text">
+                            <img src="" alt="">
+                            <label>Add Profile Pictures</label>
+                          </div>
+                          <span class="dragBox">
+                            <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                              id="uploadFile" />
+                          </span>
+                          <div class="image_preview" id="preview"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </form>
+                  <div class="col-md-6">
+                    <div class="d-inline-block">
+                      <input type="submit" value="Update Details" class="mt-4 btn btn-primary btn-submit">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="customer_reservation_tab_pane" role="tabpanel"
+            aria-labelledby="customer_reservation_tab_pane_label" tabindex="0">
+            <div class="customer_module">
+              <h6>Reservation Details</h6>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Price</th>
+                      <th>Reservation Status</th>
+                      <th>Payment Status</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        27-Sep-2022
+                      </td>
+                      <td>10:00 am - 11:00 am</td>
+                      <td>25 AED</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
+                      <td>Paid</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        24-Sep-2022
+                      </td>
+                      <td>04:00 pm - 05:00 pm</td>
+                      <td>35 AED</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
+                      <td>Paid</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        22-Sep-2022
+                      </td>
+                      <td>04:00 pm - 06:00 pm</td>
+                      <td>65 AED</td>
+                      <td><span class="btn btn-gray btn-sm radius-rounded">Unplayed</span></td>
+                      <td>Refund</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td class="text-end">
+                        <div class="btn-group divider_dropdown_group">
+                          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-bs-toggle="modal"
+                                data-bs-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="tab-pane fade" id="scustomer_reservation_tab_pane" role="tabpanel"
-              aria-labelledby="customer_reservation_tab_pane" tabindex="0">
-              reservation
-            </div>
-
-          </div> -->
-        </form>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="tournaments" role="tabpanel" aria-labelledby="tournaments-tab">tournaments</div>
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>

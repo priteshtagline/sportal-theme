@@ -93,6 +93,10 @@ textarea {
   }
 }
 
+input[type=checkbox] {
+  padding: 8px;
+}
+
 .text-primary {
   color: $theme-primary-color  !important;
 }
@@ -112,6 +116,17 @@ textarea {
 .text-muted {
   color: $gray-color  !important;
 }
+
+.btn-gray {
+  background-color: #A4A9BC;
+  color: $white;
+
+  &:hover {
+    background-color: #A4A9BC;
+    color: $white;
+  }
+}
+
 
 .btn {
   font-size: 16px;
@@ -522,6 +537,10 @@ textarea {
   z-index: 2;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
+  @media (max-width:1024px) {
+    padding: 30px 15px;
+  }
+
   .logo-wrapper {
     display: flex;
     align-items: center;
@@ -744,6 +763,10 @@ textarea {
     width: 93px;
     transition: all 0.5s ease-in-out;
 
+    @media (max-width:1024px) {
+      width: 78px;
+    }
+
     .logo-wrapper {
       .brand-row {
         padding-right: 0;
@@ -826,7 +849,6 @@ textarea {
     }
   }
 
-
 }
 
 // header
@@ -845,7 +867,6 @@ header {
     z-index: 3;
     margin-left: 271px;
   }
-
 
   .navbar {
     padding: 19px 30px;
@@ -918,6 +939,11 @@ header {
         flex: 0 0 7px;
         transform: rotateZ(180deg);
       }
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+
     }
 
     .search_group {
@@ -1158,10 +1184,17 @@ header {
   &.active {
     margin-left: 93px;
 
+    @media (max-width: 1024px) {
+      margin-left: 78px;
+    }
 
     &.fixed-header {
       width: calc(100% - 93px);
       margin-left: 93px;
+
+      @media (max-width: 1024px) {
+        margin-left: 78px;
+      }
     }
 
     .side-nav-btn {
@@ -1170,6 +1203,8 @@ header {
       img {
         transform: rotateZ(0deg);
       }
+
+
     }
   }
 }
@@ -1362,6 +1397,15 @@ header {
   &.active {
     margin-left: 93px;
     max-width: calc(100% - 93px);
+
+    @media (max-width: 1024px) {
+      margin-left: 78px;
+      max-width: calc(100% - 78px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 25px;
   }
 }
 
@@ -2646,6 +2690,10 @@ header {
         &:last-child {
           width: 70px;
         }
+
+        @media (max-width:768px) {
+          .customer_module {}
+        }
       }
     }
   }
@@ -2838,6 +2886,10 @@ header {
 // Customer Profile_info
 
 .profile_info_box {
+  .card {
+    border: none;
+  }
+
   .form-group {
     margin-bottom: 10px;
   }
@@ -2876,7 +2928,7 @@ header {
     margin-bottom: 8px;
   }
 
-  input,
+
   .textinput {
     padding: 14px 10px;
     font-size: 12px;
@@ -2902,6 +2954,7 @@ header {
     font-size: 12px;
     height: 43px;
     border: none;
+    box-shadow: inset 0px 0px 2px #00000029;
   }
 
   .divider {
@@ -2918,4 +2971,24 @@ header {
     }
   }
 
+  .btn-submit {
+    padding: 15px 41px;
+    border-radius: 8px;
+
+    @media (max-width: 1024px) {
+      padding: 10px 30px;
+      font-size: 15px;
+    }
+  }
+}
+
+
+.lightGreenText {
+  background-color: #42D599 !important;
+  color: $white;
+}
+
+.lightRedText {
+  background-color: red !important;
+  color: $white;
 }
