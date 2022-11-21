@@ -120,6 +120,7 @@ $(document).ready(function () {
     tags: true
   });
 
+
   // Navbar
   jQuery(window).scroll(function () {
     if (jQuery(window).scrollTop() >= 20) {
@@ -223,6 +224,4 @@ $(window).on('load', function () {
   // });
   $('.fc-col-header').children('thead').remove();
 })
-
-
 
