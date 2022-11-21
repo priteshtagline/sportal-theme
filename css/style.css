@@ -233,6 +233,22 @@ input[type=checkbox] {
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .btn-info {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-danger {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
 .custom_checkbox {
   position: relative;
   display: inline-block;
@@ -499,6 +515,10 @@ input[type=checkbox] {
 }
 
 .table-responsive .table thead tr th:first-child {
+  display: none;
+}
+
+.table-responsive .table thead tr th:nth-child(2) {
   border-top-left-radius: 8px;
 }
 
@@ -544,6 +564,10 @@ input[type=checkbox] {
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
+}
+
+.table-responsive .table tbody tr td:first-child {
+  display: none;
 }
 
 .sidebar {
@@ -2062,6 +2086,9 @@ header.active .side-nav-btn img {
 .amenties_feature_model .modal-dialog .modal-footer {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .amenties_feature_model .modal-dialog .modal-footer button {
@@ -2070,7 +2097,7 @@ header.active .side-nav-btn img {
 }
 
 .amenties_feature_model .modal-dialog .modal-footer .btn-close {
-  height: 36px;
+  height: 44px;
   background-image: none;
   color: #a4a9bc;
 }
@@ -2330,8 +2357,8 @@ header.active .side-nav-btn img {
   }
 }
 
-.court_table th:nth-child(5),
-.court_table td:nth-child(5) {
+.court_table th:nth-child(6),
+.court_table td:nth-child(6) {
   width: 40%;
 }
 
@@ -2953,11 +2980,11 @@ header.active .side-nav-btn img {
   }
 }
 
-.customer_module .table-responsive .table tbody tr td:nth-child(6) a {
+.customer_module .table-responsive .table tbody tr td:nth-child(7) a {
   white-space: nowrap;
 }
 
-.customer_module .table-responsive .table tbody tr td:nth-child(7), .customer_module .table-responsive .table tbody tr td:last-child {
+.customer_module .table-responsive .table tbody tr td:nth-child(8), .customer_module .table-responsive .table tbody tr td:last-child {
   width: 70px;
 }
 
@@ -3174,16 +3201,19 @@ header.active .side-nav-btn img {
   margin-left: 15px;
 }
 
-.filter-icon span {
+.filter-icon a {
   font-size: 20px;
+  width: 18px;
+  height: 4px;
+  text-decoration: none;
 }
 
-.filter-icon span:first-child {
-  margin-bottom: -7px;
+.filter-icon a:first-child {
+  margin-bottom: 3px;
 }
 
-.filter-icon span:last-child {
-  margin-top: -7px;
+.filter-icon a:last-child {
+  margin-top: 1px;
 }
 
 .profile_info_box .card {
@@ -3310,13 +3340,19 @@ header.active .side-nav-btn img {
 }
 
 .select2-selection__rendered[title="Active"] + .select2-selection__arrow b,
-.select2-selection__rendered[title="Inactive"] + .select2-selection__arrow b {
+.select2-selection__rendered[title="Blocked"] + .select2-selection__arrow b {
   border-color: #ffffff transparent transparent transparent !important;
 }
 
-.select2-selection__rendered[title="Inactive"] {
+.select2-selection__rendered[title="Blocked"] {
   background-color: red !important;
   color: #ffffff !important;
+}
+
+.select2-selection__rendered[title="Restricted"] {
+  background-color: yellow !important;
+  color: #000000 !important;
+  border: 1px solid #0000003b;
 }
 
 .schedule_modal .modal {

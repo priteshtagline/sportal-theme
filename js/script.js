@@ -120,16 +120,6 @@ $(document).ready(function () {
     tags: true
   });
 
-
-  // Navbar
-  jQuery(window).scroll(function () {
-    if (jQuery(window).scrollTop() >= 20) {
-      jQuery("header").addClass("fixed-header");
-    } else {
-      jQuery("header").removeClass("fixed-header");
-    }
-  });
-
   // Image Upload Javascript
   ("use strict");
   function dragNdrop(event) {
@@ -146,6 +136,15 @@ $(document).ready(function () {
   function drop() {
     document.getElementById("uploadFile").parentNode.className = "dragBox";
   }
+
+  // Navbar
+  jQuery(window).scroll(function () {
+    if (jQuery(window).scrollTop() >= 20) {
+      jQuery("header").addClass("fixed-header");
+    } else {
+      jQuery("header").removeClass("fixed-header");
+    }
+  });
 
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
@@ -224,4 +223,3 @@ $(window).on('load', function () {
   // });
   $('.fc-col-header').children('thead').remove();
 })
-

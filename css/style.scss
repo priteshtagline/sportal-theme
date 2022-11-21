@@ -226,6 +226,20 @@ input[type=checkbox] {
     border-color: $hover-color;
     color: $white;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
+.btn-danger {
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
 }
 
 .custom_checkbox {
@@ -470,6 +484,10 @@ input[type=checkbox] {
           color: $black;
 
           &:first-child {
+            display: none;
+          }
+
+          &:nth-child(2) {
             border-top-left-radius: 8px;
           }
 
@@ -522,6 +540,10 @@ input[type=checkbox] {
             -webkit-line-clamp: 1;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
+          }
+
+          &:first-child {
+            display: none;
           }
         }
       }
@@ -1868,6 +1890,7 @@ header {
 
     .modal-footer {
       flex-wrap: nowrap;
+      justify-content: space-between;
 
       button {
         max-width: 200px;
@@ -1876,7 +1899,7 @@ header {
       }
 
       .btn-close {
-        height: 36px;
+        height: 44px;
         background-image: none;
         color: #a4a9bc;
 
@@ -2134,7 +2157,7 @@ header {
 
   th,
   td {
-    &:nth-child(5) {
+    &:nth-child(6) {
       width: 40%;
     }
   }
@@ -2770,13 +2793,13 @@ header {
       tbody {
         tr {
           td {
-            &:nth-child(6) {
+            &:nth-child(7) {
               a {
                 white-space: nowrap;
               }
             }
 
-            &:nth-child(7),
+            &:nth-child(8),
             &:last-child {
               width: 70px;
             }
@@ -2981,15 +3004,18 @@ header {
   flex-direction: column;
   margin-left: 15px;
 
-  span {
+  a {
     font-size: 20px;
+    width: 18px;
+    height: 4px;
+    text-decoration: none;
 
     &:first-child {
-      margin-bottom: -7px;
+      margin-bottom: 3px;
     }
 
     &:last-child {
-      margin-top: -7px;
+      margin-top: 1px;
     }
   }
 
@@ -3112,13 +3138,19 @@ header {
 }
 
 .select2-selection__rendered[title="Active"]+.select2-selection__arrow b,
-.select2-selection__rendered[title="Inactive"]+.select2-selection__arrow b {
+.select2-selection__rendered[title="Blocked"]+.select2-selection__arrow b {
   border-color: #ffffff transparent transparent transparent !important;
 }
 
-.select2-selection__rendered[title="Inactive"] {
+.select2-selection__rendered[title="Blocked"] {
   background-color: red !important;
   color: $white  !important;
+}
+
+.select2-selection__rendered[title="Restricted"] {
+  background-color: yellow !important;
+  color: $black  !important;
+  border: 1px solid #0000003b;
 }
 
 // Schedule_modal
