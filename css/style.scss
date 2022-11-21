@@ -3121,138 +3121,6 @@ header {
   color: $white  !important;
 }
 
-// Calender
-.fc-header-toolbar {
-  .fc-toolbar-chunk {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    &:first-child {
-      .fc-toolbar-title {
-        min-width: 200px;
-      }
-
-      button {
-        min-width: 30px;
-        border-radius: 50%;
-        padding: 4px 0px;
-        color: #A4A9BC;
-        background-color: #F8FAFB;
-        border: none;
-        font-size: 18px;
-        font-weight: bold;
-        box-shadow: inset 0px 0px 2px #00000029;
-        font-size: 13px;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-          background-color: $theme-primary-color;
-          color: $white;
-        }
-
-        &.fc-prev-button {
-          border-top-right-radius: 50% !important;
-          border-bottom-right-radius: 50% !important;
-        }
-
-        &.fc-next-button {
-          margin-left: 5px !important;
-          border-top-left-radius: 50% !important;
-          border-bottom-left-radius: 50% !important;
-        }
-
-        &.fc-filterButton-button {
-          margin-left: 5px;
-
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      margin-left: 150px;
-      margin-right: auto;
-      border-radius: 24px;
-      box-shadow: inset 0px 0px 2px #00000029;
-
-      .fc-button-group {
-        border-radius: 24px;
-        background-color: #F8FAFB;
-
-        button {
-          color: #A4A9BC;
-          border: none;
-          background-color: #F8FAFB;
-          font-size: 10px;
-          line-height: 12px;
-          padding: 11px 15px;
-
-          &.fc-timeGridDay-button {
-            border-top-left-radius: 24px;
-            border-bottom-left-radius: 24px;
-          }
-
-          &.fc-dayGridMonth-button {
-            border-top-right-radius: 24px;
-            border-bottom-right-radius: 24px;
-          }
-
-          &.fc-button-active {
-            background-color: $theme-primary-color;
-            color: $white;
-            border-radius: 24px;
-          }
-        }
-      }
-    }
-
-    &:last-child {
-      .fc-menuButton-button {
-        min-width: 30px;
-        padding: 5px;
-        border-radius: 24px;
-        line-height: 10px;
-        color: #A4A9BC;
-        background-color: #F8FAFB;
-        box-shadow: inset 0px 0px 2px #00000029;
-        border: none;
-        display: inline-flex;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-          background-color: $theme-primary-color;
-          color: $white;
-        }
-
-        span {
-          font-size: 23px;
-        }
-      }
-
-      .fc-addButton-button {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 14px 8px 9px;
-        min-width: auto;
-        margin-left: 11px;
-        border-radius: 8px;
-        background-color: $theme-primary-color;
-        color: $white;
-        border: none;
-
-        span {
-          font-size: 12px;
-          line-height: 18px;
-
-          &.add_icon {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-}
-
 // Schedule_modal
 .schedule_modal {
   .modal {
@@ -3398,6 +3266,165 @@ header {
     .model-open-margin {
       @media screen and (min-width: 576px) {
         margin-bottom: 38px !important;
+      }
+    }
+  }
+}
+
+// Calender
+#calendar {
+  .fc-header-toolbar {
+    .fc-toolbar-chunk {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &:first-child {
+        .fc-toolbar-title {
+          min-width: 200px;
+        }
+
+        button {
+          min-width: 30px;
+          border-radius: 50%;
+          padding: 4px 0px;
+          color: #A4A9BC;
+          background-color: #F8FAFB;
+          border: none;
+          font-size: 18px;
+          font-weight: bold;
+          box-shadow: inset 0px 0px 2px #00000029;
+          font-size: 13px;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: $theme-primary-color;
+            color: $white;
+          }
+
+          &.fc-prev-button {
+            border-top-right-radius: 50% !important;
+            border-bottom-right-radius: 50% !important;
+          }
+
+          &.fc-next-button {
+            margin-left: 5px !important;
+            border-top-left-radius: 50% !important;
+            border-bottom-left-radius: 50% !important;
+          }
+
+          &.fc-filterButton-button {
+            margin-left: 5px;
+
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 150px;
+        margin-right: auto;
+        border-radius: 24px;
+        box-shadow: inset 0px 0px 2px #00000029;
+
+        .fc-button-group {
+          border-radius: 24px;
+          background-color: #F8FAFB;
+
+          button {
+            color: #A4A9BC;
+            border: none;
+            background-color: #F8FAFB;
+            font-size: 10px;
+            line-height: 12px;
+            padding: 11px 15px;
+
+            &.fc-timeGridDay-button {
+              border-top-left-radius: 24px;
+              border-bottom-left-radius: 24px;
+            }
+
+            &.fc-dayGridMonth-button {
+              border-top-right-radius: 24px;
+              border-bottom-right-radius: 24px;
+            }
+
+            &.fc-button-active {
+              background-color: $theme-primary-color;
+              color: $white;
+              border-radius: 24px;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .fc-menuButton-button {
+          min-width: 30px;
+          padding: 5px;
+          border-radius: 24px;
+          line-height: 10px;
+          color: #A4A9BC;
+          background-color: #F8FAFB;
+          box-shadow: inset 0px 0px 2px #00000029;
+          border: none;
+          display: inline-flex;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: $theme-primary-color;
+            color: $white;
+          }
+
+          span {
+            font-size: 23px;
+          }
+        }
+
+        .fc-addButton-button {
+          display: inline-flex;
+          align-items: center;
+          padding: 8px 14px 8px 9px;
+          min-width: auto;
+          margin-left: 11px;
+          border-radius: 8px;
+          background-color: $theme-primary-color;
+          color: $white;
+          border: none;
+
+          span {
+            font-size: 12px;
+            line-height: 18px;
+
+            &.add_icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fc-view-harness {
+    .fc-view {
+      thead {
+        .fc-scrollgrid-section-header {
+          th {
+            .fc-col-header-cell-cushion {
+              padding: 26px 0 22px 0;
+              font-size: 12px;
+              color: #A4A9BC;
+            }
+          }
+        }
+      }
+
+      tbody {
+        .fc-scrollgrid-section-body {
+          .fc-scrollgrid-shrink-cushion {
+            color: #A4A9BC;
+            font-size: 12px;
+          }
+        }
       }
     }
   }
