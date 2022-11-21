@@ -146,7 +146,13 @@ $(document).ready(function () {
     document.getElementById("uploadFile").parentNode.className = "dragBox";
   }
 
+  // schedule
+  $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
+  $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
+
 });
+
+
 // Schedule
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
@@ -197,10 +203,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     initialView: 'timeGridWeek',
     editable: true,
-    // selectable: true,
-    // weekends: true,
-    // height: 1000,
-    // aspectRatio: 1,
     weekNumbers: false,
     expandRows: 4,
     initialView: 'dayGridMonth',
@@ -221,11 +223,6 @@ $(window).on('load', function () {
   // });
   $('.fc-col-header').children('thead').remove();
 })
-
-$(document).ready(function () {
-
-  $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
-});
 
 
 
