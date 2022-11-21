@@ -639,7 +639,7 @@
                           <div class="form-group col-lg-6">
                             <label for="customer_gender" class=" m-top-15">Gender</label> </br>
                             <select class="w-100 select form-control" aria-label="customer_gender_label"
-                              id="customer_gender1">
+                              id="customer_gender">
                               <option selected="selected">Select Gender</option>
                               <option value="male">Male</option>
                               <option value="female">Female</option>
@@ -648,7 +648,7 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_country" class="m-top-15">Select Country</label> </br>
-                            <select class="w-100 select form-control" aria-label="customer_country_label"
+                            <select class="w-100 select  form-control" aria-label="customer_country_label"
                               id="customer_country">
                               <option selected="selected">Select Country</option>
                               <option value="UAE">United Arab Emirates</option>
@@ -660,10 +660,11 @@
                           <div class="form-group col-lg-6">
                             <label for="customer_status" class="m-top-15">Status</label> </br>
                             <select class="w-100 select form-control" aria-label="customer_status_label"
-                              id="customer_status" class="lightGreenText">
+                              id="customer_status" onchange="this.className=this.options[this.selectedIndex].className"
+                              class="lightGreenText">
                               <option selected="selected" class="w-100 form-control">Select Status</option>
-                              <option value="Active">Active</option>
-                              <option value="Inactive">Inactive</option>
+                              <option value="Active" class="lightGreenText w-100 form-control">Active</option>
+                              <option value="Inactive" class="lightRedText w-100 form-control">Inactive</option>
                             </select>
                           </div>
                         </div>
@@ -1349,7 +1350,7 @@
                           <span>Monthly</span>
                           <span class="switch">
                             <input type="checkbox" id="switch" />
-                            <label for="switch" class="mb-0"></label>
+                            <label for="switch"></label>
                           </span>
                           <span>Annually</span>
                         </div>
@@ -1614,7 +1615,7 @@
                 </div>
                 <div class="form-group mb-0">
                   <label for="select_box_1" class="m-top-15">Court Type</label> </br>
-                  <select class="w-100 select form-control" aria-label="Default select example" id="select_box_1">
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_1">
                     <option selected="selected">Synthetic</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1623,7 +1624,7 @@
                 </div>
                 <div class="form-group mb-0">
                   <label for="select_box_2" class="m-top-15">Sport</label>
-                  <select class="w-100 select form-control" aria-label="Default select example" id="select_box_2">
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_2">
                     <option selected>Indoor Tennis</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1632,7 +1633,7 @@
                 </div>
                 <div class="form-group mb-0">
                   <label for="select_box_3" class="m-top-15">Court Count</label>
-                  <select class="w-100 select form-control" aria-label="Default select example" id="select_box_3">
+                  <select class="w-100 select  form-control" aria-label="Default select example" id="select_box_3">
                     <option selected>3</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -1675,7 +1676,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <input type="submit" value="Update" class="btn btn-primary mr-2" data-dismiss="modal">
+                <button type="button" class="btn btn-primary me-2">Update</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
               </div>
             </form>
@@ -1698,7 +1699,7 @@
                 </div>
                 <div class="form-group mb-0">
                   <label for="Name" class="mt-3">Court Type</label>
-                  <select class="input w-100 select form-control" aria-label="Default select example">
+                  <select class="input w-100 select test form-control" aria-label="Default select example">
                     <option selected>Synthetic</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -1774,7 +1775,7 @@
                 </div>
               </div>
               <div class="modal-footer padding-footer">
-                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add Court">
+                <button type="button" class="btn btn-primary me-2">Add Court</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
               </div>
             </form>
@@ -1982,7 +1983,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <input type="submit" value="Add New Admin" data-dismiss="modal" class="btn btn-primary mr-2">
+              <button class="btn btn-primary me-2" data-dismiss="modal">Add New Admin</button>
               <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
             </div>
           </form>
@@ -2050,8 +2051,8 @@
                   </select>
                 </div>
                 <div class="form-group mb-0">
-                  <label for="customer_country1" class="m-top-15">Select Country</label> </br>
-                  <select class="w-100 select form-control" aria-label="customer_country1_label" id="customer_country1">
+                  <label for="customer_country" class="m-top-15">Select Country</label> </br>
+                  <select class="w-100 select  form-control" aria-label="customer_country_label" id="customer_country">
                     <option selected="selected">Select Country</option>
                     <option value="UAE">United Arab Emirates</option>
                     <option value="USA">United states of America</option>
@@ -2075,7 +2076,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
+                <button class="btn btn-primary me-2" data-dismiss="modal">Add User</button>
                 <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
               </div>
             </form>
@@ -2108,15 +2109,14 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="schedule_start1_time" class="m-top-15">Start Time</label> </br>
-                      <select class="w-100 select form-control" aria-label="schedule_reservation_label"
-                        id="schedule_start1_time">
+                      <label for="schedule_start_time" class="m-top-15">Start Time</label> </br>
+                      <select class="w-100 select form-control" aria-label="schedule_start_time_label"
+                        id="schedule_start_time">
                         <option>Select Start Time</option>
-                        <option value="1">12:00 pm</option>
-                        <option value="2" selected="selected">01:00 pm</option>
-                        <option value="3">02:00 pm</option>
+                        <option value="12:00 pm" selected="selected">12:00 pm</option>
+                        <option value="01:00 pm">01:00 pm</option>
+                        <option value="02:00 pm">02:00 pm</option>
                       </select>
-
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -2125,9 +2125,9 @@
                       <select class="w-100 select form-control" aria-label="schedule_end_time_label"
                         id="schedule_end_time">
                         <option>Select End Time</option>
-                        <option value="1">12:00 pm</option>
-                        <option value="2" selected="selected">01:00 pm</option>
-                        <option value="3">02:00 pm</option>
+                        <option value="12:00 pm">12:00 pm</option>
+                        <option value="01:00 pm" selected="selected">01:00 pm</option>
+                        <option value="02:00 pm">02:00 pm</option>
                       </select>
                     </div>
                   </div>
@@ -2195,7 +2195,7 @@
                 </div>
               </div>
               <div class="modal-footer pt-0">
-                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add Reservation">
+                <button class="btn btn-primary me-2" data-dismiss="modal">Add Reservation</button>
                 <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
               </div>
             </form>
@@ -2218,6 +2218,31 @@
   <script src="js/map.js"></script>
   <script src="js/script.js"></script>
 
+  <!-- Schedule Calender -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        timeZone: 'UTC',
+        buttonText: {
+          today: 'today',
+          month: 'Monthly',
+          week: 'Weekly',
+          day: 'Daily',
+          list: 'list',
+        },
+        headerToolbar: {
+          left: 'title prev,next',
+          center: 'timeGridDay,timeGridWeek,dayGridMonth',
+          right: '',
+        },
+      });
+      calendar.render();
+    });
+
+
+  </script>
 </body>
 
 </html>
