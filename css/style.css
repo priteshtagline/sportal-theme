@@ -640,15 +640,15 @@ input[type=checkbox] {
   width: 100%;
 }
 
-.sidebar .profile-dropdown .profile.show {
+.sidebar .profile-dropdown.show .profile {
   background-color: #ffffff;
 }
 
-.sidebar .profile-dropdown .profile.show .user_name {
+.sidebar .profile-dropdown.show .profile .user_name {
   color: #764af3 !important;
 }
 
-.sidebar .profile-dropdown .profile.show::after {
+.sidebar .profile-dropdown.show .profile::after {
   color: #764af3 !important;
 }
 
@@ -3648,6 +3648,30 @@ header.active .side-nav-btn img {
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button span.add_icon {
   margin-right: 10px;
+}
+
+#calendar .fc-view-harness .fc-view.fc-daygrid thead .fc-scrollgrid-section-header th {
+  border-left: none;
+}
+
+#calendar .fc-view-harness .fc-view.fc-daygrid thead .fc-scrollgrid-section-header th:not(:last-child) {
+  border-right: none;
+}
+
+#calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th {
+  border-left: none;
+}
+
+#calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
+  border-right: none;
+}
+
+#calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {
+  border-left: none;
+}
+
+#calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th:not(:first-child) {
+  border-right: none;
 }
 
 #calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion {
