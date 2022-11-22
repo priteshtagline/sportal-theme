@@ -2722,11 +2722,20 @@ header {
 
 // Table profile group
 .table_profile_group {
+  display: flex;
+  align-items: center;
+
   .user_image {
     width: 37px;
     height: 37px;
     border-radius: 50%;
     margin-right: 16px;
+  }
+
+  .user_name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
@@ -3457,13 +3466,80 @@ header {
   .fc-view-harness {
     .fc-view {
       &.fc-daygrid {
-        thead {
-          .fc-scrollgrid-section-header {
-            th {
-              border-left: none;
+        table {
+          thead {
+            .fc-scrollgrid-section-header {
+              .fc-scroller {
+                overflow: hidden !important;
 
-              &:not(:last-child) {
-                border-right: none;
+                th {
+                  border-left: none;
+
+                  &:not(:last-child) {
+                    border-right: none;
+                  }
+                }
+              }
+
+            }
+          }
+
+          tbody {
+            .fc-daygrid-day-frame {
+              height: 120px;
+
+              .fc-daygrid-day-top {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                .fc-daygrid-day-number {
+                  font-size: 10px;
+                }
+              }
+
+              .fc-daygrid-event {
+                background-color: $white;
+                border: none;
+
+                .monthly_event {
+                  ul {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+
+                    li {
+                      margin-right: 15px;
+                      margin-left: 11px;
+                      position: relative;
+                      margin-bottom: 9px;
+                      color: #000000;
+                      font-size: 11px;
+
+                      &::before {
+                        position: absolute;
+                        content: "";
+                        width: 4px;
+                        height: 19px;
+                        border-radius: 8px;
+                        top: 0;
+                        left: -9px;
+                        background-color: #DDECFF;
+                      }
+
+                      &.light_blue_event::before {
+                        background-color: #DDECFF;
+                      }
+
+                      &.light_pink_event::before {
+                        background-color: #F1DDFF;
+                      }
+
+                      &.light_green_event::before {
+                        background-color: #DDFFF5;
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -3515,11 +3591,4 @@ header {
       }
     }
   }
-}
-
-
-// 
-.closeon {
-  float: right;
-  padding: 0px 2px 4px 4px;
 }
