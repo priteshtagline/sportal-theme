@@ -148,7 +148,7 @@ $(document).ready(function () {
 
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
-  $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
+  // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
 
 });
 
@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elms.innerHTML = '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
   }, 0);
 
+
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
     themeSystem: 'bootstrap4',
@@ -190,11 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     buttonText: {
-      today: 'today',
       month: 'Monthly',
       week: 'Weekly',
       day: 'Daily',
-      list: 'list'
     },
     headerToolbar: {
       left: 'title prev,next filterButton',
@@ -208,33 +207,46 @@ document.addEventListener('DOMContentLoaded', function () {
     initialView: 'dayGridMonth',
     firstDay: Monday = 1,
     showNonCurrentDates: false,
-    columnHeader: true,
+    height: 800,
+    contentHeight: 600,
     views: {
       dayGridMonth: {
         titleFormat: { month: 'long' }
       },
     },
-    dayMaxEvents: true, // allow "more" link when too many events
+    initialDate: "2022-09-01",
     events: [
       {
-        title: 'Futsal',
-        start: '2022-11-01',
-        resourceEditable: false
+        title: 'Day 1',
+        start: '2012-09-01',
+        // startTime: '16:00:00',
+        // endTime: '19:00:00'
       },
       {
-        title: 'Tennis',
-        start: '2022-11-07',
-        resourceEditable: false
+        title: 'Day 2',
+        start: '2022-09-05',
+      },
+      {
+        title: 'Day 3',
+        start: '2022-09-06',
+      },
+      {
+        title: 'Day 4',
+        start: '2022-09-08',
+      },
+      {
+        title: 'Day 5',
+        start: '2022-09-09',
+      },
+      {
+        title: 'Day 6',
+        start: '2022-09-10',
+        duration: '02:00',
       }
-    ]
+    ],
+
+    eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
     // events: 'https://fullcalendar.io/api/demo-feeds/events.json'
   });
   calendar.render();
 });
-
-$(window).on('load', function () {
-  // $('.fc-col-header').children('thead').children('tr').find('.fc-timegrid-axis').append("HELLO");
-  // $('button.fc-timeGridWeek-button').on('click', function () {
-  // });
-  $('.fc-col-header').children('thead').remove();
-})
