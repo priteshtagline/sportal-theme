@@ -3,6 +3,7 @@ $theme-secodary-color: #ececec;
 $theme-purple-color: #ccbcfb;
 $hover-color: #a98ff1;
 $theme-info: #4e9afe;
+$theme-warning: #e0a800;
 $black: #000000;
 $white: #ffffff;
 $input-bg-color: #f8fafb;
@@ -224,6 +225,22 @@ input[type=checkbox] {
   &:disabled {
     background-color: $hover-color;
     border-color: $hover-color;
+    color: $white;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
+.btn-warning {
+  background-color: $theme-warning;
+  border-color: $theme-warning;
+  color: $white;
+
+  &:hover {
     color: $white;
   }
 
@@ -3007,20 +3024,18 @@ header {
   margin-left: 15px;
 
   a {
-    font-size: 20px;
-    width: 18px;
-    height: 4px;
-    text-decoration: none;
+    height: 7px;
 
-    &:first-child {
-      margin-bottom: 3px;
-    }
+    img {
+      width: 7px;
+      height: 7px;
+      margin-top: -5px;
 
-    &:last-child {
-      margin-top: 1px;
+      &.filter_up {
+        transform: rotate(180deg);
+      }
     }
   }
-
 }
 
 // Customer Profile_info
@@ -3140,7 +3155,8 @@ header {
 }
 
 .select2-selection__rendered[title="Active"]+.select2-selection__arrow b,
-.select2-selection__rendered[title="Blocked"]+.select2-selection__arrow b {
+.select2-selection__rendered[title="Blocked"]+.select2-selection__arrow b,
+.select2-selection__rendered[title="Restricted"]+.select2-selection__arrow b {
   border-color: #ffffff transparent transparent transparent !important;
 }
 
@@ -3150,9 +3166,9 @@ header {
 }
 
 .select2-selection__rendered[title="Restricted"] {
-  background-color: yellow !important;
-  color: $black  !important;
-  border: 1px solid #0000003b;
+  background-color: $theme-warning  !important;
+  color: $white  !important;
+  border: 1px solid $theme-warning;
 }
 
 // Schedule_modal
@@ -3499,4 +3515,11 @@ header {
       }
     }
   }
+}
+
+
+// 
+.closeon {
+  float: right;
+  padding: 0px 2px 4px 4px;
 }
