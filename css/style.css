@@ -241,6 +241,24 @@ input[type=checkbox] {
   }
 }
 
+.btn-warning {
+  background-color: #e0a800;
+  border-color: #e0a800;
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .btn-warning {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
 @media (max-width: 1024px) {
   .btn-danger {
     font-size: 12px;
@@ -3202,18 +3220,18 @@ header.active .side-nav-btn img {
 }
 
 .filter-icon a {
-  font-size: 20px;
-  width: 18px;
-  height: 4px;
-  text-decoration: none;
+  height: 7px;
 }
 
-.filter-icon a:first-child {
-  margin-bottom: 3px;
+.filter-icon a img {
+  width: 7px;
+  height: 7px;
+  margin-top: -5px;
 }
 
-.filter-icon a:last-child {
-  margin-top: 1px;
+.filter-icon a img.filter_up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .profile_info_box .card {
@@ -3340,7 +3358,8 @@ header.active .side-nav-btn img {
 }
 
 .select2-selection__rendered[title="Active"] + .select2-selection__arrow b,
-.select2-selection__rendered[title="Blocked"] + .select2-selection__arrow b {
+.select2-selection__rendered[title="Blocked"] + .select2-selection__arrow b,
+.select2-selection__rendered[title="Restricted"] + .select2-selection__arrow b {
   border-color: #ffffff transparent transparent transparent !important;
 }
 
@@ -3350,9 +3369,9 @@ header.active .side-nav-btn img {
 }
 
 .select2-selection__rendered[title="Restricted"] {
-  background-color: yellow !important;
-  color: #000000 !important;
-  border: 1px solid #0000003b;
+  background-color: #e0a800 !important;
+  color: #ffffff !important;
+  border: 1px solid #e0a800;
 }
 
 .schedule_modal .modal {
@@ -3683,5 +3702,10 @@ header.active .side-nav-btn img {
 #calendar .fc-view-harness .fc-view tbody .fc-scrollgrid-section-body .fc-scrollgrid-shrink-cushion {
   color: #A4A9BC;
   font-size: 12px;
+}
+
+.closeon {
+  float: right;
+  padding: 0px 2px 4px 4px;
 }
 /*# sourceMappingURL=style.css.map */
