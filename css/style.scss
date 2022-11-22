@@ -601,15 +601,17 @@ input[type=checkbox] {
       width: 100%;
     }
 
-    .profile.show {
-      background-color: $white;
+    &.show {
+      .profile {
+        background-color: $white;
 
-      .user_name {
-        color: $theme-primary-color  !important;
-      }
+        .user_name {
+          color: $theme-primary-color  !important;
+        }
 
-      &::after {
-        color: $theme-primary-color  !important;
+        &::after {
+          color: $theme-primary-color  !important;
+        }
       }
     }
 
@@ -3438,9 +3440,46 @@ header {
 
   .fc-view-harness {
     .fc-view {
+      &.fc-daygrid {
+        thead {
+          .fc-scrollgrid-section-header {
+            th {
+              border-left: none;
+
+              &:not(:last-child) {
+                border-right: none;
+              }
+            }
+          }
+        }
+
+      }
+
+      &.fc-timegrid {
+        thead {
+          .fc-scrollgrid-section-header {
+            th {
+              border-left: none;
+
+              &:not(:first-child) {
+                border-right: none;
+              }
+            }
+          }
+        }
+
+      }
+
       thead {
         .fc-scrollgrid-section-header {
           th {
+            border-left: none;
+
+            &:not(:first-child) {
+              border-right: none;
+            }
+
+
             .fc-col-header-cell-cushion {
               padding: 26px 0 22px 0;
               font-size: 12px;

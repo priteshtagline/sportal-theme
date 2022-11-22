@@ -206,13 +206,28 @@ document.addEventListener('DOMContentLoaded', function () {
     weekNumbers: false,
     expandRows: 4,
     initialView: 'dayGridMonth',
+    firstDay: Monday = 1,
+    showNonCurrentDates: false,
+    columnHeader: true,
     views: {
       dayGridMonth: {
         titleFormat: { month: 'long' }
       },
     },
     dayMaxEvents: true, // allow "more" link when too many events
-    events: 'https://fullcalendar.io/api/demo-feeds/events.json'
+    events: [
+      {
+        title: 'Futsal',
+        start: '2022-11-01',
+        resourceEditable: false
+      },
+      {
+        title: 'Tennis',
+        start: '2022-11-07',
+        resourceEditable: false
+      }
+    ]
+    // events: 'https://fullcalendar.io/api/demo-feeds/events.json'
   });
   calendar.render();
 });
