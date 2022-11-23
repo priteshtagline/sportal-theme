@@ -146,6 +146,12 @@ $(document).ready(function () {
     }
   });
 
+  // DataTable
+  $('.display').DataTable();
+
+  $('.paginate_button.previous').html('<span class="material-symbols-outlined">arrow_left</span>');
+  $('.paginate_button.next').html('<span class="material-symbols-outlined">arrow_right</span>');
+
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
   // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
