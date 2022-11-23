@@ -224,30 +224,35 @@ document.addEventListener('DOMContentLoaded', function () {
     events: [
       {
         title: 'Day 1',
-        start: '2012-09-01',
-        // startTime: '16:00:00',
-        // endTime: '19:00:00'
+        start: '2022-09-01T14:30:00',
+        end: '2022-09-01T18:30:00',
+        // allDay: false,
       },
       {
         title: 'Day 2',
         start: '2022-09-05',
+        start: '2022-09-055T14:30:00',
+        end: '2022-09-05T18:30:00',
       },
       {
         title: 'Day 3',
-        start: '2022-09-06',
+        start: '2022-09-055T14:30:00',
+        end: '2022-09-05T18:30:00',
       },
       {
         title: 'Day 4',
-        start: '2022-09-08',
+        start: '2022-09-055T14:30:00',
+        end: '2022-09-05T18:30:00',
       },
       {
         title: 'Day 5',
-        start: '2022-09-09',
+        start: '2022-09-055T14:30:00',
+        end: '2022-09-05T18:30:00',
       },
       {
         title: 'Day 6',
-        start: '2022-09-10',
-        duration: '02:00',
+        start: '2022-09-055T14:30:00',
+        end: '2022-09-05T18:30:00',
       }
     ],
 
