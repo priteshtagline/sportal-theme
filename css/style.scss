@@ -10,6 +10,9 @@ $input-bg-color: #f8fafb;
 $gray-color: #a4a9bc;
 $light-gray-color: #a1a5b7;
 $border-color: #00000029;
+$light_blue_event: #DDECFF;
+$light_pink_event: #F1DDFF;
+$light_green_event: #DDFFF5;
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -617,10 +620,15 @@ input[type=checkbox] {
         }
 
         &.paginate_button {
-          background: #ccbcfb !important;
-          border: 1px solid #ccbcfb;
           margin-right: 5px;
-          padding: 3px 4px;
+          background: transparent;
+          color: #000000 !important;
+          border: none;
+          padding: 5px 13px;
+
+          &.disabled {
+            color: $gray-color  !important;
+          }
 
           span {
             font-size: 25px;
@@ -631,8 +639,11 @@ input[type=checkbox] {
           &.current {
             color: $white  !important;
             border: none !important;
-            padding: 10px 15px;
             background-color: $theme-primary-color  !important;
+          }
+
+          &:hover {
+            border: none;
           }
         }
       }
@@ -3618,15 +3629,15 @@ header {
                       }
 
                       &.light_blue_event::before {
-                        background-color: #DDECFF;
+                        background-color: $light_blue_event;
                       }
 
                       &.light_pink_event::before {
-                        background-color: #F1DDFF;
+                        background-color: $light_pink_event;
                       }
 
                       &.light_green_event::before {
-                        background-color: #DDFFF5;
+                        background-color: $light_green_event;
                       }
                     }
                   }
@@ -3646,6 +3657,20 @@ header {
 
               &:not(:first-child) {
                 border-right: none;
+              }
+            }
+          }
+        }
+
+        tbody {
+          .fc-timegrid-body {
+            table {
+              tbody {
+                tr {
+                  .fc-timegrid-slot {
+                    height: 45px;
+                  }
+                }
               }
             }
           }

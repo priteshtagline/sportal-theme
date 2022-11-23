@@ -640,10 +640,15 @@ input[type=checkbox] {
 }
 
 .table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button {
-  background: #ccbcfb !important;
-  border: 1px solid #ccbcfb;
   margin-right: 5px;
-  padding: 3px 4px;
+  background: transparent;
+  color: #000000 !important;
+  border: none;
+  padding: 5px 13px;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button.disabled {
+  color: #a4a9bc !important;
 }
 
 .table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button span {
@@ -655,8 +660,11 @@ input[type=checkbox] {
 .table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button.current {
   color: #ffffff !important;
   border: none !important;
-  padding: 10px 15px;
   background-color: #764af3 !important;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button:hover {
+  border: none;
 }
 
 .sidebar {
@@ -3837,6 +3845,10 @@ header.active .side-nav-btn img {
 
 #calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
   border-right: none;
+}
+
+#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-slot {
+  height: 45px;
 }
 
 #calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {

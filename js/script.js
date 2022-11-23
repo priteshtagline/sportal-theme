@@ -149,8 +149,8 @@ $(document).ready(function () {
   // DataTable
   $('.display').DataTable();
 
-  $('.paginate_button.previous').html('<span class="material-symbols-outlined">arrow_left</span>');
-  $('.paginate_button.next').html('<span class="material-symbols-outlined">arrow_right</span>');
+  // $('.paginate_button.previous').html('<span class="material-symbols-outlined">arrow_left</span>');
+  // $('.paginate_button.next').html('<span class="material-symbols-outlined">arrow_right</span>');
 
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
@@ -215,6 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
     showNonCurrentDates: false,
     height: 800,
     contentHeight: 600,
+    allDaySlot: false,
+    slotLabelInterval: "01:00",
     views: {
       dayGridMonth: {
         titleFormat: { month: 'long' }
@@ -224,36 +226,39 @@ document.addEventListener('DOMContentLoaded', function () {
     events: [
       {
         title: 'Day 1',
-        start: '2022-09-01T14:30:00',
-        end: '2022-09-01T18:30:00',
-        // allDay: false,
+        start: '2022-08-29T06:00:00',
+        end: '2022-08-29T07:00:00',
+        color: "#eff5f9",
+        textColor: "",
+        durationEditable: false,
+        className: "free",
+        additionalInfo: "A great event"
       },
       {
         title: 'Day 2',
-        start: '2022-09-05',
-        start: '2022-09-055T14:30:00',
-        end: '2022-09-05T18:30:00',
+        start: '2022-08-30T06:00:00',
+        end: '2022-08-30T07:00:00',
       },
       {
         title: 'Day 3',
-        start: '2022-09-055T14:30:00',
-        end: '2022-09-05T18:30:00',
+        start: '2022-08-31T06:00:00',
+        end: '2022-08-31T07:00:00',
       },
       {
         title: 'Day 4',
-        start: '2022-09-055T14:30:00',
-        end: '2022-09-05T18:30:00',
+        start: '2022-09-01T06:00:00',
+        end: '2022-09-01T07:00:00',
       },
       {
         title: 'Day 5',
-        start: '2022-09-055T14:30:00',
-        end: '2022-09-05T18:30:00',
+        start: '2022-09-02T06:00:00',
+        end: '2022-09-02T07:00:00',
       },
       {
         title: 'Day 6',
-        start: '2022-09-055T14:30:00',
-        end: '2022-09-05T18:30:00',
-      }
+        start: '2022-09-03T06:00:00',
+        end: '2022-09-03T08:00:00',
+      },
     ],
 
     eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
