@@ -149,13 +149,9 @@ $(document).ready(function () {
   // DataTable
   $('.display').DataTable();
 
-  // $('.paginate_button.previous').html('<span class="material-symbols-outlined">arrow_left</span>');
-  // $('.paginate_button.next').html('<span class="material-symbols-outlined">arrow_right</span>');
-
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
   // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
-
 });
 
 
@@ -217,52 +213,76 @@ document.addEventListener('DOMContentLoaded', function () {
     contentHeight: 600,
     allDaySlot: false,
     slotLabelInterval: "01:00",
+    editable: false,
     views: {
       dayGridMonth: {
         titleFormat: { month: 'long' }
       },
+      dayGridWeek: {
+        titleFormat: '{DD.{MM.}}YYYY'
+      },
     },
     initialDate: "2022-09-01",
+    eventContent: function (arg) {
+      return { html: arg.event.title };
+    },
     events: [
       {
-        title: 'Day 1',
-        start: '2022-08-29T06:00:00',
-        end: '2022-08-29T07:00:00',
-        color: "#eff5f9",
-        textColor: "",
-        durationEditable: false,
-        className: "free",
-        additionalInfo: "A great event"
+        title: '<div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
+        start: '2022-08-30T08:00:00',
+        end: '2022-08-30T09:00:00',
+        color: "#DDECFF",
       },
       {
-        title: 'Day 2',
+        title: '<div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
         start: '2022-08-30T06:00:00',
         end: '2022-08-30T07:00:00',
+        color: "#F1DDFF",
       },
       {
-        title: 'Day 3',
+        title: '<div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
         start: '2022-08-31T06:00:00',
         end: '2022-08-31T07:00:00',
+        color: "#DDFFF5",
       },
       {
-        title: 'Day 4',
-        start: '2022-09-01T06:00:00',
-        end: '2022-09-01T07:00:00',
+        title: '<div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
+        start: '2022-09-01T09:00:00',
+        end: '2022-09-01T10:00:00',
+        color: "#DDECFF",
       },
       {
-        title: 'Day 5',
+        title: '<div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
+        start: '2022-09-01T09:00:00',
+        end: '2022-09-01T10:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
+        start: '2022-09-01T09:00:00',
+        end: '2022-09-01T10:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
         start: '2022-09-02T06:00:00',
         end: '2022-09-02T07:00:00',
+        color: "#F1DDFF",
       },
       {
-        title: 'Day 6',
+        title: '<div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div>',
         start: '2022-09-03T06:00:00',
-        end: '2022-09-03T08:00:00',
+        end: '2022-09-03T07:00:00',
+        color: "#DDFFF5",
       },
     ],
 
-    eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
-    // events: 'https://fullcalendar.io/api/demo-feeds/events.json'
+    eventRender: function (event, element) {
+      if (event.additionalInfo) {
+        element.find(".fc-title").append("<p>hello</p>" + event.additionalInfo);
+      }
+    },
+    // eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
   });
   calendar.render();
 });
