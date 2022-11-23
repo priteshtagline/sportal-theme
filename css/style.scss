@@ -484,10 +484,19 @@ input[type=checkbox] {
   }
 }
 
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info {
+  display: none;
+}
+
 .table-responsive {
   overflow-x: visible !important;
 
   .table {
+    width: 100% !important;
+    border-bottom: none !important;
+
     thead {
       tr {
         background-color: rgba($color: $theme-primary-color, $alpha: 0.1);
@@ -499,6 +508,28 @@ input[type=checkbox] {
           font-size: 13px;
           line-height: 16px;
           color: $black;
+
+          &.sorting {
+            &::before {
+              bottom: 45%;
+            }
+
+            &:before,
+            &:after {
+              font-size: 6px;
+              color: $black;
+              opacity: 1;
+            }
+
+            &.sorting_hide {
+
+              &:after,
+              &:before {
+                display: none;
+              }
+            }
+          }
+
 
           &:first-child {
             display: none;
@@ -518,12 +549,6 @@ input[type=checkbox] {
 
     tbody {
       tr {
-        background-color: $white;
-
-        // &:nth-child(even) {
-        //   background-color: rgba($color: $theme-secodary-color, $alpha: 0.1);
-        // }
-
         &:last-child {
           td:first-child {
             border-bottom-left-radius: 8px;
@@ -535,12 +560,18 @@ input[type=checkbox] {
         }
 
         td {
+          box-shadow: none !important;
           border: 0;
+          background-color: $white  !important;
           font-size: 14px;
           line-height: 18px;
           padding: 14px 20px;
           vertical-align: middle;
           color: $black;
+
+          &:hover {
+            box-shadow: none;
+          }
 
           @media (max-width: 1024px) {
             font-size: 12px;
@@ -566,7 +597,50 @@ input[type=checkbox] {
       }
     }
   }
+
+  // Pagination
+  .dataTables_wrapper {
+    .dataTables_paginate {
+      margin-top: 15px;
+      display: inline-flex;
+      align-items: center;
+
+      a {
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        &.paginate_button.disabled span {
+          color: #6b6b6b;
+        }
+
+        &.paginate_button {
+          background: #ccbcfb !important;
+          border: 1px solid #ccbcfb;
+          margin-right: 5px;
+          padding: 3px 4px;
+
+          span {
+            font-size: 25px;
+            margin-top: 5px;
+            color: #000000;
+          }
+
+          &.current {
+            color: $white  !important;
+            border: none !important;
+            padding: 10px 15px;
+            background-color: $theme-primary-color  !important;
+          }
+        }
+      }
+
+    }
+  }
 }
+
 
 // Sidebar
 .sidebar {
@@ -2364,30 +2438,47 @@ header {
 
 // Admin Page Css
 .admin-page-table {
-  table {
-    min-height: 115px;
+  .table-responsive {
+    table {
+      min-height: 115px;
 
-    tr {
+      thead {
+        // th:last-child {
 
-      td:last-child,
-      th:last-child {
-        width: 75px;
+        //   &:after,
+        //   &:before {
+        //     display: none;
+        //   }
+        // }
       }
-    }
 
-    .dropdown-toggle {
-      padding: 0;
-      border: none;
-      min-width: 15px;
+      tr {
 
-      &::after {
-        display: none;
+        th,
+        td {
+          width: 200px;
+        }
+
+        td:last-child,
+        th:last-child {
+          width: 75px;
+        }
       }
-    }
 
-    .dropdown-menu {
-      padding: 1px 0;
+      .dropdown-toggle {
+        padding: 0;
+        border: none;
+        min-width: 15px;
 
+        &::after {
+          display: none;
+        }
+      }
+
+      .dropdown-menu {
+        padding: 1px 0;
+
+      }
     }
   }
 }
@@ -2742,7 +2833,7 @@ header {
 // .divider_dropdown-group
 .divider_dropdown_group {
   button {
-    background-color: $white;
+    background-color: transparent;
     padding: 0;
     border: none;
     min-width: 30px;

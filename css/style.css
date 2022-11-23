@@ -514,8 +514,19 @@ input[type=checkbox] {
           justify-content: center;
 }
 
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info {
+  display: none;
+}
+
 .table-responsive {
   overflow-x: visible !important;
+}
+
+.table-responsive .table {
+  width: 100% !important;
+  border-bottom: none !important;
 }
 
 .table-responsive .table thead tr {
@@ -532,6 +543,20 @@ input[type=checkbox] {
   color: #000000;
 }
 
+.table-responsive .table thead tr th.sorting::before {
+  bottom: 45%;
+}
+
+.table-responsive .table thead tr th.sorting:before, .table-responsive .table thead tr th.sorting:after {
+  font-size: 6px;
+  color: #000000;
+  opacity: 1;
+}
+
+.table-responsive .table thead tr th.sorting.sorting_hide:after, .table-responsive .table thead tr th.sorting.sorting_hide:before {
+  display: none;
+}
+
 .table-responsive .table thead tr th:first-child {
   display: none;
 }
@@ -544,10 +569,6 @@ input[type=checkbox] {
   border-top-right-radius: 8px;
 }
 
-.table-responsive .table tbody tr {
-  background-color: #ffffff;
-}
-
 .table-responsive .table tbody tr:last-child td:first-child {
   border-bottom-left-radius: 8px;
 }
@@ -557,12 +578,20 @@ input[type=checkbox] {
 }
 
 .table-responsive .table tbody tr td {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 0;
+  background-color: #ffffff !important;
   font-size: 14px;
   line-height: 18px;
   padding: 14px 20px;
   vertical-align: middle;
   color: #000000;
+}
+
+.table-responsive .table tbody tr td:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media (max-width: 1024px) {
@@ -586,6 +615,48 @@ input[type=checkbox] {
 
 .table-responsive .table tbody tr td:first-child {
   display: none;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate {
+  margin-top: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a {
+  cursor: pointer;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button.disabled span {
+  color: #6b6b6b;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button {
+  background: #ccbcfb !important;
+  border: 1px solid #ccbcfb;
+  margin-right: 5px;
+  padding: 3px 4px;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button span {
+  font-size: 25px;
+  margin-top: 5px;
+  color: #000000;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_paginate a.paginate_button.current {
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 15px;
+  background-color: #764af3 !important;
 }
 
 .sidebar {
@@ -2565,26 +2636,31 @@ header.active .side-nav-btn img {
   }
 }
 
-.admin-page-table table {
+.admin-page-table .table-responsive table {
   min-height: 115px;
 }
 
-.admin-page-table table tr td:last-child,
-.admin-page-table table tr th:last-child {
+.admin-page-table .table-responsive table tr th,
+.admin-page-table .table-responsive table tr td {
+  width: 200px;
+}
+
+.admin-page-table .table-responsive table tr td:last-child,
+.admin-page-table .table-responsive table tr th:last-child {
   width: 75px;
 }
 
-.admin-page-table table .dropdown-toggle {
+.admin-page-table .table-responsive table .dropdown-toggle {
   padding: 0;
   border: none;
   min-width: 15px;
 }
 
-.admin-page-table table .dropdown-toggle::after {
+.admin-page-table .table-responsive table .dropdown-toggle::after {
   display: none;
 }
 
-.admin-page-table table .dropdown-menu {
+.admin-page-table .table-responsive table .dropdown-menu {
   padding: 1px 0;
 }
 
@@ -2940,7 +3016,7 @@ header.active .side-nav-btn img {
 }
 
 .divider_dropdown_group button {
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 0;
   border: none;
   min-width: 30px;
