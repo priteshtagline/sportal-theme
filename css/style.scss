@@ -525,6 +525,7 @@ input[type=checkbox] {
             }
 
             &.sorting_hide {
+              pointer-events: none;
 
               &:after,
               &:before {
@@ -3342,6 +3343,7 @@ header {
             font-size: 12px;
             height: 43px;
             border: none;
+
           }
 
           select {
@@ -3410,6 +3412,33 @@ header {
   }
 }
 
+.select2-selection__rendered,
+.select2-results__options {
+  img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+
+#schedule {
+  .card-body {
+    position: relative;
+
+    #list_view_table {
+      position: absolute;
+      top: 146px;
+      left: 21px;
+      z-index: 1;
+      bottom: 21px;
+      max-width: calc(100% - 42px);
+      background: #ffffff;
+      padding-bottom: 26px;
+    }
+  }
+}
+
 // Calender
 #calendar {
   .fc-header-toolbar {
@@ -3421,6 +3450,7 @@ header {
       &:first-child {
         .fc-toolbar-title {
           min-width: 200px;
+          font-size: 20px;
         }
 
         button {
@@ -3498,7 +3528,10 @@ header {
 
       &:last-child {
         .fc-menuButton-button {
-          min-width: 30px;
+          width: 30px;
+          height: 30px;
+          justify-content: center;
+          align-items: center;
           padding: 5px;
           border-radius: 24px;
           line-height: 10px;
@@ -3515,7 +3548,21 @@ header {
           }
 
           span {
-            font-size: 23px;
+            font-size: 21px;
+          }
+
+          svg {
+            display: none;
+          }
+
+          &.active {
+            span {
+              display: none;
+            }
+
+            svg {
+              display: block;
+            }
           }
         }
 
@@ -4180,6 +4227,141 @@ header {
 
       .dropdown-divider {
         margin: 0;
+      }
+    }
+  }
+}
+
+// Schedule_list_view
+.table-responsive {
+  .schedule_table {
+    thead {
+      tr {
+        th {
+
+          &:nth-child(2) {
+            border-top-left-radius: 0px;
+            width: 20% !important;
+          }
+
+          &:nth-child(3) {
+            width: 20% !important;
+          }
+
+          &:nth-child(4) {
+            width: 25% !important;
+          }
+
+          &:last-child {
+            border-top-right-radius: 0px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          .game {
+            margin-left: 5px;
+            position: relative;
+
+            &:before {
+              position: absolute;
+              content: "";
+              top: 4px;
+              width: 10px;
+              height: 10px;
+              left: -17px;
+              border-radius: 3px;
+              z-index: 1;
+            }
+
+            @media (max-width:1199px) {
+              margin-left: 25px;
+            }
+          }
+
+          &:last-child {
+            text-align: right;
+            display: flex;
+          }
+
+          .table_profile_group {
+            img {
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1px solid #ffffff;
+              -webkit-box-shadow: 0px 3px 6px #00000029;
+              box-shadow: 0px 3px 6px #00000029;
+            }
+          }
+
+          .btn-sm {
+            padding: 6px 12px;
+            min-width: auto;
+            display: inline-flex;
+            align-items: center;
+
+            svg {
+              margin-right: 5px;
+            }
+
+            span {
+              font-size: 9px;
+              color: $white;
+              line-height: 11px;
+            }
+          }
+
+          .btn-cancel {
+            background-color: #FF6F6F;
+            margin-left: 11px;
+          }
+        }
+
+        &.blue_court {
+          td {
+            .game {
+              &:before {
+                background-color: #8BBCFA;
+              }
+            }
+
+            .btn-edit {
+              background-color: #8BBCFA;
+            }
+          }
+        }
+
+        &.pink_court {
+          td {
+            .game {
+              &:before {
+                background-color: #CD86FF;
+              }
+            }
+
+            .btn-edit {
+              background-color: #CD86FF;
+            }
+          }
+        }
+
+        &.green_court {
+          td {
+            .game {
+              &:before {
+                background-color: #74D7BA;
+              }
+            }
+
+            .btn-edit {
+              background-color: #74D7BA;
+            }
+          }
+        }
       }
     }
   }

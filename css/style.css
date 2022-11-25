@@ -553,6 +553,10 @@ input[type=checkbox] {
   opacity: 1;
 }
 
+.table-responsive .table thead tr th.sorting.sorting_hide {
+  pointer-events: none;
+}
+
 .table-responsive .table thead tr th.sorting.sorting_hide:after, .table-responsive .table thead tr th.sorting.sorting_hide:before {
   display: none;
 }
@@ -3602,6 +3606,29 @@ header.active .side-nav-btn img {
   }
 }
 
+.select2-selection__rendered img,
+.select2-results__options img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#schedule .card-body {
+  position: relative;
+}
+
+#schedule .card-body #list_view_table {
+  position: absolute;
+  top: 146px;
+  left: 21px;
+  z-index: 1;
+  bottom: 21px;
+  max-width: calc(100% - 42px);
+  background: #ffffff;
+  padding-bottom: 26px;
+}
+
 #calendar .fc-header-toolbar .fc-toolbar-chunk {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3615,6 +3642,7 @@ header.active .side-nav-btn img {
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
   min-width: 200px;
+  font-size: 20px;
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button {
@@ -3692,7 +3720,14 @@ header.active .side-nav-btn img {
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-menuButton-button {
-  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 5px;
   border-radius: 24px;
   line-height: 10px;
@@ -3714,7 +3749,19 @@ header.active .side-nav-btn img {
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-menuButton-button span {
-  font-size: 23px;
+  font-size: 21px;
+}
+
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-menuButton-button svg {
+  display: none;
+}
+
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-menuButton-button.active span {
+  display: none;
+}
+
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-menuButton-button.active svg {
+  display: block;
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button {
@@ -4370,5 +4417,110 @@ header.active .side-nav-btn img {
 
 .dashboard_theme .report_dropdown .dropdown-menu .dropdown-divider {
   margin: 0;
+}
+
+.table-responsive .schedule_table thead tr th:nth-child(2) {
+  border-top-left-radius: 0px;
+  width: 20% !important;
+}
+
+.table-responsive .schedule_table thead tr th:nth-child(3) {
+  width: 20% !important;
+}
+
+.table-responsive .schedule_table thead tr th:nth-child(4) {
+  width: 25% !important;
+}
+
+.table-responsive .schedule_table thead tr th:last-child {
+  border-top-right-radius: 0px;
+}
+
+.table-responsive .schedule_table tbody tr td .game {
+  margin-left: 5px;
+  position: relative;
+}
+
+.table-responsive .schedule_table tbody tr td .game:before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  left: -17px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+@media (max-width: 1199px) {
+  .table-responsive .schedule_table tbody tr td .game {
+    margin-left: 25px;
+  }
+}
+
+.table-responsive .schedule_table tbody tr td:last-child {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table-responsive .schedule_table tbody tr td .table_profile_group img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.table-responsive .schedule_table tbody tr td .btn-sm {
+  padding: 6px 12px;
+  min-width: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-responsive .schedule_table tbody tr td .btn-sm svg {
+  margin-right: 5px;
+}
+
+.table-responsive .schedule_table tbody tr td .btn-sm span {
+  font-size: 9px;
+  color: #ffffff;
+  line-height: 11px;
+}
+
+.table-responsive .schedule_table tbody tr td .btn-cancel {
+  background-color: #FF6F6F;
+  margin-left: 11px;
+}
+
+.table-responsive .schedule_table tbody tr.blue_court td .game:before {
+  background-color: #8BBCFA;
+}
+
+.table-responsive .schedule_table tbody tr.blue_court td .btn-edit {
+  background-color: #8BBCFA;
+}
+
+.table-responsive .schedule_table tbody tr.pink_court td .game:before {
+  background-color: #CD86FF;
+}
+
+.table-responsive .schedule_table tbody tr.pink_court td .btn-edit {
+  background-color: #CD86FF;
+}
+
+.table-responsive .schedule_table tbody tr.green_court td .game:before {
+  background-color: #74D7BA;
+}
+
+.table-responsive .schedule_table tbody tr.green_court td .btn-edit {
+  background-color: #74D7BA;
 }
 /*# sourceMappingURL=style.css.map */

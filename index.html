@@ -301,8 +301,8 @@
       </div>
       <ul class="features-list nav nav-tabs">
         <li class="features-item dashboard nav-item main-features-list">
-          <a href="#" class="nav-link  active" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
-            type="button" role="tab" aria-controls="dashboard" aria-selected="true">
+          <a href="#" class="nav-link" id="dashboard-tab" data-toggle="tab" data-target="#dashboard" type="button"
+            role="tab" aria-controls="dashboard" aria-selected="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <path id="_icon__home_house_" data-name="🦆 icon _home house_"
                 d="M8.784.45a.549.549,0,0,1,.33.11l7.438,5.578a1.422,1.422,0,0,1,.566,1.132V15.7A1.416,1.416,0,0,1,15.7,17.118h-3.83A1.416,1.416,0,0,1,10.458,15.7V10.446H7.11V15.7A1.416,1.416,0,0,1,5.7,17.118H1.865A1.416,1.416,0,0,1,.45,15.7V7.27a1.422,1.422,0,0,1,.566-1.132L8.454.56A.549.549,0,0,1,8.784.45ZM15.7,16.018a.315.315,0,0,0,.315-.315V7.27a.316.316,0,0,0-.126-.252L8.784,1.688,1.676,7.018a.316.316,0,0,0-.126.252V15.7a.315.315,0,0,0,.315.315H5.7A.315.315,0,0,0,6.01,15.7V9.9a.55.55,0,0,1,.55-.55h4.448a.55.55,0,0,1,.55.55V15.7a.315.315,0,0,0,.315.315Z"
@@ -313,8 +313,8 @@
           </a>
         </li>
         <li class="features-item schedule nav-item">
-          <a href="#" class="nav-link" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
-            role="tab" aria-controls="schedule" aria-selected="false">
+          <a href="#" class="nav-link active" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
+            role="tab" aria-controls="schedule" aria-selected="true">
             <span class="material-symbols-outlined">
               calendar_today
             </span>
@@ -408,7 +408,7 @@
 
   <div class="main-content" id="main-content">
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade  show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+      <div class="tab-pane fade" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
         <!-- Dashboard -->
         <div class="dashboard_theme">
           <div class="row dashboard_head">
@@ -731,10 +731,447 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane fade " id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+      <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
         <div class="card">
           <div class="card-body">
-            <div id='calendar'></div>
+            <div id='calendar'>
+            </div>
+            <div class="table-responsive" id="list_view_table">
+              <table id="table_id" class="display table schedule_table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Item</th>
+                    <th class="sorting_hide">Time</th>
+                    <th>Court</th>
+                    <th>Booked by</th>
+                    <th class="sorting_hide"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="blue_court">
+                    <td></td>
+                    <td><span class="game">Futsal</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Court # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="pink_court">
+                    <td></td>
+                    <td><span class="game">Badminton</span></td>
+                    <td>10:00 am - 11:00 am</td>
+                    <td>Beach Front Arena - Badminton Court # 1</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="blue_court">
+                    <td></td>
+                    <td><span class="game">Futsal</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Court # 4</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="pink_court">
+                    <td></td>
+                    <td><span class="game">Badminton</span></td>
+                    <td>10:00 am - 11:00 am</td>
+                    <td>Beach Front Arena - Court # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="green_court">
+                    <td></td>
+                    <td><span class="game">Tennis</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Courtyard # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="blue_court">
+                    <td></td>
+                    <td><span class="game">Futsal</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Court # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="pink_court">
+                    <td></td>
+                    <td><span class="game">Badminton</span></td>
+                    <td>10:00 am - 11:00 am</td>
+                    <td>Beach Front Arena - Badminton Court # 1</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="blue_court">
+                    <td></td>
+                    <td><span class="game">Futsal</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Court # 4</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="pink_court">
+                    <td></td>
+                    <td><span class="game">Badminton</span></td>
+                    <td>10:00 am - 11:00 am</td>
+                    <td>Beach Front Arena - Court # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="green_court">
+                    <td></td>
+                    <td><span class="game">Tennis</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Courtyard # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="pink_court">
+                    <td></td>
+                    <td><span class="game">Badminton</span></td>
+                    <td>10:00 am - 11:00 am</td>
+                    <td>Beach Front Arena - Court # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="green_court">
+                    <td></td>
+                    <td><span class="game">Tennis</span></td>
+                    <td>09:00 am - 10:00 am</td>
+                    <td>Beach Front Arena - Courtyard # 2</td>
+                    <td>
+                      <div class="table_profile_group">
+                        <img src="images/user_profile.png" alt="User_profile" class="user_image">
+                        <span class="user_name">Moeed Shahid</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.29" viewBox="0 0 8.308 8.29">
+                          <g id="edit-solid" transform="translate(0 0)">
+                            <path id="Path_44" data-name="Path 44"
+                              d="M2.776,11.481,2.285,13.6a.532.532,0,0,0,.517.646.553.553,0,0,0,.111,0l2.131-.491L9.135,9.678,6.852,7.4Z"
+                              transform="translate(-2.272 -5.958)" fill="#fff" />
+                            <path id="Path_45" data-name="Path 45"
+                              d="M24.846,3.5,23.322,1.973a.535.535,0,0,0-.754,0l-.847.847L24,5.1l.847-.847a.535.535,0,0,0,0-.757Z"
+                              transform="translate(-16.696 -1.817)" fill="#fff" />
+                          </g>
+                        </svg>
+                        <span>Edit</span>
+                      </span>
+                      <span class="btn btn-sm btn-cancel radius-rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8.308" height="8.308" viewBox="0 0 8.308 8.308">
+                          <path id="android-cancel"
+                            d="M7.529,3.375a4.154,4.154,0,1,0,4.154,4.154A4.139,4.139,0,0,0,7.529,3.375ZM9.606,9.024l-.581.581-1.5-1.5-1.5,1.5-.582-.581,1.5-1.5-1.5-1.5.582-.581,1.5,1.5,1.5-1.5.581.581-1.5,1.5,1.5,1.5Z"
+                            transform="translate(-3.375 -3.375)" fill="#fff" />
+                        </svg>
+                        <span>Cancel</span>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -2570,13 +3007,17 @@
                 </div>
                 <h6 class="form_label">Participants</h6>
                 <div class="form-group">
-                  <label for="add_reservation_owner" class="m-top-15">Add Reservation Owner</label> </br>
-                  <select class="w-100 select form-control" aria-label="add_reservation_owner_label"
-                    id="add_reservation_owner">
-                    <option selected="selected">Select Payment</option>
-                    <option value="Moeed Shahid">Moeed Shahid</option>
-                    <option value="Owner 2">Owner 2</option>
-                  </select>
+                  <div class="form-group">
+                    <label for="add_reservation_owner" class="m-top-15">Add Reservation Owner</label> </br>
+                    <select class="w-100 form-control select_image" aria-label="add_reservation_owner_label"
+                      id="add_reservation_owner">
+                      <option selected="selected">Select Reservation Owner</option>
+                      <option value="Moeed Shahid">Moeed Shahid
+                      </option>
+                      <option value="Moeed Shahid">user 2
+                      </option>
+                    </select>
+                  </div>
                 </div>
                 <div class="form-group mb-3">
                   <label for="customer_payment_method" class="m-top-15">Customer</label> </br>
@@ -2610,7 +3051,120 @@
         </div>
       </div>
     </div>
+
+    <!-- Edit schedule Modal -->
+    <div class="schedule_modal">
+      <div class="modal fade" id="edit_schedule_modal" tabindex="-1" aria-labelledby="edit_schedule_Label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Edit Reservation</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <select class="w-100 select form-control" aria-label="schedule_reservation_label"
+                    id="schedule_reservation">
+                    <option>Select Reservation</option>
+                    <option value="Regular_Reservation" selected="selected">Regular Reservation</option>
+                    <option value="ABC_Reservation">ABC Reservation</option>
+                    <option value="XYZ_Reservation">XYZ Reservation</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="schedule_start1_time" class="m-top-15">Start Time</label> </br>
+                      <select class="w-100 select form-control" aria-label="schedule_reservation_label"
+                        id="schedule_start1_time">
+                        <option>Select Start Time</option>
+                        <option value="1">12:00 pm</option>
+                        <option value="2" selected="selected">01:00 pm</option>
+                        <option value="3">02:00 pm</option>
+                      </select>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="schedule_end_time" class="m-top-15">End Time</label> </br>
+                      <select class="w-100 select form-control" aria-label="schedule_end_time_label"
+                        id="schedule_end_time">
+                        <option>Select End Time</option>
+                        <option value="1">12:00 pm</option>
+                        <option value="2" selected="selected">01:00 pm</option>
+                        <option value="3">02:00 pm</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="customer_schedule_court" class="m-top-15">Court</label> </br>
+                  <select class="w-100 select form-control" aria-label="customer_schedule_court_label"
+                    id="customer_schedule_court">
+                    <option>Select Court</option>
+                    <option value="synthetic grass 1" selected="selected">Synthetic Grass 1</option>
+                    <option value="synthetic grass 2">Synthetic Grass 2</option>
+                    <option value="synthetic grass 3">Synthetic Grass 3</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="reservation_payment" class="m-top-15">Payment</label> </br>
+                      <select class="w-100 select form-control" aria-label="reservation_payment_label"
+                        id="schedule_start_time">
+                        <option selected="selected">Select Payment</option>
+                        <option value="online">Online</option>
+                        <option value="cash">Cash</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="user_phone_number" class="mt-0">Price</label>
+                      <input type="text" class="textinput form-control" id="user_phone_number" value="25 AED">
+                    </div>
+                  </div>
+                </div>
+                <h6 class="form_label">Participants</h6>
+                <div class="form-group">
+                  <label for="add_reservation_owner" class="m-top-15">Add Reservation Owner</label> </br>
+                  <select class="w-100 form-control test select_image" aria-label="edit_reservation_owner_label"
+                    id="edit_reservation_owner">
+                    <option selected="selected">Select Reservation Owner</option>
+                    <option value="Moeed Shahid">Moeed Shahid
+                    </option>
+                    <option value="Moeed Shahid">Moeed Shahid 2
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <div class="d-inline-block">
+                    <button class="btn btn-primary add_owner_btn">Add Owner</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Name" class="mt-3">Notes</label>
+                  <textarea class="textinput form-control text-area w-100" rows="5">Private Notes</textarea>
+                </div>
+                <div class="form-group d-flex justify-content-between mt-3">
+                  <label for="total_price" class="my-0 form_label">Total Price</label>
+                  <label for="total_price" class="my-0 form_label">25 AED</label>
+                </div>
+              </div>
+              <div class="modal-footer pt-0">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Update Reservation">
+                <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
 
   <!-- Script -->
   <script src="js/jquery-3.6.0.min.js"></script>
