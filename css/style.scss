@@ -3665,8 +3665,6 @@ header {
                             color: #707070;
                             font-size: 10px;
                           }
-
-
                         }
                       }
                     }
@@ -3752,6 +3750,437 @@ header {
       margin-left: 6px;
       font-size: 10px;
       color: #707070;
+    }
+  }
+}
+
+// Dashboard_module
+.dashboard_theme {
+  .dashboard_head {
+
+    .dashboard_head_row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .dashboard_title_group {
+        display: flex;
+        align-items: center;
+
+        .dashboard_title {
+          margin-right: 44px;
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card {
+      border-radius: 12px;
+      border: 1px solid #E4E4E4;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      .card-body {
+        padding: 15px 20px;
+
+        .card_head_block {
+          display: inline-flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          .head_icon {
+            width: 34px;
+            height: 34px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #A98FF1;
+            color: $white;
+            border-radius: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+          }
+
+          .title {
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+        }
+
+        .price {
+          font-size: 26px;
+          font-family: 'Outfit Bold';
+          margin-bottom: 8px;
+        }
+
+        .profit_value {
+          color: #42D599;
+          font-size: 12px;
+          margin-right: 5px;
+        }
+
+        .loss_value {
+          color: #EA1C29;
+          font-size: 12px;
+          margin-right: 5px;
+        }
+
+        .duration {
+          font-size: 10px;
+          color: #A4A9BC;
+        }
+
+        .bg_element_1,
+        .bg_element_2 {
+          position: absolute;
+        }
+
+        .bg_element_1 {
+          right: -86px;
+          top: 56px;
+        }
+
+        .bg_element_2 {
+          right: -31px;
+          top: 110px;
+        }
+      }
+
+    }
+  }
+
+  .dashboard_body {
+    .card {
+      border-radius: 12px;
+      border: 1px solid #E4E4E4;
+
+      .card-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: $white;
+        padding: 19px 20px 16px;
+
+        .card-title {
+          font-size: 14px;
+          margin-bottom: 0;
+          margin-right: 28px;
+        }
+      }
+    }
+
+    .apexcharts-text {
+      tspan {
+        font-size: 10px;
+        color: #A4A9BC;
+      }
+    }
+
+    .timeline_card {
+      .card-body {
+        padding: 0;
+        position: relative;
+
+        .card_heading {
+          border-bottom: 0.5px solid #E4E4E4;
+          padding: 14px 20px;
+
+          .card-title {
+            font-size: 14px;
+            margin-bottom: 0;
+            margin-right: 28px;
+          }
+        }
+
+        .chart {
+          padding: 26px 20px;
+          min-height: 500px !important;
+
+          svg:not(:root) {
+            overflow: visible;
+          }
+
+          .apexcharts-toolbar {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .dashboard_reservation_card {
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 0;
+        padding-top: 23px;
+        padding-bottom: 0px;
+
+        h5 {
+          font-size: 14px;
+        }
+
+        .btn-info {
+          padding: 6px 10px;
+          font-size: 9px;
+          line-height: 10px;
+          min-width: 48px;
+          border-radius: 16px;
+        }
+      }
+
+      .card-body {
+        .reservation_list {
+          height: 800px;
+          overflow-y: auto;
+
+          /* width */
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          /* Track */
+          &::-webkit-scrollbar-track {
+            border: 1px solid #E4E4E4;
+            border-radius: 10px;
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #4E9AFE;
+            border-radius: 12px;
+          }
+
+          li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 14px;
+
+            img {
+              width: 56px;
+              height: 56px;
+              border-radius: 6px;
+              margin-right: 9px;
+            }
+
+            .reservation_info {
+              .title {
+                font-size: 12px;
+                line-height: 14px;
+                margin-bottom: 7px;
+              }
+
+              .court_name {
+                font-size: 10px;
+                line-height: 12px;
+                color: #A4A9BC;
+                margin-bottom: 6px;
+              }
+
+              .schedule {
+                line-height: 12px;
+                font-size: 10px;
+                color: #A4A9BC;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .timeline_card {
+      .card_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .heading_left {
+          display: flex;
+          align-items: center;
+        }
+
+        .legend {
+          display: flex;
+          align-items: center;
+
+          li {
+            margin-left: 17px;
+            position: relative;
+            font-size: 10px;
+            color: #A4A9BC;
+
+            &:not(:last-child) {
+              margin-right: 23px;
+            }
+
+            &:before {
+              position: absolute;
+              content: "";
+              top: 3px;
+              width: 10px;
+              height: 10px;
+              left: -17px;
+              border-radius: 3px;
+              z-index: 1;
+            }
+
+            &.column_1 {
+              &:before {
+                background-color: $theme-primary-color;
+              }
+            }
+
+            &.column_2 {
+              &:before {
+                background-color: #A98FF1;
+              }
+            }
+          }
+        }
+      }
+
+      .apexcharts-canvas {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 46px;
+          bottom: 0;
+          left: 45px;
+          height: 370px;
+          z-index: 1;
+          border-left: 0.6px solid #ddd4d4;
+
+          @media (max-width: 1199px) {
+            height: 345px;
+          }
+
+          @media (max-width: 991px) {
+            height: 370px;
+          }
+        }
+      }
+    }
+
+    .sales_overview_card {
+      .card-header {
+        display: flex;
+        align-items: center;
+
+        .card-title {
+          margin-right: 56px;
+        }
+      }
+
+      .sales_value {
+        position: absolute;
+        content: "";
+        width: 103px;
+        top: 50%;
+        left: 105px;
+        height: 70px;
+        font-size: 46px;
+        color: #000000;
+        z-index: 1;
+      }
+
+      .apexcharts-legend-marker {
+        border-radius: 4px !important;
+        width: 10px !important;
+        height: 10px !important;
+      }
+
+      .apexcharts-legend-text {
+        padding-left: 18px !important;
+        margin-left: -15px !important;
+      }
+    }
+
+    .player_analytics_card {
+      .apexcharts-legend {
+        margin: -44px 21px 0 12px;
+        border-top: 0.5px solid #ddd4d4;
+      }
+    }
+  }
+
+  .sorting_select {
+    position: relative;
+    border: 0.5px solid #764af3;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #764af3;
+    font-size: 8px;
+    background-size: 7px;
+    padding: 6px 21px 6px 9px;
+    -webkit-appearance: none;
+    background-image: url(../images/select_down.svg);
+    background-repeat: no-repeat;
+    background-position: 53px center;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .apexcharts-legend-text {
+    color: #A4A9BC !important;
+  }
+
+  .report_dropdown {
+    &.show {
+      .dropdown-toggle {
+        background-color: $theme-primary-color;
+        color: $white;
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 13px;
+
+      span {
+        margin-left: 9px;
+        font-size: 12px;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      font-size: 10px;
+      min-width: 120px;
+      padding: 5px 0;
+      box-shadow: 0px 3px 8px #0000000F;
+      border: none;
+
+      .dropdown-item {
+        padding: 4px;
+
+        img {
+          margin-right: 5px;
+        }
+
+        &:first-child {
+          padding: 7px;
+
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+
+      .dropdown-divider {
+        margin: 0;
+      }
     }
   }
 }

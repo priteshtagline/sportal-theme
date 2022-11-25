@@ -3914,4 +3914,461 @@ header.active .side-nav-btn img {
   font-size: 10px;
   color: #707070;
 }
+
+.dashboard_theme .dashboard_head .dashboard_head_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard_theme .dashboard_head .dashboard_head_row .dashboard_title_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard_theme .dashboard_head .dashboard_head_row .dashboard_title_group .dashboard_title {
+  margin-right: 44px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.dashboard_theme .dashboard_head .card {
+  border-radius: 12px;
+  border: 1px solid #E4E4E4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body {
+  padding: 15px 20px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .card_head_block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .card_head_block .head_icon {
+  width: 34px;
+  height: 34px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #A98FF1;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .card_head_block .title {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .price {
+  font-size: 26px;
+  font-family: 'Outfit Bold';
+  margin-bottom: 8px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .profit_value {
+  color: #42D599;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .loss_value {
+  color: #EA1C29;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .duration {
+  font-size: 10px;
+  color: #A4A9BC;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .bg_element_1,
+.dashboard_theme .dashboard_head .card .card-body .bg_element_2 {
+  position: absolute;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .bg_element_1 {
+  right: -86px;
+  top: 56px;
+}
+
+.dashboard_theme .dashboard_head .card .card-body .bg_element_2 {
+  right: -31px;
+  top: 110px;
+}
+
+.dashboard_theme .dashboard_body .card {
+  border-radius: 12px;
+  border: 1px solid #E4E4E4;
+}
+
+.dashboard_theme .dashboard_body .card .card-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #ffffff;
+  padding: 19px 20px 16px;
+}
+
+.dashboard_theme .dashboard_body .card .card-header .card-title {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-right: 28px;
+}
+
+.dashboard_theme .dashboard_body .apexcharts-text tspan {
+  font-size: 10px;
+  color: #A4A9BC;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body {
+  padding: 0;
+  position: relative;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body .card_heading {
+  border-bottom: 0.5px solid #E4E4E4;
+  padding: 14px 20px;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body .card_heading .card-title {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-right: 28px;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body .chart {
+  padding: 26px 20px;
+  min-height: 500px !important;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body .chart svg:not(:root) {
+  overflow: visible;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card-body .chart .apexcharts-toolbar {
+  display: none;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0;
+  padding-top: 23px;
+  padding-bottom: 0px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-header h5 {
+  font-size: 14px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-header .btn-info {
+  padding: 6px 10px;
+  font-size: 9px;
+  line-height: 10px;
+  min-width: 48px;
+  border-radius: 16px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list {
+  height: 800px;
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list::-webkit-scrollbar-track {
+  border: 1px solid #E4E4E4;
+  border-radius: 10px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list::-webkit-scrollbar-thumb {
+  background: #4E9AFE;
+  border-radius: 12px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list li img {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  margin-right: 9px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list li .reservation_info .title {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 7px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list li .reservation_info .court_name {
+  font-size: 10px;
+  line-height: 12px;
+  color: #A4A9BC;
+  margin-bottom: 6px;
+}
+
+.dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list li .reservation_info .schedule {
+  line-height: 12px;
+  font-size: 10px;
+  color: #A4A9BC;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .heading_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend li {
+  margin-left: 17px;
+  position: relative;
+  font-size: 10px;
+  color: #A4A9BC;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend li:not(:last-child) {
+  margin-right: 23px;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend li:before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  left: -17px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend li.column_1:before {
+  background-color: #764af3;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .card_heading .legend li.column_2:before {
+  background-color: #A98FF1;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas {
+  position: relative;
+}
+
+.dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
+  position: absolute;
+  content: "";
+  top: 46px;
+  bottom: 0;
+  left: 45px;
+  height: 370px;
+  z-index: 1;
+  border-left: 0.6px solid #ddd4d4;
+}
+
+@media (max-width: 1199px) {
+  .dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
+    height: 345px;
+  }
+}
+
+@media (max-width: 991px) {
+  .dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
+    height: 370px;
+  }
+}
+
+.dashboard_theme .dashboard_body .sales_overview_card .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard_theme .dashboard_body .sales_overview_card .card-header .card-title {
+  margin-right: 56px;
+}
+
+.dashboard_theme .dashboard_body .sales_overview_card .sales_value {
+  position: absolute;
+  content: "";
+  width: 103px;
+  top: 50%;
+  left: 105px;
+  height: 70px;
+  font-size: 46px;
+  color: #000000;
+  z-index: 1;
+}
+
+.dashboard_theme .dashboard_body .sales_overview_card .apexcharts-legend-marker {
+  border-radius: 4px !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.dashboard_theme .dashboard_body .sales_overview_card .apexcharts-legend-text {
+  padding-left: 18px !important;
+  margin-left: -15px !important;
+}
+
+.dashboard_theme .dashboard_body .player_analytics_card .apexcharts-legend {
+  margin: -44px 21px 0 12px;
+  border-top: 0.5px solid #ddd4d4;
+}
+
+.dashboard_theme .sorting_select {
+  position: relative;
+  border: 0.5px solid #764af3;
+  border-radius: 18px;
+  background-color: #ffffff;
+  color: #764af3;
+  font-size: 8px;
+  background-size: 7px;
+  padding: 6px 21px 6px 9px;
+  -webkit-appearance: none;
+  background-image: url(../images/select_down.svg);
+  background-repeat: no-repeat;
+  background-position: 53px center;
+}
+
+.dashboard_theme .sorting_select:focus-visible {
+  outline: none;
+}
+
+.dashboard_theme .apexcharts-legend-text {
+  color: #A4A9BC !important;
+}
+
+.dashboard_theme .report_dropdown.show .dropdown-toggle {
+  background-color: #764af3;
+  color: #ffffff;
+}
+
+.dashboard_theme .report_dropdown button {
+  border-radius: 8px;
+  font-size: 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 13px;
+}
+
+.dashboard_theme .report_dropdown button span {
+  margin-left: 9px;
+  font-size: 12px;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu {
+  border-radius: 8px;
+  font-size: 10px;
+  min-width: 120px;
+  padding: 5px 0;
+  -webkit-box-shadow: 0px 3px 8px #0000000F;
+          box-shadow: 0px 3px 8px #0000000F;
+  border: none;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu .dropdown-item {
+  padding: 4px;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu .dropdown-item img {
+  margin-right: 5px;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu .dropdown-item:first-child {
+  padding: 7px;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu .dropdown-item:first-child:hover {
+  background-color: inherit;
+}
+
+.dashboard_theme .report_dropdown .dropdown-menu .dropdown-divider {
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */
