@@ -1881,13 +1881,12 @@ header {
           margin-right: 10px;
 
           input[type=time] {
-            width: 62px;
             padding: 0;
             height: 26px;
             font-size: 13px;
             border: none;
             padding: 5px;
-            width: 73px;
+            width: 75px;
 
             &::-webkit-calendar-picker-indicator {
               background: none;
@@ -1898,8 +1897,10 @@ header {
           }
 
           .off_time {
-            min-width: 167px;
-            text-align: center;
+            min-width: 171px;
+            text-align: left;
+            font-size: 12px;
+            padding: 5px;
           }
         }
 
@@ -2220,12 +2221,14 @@ header {
             box-shadow: inset 0px 0px 2px #00000029;
             border: none;
 
-            img {
-              width: 21px;
-            }
+            .upload_image_text {
+              img {
+                width: 21px;
+              }
 
-            label {
-              color: $black;
+              label {
+                color: $black;
+              }
             }
           }
 
@@ -2953,7 +2956,11 @@ header {
 
             &:nth-child(2),
             &:nth-child(3) {
-              width: 15%
+              width: 15%;
+            }
+
+            &:nth-child(4) {
+              width: 10%;
             }
 
             &:nth-child(6) {
@@ -3087,12 +3094,14 @@ header {
             box-shadow: inset 0px 0px 2px #00000029;
             border: none;
 
-            img {
-              width: 21px;
-            }
+            .upload_image_text {
+              img {
+                width: 21px;
+              }
 
-            label {
-              color: $black;
+              label {
+                color: $black;
+              }
             }
           }
 
@@ -3151,6 +3160,12 @@ header {
 // Customer Profile_info
 
 .profile_info_box {
+  h6 {
+    font-family: 'Outfit SemiBold';
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
   .card {
     border: none;
   }
@@ -3171,16 +3186,18 @@ header {
       border-radius: 6px;
       box-shadow: inset 0px 0px 2px #00000029;
 
-      img {
-        width: 21px;
-      }
+      .upload_image_text {
+        img {
+          width: 21px;
+        }
 
-      .upload-text {
-        margin-top: 6px;
-        font-size: 10px;
-        color: $black;
-        line-height: 13px;
-        letter-spacing: 0px;
+        .upload-text {
+          margin-top: 6px;
+          font-size: 10px;
+          color: $black;
+          line-height: 13px;
+          letter-spacing: 0px;
+        }
       }
     }
   }

@@ -2074,13 +2074,12 @@ header.active .side-nav-btn img {
 }
 
 .contact_info_form .form_card .schdeule_list .schedule_time_list .schedule_time input[type=time] {
-  width: 62px;
   padding: 0;
   height: 26px;
   font-size: 13px;
   border: none;
   padding: 5px;
-  width: 73px;
+  width: 75px;
 }
 
 .contact_info_form .form_card .schdeule_list .schedule_time_list .schedule_time input[type=time]::-webkit-calendar-picker-indicator {
@@ -2089,8 +2088,10 @@ header.active .side-nav-btn img {
 }
 
 .contact_info_form .form_card .schdeule_list .schedule_time_list .schedule_time .off_time {
-  min-width: 167px;
-  text-align: center;
+  min-width: 171px;
+  text-align: left;
+  font-size: 12px;
+  padding: 5px;
 }
 
 .contact_info_form .form_card .schdeule_list .schedule_time_list span.hyphen {
@@ -2424,11 +2425,11 @@ header.active .side-nav-btn img {
   border: none;
 }
 
-.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload img {
+.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text img {
   width: 21px;
 }
 
-.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload label {
+.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text label {
   color: #000000;
 }
 
@@ -3142,6 +3143,10 @@ header.active .side-nav-btn img {
   width: 15%;
 }
 
+.customer_module .table-responsive .table tbody tr td:nth-child(4) {
+  width: 10%;
+}
+
 .customer_module .table-responsive .table tbody tr td:nth-child(6) {
   text-overflow: ellipsis;
   width: 80px;
@@ -3277,11 +3282,11 @@ header.active .side-nav-btn img {
   border: none;
 }
 
-.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload img {
+.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text img {
   width: 21px;
 }
 
-.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload label {
+.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text label {
   color: #000000;
 }
 
@@ -3335,6 +3340,12 @@ header.active .side-nav-btn img {
   }
 }
 
+.profile_info_box h6 {
+  font-family: 'Outfit SemiBold';
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
 .profile_info_box .card {
   border: none;
 }
@@ -3365,11 +3376,11 @@ header.active .side-nav-btn img {
           box-shadow: inset 0px 0px 2px #00000029;
 }
 
-.profile_info_box .upload-img .upload-picture img {
+.profile_info_box .upload-img .upload-picture .upload_image_text img {
   width: 21px;
 }
 
-.profile_info_box .upload-img .upload-picture .upload-text {
+.profile_info_box .upload-img .upload-picture .upload_image_text .upload-text {
   margin-top: 6px;
   font-size: 10px;
   color: #000000;
