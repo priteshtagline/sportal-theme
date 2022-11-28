@@ -151,11 +151,6 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // Select2
-  $(".select").select2({
-    tags: true
-  });
-
   // Image Upload Javascript
   ("use strict");
   function dragNdrop(event) {
@@ -173,9 +168,14 @@ $(document).ready(function () {
     document.getElementById("uploadFile").parentNode.className = "dragBox";
   }
 
+  // Select2
+  $(".select").select2({
+    tags: true
+  });
+
   // Navbar
   jQuery(window).scroll(function () {
-    if (jQuery(window).scrollTop() >= 20) {
+    if (jQuery(window).scrollTop() >= 150) {
       jQuery("header").addClass("fixed-header");
     } else {
       jQuery("header").removeClass("fixed-header");

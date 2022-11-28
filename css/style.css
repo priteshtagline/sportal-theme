@@ -2417,42 +2417,19 @@ header.active .side-nav-btn img {
   border: none;
 }
 
-.court-popup .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 116px;
-  background-color: #f9f9f9;
-  border-radius: 6px;
+.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload {
+  min-height: 116px;
   -webkit-box-shadow: inset 0px 0px 2px #00000029;
           box-shadow: inset 0px 0px 2px #00000029;
+  border: none;
 }
 
-.court-popup .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture img {
+.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload img {
   width: 21px;
 }
 
-.court-popup .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture .upload-text {
-  margin-top: 6px;
-  font-size: 10px;
+.court-popup .modal .modal-dialog .modal-content .modal-body .image_upload label {
   color: #000000;
-  line-height: 13px;
-  letter-spacing: 0px;
-}
-
-.court-popup .modal .modal-dialog .modal-content .modal-body .upload-img .textinput {
-  display: none;
 }
 
 .court-popup .modal .modal-dialog .modal-content .modal-body .location {
@@ -2507,6 +2484,11 @@ header.active .side-nav-btn img {
 .court_table th:nth-child(6),
 .court_table td:nth-child(6) {
   width: 40%;
+}
+
+.court_table th:last-child,
+.court_table td:last-child {
+  text-align: right;
 }
 
 .court_group {
@@ -2705,7 +2687,8 @@ header.active .side-nav-btn img {
 
 .admin-page-table .table-responsive table tr td:last-child,
 .admin-page-table .table-responsive table tr th:last-child {
-  width: 75px;
+  width: 30px;
+  text-align: right;
 }
 
 .admin-page-table .table-responsive table .dropdown-toggle {
@@ -3159,9 +3142,19 @@ header.active .side-nav-btn img {
   width: 15%;
 }
 
-.customer_module .table-responsive .table tbody tr td:nth-child(7), .customer_module .table-responsive .table tbody tr td:last-child {
-  width: 70px;
+.customer_module .table-responsive .table tbody tr td:nth-child(6) {
+  text-overflow: ellipsis;
+  width: 80px;
+  white-space: nowrap;
+}
+
+.customer_module .table-responsive .table tbody tr td:nth-child(7) {
   text-align: center;
+}
+
+.customer_module .table-responsive .table tbody tr td:nth-child(8), .customer_module .table-responsive .table tbody tr td:last-child {
+  width: 70px;
+  text-align: right;
 }
 
 @media (max-width: 991px) {
@@ -3277,43 +3270,19 @@ header.active .side-nav-btn img {
   resize: none;
 }
 
-.customer_modal .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 116px;
-  background-color: #f9f9f9;
-  border-radius: 6px;
+.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload {
+  min-height: 116px;
   -webkit-box-shadow: inset 0px 0px 2px #00000029;
           box-shadow: inset 0px 0px 2px #00000029;
+  border: none;
 }
 
-.customer_modal .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture img {
+.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload img {
   width: 21px;
 }
 
-.customer_modal .modal .modal-dialog .modal-content .modal-body .upload-img .upload-picture .upload-text {
-  margin-top: 6px;
-  font-size: 10px;
+.customer_modal .modal .modal-dialog .modal-content .modal-body .image_upload label {
   color: #000000;
-  line-height: 13px;
-  letter-spacing: 0px;
-}
-
-.customer_modal .modal .modal-dialog .modal-content .modal-body .upload-img input,
-.customer_modal .modal .modal-dialog .modal-content .modal-body .upload-img .textinput {
-  display: none;
 }
 
 .customer_modal .modal .modal-dialog .modal-content .modal-body .location {

@@ -2215,33 +2215,17 @@ header {
             }
           }
 
-          .upload-img {
-            .upload-picture {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              width: 100%;
-              height: 116px;
-              background-color: #f9f9f9;
-              border-radius: 6px;
-              box-shadow: inset 0px 0px 2px #00000029;
+          .image_upload {
+            min-height: 116px;
+            box-shadow: inset 0px 0px 2px #00000029;
+            border: none;
 
-              img {
-                width: 21px;
-              }
-
-              .upload-text {
-                margin-top: 6px;
-                font-size: 10px;
-                color: $black;
-                line-height: 13px;
-                letter-spacing: 0px;
-              }
+            img {
+              width: 21px;
             }
 
-            .textinput {
-              display: none;
+            label {
+              color: $black;
             }
           }
 
@@ -2302,6 +2286,10 @@ header {
   td {
     &:nth-child(6) {
       width: 40%;
+    }
+
+    &:last-child {
+      text-align: right;
     }
   }
 }
@@ -2492,16 +2480,6 @@ header {
     table {
       min-height: 115px;
 
-      thead {
-        // th:last-child {
-
-        //   &:after,
-        //   &:before {
-        //     display: none;
-        //   }
-        // }
-      }
-
       tr {
 
         th,
@@ -2511,7 +2489,8 @@ header {
 
         td:last-child,
         th:last-child {
-          width: 75px;
+          width: 30px;
+          text-align: right;
         }
       }
 
@@ -2977,10 +2956,20 @@ header {
               width: 15%
             }
 
-            &:nth-child(7),
+            &:nth-child(6) {
+              text-overflow: ellipsis;
+              width: 80px;
+              white-space: nowrap;
+            }
+
+            &:nth-child(7) {
+              text-align: center;
+            }
+
+            &:nth-child(8),
             &:last-child {
               width: 70px;
-              text-align: center;
+              text-align: right;
             }
 
             @media (max-width: 991px) {
@@ -3093,34 +3082,17 @@ header {
             resize: none;
           }
 
-          .upload-img {
-            .upload-picture {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              width: 100%;
-              height: 116px;
-              background-color: #f9f9f9;
-              border-radius: 6px;
-              box-shadow: inset 0px 0px 2px #00000029;
+          .image_upload {
+            min-height: 116px;
+            box-shadow: inset 0px 0px 2px #00000029;
+            border: none;
 
-              img {
-                width: 21px;
-              }
-
-              .upload-text {
-                margin-top: 6px;
-                font-size: 10px;
-                color: $black;
-                line-height: 13px;
-                letter-spacing: 0px;
-              }
+            img {
+              width: 21px;
             }
 
-            input,
-            .textinput {
-              display: none;
+            label {
+              color: $black;
             }
           }
 
