@@ -135,10 +135,19 @@ input[type=checkbox] {
   background-color: #A4A9BC;
   color: $white;
 
+  &.btn-sm {
+    @media (max-width: 1024px) {
+      font-size: 12px;
+      padding: 3px 14px;
+      min-width: 70px;
+    }
+  }
+
   &:hover {
     background-color: #A4A9BC;
     color: $white;
   }
+
 }
 
 
@@ -155,6 +164,7 @@ input[type=checkbox] {
 
 .btn-sm {
   padding: 6px 18px;
+  font-size: 14px;
 }
 
 .btn-primary {
@@ -508,20 +518,12 @@ input[type=checkbox] {
         th {
           padding: 18px 17px;
           border: 0;
-          font-size: 13px;
-          line-height: 16px;
-          color: $black;
 
           &.sorting {
-            &::before {
-              bottom: 45%;
-            }
 
             &:before,
             &:after {
-              font-size: 6px;
-              color: $black;
-              opacity: 1;
+              display: none;
             }
 
             &.sorting_hide {
@@ -534,6 +536,31 @@ input[type=checkbox] {
             }
           }
 
+          span {
+            &:first-child {
+              font-size: 12px;
+              line-height: 14px;
+              vertical-align: middle;
+            }
+          }
+
+          .heading_sorting {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            margin-left: 15px;
+
+            svg {
+              &:first-child {
+                margin-bottom: 1px;
+              }
+            }
+
+            @media (max-width:991px) {
+              margin-left: 5px;
+            }
+          }
 
           &:first-child {
             display: none;
@@ -2930,9 +2957,15 @@ header {
               }
             }
 
-            &:nth-child(8),
+            &:nth-child(2),
+            &:nth-child(3) {
+              width: 15%
+            }
+
+            &:nth-child(7),
             &:last-child {
               width: 70px;
+              text-align: center;
             }
 
             @media (max-width: 991px) {

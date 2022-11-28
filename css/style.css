@@ -145,6 +145,14 @@ input[type=checkbox] {
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .btn-gray.btn-sm {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
 .btn-gray:hover {
   background-color: #A4A9BC;
   color: #ffffff;
@@ -163,6 +171,7 @@ input[type=checkbox] {
 
 .btn-sm {
   padding: 6px 18px;
+  font-size: 14px;
 }
 
 .btn-primary {
@@ -538,19 +547,10 @@ input[type=checkbox] {
 .table-responsive .table thead tr th {
   padding: 18px 17px;
   border: 0;
-  font-size: 13px;
-  line-height: 16px;
-  color: #000000;
-}
-
-.table-responsive .table thead tr th.sorting::before {
-  bottom: 45%;
 }
 
 .table-responsive .table thead tr th.sorting:before, .table-responsive .table thead tr th.sorting:after {
-  font-size: 6px;
-  color: #000000;
-  opacity: 1;
+  display: none;
 }
 
 .table-responsive .table thead tr th.sorting.sorting_hide {
@@ -559,6 +559,37 @@ input[type=checkbox] {
 
 .table-responsive .table thead tr th.sorting.sorting_hide:after, .table-responsive .table thead tr th.sorting.sorting_hide:before {
   display: none;
+}
+
+.table-responsive .table thead tr th span:first-child {
+  font-size: 12px;
+  line-height: 14px;
+  vertical-align: middle;
+}
+
+.table-responsive .table thead tr th .heading_sorting {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.table-responsive .table thead tr th .heading_sorting svg:first-child {
+  margin-bottom: 1px;
+}
+
+@media (max-width: 991px) {
+  .table-responsive .table thead tr th .heading_sorting {
+    margin-left: 5px;
+  }
 }
 
 .table-responsive .table thead tr th:first-child {
@@ -3105,8 +3136,13 @@ header.active .side-nav-btn img {
   white-space: nowrap;
 }
 
-.customer_module .table-responsive .table tbody tr td:nth-child(8), .customer_module .table-responsive .table tbody tr td:last-child {
+.customer_module .table-responsive .table tbody tr td:nth-child(2), .customer_module .table-responsive .table tbody tr td:nth-child(3) {
+  width: 15%;
+}
+
+.customer_module .table-responsive .table tbody tr td:nth-child(7), .customer_module .table-responsive .table tbody tr td:last-child {
   width: 70px;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
