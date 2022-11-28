@@ -545,8 +545,16 @@ input[type=checkbox] {
 }
 
 .table-responsive .table thead tr th {
-  padding: 18px 17px;
+  padding: 18px 20px;
   border: 0;
+}
+
+@media (max-width: 1024px) {
+  .table-responsive .table thead tr th {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 15px 10px;
+  }
 }
 
 .table-responsive .table thead tr th.sorting:before, .table-responsive .table thead tr th.sorting:after {
@@ -1084,10 +1092,16 @@ header.fixed-header {
 }
 
 header .navbar {
-  padding: 19px 30px;
+  padding: 19px 34px;
   background: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  header .navbar {
+    padding: 19px 23px;
+  }
 }
 
 header .navbar .navbar_menu {
@@ -1186,6 +1200,7 @@ header .navbar .side-nav-btn img {
 header .navbar .navbar-brand {
   color: #000000;
   font-size: 20px;
+  font-family: 'Outfit SemiBold';
   line-height: 24px;
 }
 
@@ -3056,6 +3071,8 @@ header.active .side-nav-btn img {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-width: 100px;
+  width: 100%;
 }
 
 .divider_dropdown_group button {
@@ -3065,6 +3082,7 @@ header.active .side-nav-btn img {
   min-width: 30px;
   -webkit-box-shadow: none;
           box-shadow: none;
+  font-family: 'Outfit Bold';
 }
 
 .divider_dropdown_group button::before, .divider_dropdown_group button::after {
@@ -3109,6 +3127,7 @@ header.active .side-nav-btn img {
 }
 
 .customer_module .customer_top_row .user_box p {
+  font-family: 'Outfit SemiBold';
   font-size: 16px;
   margin-bottom: 0;
 }

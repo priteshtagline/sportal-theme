@@ -516,8 +516,14 @@ input[type=checkbox] {
         box-shadow: 0px 3px 8px #0000000f;
 
         th {
-          padding: 18px 17px;
+          padding: 18px 20px;
           border: 0;
+
+          @media (max-width: 1024px) {
+            font-size: 12px;
+            line-height: 18px;
+            padding: 15px 10px;
+          }
 
           &.sorting {
 
@@ -1039,9 +1045,13 @@ header {
   }
 
   .navbar {
-    padding: 19px 30px;
+    padding: 19px 34px;
     background: $white;
     transition: all 0.5s ease-in-out;
+
+    @media (max-width:1024px) {
+      padding: 19px 23px;
+    }
 
     .navbar_menu {
       margin-left: 42px;
@@ -1122,6 +1132,7 @@ header {
     .navbar-brand {
       color: #000000;
       font-size: 20px;
+      font-family: 'Outfit SemiBold';
       line-height: 24px;
     }
 
@@ -2866,6 +2877,8 @@ header {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 100px;
+    width: 100%;
   }
 }
 
@@ -2877,6 +2890,7 @@ header {
     border: none;
     min-width: 30px;
     box-shadow: none;
+    font-family: 'Outfit Bold';
 
     &::before,
     &::after {
@@ -2920,6 +2934,7 @@ header {
       margin-right: 27px;
 
       p {
+        font-family: 'Outfit SemiBold';
         font-size: 16px;
         margin-bottom: 0;
       }
