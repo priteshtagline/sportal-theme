@@ -1054,7 +1054,7 @@ header {
     }
 
     .navbar_menu {
-      margin-left: 42px;
+      margin-left: 72px;
 
       .navbar-nav {
         border-bottom: none;
@@ -1854,6 +1854,8 @@ header {
         }
 
         &.edit {
+
+
           .schedule_time {
             input[type=time] {
               border: 1px solid #000000;
@@ -1914,6 +1916,11 @@ header {
           padding: 0px 16px;
         }
 
+        .btn-edit {
+          background-color: #A98FF1;
+          border: 1px solid #A98FF1;
+        }
+
         .btn-save {
           display: none;
         }
@@ -1940,6 +1947,12 @@ header {
 
   .update_info_btn {
     border-radius: 8px;
+  }
+
+  .amneties_form {
+    .card-body {
+      min-height: 275px;
+    }
   }
 }
 
@@ -4401,6 +4414,137 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+// Reports_theme
+.reports_theme {
+  .report_head {
+    .card {
+      border-radius: 12px;
+      border: 1px solid #E4E4E4;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      .card-body {
+        padding: 22px 17px;
+
+        .card_head_block {
+          display: inline-flex;
+          align-items: center;
+          margin-bottom: 21px;
+
+          .head_icon {
+            width: 45px;
+            height: 45px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #A98FF1;
+            color: $white;
+            border-radius: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+          }
+
+          .title {
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+        }
+
+        .price {
+          font-size: 34px;
+          font-family: 'Outfit Bold';
+          margin-bottom: 8px;
+        }
+
+        .profit_value {
+          color: #42D599;
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        .loss_value {
+          color: #EA1C29;
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        .bg_element_1,
+        .bg_element_2 {
+          position: absolute;
+        }
+
+        .bg_element_1 {
+          right: -86px;
+          top: 56px;
+        }
+
+        .bg_element_2 {
+          right: -31px;
+          top: 110px;
+        }
+      }
+
+    }
+  }
+
+  .reports_body {
+    .card {
+      border-radius: 12px;
+      border: 1px solid #E4E4E4;
+
+      .card-header {
+        border-top-left-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 12px;
+        background-color: #ffffff;
+        padding: 19px 20px 16px;
+
+        .card-title {
+          font-size: 14px;
+          margin-bottom: 0;
+          margin-right: 28px;
+        }
+      }
+    }
+
+    .apexcharts-text {
+      tspan {
+        font-size: 10px;
+        color: #A4A9BC;
+      }
+    }
+
+  }
+
+  .sorting_select {
+    position: relative;
+    border: 0.5px solid #764af3;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #764af3;
+    font-size: 8px;
+    background-size: 7px;
+    padding: 6px 21px 6px 9px;
+    -webkit-appearance: none;
+    background-image: url(../images/select_down.svg);
+    background-repeat: no-repeat;
+    background-position: 53px center;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &.gray_sorting {
+      color: #A4A9BC;
+      border: 0.5px solid #A4A9BC;
+      background-image: url(../images/select_down_grey.svg);
     }
   }
 }
