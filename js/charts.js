@@ -1,4 +1,4 @@
-// timeline_chart
+// timeline_chart for dashboard
 var options = {
   series: [{
     name: 'Online Booking',
@@ -85,7 +85,7 @@ var chart = new ApexCharts(document.querySelector("#timeline_chart"), options);
 chart.render();
 
 
-// #sales_overview_chart
+// #sales_overview_chart for dashboard
 var options = {
   series: [43, 57,],
   chart: {
@@ -157,7 +157,7 @@ function reset() {
 }
 
 
-// player_analytics_chart
+// player_analytics_chart for dashboard
 var options = {
   series: [{
     name: 'series1',
@@ -196,3 +196,72 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#player_analytics_chart"), options);
 chart.render();
+
+// reports_revenue_chart for Reports
+var options = {
+  series: [{
+    name: 'Income',
+    type: 'column',
+    data: [10, 25, 30, 31, 40, 42, 45, 30]
+  }, {
+    name: 'Revenue',
+    type: 'line',
+    data: [20, 29, 37, 36, 44, 45, 50, 58]
+  }],
+  chart: {
+    height: 350,
+    type: 'line',
+    stacked: false
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [1, 1, 4]
+  },
+  xaxis: {
+    categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+  },
+  yaxis: [
+    {
+      axisTicks: {
+        show: true,
+      },
+      axisBorder: {
+        show: true,
+        color: '#008FFB'
+      },
+      labels: {
+        style: {
+          colors: '#008FFB',
+        }
+      },
+      title: {
+        text: "Income (thousand crores)",
+        style: {
+          color: '#008FFB',
+        }
+      },
+      tooltip: {
+        enabled: true
+      }
+    },
+  ],
+  tooltip: {
+    fixed: {
+      enabled: true,
+      position: 'topLeft',
+      offsetY: 30,
+      offsetX: 60
+    },
+  },
+  legend: {
+    horizontalAlign: 'left',
+    offsetX: 40
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_revenue_chart"), options);
+chart.render();
+
+

@@ -1049,7 +1049,7 @@ input[type=checkbox] {
   font-family: "Outfit SemiBold";
   font-size: 7px;
   line-height: 13px !important;
-  top: 4px;
+  top: 10px;
   left: 24px;
   position: absolute;
   width: 13px;
@@ -1154,7 +1154,7 @@ header .navbar .navbar_menu .navbar-nav .nav-item .nav-link:hover {
 }
 
 header .navbar .side-nav-btn {
-  margin-left: -37px;
+  margin-left: -41px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1498,7 +1498,7 @@ header.active.fixed-header {
 }
 
 header.active .side-nav-btn {
-  margin-left: -39px;
+  margin-left: -41px;
 }
 
 header.active .side-nav-btn img {
@@ -3025,7 +3025,6 @@ header.active .side-nav-btn img {
 .setting_popup .modal-footer button:last-child {
   color: #a4a9bc;
   background-image: none;
-  padding: 16px 0;
 }
 
 .setting_popup .modal-footer input:last-child:hover,
@@ -4401,7 +4400,7 @@ header.active .side-nav-btn img {
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
-  background-position: 53px center;
+  background-position: 45px center;
 }
 
 .dashboard_theme .sorting_select:focus-visible {
@@ -4690,7 +4689,7 @@ header.active .side-nav-btn img {
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
-  background-position: 53px center;
+  background-position: 45px center;
 }
 
 .reports_theme .sorting_select:focus-visible {
