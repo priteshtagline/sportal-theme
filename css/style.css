@@ -1105,7 +1105,7 @@ header .navbar {
 }
 
 header .navbar .navbar_menu {
-  margin-left: 42px;
+  margin-left: 72px;
 }
 
 header .navbar .navbar_menu .navbar-nav {
@@ -2104,6 +2104,11 @@ header.active .side-nav-btn img {
   padding: 0px 16px;
 }
 
+.contact_info_form .form_card .schdeule_list .schedule_time_list .btn-edit {
+  background-color: #A98FF1;
+  border: 1px solid #A98FF1;
+}
+
 .contact_info_form .form_card .schdeule_list .schedule_time_list .btn-save {
   display: none;
 }
@@ -2125,6 +2130,10 @@ header.active .side-nav-btn img {
 
 .contact_info_form .update_info_btn {
   border-radius: 8px;
+}
+
+.contact_info_form .amneties_form .card-body {
+  min-height: 275px;
 }
 
 .image_upload {
@@ -2192,6 +2201,7 @@ header.active .side-nav-btn img {
   width: 100%;
   height: 100%;
   top: 0;
+  padding: 5px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -4557,5 +4567,139 @@ header.active .side-nav-btn img {
 
 .table-responsive .schedule_table tbody tr.green_court td .btn-edit {
   background-color: #74D7BA;
+}
+
+.reports_theme .report_head .card {
+  border-radius: 12px;
+  border: 1px solid #E4E4E4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.reports_theme .report_head .card .card-body {
+  padding: 22px 17px;
+}
+
+.reports_theme .report_head .card .card-body .card_head_block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 21px;
+}
+
+.reports_theme .report_head .card .card-body .card_head_block .head_icon {
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #A98FF1;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.reports_theme .report_head .card .card-body .card_head_block .title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.reports_theme .report_head .card .card-body .price {
+  font-size: 34px;
+  font-family: 'Outfit Bold';
+  margin-bottom: 8px;
+}
+
+.reports_theme .report_head .card .card-body .profit_value {
+  color: #42D599;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.reports_theme .report_head .card .card-body .loss_value {
+  color: #EA1C29;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.reports_theme .report_head .card .card-body .bg_element_1,
+.reports_theme .report_head .card .card-body .bg_element_2 {
+  position: absolute;
+}
+
+.reports_theme .report_head .card .card-body .bg_element_1 {
+  right: -86px;
+  top: 56px;
+}
+
+.reports_theme .report_head .card .card-body .bg_element_2 {
+  right: -31px;
+  top: 110px;
+}
+
+.reports_theme .reports_body .card {
+  border-radius: 12px;
+  border: 1px solid #E4E4E4;
+}
+
+.reports_theme .reports_body .card .card-header {
+  border-top-left-radius: 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 12px;
+  background-color: #ffffff;
+  padding: 19px 20px 16px;
+}
+
+.reports_theme .reports_body .card .card-header .card-title {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-right: 28px;
+}
+
+.reports_theme .reports_body .apexcharts-text tspan {
+  font-size: 10px;
+  color: #A4A9BC;
+}
+
+.reports_theme .sorting_select {
+  position: relative;
+  border: 0.5px solid #764af3;
+  border-radius: 18px;
+  background-color: #ffffff;
+  color: #764af3;
+  font-size: 8px;
+  background-size: 7px;
+  padding: 6px 21px 6px 9px;
+  -webkit-appearance: none;
+  background-image: url(../images/select_down.svg);
+  background-repeat: no-repeat;
+  background-position: 53px center;
+}
+
+.reports_theme .sorting_select:focus-visible {
+  outline: none;
+}
+
+.reports_theme .sorting_select.gray_sorting {
+  color: #A4A9BC;
+  border: 0.5px solid #A4A9BC;
+  background-image: url(../images/select_down_grey.svg);
 }
 /*# sourceMappingURL=style.css.map */

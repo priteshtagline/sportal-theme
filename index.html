@@ -48,7 +48,6 @@
           <img src="images/back-arrow.svg" alt="back_arrow_icon">
         </a>
 
-
         <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav setting-nav nav nav-tabs me-auto my-2 my-lg-0 navbar-nav-scroll" id="settings_nav_tab"
             role="tablist" style="--scroll-height: 100px;">
@@ -101,6 +100,29 @@
                     <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_reservation_tab"
                       data-toggle="tab" data-target="#customer_reservation_tab_pane" type="button" role="tab"
                       aria-controls="customer_reservation_tab_pane" aria-selected="false">Reservation History</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- For Reports Header -->
+            <li class="nav-item" id="reports_nav_tab">
+              <div>
+                <ul class="navbar-nav setting-nav nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="reports_booking_tab"
+                      data-toggle="tab" data-target="#reports_booking_tab_pane" type="button" role="tab"
+                      aria-controls="reports_booking_tab_pane" aria-selected="true">Bookings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="reports_revenue_tab" data-toggle="tab"
+                      data-target="#reports_revenue_tab_pane" type="button" role="tab"
+                      aria-controls="reports_revenue_tab_pane" aria-selected="false">Revenue</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="reports_players_tab" data-toggle="tab"
+                      data-target="#reports_players_tab_pane" type="button" role="tab"
+                      aria-controls="reports_players_tab_pane" aria-selected="false">Players</a>
                   </li>
                 </ul>
               </div>
@@ -405,10 +427,11 @@
       <span class="footer-bottom">Sportal Inc,(c) All Rights Reserved</span>
     </div>
   </div>
+
   <div class="main-content" id="main-content">
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-        <!-- Dashboard -->
+        <!-- Dashboard Start-->
         <div class="dashboard_theme">
           <div class="row dashboard_head">
             <div class="col-md-12">
@@ -729,8 +752,10 @@
             </div>
           </div>
         </div>
+        <!-- Dashboard End-->
       </div>
       <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+        <!-- Schedule Start -->
         <div class="card">
           <div class="card-body">
             <div id='calendar'>
@@ -1237,8 +1262,381 @@
             </div>
           </div>
         </div>
+        <!-- Schedule End -->
       </div>
-      <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">reports</div>
+      <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+        <!-- Reports Start -->
+        <div class="tab-content" id="reports_nav_tab_content">
+          <div class="tab-pane fade show active" id="reports_booking_tab_pane" role="tabpanel"
+            aria-labelledby="reports_booking_tab" tabindex="0">
+            <div class="reports_theme">
+              <div class="row report_head">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9.659" height="16.099"
+                            viewBox="0 0 9.659 16.099">
+                            <path id="bx-dollar"
+                              d="M17.047,8.232h1.61c0-2.284-2.218-3.325-4.025-3.565V3h-1.61V4.667C11.215,4.907,9,5.949,9,8.233c0,2.178,2.146,3.311,4.025,3.566v4c-1.166-.2-2.415-.824-2.415-1.932H9c0,2.084,1.952,3.315,4.025,3.571V19.1h1.61V17.433c1.807-.24,4.025-1.282,4.025-3.566s-2.218-3.325-4.025-3.565v-4C15.7,6.492,17.047,7.057,17.047,8.232Zm-6.44,0c0-1.175,1.344-1.74,2.415-1.932v3.863C11.919,9.96,10.608,9.357,10.608,8.232Zm6.44,5.635c0,1.175-1.344,1.74-2.415,1.932V11.935c1.071.192,2.415.757,2.415,1.932Z"
+                              transform="translate(-8.998 -3)" fill="#fff" />
+                          </svg>
+                        </span>
+                        <p class="title">Matches</p>
+                      </div>
+                      <h6 class="price">345</h6>
+                      <span class="profit_value">+25 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <g id="time" transform="translate(-3 -3)">
+                              <path id="Path_30" data-name="Path 30" d="M13.5,10.5h1.8V15h4.5v1.8H13.5Z"
+                                transform="translate(-4.2 -3)" fill="#fff" />
+                              <path id="Path_31" data-name="Path 31"
+                                d="M21,12a9,9,0,1,1-9-9A9,9,0,0,1,21,12Zm-1.8,0A7.2,7.2,0,1,1,12,4.8,7.2,7.2,0,0,1,19.2,12Z"
+                                fill="#fff" fill-rule="evenodd" />
+                            </g>
+                          </svg>
+                        </span>
+                        <p class="title">Hours of Occupation</p>
+                      </div>
+                      <h6 class="price">876</h6>
+                      <span class="profit_value">+15 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9.462" height="13.247"
+                            viewBox="0 0 9.462 13.247">
+                            <g id="user" transform="translate(-6.75 -2.25)">
+                              <path id="Path_32" data-name="Path 32"
+                                d="M13.437,3.2a2.365,2.365,0,1,1-2.365,2.365A2.365,2.365,0,0,1,13.437,3.2m0-.946a3.312,3.312,0,1,0,3.312,3.312A3.312,3.312,0,0,0,13.437,2.25Z"
+                                transform="translate(-1.956)" fill="#fff" />
+                              <path id="Path_33" data-name="Path 33"
+                                d="M16.212,25.927h-.946V23.562A2.365,2.365,0,0,0,12.9,21.2H10.062A2.365,2.365,0,0,0,7.7,23.562v2.365H6.75V23.562a3.312,3.312,0,0,1,3.312-3.312H12.9a3.312,3.312,0,0,1,3.312,3.312Z"
+                                transform="translate(0 -10.43)" fill="#fff" />
+                            </g>
+                          </svg>
+                        </span>
+                        <p class="title">Unique Players</p>
+                      </div>
+                      <h6 class="price">346</h6>
+                      <span class="loss_value">-15 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row reports_body">
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Revenue</h5>
+                      <select class="sorting_select" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body">
+                      <div id="reports_revenue_chart">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Payment Type</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Sport</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Product</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Coverage</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Size</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Feature</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="reports_revenue_tab_pane" role="tabpanel" aria-labelledby="reports_revenue_tab"
+            tabindex="0">
+            <div class="reports_theme">
+              <div class="row report_head">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9.659" height="16.099"
+                            viewBox="0 0 9.659 16.099">
+                            <path id="bx-dollar"
+                              d="M17.047,8.232h1.61c0-2.284-2.218-3.325-4.025-3.565V3h-1.61V4.667C11.215,4.907,9,5.949,9,8.233c0,2.178,2.146,3.311,4.025,3.566v4c-1.166-.2-2.415-.824-2.415-1.932H9c0,2.084,1.952,3.315,4.025,3.571V19.1h1.61V17.433c1.807-.24,4.025-1.282,4.025-3.566s-2.218-3.325-4.025-3.565v-4C15.7,6.492,17.047,7.057,17.047,8.232Zm-6.44,0c0-1.175,1.344-1.74,2.415-1.932v3.863C11.919,9.96,10.608,9.357,10.608,8.232Zm6.44,5.635c0,1.175-1.344,1.74-2.415,1.932V11.935c1.071.192,2.415.757,2.415,1.932Z"
+                              transform="translate(-8.998 -3)" fill="#fff" />
+                          </svg>
+                        </span>
+                        <p class="title">Matches</p>
+                      </div>
+                      <h6 class="price">345</h6>
+                      <span class="profit_value">+25 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <g id="time" transform="translate(-3 -3)">
+                              <path id="Path_30" data-name="Path 30" d="M13.5,10.5h1.8V15h4.5v1.8H13.5Z"
+                                transform="translate(-4.2 -3)" fill="#fff" />
+                              <path id="Path_31" data-name="Path 31"
+                                d="M21,12a9,9,0,1,1-9-9A9,9,0,0,1,21,12Zm-1.8,0A7.2,7.2,0,1,1,12,4.8,7.2,7.2,0,0,1,19.2,12Z"
+                                fill="#fff" fill-rule="evenodd" />
+                            </g>
+                          </svg>
+                        </span>
+                        <p class="title">Hours of Occupation</p>
+                      </div>
+                      <h6 class="price">876</h6>
+                      <span class="profit_value">+15 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card_head_block">
+                        <span class="head_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9.462" height="13.247"
+                            viewBox="0 0 9.462 13.247">
+                            <g id="user" transform="translate(-6.75 -2.25)">
+                              <path id="Path_32" data-name="Path 32"
+                                d="M13.437,3.2a2.365,2.365,0,1,1-2.365,2.365A2.365,2.365,0,0,1,13.437,3.2m0-.946a3.312,3.312,0,1,0,3.312,3.312A3.312,3.312,0,0,0,13.437,2.25Z"
+                                transform="translate(-1.956)" fill="#fff" />
+                              <path id="Path_33" data-name="Path 33"
+                                d="M16.212,25.927h-.946V23.562A2.365,2.365,0,0,0,12.9,21.2H10.062A2.365,2.365,0,0,0,7.7,23.562v2.365H6.75V23.562a3.312,3.312,0,0,1,3.312-3.312H12.9a3.312,3.312,0,0,1,3.312,3.312Z"
+                                transform="translate(0 -10.43)" fill="#fff" />
+                            </g>
+                          </svg>
+                        </span>
+                        <p class="title">Unique Players</p>
+                      </div>
+                      <h6 class="price">346</h6>
+                      <span class="loss_value">-15 percent</span>
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_1">
+                      <img src="images/card_bg.svg" alt="bg_elements" class="bg_element_2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row reports_body">
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Revenue</h5>
+                      <select class="sorting_select" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body">
+                      <div id="reports_revenue_chart">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Payment Type</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Sport</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Product</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Coverage</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Size</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <div class="card-header justify-content-between">
+                      <h5 class="card-title">Court Feature</h5>
+                      <select class="sorting_select gray_sorting" id="overview_select">
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                      </select>
+                    </div>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="reports_players_tab_pane" role="tabpanel" aria-labelledby="reports_players_tab"
+            tabindex="0">
+            reports_Players
+          </div>
+        </div>
+        <!-- Reports End -->
+
+      </div>
       <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">billings</div>
       <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">
         <div class="customer_module" id="customer_main_module">
@@ -2024,14 +2422,14 @@
                     </div>
                     <div class="col-md-6 form-group">
                       <form action="">
-                        <div class="card form_card">
+                        <div class="card form_card amneties_form">
                           <div class="card-header">
                             Amneties
                             <a href="javascript:void(0)" class="text-info add_amneties_features" data-toggle="modal"
                               data-target="#amenties_features_model">+ Add a custom
                               feature</a>
                           </div>
-                          <div class="card-body amneties_form">
+                          <div class="card-body">
                             <ul class="feature_list">
                               <li>
                                 <label>Lockers</label>
@@ -3537,6 +3935,7 @@
   <script src="js/fullcalender.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <script src="js/charts.js"></script>
   <script src="js/script.js"></script>
 </body>
 

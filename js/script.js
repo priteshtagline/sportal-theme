@@ -74,6 +74,14 @@ $(document).ready(function () {
     $('#customer_title').hide();
   });
 
+  // Report_nav_tab
+  $('#reports_nav_tab').hide();
+  $("#reports-tab").click(function () {
+    $('.navbar-brand').html('Reports');
+    $('#nav_search_field').hide();
+    $('#reports_nav_tab').show();
+  });
+
   // Customer_nav_tab
   $('#customer_subtab').hide();
   $('#nav-back-arrow').hide();
@@ -324,201 +332,48 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// timeline_chart
+// 
+
 var options = {
   series: [{
-    name: 'Online Booking',
-    data: [40, 42, 50, 52, 59, 55, 20, 30, 40, 55, 70, 10, 45, 30,]
+    name: 'Website Blog',
+    type: 'column',
+    data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
   }, {
-    name: 'Offline Booking',
-    data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 85, 80, 25, 56, 61,]
+    name: 'Social Media',
+    type: 'line',
+    data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
   }],
-  colors: ['#A98FF1', '#764AF3',],
   chart: {
-    type: 'bar',
-    height: 450
-  },
-  legend: {
-    show: false,
-    position: 'top',
-    horizontalAlign: 'right',
-    onItemHover: {
-      highlightDataSeries: false
-    },
-  },
-  plotOptions: {
-    bar: {
-      borderRadius: 3,
-      horizontal: false,
-      columnWidth: '60%',
-      endingShape: 'rounded'
-    },
-  },
-  dataLabels: {
-    enabled: false,
+    height: 350,
+    type: 'line',
   },
   stroke: {
-    show: true,
-    width: 2,
-    colors: ['transparent']
+    width: [0, 4]
   },
-  xaxis: {
-    categories: ['Sept 18', 'Sept 19', 'Sept 20', 'Sept 21', 'Sept 22', 'Sept 23', 'Sept 24', 'Sept 25', 'Sept 26', 'Sept 27', 'Sept 28', 'Sept 29', 'Sept 30', 'Sept 31'],
-    labels: {
-      style: {
-        colors: '#8e8da4',
-      },
-    },
-  },
-  yaxis: {
-    lines: {
-      show: true,
-    },
-    labels: {
-      style: {
-        colors: '#8e8da4',
-      },
-    },
-  },
-  grid: {
-    show: true,
-    borderColor: '#90A4AE',
-    position: 'back',
-    xaxis: {
-      lines: {
-        show: false
-      }
-    },
-    yaxis: {
-      lines: {
-        show: false
-      },
-    },
-  },
-
-  fill: {
-    opacity: 1
-  },
-  tooltip: {
-    y: {
-      formatter: function (val) {
-        return "$ " + val + " thousands"
-      }
-    }
-  }
-};
-var chart = new ApexCharts(document.querySelector("#timeline_chart"), options);
-chart.render();
-
-
-// #sales_overview_chart
-var options = {
-  series: [43, 57,],
-  chart: {
-    width: 375,
-    type: 'donut',
-  },
-  labels: ["Online Booking", "Offline Booking",],
-  colors: ['#4E9AFE', '#06D6A0',],
-  dataLabels: {
-    enabled: false
-  },
-  legend: {
-    position: 'right',
-    offsetY: 50,
-    height: 150,
-  },
-  responsive: [{
-    breakpoint: 1201,
-    options: {
-      legend: {
-        position: "bottom",
-        height: 50,
-        offsetY: 0,
-      },
-      chart: {
-        width: 300,
-      },
-    }
-  },
-  {
-    breakpoint: 1000,
-    options: {
-      legend: {
-        position: "bottom",
-        height: 50,
-        offsetY: 0,
-      },
-      chart: {
-        width: 320,
-      },
-    }
-  }],
-};
-
-var chart = new ApexCharts(document.querySelector("#sales_overview_chart"), options);
-chart.render();
-
-
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return options.series
-}
-
-
-// player_analytics_chart
-var options = {
-  series: [{
-    name: 'series1',
-    data: [31, 40, 28, 51, 42, 109, 100]
-  }],
-  chart: {
-    height: 200,
-    type: 'area',
-    toolbar: {
-      show: false,
-    }
+  title: {
+    text: 'Traffic Sources'
   },
   dataLabels: {
-    enabled: false
+    enabled: true,
+    enabledOnSeries: [1]
   },
-  stroke: {
-    curve: 'smooth',
-    width: 1,
-    colors: ["#8964F5",],
-  },
-  grid: {
-    show: false,
-  },
+  labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
   xaxis: {
-    categories: ["Mo", "Tu", "We", "Th", "Fr", "Sat", "Sun"],
-    labels: {
-      style: {
-        colors: '#8e8da4',
-      },
+    type: 'datetime'
+  },
+  yaxis: [{
+    title: {
+      text: 'Website Blog',
     },
-  },
-  yaxis: {
-    show: false,
-  },
+
+  }, {
+    opposite: true,
+    title: {
+      text: 'Social Media'
+    }
+  }]
 };
 
-var chart = new ApexCharts(document.querySelector("#player_analytics_chart"), options);
+var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
