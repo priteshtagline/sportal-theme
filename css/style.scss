@@ -995,7 +995,7 @@ input[type=checkbox] {
             font-family: "Outfit SemiBold";
             font-size: 7px;
             line-height: 13px !important;
-            top: 4px;
+            top: 10px;
             left: 24px;
             position: absolute;
             width: 13px;
@@ -1101,7 +1101,7 @@ header {
     }
 
     .side-nav-btn {
-      margin-left: -37px;
+      margin-left: -41px;
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -1401,7 +1401,7 @@ header {
     }
 
     .side-nav-btn {
-      margin-left: -39px;
+      margin-left: -41px;
 
       img {
         transform: rotateZ(0deg);
@@ -2832,7 +2832,6 @@ header {
       &:last-child {
         color: $gray-color;
         background-image: none;
-        padding: 16px 0;
 
         &:hover {
           color: #FFFFFF;
@@ -4220,7 +4219,7 @@ header {
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
-    background-position: 53px center;
+    background-position: 45px center;
 
     &:focus-visible {
       outline: none;
@@ -4535,7 +4534,7 @@ header {
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
-    background-position: 53px center;
+    background-position: 45px center;
 
     &:focus-visible {
       outline: none;
