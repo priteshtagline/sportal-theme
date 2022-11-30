@@ -49,6 +49,9 @@ $(document).ready(function () {
   $("#overview-tab").on('click', function () {
     $('.navbar-brand').hide();
   });
+  $("#dashboard-tab").on('click', function () {
+    $('.navbar-brand').hide();
+  });
 
 
   $('#customer_tab').hide();
@@ -77,7 +80,7 @@ $(document).ready(function () {
   // Report_nav_tab
   $('#reports_nav_tab').hide();
   $("#reports-tab").click(function () {
-    $('.navbar-brand').html('Reports');
+    $('.navbar-brand').html('Reports').show();
     $('#nav_search_field').hide();
     $('#reports_nav_tab').show();
   });

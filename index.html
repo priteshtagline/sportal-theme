@@ -335,8 +335,8 @@
           </a>
         </li>
         <li class="features-item schedule nav-item">
-          <a href="#" class="nav-link active" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
-            role="tab" aria-controls="schedule" aria-selected="true">
+          <a href="#" class="nav-link" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
+            role="tab" aria-controls="schedule" aria-selected="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="18.397" viewBox="0 0 16.668 18.397">
               <g id="_icon__calendar_appointment_date_" data-name="🦆 icon _calendar appointment date_"
                 transform="translate(0.55 0.55)">
@@ -359,8 +359,8 @@
           </a>
         </li>
         <li class="features-item reports nav-item">
-          <a href="#" class="nav-link" id="reports-tab" data-toggle="tab" data-target="#reports" type="button"
-            role="tab" aria-controls="reports" aria-selected="false">
+          <a href="#" class="nav-link active" id="reports-tab" data-toggle="tab" data-target="#reports" type="button"
+            role="tab" aria-controls="reports" aria-selected="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <g id="_icon__pie_chart_" data-name="🦆 icon _pie chart_" transform="translate(0.55 0.55)">
                 <path id="Path_19" data-name="Path 19"
@@ -829,7 +829,7 @@
         </div>
         <!-- Dashboard End-->
       </div>
-      <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+      <div class="tab-pane fade " id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
         <!-- Schedule Start -->
         <div class="card">
           <div class="card-body">
@@ -1339,7 +1339,7 @@
         </div>
         <!-- Schedule End -->
       </div>
-      <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+      <div class="tab-pane fad show active" id="reports" role="tabpanel" aria-labelledby="reports-tab">
         <!-- Reports Start -->
         <div class="tab-content" id="reports_nav_tab_content">
           <div class="tab-pane fade show active" id="reports_booking_tab_pane" role="tabpanel"
@@ -1447,7 +1447,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_payment_chart"></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -1461,7 +1463,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_sports_chart"></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -1475,7 +1479,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_product_chart"></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -1489,7 +1495,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_court_coverage_chart"></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -1503,7 +1511,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_court_size_chart"></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -1517,7 +1527,9 @@
                         <option>Yearly</option>
                       </select>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div id="reports_court_feature_chart"></div>
+                    </div>
                   </div>
                 </div>
               </div>

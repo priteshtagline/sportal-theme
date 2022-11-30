@@ -4144,24 +4144,24 @@ header {
       .apexcharts-canvas {
         position: relative;
 
-        &::before {
-          position: absolute;
-          content: "";
-          top: 46px;
-          bottom: 0;
-          left: 45px;
-          height: 370px;
-          z-index: 1;
-          border-left: 0.6px solid #ddd4d4;
+        // &::before {
+        //   position: absolute;
+        //   content: "";
+        //   top: 46px;
+        //   bottom: 0;
+        //   left: 45px;
+        //   height: 370px;
+        //   z-index: 1;
+        //   border-left: 0.6px solid #ddd4d4;
 
-          @media (max-width: 1199px) {
-            height: 345px;
-          }
+        //   @media (max-width: 1199px) {
+        //     height: 345px;
+        //   }
 
-          @media (max-width: 991px) {
-            height: 370px;
-          }
-        }
+        //   @media (max-width: 991px) {
+        //     height: 370px;
+        //   }
+        // }
       }
     }
 
@@ -4530,11 +4530,11 @@ header {
     color: #764af3;
     font-size: 8px;
     background-size: 7px;
-    padding: 6px 21px 6px 9px;
+    padding: 6px 28px 6px 9px;
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
-    background-position: 45px center;
+    background-position: 50px center;
 
     &:focus-visible {
       outline: none;
