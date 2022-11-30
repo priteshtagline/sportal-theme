@@ -338,6 +338,53 @@ input[type=checkbox] {
   }
 }
 
+.switch {
+  height: 0px;
+  margin-top: -25px;
+
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 16px;
+    height: 9px;
+    background: $gray-color;
+    border-radius: 100px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 7px;
+      height: 7px;
+      background: $white;
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+  }
+
+  input:checked+label {
+    background: #764af3;
+  }
+
+  input:checked+label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 7px;
+  }
+}
+
 .custom_radio {
   position: relative;
   display: inline-block;

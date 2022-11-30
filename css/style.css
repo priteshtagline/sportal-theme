@@ -341,6 +341,55 @@ input[type=checkbox] {
   z-index: 2;
 }
 
+.switch {
+  height: 0px;
+  margin-top: -25px;
+}
+
+.switch input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switch label {
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 16px;
+  height: 9px;
+  background: #a4a9bc;
+  border-radius: 100px;
+  position: relative;
+}
+
+.switch label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.switch input:checked + label {
+  background: #764af3;
+}
+
+.switch input:checked + label:after {
+  left: calc(100% - 1px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.switch label:active:after {
+  width: 7px;
+}
+
 .custom_radio {
   position: relative;
   display: inline-block;
