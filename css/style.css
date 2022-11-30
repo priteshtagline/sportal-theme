@@ -4324,29 +4324,6 @@ header.active .side-nav-btn img {
   position: relative;
 }
 
-.dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
-  position: absolute;
-  content: "";
-  top: 46px;
-  bottom: 0;
-  left: 45px;
-  height: 370px;
-  z-index: 1;
-  border-left: 0.6px solid #ddd4d4;
-}
-
-@media (max-width: 1199px) {
-  .dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
-    height: 345px;
-  }
-}
-
-@media (max-width: 991px) {
-  .dashboard_theme .dashboard_body .timeline_card .apexcharts-canvas::before {
-    height: 370px;
-  }
-}
-
 .dashboard_theme .dashboard_body .sales_overview_card .card-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4685,11 +4662,11 @@ header.active .side-nav-btn img {
   color: #764af3;
   font-size: 8px;
   background-size: 7px;
-  padding: 6px 21px 6px 9px;
+  padding: 6px 28px 6px 9px;
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
-  background-position: 45px center;
+  background-position: 50px center;
 }
 
 .reports_theme .sorting_select:focus-visible {
