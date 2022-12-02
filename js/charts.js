@@ -73,13 +73,6 @@ var options = {
   fill: {
     opacity: 1
   },
-  tooltip: {
-    y: {
-      formatter: function (val) {
-        return "$ " + val + " thousands"
-      }
-    }
-  }
 };
 var chart = new ApexCharts(document.querySelector("#timeline_chart"), options);
 chart.render();
@@ -101,6 +94,35 @@ var options = {
     position: 'right',
     offsetY: 50,
     height: 150,
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '46px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
+      }
+    }
   },
   responsive: [{
     breakpoint: 1201,
@@ -250,7 +272,6 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#reports_revenue_chart"), options);
 chart.render();
 
-
 // Payment Chart for Reports
 var payment_options = {
   series: [43, 57,],
@@ -395,7 +416,6 @@ var reports_court_coverage_options = {
 
 var chart = new ApexCharts(document.querySelector("#reports_court_coverage_chart"), reports_court_coverage_options);
 chart.render();
-
 
 // Court Size Chart For Report
 
@@ -668,8 +688,9 @@ chart.render();
 var reports_player_payment_options = {
   series: [5, 60, 15, 10, 2, 3, 3, 2],
   chart: {
-    width: 450,
     type: 'donut',
+    width: '90%',
+    height: 360,
   },
   labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
   colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
@@ -678,43 +699,7 @@ var reports_player_payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 40,
-    offsetX: -40,
-    fontSize: '10px',
-    fontFamily: 'Outfit Medium',
-    colors: "#A4A9BC",
-    markers: {
-      width: 10,
-      height: 10,
-      radius: 3,
-      offsetY: 2,
-      offsetX: -4,
-    },
-    labels: {
-      colors: "#A4A9BC",
-    },
-  }
-};
-
-var chart = new ApexCharts(document.querySelector("#reports_player_payment_chart"), reports_player_payment_options);
-chart.render();
-
-// Report Players Payment Type
-var reports_player_payment_1_options = {
-  series: [5, 60, 15, 10, 2, 3, 3, 2],
-  chart: {
-    type: 'donut',
-    width: '100%',
-    height: 400,
-  },
-  labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
-  colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
-  dataLabels: {
-    enabled: false
-  },
-  legend: {
-    position: 'right',
-    offsetY: 40,
+    offsetY: 80,
     offsetX: -40,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -732,11 +717,56 @@ var reports_player_payment_1_options = {
   },
   plotOptions: {
     pie: {
-      customScale: 0.8,
+      customScale: 0.9,
       donut: {
-        size: '75%',
+        size: '80%',
       },
-      offsetY: -30,
+      offsetY: 0,
+    },
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_player_payment_chart"), reports_player_payment_options);
+chart.render();
+
+// Report Players Payment Type
+var reports_player_payment_1_options = {
+  series: [5, 60, 15, 10, 2, 3, 3, 2],
+  chart: {
+    type: 'donut',
+    width: '90%',
+    height: 360,
+  },
+  labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
+  colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    position: 'right',
+    offsetY: 80,
+    offsetX: -40,
+    fontSize: '10px',
+    fontFamily: 'Outfit Medium',
+    colors: "#A4A9BC",
+    markers: {
+      width: 10,
+      height: 10,
+      radius: 3,
+      offsetY: 2,
+      offsetX: -4,
+    },
+    labels: {
+      colors: "#A4A9BC",
+    },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      donut: {
+        size: '80%',
+      },
+      offsetY: 0,
     },
   }
 };
