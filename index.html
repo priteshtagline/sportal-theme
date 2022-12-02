@@ -31,7 +31,7 @@
       </button>
       <div class="container-fluid pl-1 pl-md-0">
 
-        <a class="navbar-brand" href="javascript:void(0)">Customers</a>
+        <a class="navbar-brand d-none" href="javascript:void(0)">Customers</a>
         <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
 
         <form class="d-flex" role="search">
@@ -520,6 +520,7 @@
                     <option>This Week</option>
                     <option>This Month</option>
                     <option>This Year</option>
+                    <option>Custom</option>
                   </select>
                 </div>
                 <div class="btn-group report_dropdown">
@@ -654,6 +655,7 @@
                             <option>This Week</option>
                             <option>This Month</option>
                             <option>This Year</option>
+                            <option>Custom</option>
                           </select>
                         </div>
                         <ul class="legend">
@@ -678,6 +680,7 @@
                         <option>This Week</option>
                         <option>This Month</option>
                         <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1346,6 +1349,20 @@
             aria-labelledby="reports_booking_tab" tabindex="0">
             <div class="reports_theme">
               <div class="row report_head">
+                <div class="col-md-12">
+                  <div class="report_title_group">
+                    <h4 class="report_title">
+                      Overview
+                    </h4>
+                    <select class="sorting_select" id="overview_select">
+                      <option selected>Today</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
+                      <option>Custom</option>
+                    </select>
+                  </div>
+                </div>
                 <div class="col-lg-4">
                   <div class="card">
                     <div class="card-body">
@@ -1425,9 +1442,10 @@
                       <h5 class="card-title">Revenue</h5>
                       <select class="sorting_select" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1442,9 +1460,10 @@
                       <h5 class="card-title">Payment Type</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1458,9 +1477,10 @@
                       <h5 class="card-title">Sport</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1474,9 +1494,10 @@
                       <h5 class="card-title">Product</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1490,9 +1511,10 @@
                       <h5 class="card-title">Court Coverage</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1506,9 +1528,10 @@
                       <h5 class="card-title">Court Size</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1522,9 +1545,10 @@
                       <h5 class="card-title">Court Feature</h5>
                       <select class="sorting_select gray_sorting" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1539,6 +1563,20 @@
             tabindex="0">
             <div class="reports_theme">
               <div class="row report_head">
+                <div class="col-md-12">
+                  <div class="report_title_group">
+                    <h4 class="report_title">
+                      Overview
+                    </h4>
+                    <select class="sorting_select" id="overview_select">
+                      <option selected>Today</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
+                      <option>Custom</option>
+                    </select>
+                  </div>
+                </div>
                 <div class="col-lg-4">
                   <div class="card">
                     <div class="card-body">
@@ -1628,10 +1666,11 @@
                     <div class="card-header">
                       <h5 class="card-title">Trend of their Product</h5>
                       <select class="sorting_select" id="overview_select">
-                        <option>Today</option>
-                        <option selected>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option selected>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1645,9 +1684,10 @@
                       <h5 class="card-title">Payment Type</h5>
                       <select class="sorting_select" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1662,6 +1702,20 @@
             tabindex="0">
             <div class="reports_theme">
               <div class="row report_head">
+                <div class="col-md-12">
+                  <div class="report_title_group">
+                    <h4 class="report_title">
+                      Overview
+                    </h4>
+                    <select class="sorting_select" id="overview_select">
+                      <option selected>Today</option>
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
+                      <option>Custom</option>
+                    </select>
+                  </div>
+                </div>
                 <div class="col-lg-4">
                   <div class="card">
                     <div class="card-body">
@@ -1772,9 +1826,10 @@
                       <h5 class="card-title">Payment Type</h5>
                       <select class="sorting_select" id="overview_select">
                         <option>Today</option>
-                        <option selected>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option selected>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">
@@ -1788,9 +1843,10 @@
                       <h5 class="card-title">Payment Type</h5>
                       <select class="sorting_select" id="overview_select">
                         <option selected>Today</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
                       </select>
                     </div>
                     <div class="card-body">

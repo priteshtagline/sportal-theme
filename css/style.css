@@ -4424,15 +4424,21 @@ header.active .side-nav-btn img {
   color: #764af3;
   font-size: 8px;
   background-size: 7px;
-  padding: 6px 21px 6px 9px;
+  padding: 6px 22px 6px 9px;
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
-  background-position: 45px center;
+  background-position: 53px center;
 }
 
 .dashboard_theme .sorting_select:focus-visible {
   outline: none;
+}
+
+.dashboard_theme .sorting_select.gray_sorting {
+  color: #A4A9BC;
+  border: 0.5px solid #A4A9BC;
+  background-image: url(../images/select_down_grey.svg);
 }
 
 .dashboard_theme .apexcharts-legend-text {
@@ -4596,6 +4602,23 @@ header.active .side-nav-btn img {
   background-color: #74D7BA;
 }
 
+.reports_theme .report_head .report_title_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.reports_theme .report_head .report_title_group .report_title {
+  margin-right: 44px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
 .reports_theme .report_head .card {
   border-radius: 12px;
   border: 1px solid #E4E4E4;
@@ -4713,11 +4736,11 @@ header.active .side-nav-btn img {
   color: #764af3;
   font-size: 8px;
   background-size: 7px;
-  padding: 6px 28px 6px 9px;
+  padding: 6px 22px 6px 9px;
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
-  background-position: 50px center;
+  background-position: 53px center;
 }
 
 .reports_theme .sorting_select:focus-visible {
