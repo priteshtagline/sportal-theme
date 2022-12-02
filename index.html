@@ -29,7 +29,7 @@
       <button class="side-nav-btn" id="side_nav_btn">
         <img src="images/nav-aerrow.svg" alt="nav-aerrow">
       </button>
-      <div class="container-fluid pl-1 pl-md-0">
+      <div class="container-fluid pl-0 pl-md-0">
 
         <a class="navbar-brand d-none" href="javascript:void(0)">Customers</a>
         <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
@@ -685,8 +685,8 @@
                     </div>
                     <div class="card-body">
                       <div id="sales_overview_chart">
-                        <p class="sales_value">71%</p>
                       </div>
+                      <p class="chart_label">Sales Overview</p>
                     </div>
                   </div>
                 </div>
@@ -1656,7 +1656,7 @@
                       <h5 class="card-title">Breakdown</h5>
                     </div>
                     <div class="card-body">
-                      <div id="reports_revenue_chart">
+                      <div id="reports_breakdown_chart">
                       </div>
                     </div>
                   </div>
@@ -1679,7 +1679,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <div class="card h-100">
+                  <div class="card">
                     <div class="card-header">
                       <h5 class="card-title">Payment Type</h5>
                       <select class="sorting_select" id="overview_select">
@@ -1691,7 +1691,7 @@
                       </select>
                     </div>
                     <div class="card-body">
-                      <div id="reports_revenue_payment_chart" class="mt-5"></div>
+                      <div id="reports_revenue_payment_chart"></div>
                     </div>
                   </div>
                 </div>
@@ -1813,6 +1813,13 @@
                   <div class="card">
                     <div class="card-header">
                       <h5 class="card-title">Player Activity</h5>
+                      <select class="sorting_select" id="overview_select">
+                        <option>Today</option>
+                        <option selected>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+                        <option>Custom</option>
+                      </select>
                     </div>
                     <div class="card-body">
                       <div id="reports_player_activity_chart">
