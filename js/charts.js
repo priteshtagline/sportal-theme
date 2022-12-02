@@ -135,29 +135,6 @@ var chart = new ApexCharts(document.querySelector("#sales_overview_chart"), opti
 chart.render();
 
 
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return options.series
-}
-
-
 // player_analytics_chart for dashboard
 var options = {
   series: [{
@@ -310,29 +287,6 @@ var payment_options = {
 var chart = new ApexCharts(document.querySelector("#reports_payment_chart"), payment_options);
 chart.render();
 
-
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return options.series
-}
-
 // Sport Chart for Reports
 var payment_options = {
   series: [50, 20, 30],
@@ -369,30 +323,6 @@ var payment_options = {
 var chart = new ApexCharts(document.querySelector("#reports_sports_chart"), payment_options);
 chart.render();
 
-
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return payment_options.series
-}
-
-
 // Product Chart For Report
 var reports_product_options = {
   series: [43, 57,],
@@ -428,29 +358,6 @@ var reports_product_options = {
 
 var chart = new ApexCharts(document.querySelector("#reports_product_chart"), reports_product_options);
 chart.render();
-
-
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return reports_product_options.series
-}
 
 // Court Coverage Chart For Report
 
@@ -490,28 +397,6 @@ var chart = new ApexCharts(document.querySelector("#reports_court_coverage_chart
 chart.render();
 
 
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return reports_court_coverage_options.series
-}
-
 // Court Size Chart For Report
 
 var reports_court_size_options = {
@@ -548,29 +433,6 @@ var reports_court_size_options = {
 
 var chart = new ApexCharts(document.querySelector("#reports_court_size_chart"), reports_court_size_options);
 chart.render();
-
-
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
-
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
-
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
-
-function reset() {
-  return reports_court_size_options.series
-}
 
 // Court Feature Chart For Report
 
@@ -609,25 +471,270 @@ var reports_court_feature_options = {
 var chart = new ApexCharts(document.querySelector("#reports_court_feature_chart"), reports_court_feature_options);
 chart.render();
 
+//Reports_Revenue_Product_chart 
 
-function appendData() {
-  var arr = chart.w.globals.series.slice()
-  arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
-  return arr;
-}
+var revenue_product_options = {
+  series: [{
+    name: 'PRODUCT A',
+    data: [20, 40, 40, 20, 10, 20, 15]
+  }, {
+    name: 'PRODUCT B',
+    data: [10, 20, 20, 8, 13, 25, 20]
+  }, {
+    name: 'PRODUCT C',
+    data: [08, 10, 15, 15, 21, 14, 15]
+  }, {
+    name: 'PRODUCT D',
+    data: [04, 04, 04, 04, 04, 04, 04]
+  }, {
+    name: 'PRODUCT E',
+    data: [04, 04, 04, 04, 04, 04, 04]
+  }, {
+    name: 'PRODUCT F',
+    data: [04, 04, 04, 04, 04, 04, 04]
+  }, {
+    name: 'PRODUCT G',
+    data: [04, 04, 04, 04, 04, 04, 04]
+  }],
+  chart: {
+    type: 'bar',
+    height: 350,
+    stacked: true,
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: [
+    "#E5A24D",
+    "#C000CC",
+    "#00A3CC",
+    "#7240FF",
+    "#FF7FD8",
+    "#3D8A7B",
+    "#4FFFB3",
+  ],
+  xaxis: {
+    categories: ['Sept 19', 'Sept 19', 'Sept 19', 'Sept 19', 'Sept 19', 'Sept 19', 'Sept 19',],
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#A4A9BC',
+      }
+    }
+  },
+  yaxis:
+  {
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#A4A9BC',
+      },
+      formatter: function (value) {
+        return "$" + value;
+      },
+    },
+    axisBorder: {
+      show: true,
+      colors: '#A4A9BC',
+      width: 1,
+      offsetX: -1,
+      offsetY: -4,
+    },
+  },
+  fill: {
+    opacity: 1
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    show: true,
+    position: 'back',
+    xaxis: {
+      lines: {
+        show: false
+      },
+    },
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+};
 
-function removeData() {
-  var arr = chart.w.globals.series.slice()
-  arr.pop()
-  return arr;
-}
+var chart = new ApexCharts(document.querySelector("#reports_revenue_product_chart"), revenue_product_options);
+chart.render();
 
-function randomize() {
-  return chart.w.globals.series.map(function () {
-    return Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  })
-}
 
-function reset() {
-  return reports_court_feature_options.series
-}
+// Report Revenue Payment Type
+var reports_revenue_payment_options = {
+  series: [5, 60, 15, 10, 2, 3, 3, 2],
+  chart: {
+    width: 450,
+    type: 'donut',
+  },
+  labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
+  colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    position: 'right',
+    offsetY: 40,
+    offsetX: -40,
+    fontSize: '10px',
+    fontFamily: 'Outfit Medium',
+    colors: "#A4A9BC",
+    markers: {
+      width: 10,
+      height: 10,
+      radius: 3,
+      offsetY: 2,
+      offsetX: -4,
+    },
+    labels: {
+      colors: "#A4A9BC",
+    },
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_revenue_payment_chart"), reports_revenue_payment_options);
+chart.render();
+
+// Report Player Activity
+var report_player_activity_options = {
+  series: [{
+    name: 'series1',
+    data: [10, 25, 25, 35, 55, 70, 55, 50, 60, 70]
+  }],
+  chart: {
+    height: 200,
+    type: 'area',
+    toolbar: {
+      show: false,
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth',
+    width: 1,
+    colors: ["#8964F5",],
+  },
+  grid: {
+    show: false,
+  },
+  xaxis: {
+    categories: ["Sept 17", "Sept 18", "Sept 19", "Sept 20", "Sept 21", "Sept 22", "Sept 23", "Sept 24", "Sept 25", "Sept 26"],
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#A4A9BC',
+      }
+    }
+  },
+  yaxis:
+  {
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#A4A9BC',
+      },
+    },
+    axisBorder: {
+      show: true,
+      colors: '#A4A9BC',
+      width: 1,
+      offsetX: -1,
+      offsetY: -4,
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_player_activity_chart"), report_player_activity_options);
+chart.render();
+
+
+// Report Players Payment Type
+var reports_player_payment_options = {
+  series: [5, 60, 15, 10, 2, 3, 3, 2],
+  chart: {
+    width: 450,
+    type: 'donut',
+  },
+  labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
+  colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    position: 'right',
+    offsetY: 40,
+    offsetX: -40,
+    fontSize: '10px',
+    fontFamily: 'Outfit Medium',
+    colors: "#A4A9BC",
+    markers: {
+      width: 10,
+      height: 10,
+      radius: 3,
+      offsetY: 2,
+      offsetX: -4,
+    },
+    labels: {
+      colors: "#A4A9BC",
+    },
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_player_payment_chart"), reports_player_payment_options);
+chart.render();
+
+// Report Players Payment Type
+var reports_player_payment_1_options = {
+  series: [5, 60, 15, 10, 2, 3, 3, 2],
+  chart: {
+    width: 450,
+    type: 'donut',
+  },
+  labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
+  colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    position: 'right',
+    offsetY: 40,
+    offsetX: -40,
+    fontSize: '10px',
+    fontFamily: 'Outfit Medium',
+    colors: "#A4A9BC",
+    markers: {
+      width: 10,
+      height: 10,
+      radius: 3,
+      offsetY: 2,
+      offsetX: -4,
+    },
+    labels: {
+      colors: "#A4A9BC",
+    },
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '20%',
+    }
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_player_payment_1_chart"), reports_player_payment_1_options);
+chart.render();
