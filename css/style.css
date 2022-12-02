@@ -1143,6 +1143,8 @@ header.fixed-header {
 header .navbar {
   padding: 19px 34px;
   background: #ffffff;
+  -webkit-box-shadow: 0px 5px 25px #0000000F;
+          box-shadow: 0px 5px 25px #0000000F;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
