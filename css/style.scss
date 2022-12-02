@@ -4263,14 +4263,20 @@ header {
     color: #764af3;
     font-size: 8px;
     background-size: 7px;
-    padding: 6px 21px 6px 9px;
+    padding: 6px 22px 6px 9px;
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
-    background-position: 45px center;
+    background-position: 53px center;
 
     &:focus-visible {
       outline: none;
+    }
+
+    &.gray_sorting {
+      color: #A4A9BC;
+      border: 0.5px solid #A4A9BC;
+      background-image: url(../images/select_down_grey.svg);
     }
   }
 
@@ -4468,6 +4474,19 @@ header {
 // Reports_theme
 .reports_theme {
   .report_head {
+    .report_title_group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-top: 10px;
+
+      .report_title {
+        margin-right: 44px;
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+    }
+
     .card {
       border-radius: 12px;
       border: 1px solid #E4E4E4;
@@ -4578,11 +4597,11 @@ header {
     color: #764af3;
     font-size: 8px;
     background-size: 7px;
-    padding: 6px 28px 6px 9px;
+    padding: 6px 22px 6px 9px;
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
-    background-position: 50px center;
+    background-position: 53px center;
 
     &:focus-visible {
       outline: none;
