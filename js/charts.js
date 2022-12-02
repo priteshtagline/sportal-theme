@@ -82,7 +82,8 @@ chart.render();
 var options = {
   series: [43, 57,],
   chart: {
-    width: 375,
+    width: "100%",
+    height: 205,
     type: 'donut',
   },
   labels: ["Online Booking", "Offline Booking",],
@@ -92,8 +93,8 @@ var options = {
   },
   legend: {
     position: 'right',
-    offsetY: 50,
-    height: 150,
+    offsetY: 80,
+    height: 50,
   },
   plotOptions: {
     pie: {
@@ -105,7 +106,7 @@ var options = {
           },
           value: {
             show: true,
-            fontSize: '46px',
+            fontSize: '40px',
             offsetY: 16,
             formatter: function (val) {
               return val
@@ -124,38 +125,33 @@ var options = {
       }
     }
   },
-  responsive: [{
-    breakpoint: 1201,
-    options: {
-      legend: {
-        position: "bottom",
-        height: 50,
-        offsetY: 0,
-      },
-      chart: {
-        width: 300,
-      },
+  responsive: [
+    {
+      breakpoint: "1201",
+      options: {
+        legend: {
+          position: "bottom",
+          height: 50,
+          offsetY: 0,
+        },
+        chart: {
+          width: 300,
+        },
+      }
+    },
+    {
+      breakpoint: 1000,
+      options: {
+        chart: {
+          width: 320,
+        },
+      }
     }
-  },
-  {
-    breakpoint: 1000,
-    options: {
-      legend: {
-        position: "bottom",
-        height: 50,
-        offsetY: 0,
-        fontFamily: 'Outfit Medium',
-      },
-      chart: {
-        width: 320,
-      },
-    }
-  }],
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#sales_overview_chart"), options);
 chart.render();
-
 
 // player_analytics_chart for dashboard
 var options = {
@@ -202,17 +198,24 @@ var options = {
   series: [{
     name: 'Income',
     type: 'column',
-    data: [700, 1600, 1200, 800, 1300, 42, 750]
+    data: [700, 1600, 1200, 800, 1300, 200, 750]
   }, {
     name: 'Revenue',
     type: 'line',
-    data: [700, 1600, 1200, 800, 1300, 42, 750],
+    data: [700, 1600, 1200, 800, 1300, 200, 750],
   }],
   chart: {
     height: 350,
     type: 'line',
     toolbar: {
       show: false,
+    }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '40%',
+      borderRadius: 4,
     }
   },
   stroke: {
@@ -491,6 +494,75 @@ var reports_court_feature_options = {
 var chart = new ApexCharts(document.querySelector("#reports_court_feature_chart"), reports_court_feature_options);
 chart.render();
 
+// Report_revenue_Breakdown_chart
+var reports_breakdown_options = {
+  series: [{
+    data: [38, 25, 14, 7],
+  }],
+  chart: {
+    type: 'bar',
+    height: 350,
+    toolbar: {
+      show: false,
+    },
+  },
+  plotOptions: {
+    bar: {
+      barHeight: '30%',
+      distributed: true,
+      horizontal: true,
+    }
+  },
+  legend: {
+    show: false,
+  },
+  colors: ['#DCD1FC', '#BAA4F9', '#9877F6', '#764AF3',],
+  dataLabels: {
+    enabled: false,
+  },
+  xaxis: {
+    categories: ['Online', 'Offline', 'Club Wallet', 'Club Offer',],
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#90A4AE',
+      },
+      formatter: function (value) {
+        return value + "%";
+      },
+    },
+  },
+  yaxis:
+  {
+    labels: {
+      style: {
+        fontFamily: 'Outfit Medium',
+        fontFamily: 10,
+        colors: '#90A4AE',
+      },
+    },
+  },
+  grid: {
+    show: true,
+    borderColor: '#90A4AE',
+    position: 'back',
+    xaxis: {
+      lines: {
+        show: false
+      }
+    },
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#reports_breakdown_chart"), reports_breakdown_options);
+chart.render();
+
 //Reports_Revenue_Product_chart 
 
 var revenue_product_options = {
@@ -583,6 +655,11 @@ var revenue_product_options = {
       },
     },
   },
+  plotOptions: {
+    bar: {
+      columnWidth: '40%',
+    }
+  },
   dataLabels: {
     enabled: false
   },
@@ -591,13 +668,13 @@ var revenue_product_options = {
 var chart = new ApexCharts(document.querySelector("#reports_revenue_product_chart"), revenue_product_options);
 chart.render();
 
-
 // Report Revenue Payment Type
 var reports_revenue_payment_options = {
   series: [5, 60, 15, 10, 2, 3, 3, 2],
   chart: {
-    width: 450,
     type: 'donut',
+    width: '90%',
+    height: 360,
   },
   labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
   colors: ['#4E9AFE', "#E5A24D", "#C000CC", "#00A3CC", "#7240FF", "#FF7FD8", "#3D8A7B", "#4FFFB3",],
@@ -606,7 +683,7 @@ var reports_revenue_payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 40,
+    offsetY: 80,
     offsetX: -40,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -620,6 +697,15 @@ var reports_revenue_payment_options = {
     },
     labels: {
       colors: "#A4A9BC",
+    },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      donut: {
+        size: '80%',
+      },
+      offsetY: 0,
     },
   }
 };
@@ -659,22 +745,29 @@ var report_player_activity_options = {
         fontFamily: 10,
         colors: '#A4A9BC',
       }
-    }
+    },
   },
   yaxis:
   {
     labels: {
+      align: 'left',
+      minWidth: 50,
+      offsetX: -50,
       style: {
         fontFamily: 'Outfit Medium',
         fontFamily: 10,
         colors: '#A4A9BC',
       },
+      title: {
+        offsetX: 50,
+      },
     },
+
     axisBorder: {
       show: true,
       colors: '#A4A9BC',
-      width: 1,
-      offsetX: -1,
+      width: 0.5,
+      offsetX: 49,
       offsetY: -4,
     },
   },

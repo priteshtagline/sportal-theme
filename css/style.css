@@ -4085,6 +4085,7 @@ header.active .side-nav-btn img {
   margin-right: 44px;
   font-size: 20px;
   margin-bottom: 0;
+  font-family: 'Outfit SemiBold';
 }
 
 .dashboard_theme .dashboard_head .card {
@@ -4209,6 +4210,7 @@ header.active .side-nav-btn img {
   font-size: 14px;
   margin-bottom: 0;
   margin-right: 28px;
+  font-family: 'Outfit Medium';
 }
 
 .dashboard_theme .dashboard_body .timeline_card .card-body .chart {
@@ -4386,6 +4388,7 @@ header.active .side-nav-btn img {
 
 .dashboard_theme .dashboard_body .sales_overview_card .card-header .card-title {
   margin-right: 56px;
+  font-family: 'Outfit Medium';
 }
 
 .dashboard_theme .dashboard_body .sales_overview_card .sales_value {
@@ -4409,6 +4412,10 @@ header.active .side-nav-btn img {
 .dashboard_theme .dashboard_body .sales_overview_card .apexcharts-legend-text {
   padding-left: 18px !important;
   margin-left: -15px !important;
+}
+
+.dashboard_theme .dashboard_body .player_analytics_card .card-title {
+  font-family: 'Outfit Medium';
 }
 
 .dashboard_theme .dashboard_body .player_analytics_card .apexcharts-legend {
@@ -4751,5 +4758,13 @@ header.active .side-nav-btn img {
   color: #A4A9BC;
   border: 0.5px solid #A4A9BC;
   background-image: url(../images/select_down_grey.svg);
+}
+
+.chart_label {
+  position: absolute;
+  font-family: 'Outfit Medium';
+  font-size: 12px;
+  top: 160px;
+  right: 56px;
 }
 /*# sourceMappingURL=style.css.map */
