@@ -14,6 +14,13 @@ $light_blue_event: #DDECFF;
 $light_pink_event: #F1DDFF;
 $light_green_event: #DDFFF5;
 
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  -webkit-appearance: inherit;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
@@ -1164,6 +1171,7 @@ header {
       margin-bottom: 0;
       transition: all 0.9s ease-in-out;
       cursor: pointer;
+      background-color: $white;
 
       img {
         transition: all 0.9s ease-in-out;
@@ -1392,6 +1400,7 @@ header {
           border: 1px solid $theme-primary-color;
           display: flex;
           align-items: center;
+          background-color: $white;
 
           @media (max-width: 1200px) {
             padding: 5px;
@@ -1402,7 +1411,7 @@ header {
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            outline: 1px solid $theme-primary-color;
+            border: 1px solid $theme-primary-color;
           }
 
           span {
@@ -3965,12 +3974,14 @@ header {
         }
 
         .profit_value {
+          font-family: 'Outfit Regular';
           color: #42D599;
           font-size: 12px;
           margin-right: 5px;
         }
 
         .loss_value {
+          font-family: 'Outfit Regular';
           color: #EA1C29;
           font-size: 12px;
           margin-right: 5px;
@@ -4163,6 +4174,10 @@ header {
 
             &:not(:last-child) {
               margin-right: 23px;
+
+              @media (max-width:1199px) {
+                margin-right: 10px;
+              }
             }
 
             &:before {
@@ -4193,25 +4208,6 @@ header {
 
       .apexcharts-canvas {
         position: relative;
-
-        // &::before {
-        //   position: absolute;
-        //   content: "";
-        //   top: 46px;
-        //   bottom: 0;
-        //   left: 45px;
-        //   height: 370px;
-        //   z-index: 1;
-        //   border-left: 0.6px solid #ddd4d4;
-
-        //   @media (max-width: 1199px) {
-        //     height: 345px;
-        //   }
-
-        //   @media (max-width: 991px) {
-        //     height: 370px;
-        //   }
-        // }
       }
     }
 
@@ -4269,8 +4265,9 @@ header {
     background-color: #ffffff;
     color: #764af3;
     font-size: 8px;
+    line-height: 10px;
     background-size: 7px;
-    padding: 6px 22px 6px 9px;
+    padding: 4px 22px 4px 9px;
     -webkit-appearance: none;
     background-image: url(../images/select_down.svg);
     background-repeat: no-repeat;
@@ -4629,10 +4626,8 @@ header {
   }
 }
 
-// .chart_label {
-//   position: absolute;
-//   font-family: 'Outfit Medium';
-//   font-size: 12px;
-//   top: 160px;
-//   right: 56px;
-// }
+.report_revenue_chart {
+  .apexcharts-marker {
+    fill: #764AF3;
+  }
+}

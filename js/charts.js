@@ -1,5 +1,5 @@
 // timeline_chart for dashboard
-var options = {
+var timeline_chart_options = {
   series: [{
     name: 'Online Booking',
     data: [40, 42, 50, 52, 59, 55, 20, 30, 40, 55, 70, 10, 45, 30,]
@@ -74,11 +74,11 @@ var options = {
     opacity: 1
   },
 };
-var chart = new ApexCharts(document.querySelector("#timeline_chart"), options);
+var chart = new ApexCharts(document.querySelector("#timeline_chart"), timeline_chart_options);
 chart.render();
 
 // sales_overview_chart for dashboard
-var options = {
+var sales_overview_options = {
   series: [43, 57,],
   chart: {
     width: "100%",
@@ -95,20 +95,11 @@ var options = {
     offsetX: 100,
     offsetY: 70,
     height: 50,
-    title: {
-      text: "Hello",
-      style: {
-        fontSize: '14px',
-        fontWeight: 'bold',
-        color: '#000000',
-      },
-    },
   },
   plotOptions: {
     pie: {
       customScale: 0.9,
       offsetX: -50,
-
       donut: {
         size: '70%',
         offsetY: 0,
@@ -138,36 +129,37 @@ var options = {
       }
     }
   },
-  responsive: [
-    {
-      breakpoint: "1201",
-      options: {
-        legend: {
-          position: "bottom",
-          height: 50,
-          offsetY: 0,
+  responsive: [{
+    breakpoint: 1500,
+    options: {
+      legend: {
+        offsetY: 50,
+        offsetX: 0,
+      },
+      plotOptions: {
+        pie: {
+          customScale: 0.9,
+          offsetX: 0,
         },
-        chart: {
-          width: 300,
-        },
-      }
+      },
     },
-    {
-      breakpoint: 1000,
-      options: {
-        chart: {
-          width: 320,
-        },
-      }
-    }
+  },
+  {
+    breakpoint: 1200,
+    options: {
+      legend: {
+        offsetY: 80,
+      },
+    },
+  },
   ],
 };
 
-var chart = new ApexCharts(document.querySelector("#sales_overview_chart"), options);
+var chart = new ApexCharts(document.querySelector("#sales_overview_chart"), sales_overview_options);
 chart.render();
 
 // player_analytics_chart for dashboard
-var options = {
+var player_analytics_options = {
   series: [{
     name: 'series1',
     data: [31, 40, 35, 60, 42, 50, 55]
@@ -198,16 +190,25 @@ var options = {
       },
     },
   },
+  responsive: [{
+    breakpoint: 1500,
+    options: {
+      chart: {
+        height: 170,
+      },
+    },
+  },
+  ],
   yaxis: {
     show: false,
   },
 };
 
-var chart = new ApexCharts(document.querySelector("#player_analytics_chart"), options);
+var chart = new ApexCharts(document.querySelector("#player_analytics_chart"), player_analytics_options);
 chart.render();
 
 // reports_revenue_chart for Reports
-var options = {
+var reports_revenue_options = {
   series: [{
     name: 'Income',
     type: 'column',
@@ -296,7 +297,7 @@ var options = {
   },
 };
 
-var chart = new ApexCharts(document.querySelector("#reports_revenue_chart"), options);
+var chart = new ApexCharts(document.querySelector("#reports_revenue_chart"), reports_revenue_options);
 chart.render();
 
 // Payment Chart for Reports
@@ -314,8 +315,8 @@ var payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -334,7 +335,7 @@ var payment_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
@@ -362,8 +363,8 @@ var payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -382,7 +383,7 @@ var payment_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
@@ -410,8 +411,8 @@ var reports_product_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -430,7 +431,7 @@ var reports_product_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
@@ -444,7 +445,6 @@ var chart = new ApexCharts(document.querySelector("#reports_product_chart"), rep
 chart.render();
 
 // Court Coverage Chart For Report
-
 var reports_court_coverage_options = {
   series: [43, 57,],
   chart: {
@@ -459,8 +459,8 @@ var reports_court_coverage_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -479,7 +479,7 @@ var reports_court_coverage_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
@@ -508,8 +508,8 @@ var reports_court_size_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -528,7 +528,7 @@ var reports_court_size_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
@@ -557,8 +557,8 @@ var reports_court_feature_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 60,
-    offsetX: 80,
+    offsetY: 50,
+    offsetX: -10,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -577,7 +577,7 @@ var reports_court_feature_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
-      offsetX: -50,
+      offsetX: 0,
 
       donut: {
         size: '70%',
