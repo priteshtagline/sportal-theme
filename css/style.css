@@ -4624,6 +4624,7 @@ header.active .side-nav-btn img {
   margin-right: 44px;
   font-size: 20px;
   margin-bottom: 0;
+  font-family: 'Outfit SemiBold';
 }
 
 .reports_theme .report_head .card {
@@ -4725,6 +4726,7 @@ header.active .side-nav-btn img {
 }
 
 .reports_theme .reports_body .card .card-header .card-title {
+  font-family: 'Outfit Medium';
   font-size: 14px;
   margin-bottom: 0;
   margin-right: 28px;
@@ -4733,6 +4735,13 @@ header.active .side-nav-btn img {
 .reports_theme .reports_body .apexcharts-text tspan {
   font-size: 10px;
   color: #A4A9BC;
+}
+
+.reports_theme .reports_body .report-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'Outfit SemiBold';
+  margin-bottom: 20px;
 }
 
 .reports_theme .sorting_select {
@@ -4758,13 +4767,5 @@ header.active .side-nav-btn img {
   color: #A4A9BC;
   border: 0.5px solid #A4A9BC;
   background-image: url(../images/select_down_grey.svg);
-}
-
-.chart_label {
-  position: absolute;
-  font-family: 'Outfit Medium';
-  font-size: 12px;
-  top: 160px;
-  right: 56px;
 }
 /*# sourceMappingURL=style.css.map */

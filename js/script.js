@@ -51,6 +51,7 @@ $(document).ready(function () {
   });
   $("#dashboard-tab").on('click', function () {
     $('.navbar-brand').hide();
+    $('#reports_nav_tab').hide();
   });
 
 

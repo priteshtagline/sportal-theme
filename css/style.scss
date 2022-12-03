@@ -4491,6 +4491,7 @@ header {
         margin-right: 44px;
         font-size: 20px;
         margin-bottom: 0;
+        font-family: 'Outfit SemiBold';
       }
     }
 
@@ -4562,7 +4563,6 @@ header {
           top: 110px;
         }
       }
-
     }
   }
 
@@ -4580,6 +4580,7 @@ header {
         padding: 19px 20px 16px;
 
         .card-title {
+          font-family: 'Outfit Medium';
           font-size: 14px;
           margin-bottom: 0;
           margin-right: 28px;
@@ -4594,6 +4595,12 @@ header {
       }
     }
 
+    .report-title {
+      font-size: 20px;
+      line-height: 24px;
+      font-family: 'Outfit SemiBold';
+      margin-bottom: 20px;
+    }
   }
 
   .sorting_select {
@@ -4622,10 +4629,10 @@ header {
   }
 }
 
-.chart_label {
-  position: absolute;
-  font-family: 'Outfit Medium';
-  font-size: 12px;
-  top: 160px;
-  right: 56px;
-}
+// .chart_label {
+//   position: absolute;
+//   font-family: 'Outfit Medium';
+//   font-size: 12px;
+//   top: 160px;
+//   right: 56px;
+// }
