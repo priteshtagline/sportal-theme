@@ -1,3 +1,10 @@
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  -webkit-appearance: inherit;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
@@ -1230,6 +1237,7 @@ header .navbar .side-nav-btn {
   -webkit-transition: all 0.9s ease-in-out;
   transition: all 0.9s ease-in-out;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 header .navbar .side-nav-btn img {
@@ -1482,6 +1490,7 @@ header .navbar .nav-right .btn-group .profile-dropdown {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffffff;
 }
 
 @media (max-width: 1200px) {
@@ -1495,7 +1504,7 @@ header .navbar .nav-right .btn-group .profile-dropdown .profile_image {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  outline: 1px solid #764af3;
+  border: 1px solid #764af3;
 }
 
 header .navbar .nav-right .btn-group .profile-dropdown span {
@@ -4142,12 +4151,14 @@ header.active .side-nav-btn img {
 }
 
 .dashboard_theme .dashboard_head .card .card-body .profit_value {
+  font-family: 'Outfit Regular';
   color: #42D599;
   font-size: 12px;
   margin-right: 5px;
 }
 
 .dashboard_theme .dashboard_head .card .card-body .loss_value {
+  font-family: 'Outfit Regular';
   color: #EA1C29;
   font-size: 12px;
   margin-right: 5px;
@@ -4354,6 +4365,12 @@ header.active .side-nav-btn img {
   margin-right: 23px;
 }
 
+@media (max-width: 1199px) {
+  .dashboard_theme .dashboard_body .timeline_card .card_heading .legend li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
 .dashboard_theme .dashboard_body .timeline_card .card_heading .legend li:before {
   position: absolute;
   content: "";
@@ -4430,8 +4447,9 @@ header.active .side-nav-btn img {
   background-color: #ffffff;
   color: #764af3;
   font-size: 8px;
+  line-height: 10px;
   background-size: 7px;
-  padding: 6px 22px 6px 9px;
+  padding: 4px 22px 4px 9px;
   -webkit-appearance: none;
   background-image: url(../images/select_down.svg);
   background-repeat: no-repeat;
@@ -4767,5 +4785,9 @@ header.active .side-nav-btn img {
   color: #A4A9BC;
   border: 0.5px solid #A4A9BC;
   background-image: url(../images/select_down_grey.svg);
+}
+
+.report_revenue_chart .apexcharts-marker {
+  fill: #764AF3;
 }
 /*# sourceMappingURL=style.css.map */
