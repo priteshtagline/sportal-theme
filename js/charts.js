@@ -77,13 +77,12 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#timeline_chart"), options);
 chart.render();
 
-
 // sales_overview_chart for dashboard
 var options = {
   series: [43, 57,],
   chart: {
     width: "100%",
-    height: 205,
+    height: 250,
     type: 'donut',
   },
   labels: ["Online Booking", "Offline Booking",],
@@ -93,12 +92,26 @@ var options = {
   },
   legend: {
     position: 'right',
-    offsetY: 80,
+    offsetX: 100,
+    offsetY: 70,
     height: 50,
+    title: {
+      text: "Hello",
+      style: {
+        fontSize: '14px',
+        fontWeight: 'bold',
+        color: '#000000',
+      },
+    },
   },
   plotOptions: {
     pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
       donut: {
+        size: '70%',
+        offsetY: 0,
         labels: {
           show: true,
           name: {
@@ -157,10 +170,10 @@ chart.render();
 var options = {
   series: [{
     name: 'series1',
-    data: [31, 40, 28, 51, 42, 109, 100]
+    data: [31, 40, 35, 60, 42, 50, 55]
   }],
   chart: {
-    height: 200,
+    height: 250,
     type: 'area',
     toolbar: {
       show: false,
@@ -198,12 +211,23 @@ var options = {
   series: [{
     name: 'Income',
     type: 'column',
-    data: [700, 1600, 1200, 800, 1300, 200, 750]
+    data: [700, 1600, 1200, 800, 1300, 200, 750],
   }, {
     name: 'Revenue',
     type: 'line',
     data: [700, 1600, 1200, 800, 1300, 200, 750],
   }],
+  markers: {
+    size: 5,
+    discrete: [{
+      seriesIndex: 0,
+      dataPointIndex: 1,
+      fillColor: "#764AF3",
+      strokeColor: "#FFF",
+      size: 13,
+    }]
+  },
+  colors: ["#4E9AFE", "#A98FF1"],
   chart: {
     height: 350,
     type: 'line',
@@ -279,7 +303,8 @@ chart.render();
 var payment_options = {
   series: [43, 57,],
   chart: {
-    width: 305,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Split Payment", "Single Pay",],
@@ -289,8 +314,8 @@ var payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 30,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -305,6 +330,17 @@ var payment_options = {
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -315,7 +351,8 @@ chart.render();
 var payment_options = {
   series: [50, 20, 30],
   chart: {
-    width: 270,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Futsal", "Tennis", "Pedal",],
@@ -325,22 +362,33 @@ var payment_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 20,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
     colors: "#A4A9BC",
     markers: {
-      radius: 3,
       width: 10,
       height: 10,
+      radius: 3,
       offsetY: 2,
       offsetX: -4,
     },
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -351,7 +399,8 @@ chart.render();
 var reports_product_options = {
   series: [43, 57,],
   chart: {
-    width: 305,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Online Booking", "Offline Booking",],
@@ -361,22 +410,33 @@ var reports_product_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 30,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
     colors: "#A4A9BC",
     markers: {
-      radius: 3,
       width: 10,
       height: 10,
+      radius: 3,
       offsetY: 2,
       offsetX: -4,
     },
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -388,7 +448,8 @@ chart.render();
 var reports_court_coverage_options = {
   series: [43, 57,],
   chart: {
-    width: 285,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Outdoor", "Indoor",],
@@ -398,11 +459,11 @@ var reports_court_coverage_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 40,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
-    fontFamily: 'Outfit Medium',
     fontSize: '10px',
+    fontFamily: 'Outfit Medium',
     colors: "#A4A9BC",
     markers: {
       width: 10,
@@ -414,6 +475,17 @@ var reports_court_coverage_options = {
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -425,7 +497,8 @@ chart.render();
 var reports_court_size_options = {
   series: [43, 57,],
   chart: {
-    width: 285,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Outdoor", "Indoor",],
@@ -435,8 +508,8 @@ var reports_court_size_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 40,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -451,6 +524,17 @@ var reports_court_size_options = {
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -462,7 +546,8 @@ chart.render();
 var reports_court_feature_options = {
   series: [43, 57,],
   chart: {
-    width: 285,
+    width: "100%",
+    height: 200,
     type: 'donut',
   },
   labels: ["Cystal", "Syntehtic",],
@@ -472,8 +557,8 @@ var reports_court_feature_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 40,
-    offsetX: -35,
+    offsetY: 60,
+    offsetX: 80,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -488,6 +573,17 @@ var reports_court_feature_options = {
     labels: {
       colors: "#A4A9BC",
     },
+  },
+  plotOptions: {
+    pie: {
+      customScale: 0.9,
+      offsetX: -50,
+
+      donut: {
+        size: '70%',
+        offsetY: 0,
+      }
+    }
   },
 };
 
@@ -866,3 +962,14 @@ var reports_player_payment_1_options = {
 
 var chart = new ApexCharts(document.querySelector("#reports_player_payment_1_chart"), reports_player_payment_1_options);
 chart.render();
+
+
+
+
+// const link = document.querySelector('.charts');
+// let method = link.getAttribute("data-legend-label")
+
+// const para = document.createElement("div");
+// para.classList.add("ss");
+// para.innerText = method;
+// document.querySelector("charts").prepend(para);
