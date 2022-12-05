@@ -4122,7 +4122,6 @@ header.active .side-nav-btn img {
 .dashboard_theme .dashboard_head .card .card-body .card_head_block .head_icon {
   width: 34px;
   height: 34px;
-  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4324,6 +4323,12 @@ header.active .side-nav-btn img {
   color: #A4A9BC;
 }
 
+@media (max-width: 1440px) {
+  .dashboard_theme .dashboard_body .dashboard_reservation_card .card-body .reservation_list {
+    height: 760px;
+  }
+}
+
 .dashboard_theme .dashboard_body .timeline_card .card_heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4438,6 +4443,10 @@ header.active .side-nav-btn img {
 .dashboard_theme .dashboard_body .player_analytics_card .apexcharts-legend {
   margin: -44px 21px 0 12px;
   border-top: 0.5px solid #ddd4d4;
+}
+
+.dashboard_theme .dashboard_body .sales_overview_charts .apexcharts-canvas {
+  margin: 0 auto;
 }
 
 .dashboard_theme .sorting_select {
@@ -4670,7 +4679,6 @@ header.active .side-nav-btn img {
 .reports_theme .report_head .card .card-body .card_head_block .head_icon {
   width: 45px;
   height: 45px;
-  font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4687,9 +4695,22 @@ header.active .side-nav-btn img {
   overflow: hidden;
 }
 
+@media (max-width: 1440px) {
+  .reports_theme .report_head .card .card-body .card_head_block .head_icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 .reports_theme .report_head .card .card-body .card_head_block .title {
   font-size: 18px;
   margin-bottom: 0;
+}
+
+@media (max-width: 1440px) {
+  .reports_theme .report_head .card .card-body .card_head_block .title {
+    font-size: 14px;
+  }
 }
 
 .reports_theme .report_head .card .card-body .price {
@@ -4698,16 +4719,34 @@ header.active .side-nav-btn img {
   margin-bottom: 8px;
 }
 
+@media (max-width: 1440px) {
+  .reports_theme .report_head .card .card-body .price {
+    font-size: 30px;
+  }
+}
+
 .reports_theme .report_head .card .card-body .profit_value {
   color: #42D599;
   font-size: 16px;
   margin-right: 5px;
 }
 
+@media (max-width: 1440px) {
+  .reports_theme .report_head .card .card-body .profit_value {
+    font-size: 14px;
+  }
+}
+
 .reports_theme .report_head .card .card-body .loss_value {
   color: #EA1C29;
   font-size: 16px;
   margin-right: 5px;
+}
+
+@media (max-width: 1440px) {
+  .reports_theme .report_head .card .card-body .loss_value {
+    font-size: 14px;
+  }
 }
 
 .reports_theme .report_head .card .card-body .bg_element_1,
@@ -4748,6 +4787,16 @@ header.active .side-nav-btn img {
   font-size: 14px;
   margin-bottom: 0;
   margin-right: 28px;
+}
+
+.reports_theme .reports_body .card .card-body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1199px) {
+  .reports_theme .reports_body .card .apexcharts-canvas {
+    margin: 0 auto;
+  }
 }
 
 .reports_theme .reports_body .apexcharts-text tspan {
