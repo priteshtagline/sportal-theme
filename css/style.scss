@@ -3950,7 +3950,6 @@ header {
           .head_icon {
             width: 34px;
             height: 34px;
-            font-size: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4147,6 +4146,10 @@ header {
               }
             }
           }
+
+          @media (max-width:1440px) {
+            height: 760px;
+          }
         }
       }
     }
@@ -4254,6 +4257,12 @@ header {
       .apexcharts-legend {
         margin: -44px 21px 0 12px;
         border-top: 0.5px solid #ddd4d4;
+      }
+    }
+
+    .sales_overview_charts {
+      .apexcharts-canvas {
+        margin: 0 auto;
       }
     }
   }
@@ -4510,7 +4519,6 @@ header {
           .head_icon {
             width: 45px;
             height: 45px;
-            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4519,11 +4527,20 @@ header {
             border-radius: 5px;
             margin-right: 10px;
             overflow: hidden;
+
+            @media (max-width:1440px) {
+              width: 38px;
+              height: 38px;
+            }
           }
 
           .title {
             font-size: 18px;
             margin-bottom: 0;
+
+            @media (max-width:1440px) {
+              font-size: 14px;
+            }
           }
         }
 
@@ -4531,18 +4548,30 @@ header {
           font-size: 34px;
           font-family: 'Outfit Bold';
           margin-bottom: 8px;
+
+          @media (max-width:1440px) {
+            font-size: 30px;
+          }
         }
 
         .profit_value {
           color: #42D599;
           font-size: 16px;
           margin-right: 5px;
+
+          @media (max-width:1440px) {
+            font-size: 14px;
+          }
         }
 
         .loss_value {
           color: #EA1C29;
           font-size: 16px;
           margin-right: 5px;
+
+          @media (max-width:1440px) {
+            font-size: 14px;
+          }
         }
 
         .bg_element_1,
@@ -4581,6 +4610,16 @@ header {
           font-size: 14px;
           margin-bottom: 0;
           margin-right: 28px;
+        }
+      }
+
+      .card-body {
+        overflow-x: hidden;
+      }
+
+      .apexcharts-canvas {
+        @media (max-width: 1199px) {
+          margin: 0 auto;
         }
       }
     }

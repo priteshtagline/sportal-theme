@@ -69,7 +69,6 @@ var timeline_chart_options = {
       },
     },
   },
-
   fill: {
     opacity: 1
   },
@@ -145,10 +144,27 @@ var sales_overview_options = {
     },
   },
   {
-    breakpoint: 1200,
+    breakpoint: 1401,
     options: {
+      chart: {
+        width: "350px",
+        height: 300,
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          customScale: 0.9,
+          offsetX: -35,
+          donut: {
+            size: '70%',
+            offsetY: 0,
+          }
+        }
+      },
       legend: {
-        offsetY: 80,
+        offsetX: 40,
+        fontSize: 10,
+        offsetY: 65,
       },
     },
   },
@@ -304,7 +320,7 @@ chart.render();
 var payment_options = {
   series: [43, 57,],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -316,7 +332,7 @@ var payment_options = {
   legend: {
     position: 'right',
     offsetY: 50,
-    offsetX: -10,
+    offsetX: -20,
     height: 150,
     fontSize: '10px',
     fontFamily: 'Outfit Medium',
@@ -343,6 +359,43 @@ var payment_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "300px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 40,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+            donut: {
+              size: '70%',
+              offsetY: 0,
+            }
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "350px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 80,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_payment_chart"), payment_options);
@@ -352,7 +405,7 @@ chart.render();
 var payment_options = {
   series: [50, 20, 30],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -391,6 +444,39 @@ var payment_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "265px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 20,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "320px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 20,
+          offsetY: 70,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_sports_chart"), payment_options);
@@ -400,7 +486,7 @@ chart.render();
 var reports_product_options = {
   series: [43, 57,],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -439,6 +525,43 @@ var reports_product_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "300px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 40,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+            donut: {
+              size: '70%',
+              offsetY: 0,
+            }
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "350px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 80,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_product_chart"), reports_product_options);
@@ -448,7 +571,7 @@ chart.render();
 var reports_court_coverage_options = {
   series: [43, 57,],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -487,6 +610,43 @@ var reports_court_coverage_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "280px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 40,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+            donut: {
+              size: '70%',
+              offsetY: 0,
+            }
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "330px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 80,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_court_coverage_chart"), reports_court_coverage_options);
@@ -497,7 +657,7 @@ chart.render();
 var reports_court_size_options = {
   series: [43, 57,],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -536,6 +696,43 @@ var reports_court_size_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "280px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 40,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+            donut: {
+              size: '70%',
+              offsetY: 0,
+            }
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "330px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 80,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_court_size_chart"), reports_court_size_options);
@@ -546,7 +743,7 @@ chart.render();
 var reports_court_feature_options = {
   series: [43, 57,],
   chart: {
-    width: "100%",
+    width: "350px",
     height: 200,
     type: 'donut',
   },
@@ -585,6 +782,43 @@ var reports_court_feature_options = {
       }
     }
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: "280px",
+          height: 200,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 40,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -35,
+            donut: {
+              size: '70%',
+              offsetY: 0,
+            }
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: "330px",
+          height: 300,
+        },
+        legend: {
+          offsetX: 30,
+          offsetY: 80,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_court_feature_chart"), reports_court_feature_options);
@@ -686,6 +920,7 @@ var revenue_product_options = {
   }],
   chart: {
     type: 'bar',
+    width: "100%",
     height: 350,
     stacked: true,
     toolbar: {
@@ -759,6 +994,16 @@ var revenue_product_options = {
   dataLabels: {
     enabled: false
   },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          height: 300,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_revenue_product_chart"), revenue_product_options);
@@ -769,7 +1014,7 @@ var reports_revenue_payment_options = {
   series: [5, 60, 15, 10, 2, 3, 3, 2],
   chart: {
     type: 'donut',
-    width: '90%',
+    width: '600px',
     height: 360,
   },
   labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
@@ -803,7 +1048,43 @@ var reports_revenue_payment_options = {
       },
       offsetY: 0,
     },
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: '420px',
+          height: 360,
+        },
+        legend: {
+          offsetX: 0,
+          offsetY: 70,
+          height: 200,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -20,
+            offsetY: 65,
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: '500px',
+          height: 360,
+        },
+        legend: {
+          offsetX: -30,
+          offsetY: 110,
+          height: 200,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_revenue_payment_chart"), reports_revenue_payment_options);
@@ -816,7 +1097,7 @@ var report_player_activity_options = {
     data: [10, 25, 25, 35, 55, 70, 55, 50, 60, 70]
   }],
   chart: {
-    height: 200,
+    height: 250,
     type: 'area',
     toolbar: {
       show: false,
@@ -878,7 +1159,7 @@ var reports_player_payment_options = {
   series: [5, 60, 15, 10, 2, 3, 3, 2],
   chart: {
     type: 'donut',
-    width: '90%',
+    width: '600px',
     height: 360,
   },
   labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
@@ -912,7 +1193,43 @@ var reports_player_payment_options = {
       },
       offsetY: 0,
     },
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: '420px',
+          height: 360,
+        },
+        legend: {
+          offsetX: 0,
+          offsetY: 70,
+          height: 200,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -20,
+            offsetY: 65,
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: '500px',
+          height: 360,
+        },
+        legend: {
+          offsetX: -30,
+          offsetY: 110,
+          height: 200,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_player_payment_chart"), reports_player_payment_options);
@@ -923,7 +1240,7 @@ var reports_player_payment_1_options = {
   series: [5, 60, 15, 10, 2, 3, 3, 2],
   chart: {
     type: 'donut',
-    width: '90%',
+    width: '600px',
     height: 360,
   },
   labels: ["Online Booking", "Offline Booking", "League", "Sportal Matches", "Tournament", "Offer", "Class", "Bookings Recurring",],
@@ -957,7 +1274,43 @@ var reports_player_payment_1_options = {
       },
       offsetY: 0,
     },
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1500,
+      options: {
+        chart: {
+          width: '420px',
+          height: 360,
+        },
+        legend: {
+          offsetX: 0,
+          offsetY: 70,
+          height: 200,
+        },
+        plotOptions: {
+          pie: {
+            offsetX: -20,
+            offsetY: 65,
+          }
+        },
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        chart: {
+          width: '500px',
+          height: 360,
+        },
+        legend: {
+          offsetX: -30,
+          offsetY: 110,
+          height: 200,
+        },
+      },
+    },
+  ],
 };
 
 var chart = new ApexCharts(document.querySelector("#reports_player_payment_1_chart"), reports_player_payment_1_options);
