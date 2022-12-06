@@ -1094,7 +1094,7 @@ header {
     right: 0;
     width: calc(100% - 271px);
     height: auto;
-    z-index: 3;
+    z-index: 1111111;
     margin-left: 271px;
   }
 
@@ -3386,6 +3386,30 @@ header {
   border-radius: 6px;
 }
 
+.select2-container {
+  .select2-dropdown {
+    border: 1px solid #ECECEC;
+
+    .select2-results {
+      .select2-results__option {
+        font-size: 12px;
+
+        &.select2-results__option--selected {
+          background-color: $theme-primary-color;
+          color: $white;
+        }
+
+        &.select2-results__option--highlighted {
+          &.select2-results__option--selectable {
+            background-color: $hover-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
 .select2-selection__rendered[title="Active"] {
   background-color: #42D599 !important;
   color: $white  !important;
@@ -4756,6 +4780,66 @@ header {
 
     @media (max-width:1440px) {
       padding: 5px 0px;
+    }
+  }
+}
+
+// Billings_Form
+
+.billing_form {
+  .form_title {
+    font-size: 16px;
+    font-family: 'Outfit SemiBold';
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  label,
+  span {
+    font-size: 12px;
+    color: #A4A9BC;
+  }
+
+  span {
+    &.heading {
+      color: #A4A9BC;
+      font-size: 14px;
+    }
+  }
+
+  .textinput {
+    border: 1px solid #ECECEC;
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .select2-selection__rendered {
+    border: 1px solid #ECECEC;
+    padding: 8px;
+    font-size: 12px;
+    background-color: $white;
+  }
+
+  .border-box {
+    margin: 20px 0;
+
+    .border-top {
+      border-top: 0.6px solid #E4E4E4;
+    }
+  }
+
+  .btn-submit {
+    font-size: 16px;
+    padding: 14px 34px;
+    border-radius: 8px;
+    display: inline-block;
+
+    @media (max-width: 1024px) {
+      padding: 10px 20px;
+      font-size: 12px;
     }
   }
 }
