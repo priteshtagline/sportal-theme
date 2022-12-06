@@ -51,8 +51,10 @@ $(document).ready(function () {
   $("#dashboard-tab").on('click', function () {
     $('.navbar-brand').hide();
     $('#reports_nav_tab').hide();
+    $('#humburge_menu').hide();
   });
 
+  $('.navbar-brand').hide();
 
   $('#customer_tab').hide();
   $("#customers-tab").click(function () {
@@ -83,19 +85,23 @@ $(document).ready(function () {
     $('.navbar-brand').html('Reports').show();
     $('#nav_search_field').hide();
     $('#reports_nav_tab').show();
+    // $('#humburge_menu').show();
   });
 
   // Customer_nav_tab
   $('#customer_subtab').hide();
   $('#nav-back-arrow').hide();
+  $('#humburge_menu').hide();
   $('#customer_subtab_content').hide();
   $('#customer_show_more_btn').on('click', function () {
     $('.navbar-brand').hide();
     $('#customer_title').hide();
+    $('#customer_nav_title').hide();
     $('#customer_subtab').show();
     $('#customer_subtab_content').show();
     $('#customer_main_module').hide();
     $('#nav-back-arrow').show();
+    $('#humburge_menu').show();
   })
   $('#nav-back-arrow').on('click', function () {
     $('.navbar-brand').show();

@@ -1211,6 +1211,12 @@ header .navbar .navbar_menu .navbar-nav .nav-item .nav-link:hover {
   }
 }
 
+@media (max-width: 991px) {
+  header .navbar .navbar_menu .customer_nav_list .nav-link {
+    display: none;
+  }
+}
+
 header .navbar .side-nav-btn {
   margin-left: -41px;
   position: absolute;
@@ -1261,6 +1267,10 @@ header .navbar .navbar-brand {
   font-size: 20px;
   font-family: 'Outfit SemiBold';
   line-height: 24px;
+}
+
+header .navbar .customer_nav_title {
+  font-size: 12px;
 }
 
 header .navbar .search_group {
@@ -1534,6 +1544,14 @@ header .navbar .nav-right .btn-group .profile-dropdown::after {
     margin-left: auto;
     margin-right: 22px;
   }
+}
+
+header .navbar .navbar-toggler {
+  color: #764af3;
+}
+
+header .navbar .navbar-toggler .humburge_menu {
+  font-size: 32px;
 }
 
 header.active {
@@ -4097,6 +4115,12 @@ header.active .side-nav-btn img {
   font-family: 'Outfit SemiBold';
 }
 
+@media (max-width: 991px) {
+  .dashboard_theme .dashboard_head .dashboard_head_row .dashboard_title_group .dashboard_title {
+    margin-right: 9px;
+  }
+}
+
 .dashboard_theme .dashboard_head .card {
   border-radius: 12px;
   border: 1px solid #E4E4E4;
@@ -4634,6 +4658,9 @@ header.active .side-nav-btn img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 10px;
 }
