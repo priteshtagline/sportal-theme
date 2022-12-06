@@ -1708,14 +1708,21 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <h5 class="card-title">Trend of their Product</h5>
-                      <select class="sorting_select" id="overview_select">
-                        <option selected>Today</option>
-                        <option>This Week</option>
-                        <option>This Month</option>
-                        <option>This Year</option>
-                        <option>Custom</option>
-                      </select>
+                      <div class="d-flex">
+                        <h5 class="card-title">Trend of their Product</h5>
+                        <select class="sorting_select" id="overview_custom_select">
+                          <option selected value="today">Today</option>
+                          <option value="thisweek">This Week</option>
+                          <option value="thismonth">This Month</option>
+                          <option value="thisyear">This Year</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </div>
+                      <div class="custom_date_picker mt-2" id="custom_date">
+                        <input type="date" name="from_date" id="from_date" class="input_date">
+                        <input type="date" name="to_date" id="to_date" class="input_date">
+                        <input type="submit" value="Submit" class="submit-btn">
+                      </div>
                     </div>
                     <div class="card-body">
                       <div id="reports_revenue_product_chart"></div>
@@ -1725,14 +1732,21 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <h5 class="card-title">Payment Type</h5>
-                      <select class="sorting_select" id="overview_select">
-                        <option selected>Today</option>
-                        <option>This Week</option>
-                        <option>This Month</option>
-                        <option>This Year</option>
-                        <option>Custom</option>
-                      </select>
+                      <div class="d-flex">
+                        <h5 class="card-title">Payment Type</h5>
+                        <select class="sorting_select" id="overview_custom_select">
+                          <option selected value="today">Today</option>
+                          <option value="thisweek">This Week</option>
+                          <option value="thismonth">This Month</option>
+                          <option value="thisyear">This Year</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </div>
+                      <div class="custom_date_picker mt-2" id="custom_date">
+                        <input type="date" name="from_date" id="from_date" class="input_date">
+                        <input type="date" name="to_date" id="to_date" class="input_date">
+                        <input type="submit" value="Submit" class="submit-btn">
+                      </div>
                     </div>
                     <div class="card-body">
                       <div id="reports_revenue_payment_chart" class="reports_revenue_payment_chart"></div>
@@ -1812,15 +1826,22 @@
               <div class="row reports_body">
                 <div class="col-md-12 mb-4">
                   <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title">Player Activity</h5>
-                      <select class="sorting_select" id="overview_select">
-                        <option>Today</option>
-                        <option selected>This Week</option>
-                        <option>This Month</option>
-                        <option>This Year</option>
-                        <option>Custom</option>
-                      </select>
+                    <div class="card-header d-flex justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <h5 class="card-title">Player Activity</h5>
+                        <select class="sorting_select" id="overview_custom_select">
+                          <option selected value="today">Today</option>
+                          <option value="thisweek">This Week</option>
+                          <option value="thismonth">This Month</option>
+                          <option value="thisyear">This Year</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </div>
+                      <div class="custom_date_picker ml-3" id="custom_date">
+                        <input type="date" name="from_date" id="from_date" class="input_date">
+                        <input type="date" name="to_date" id="to_date" class="input_date">
+                        <input type="submit" value="Submit" class="submit-btn">
+                      </div>
                     </div>
                     <div class="card-body">
                       <div id="reports_player_activity_chart">
@@ -1831,14 +1852,21 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <h5 class="card-title">Payment Type</h5>
-                      <select class="sorting_select" id="overview_select">
-                        <option>Today</option>
-                        <option selected>This Week</option>
-                        <option>This Month</option>
-                        <option>This Year</option>
-                        <option>Custom</option>
-                      </select>
+                      <div class="d-flex">
+                        <h5 class="card-title">Payment Type</h5>
+                        <select class="sorting_select" id="overview_custom_select">
+                          <option selected value="today">Today</option>
+                          <option value="thisweek">This Week</option>
+                          <option value="thismonth">This Month</option>
+                          <option value="thisyear">This Year</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </div>
+                      <div class="custom_date_picker mt-2" id="custom_date">
+                        <input type="date" name="from_date" id="from_date" class="input_date">
+                        <input type="date" name="to_date" id="to_date" class="input_date">
+                        <input type="submit" value="Submit" class="submit-btn">
+                      </div>
                     </div>
                     <div class="card-body">
                       <div id="reports_player_payment_chart"></div>
@@ -1848,14 +1876,21 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <h5 class="card-title">Payment Type</h5>
-                      <select class="sorting_select" id="overview_select">
-                        <option selected>Today</option>
-                        <option>This Week</option>
-                        <option>This Month</option>
-                        <option>This Year</option>
-                        <option>Custom</option>
-                      </select>
+                      <div class="d-flex">
+                        <h5 class="card-title">Payment Type</h5>
+                        <select class="sorting_select" id="overview_custom_select">
+                          <option selected value="today">Today</option>
+                          <option value="thisweek">This Week</option>
+                          <option value="thismonth">This Month</option>
+                          <option value="thisyear">This Year</option>
+                          <option value="custom">Custom</option>
+                        </select>
+                      </div>
+                      <div class="custom_date_picker mt-2" id="custom_date">
+                        <input type="date" name="from_date" id="from_date" class="input_date">
+                        <input type="date" name="to_date" id="to_date" class="input_date">
+                        <input type="submit" value="Submit" class="submit-btn">
+                      </div>
                     </div>
                     <div class="card-body">
                       <div id="reports_player_payment_1_chart"></div>
