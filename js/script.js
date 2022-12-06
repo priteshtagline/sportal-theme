@@ -53,9 +53,6 @@ $(document).ready(function () {
         $("#humburge_menu").show();
       });
     }
-    else {
-      $("#customer_nav_title").hide();
-    }
   });
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
@@ -101,6 +98,12 @@ $(document).ready(function () {
     $('.navbar-brand').html('Reports').show();
     $('#nav_search_field').hide();
     $('#reports_nav_tab').show();
+  });
+
+  // Billings_nav_tab
+  $("#billings-tab").click(function () {
+    $('.navbar-brand').html('Billings').show();
+    $('#nav_search_field').hide();
   });
 
   // Customer_nav_tab
@@ -204,7 +207,7 @@ $(document).ready(function () {
 
   // Navbar
   jQuery(window).scroll(function () {
-    if (jQuery(window).scrollTop() >= 150) {
+    if (jQuery(window).scrollTop() >= 300) {
       jQuery("header").addClass("fixed-header");
     } else {
       jQuery("header").removeClass("fixed-header");

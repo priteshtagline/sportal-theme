@@ -1938,7 +1938,98 @@
         <!-- Reports End -->
 
       </div>
-      <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">billings</div>
+      <div class="tab-pane fade" id="billings" role="tabpanel" aria-labelledby="billings-tab">
+        <!-- Billings start -->
+        <div class="billing_form">
+          <form action="">
+            <div class="row">
+              <div class="col-md-12">
+                <h6 class="form_title">Company Information</h6>
+              </div>
+              <div class="col-lg-8">
+                <div class="row">
+                  <div class="form-group col-md-6 mb-0">
+                    <label for="company_name">Company Name</label>
+                    <input type="text" class="textinput form-control" id="company_name"
+                      value="Official Name of Company">
+                  </div>
+                  <div class="form-group col-md-6 mb-0">
+                    <label for="company_email">Email</label>
+                    <input type="email" class="textinput form-control" id="company_email" value="Test@gmail.com">
+                  </div>
+                  <div class="col-md-12 border-box">
+                    <div class="border-top"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-2">
+                    <span class="heading">Additional Information</span>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="customer_tax_id" class=" m-top-15">Tax ID Type</label> </br>
+                    <select class="w-100 select form-control" aria-label="customer_tax_id_label" id="customer_tax_id">
+                      <option selected="selected">Select Tax Id Type</option>
+                      <option value="UAE">UAE TRN</option>
+                      <option value="US">US TRN</option>
+                      <option value="India">India TRN</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="country_trn">United Arab Emirates TRN</label>
+                    <input type="text" class="textinput form-control" id="country_trn" value="-">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="country_vat_tax">VAT/TAX</label>
+                    <input type="text" class="textinput form-control" id="country_vat_tax" value="5">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <h6 class="form_title">Company Address</h6>
+                <span>Indicate here the address of your company according to your tax information and remember it can be
+                  different from the address
+                  of your facilities</span>
+              </div>
+              <div class="col-lg-8 mt-2">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="company_name">Street and number</label>
+                    <input type="text" class="textinput form-control" id="company_name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="company_zip_code">Postal/ZIP Code</label>
+                    <input type="number" class="textinput form-control" id="company_zip_code">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="company_city">City</label>
+                    <input type="text" class="textinput form-control" id="company_city">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="customer_company_address" class=" m-top-15">Country</label> </br>
+                    <select class="w-100 select form-control" aria-label="customer_company_address_label"
+                      id="customer_company_address">
+                      <option selected="selected">Select Company Country</option>
+                      <option value="UAE">United Arab Emirates</option>
+                      <option value="US">USA</option>
+                      <option value="India">India</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12 mt-2">
+                    <div class="form-group d-inline-block">
+                      <input type="submit" value="Save Information" class="btn btn-submit btn-primary">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Billings End -->
+
+      </div>
       <div class="tab-pane fade" id="customers" role="tabpanel" aria-labelledby="customers-tab">
         <div class="customer_module" id="customer_main_module">
           <div class="customer_top_row">
