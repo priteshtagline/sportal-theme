@@ -39,7 +39,6 @@ $(document).ready(function () {
       $('header').addClass('active');
     }
   });
-
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
     $('.navbar-brand').html('Settings');
@@ -200,6 +199,21 @@ $(document).ready(function () {
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
   // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
+
+
+  // chart selectbox
+  $(".custom_date_picker").hide();
+  $('.sorting_select').on('change', function () {
+    var value = $(this).val()
+    if (value == 'custom') {
+      // $this.closest(".cards-header").child(".custom_date_picker").show();
+      $(".custom_date_picker").show();
+    } else {
+      // $this.closest(".cards-header").child(".custom_date_picker").hide();
+      $(".custom_date_picker").hide();
+    }
+  });
+
 });
 
 

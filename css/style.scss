@@ -4216,8 +4216,8 @@ header {
 
     .sales_overview_card {
       .card-header {
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
 
         .card-title {
           margin-right: 56px;
@@ -4599,8 +4599,6 @@ header {
 
       .card-header {
         border-top-left-radius: 12px;
-        display: inline-flex;
-        align-items: center;
         border-top-right-radius: 12px;
         background-color: #ffffff;
         padding: 19px 20px 16px;
@@ -4668,5 +4666,38 @@ header {
 .report_revenue_chart {
   .apexcharts-marker {
     fill: #764AF3;
+  }
+}
+
+.custom_date_picker {
+  display: inline-flex;
+  align-items: center;
+
+  input {
+    &.input_date {
+      padding: 8px;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 15px;
+      color: #000000;
+      background-color: #f9f9f9;
+      border-color: transparent;
+      -webkit-box-shadow: inset 0px 0px 2px #00000029;
+      box-shadow: inset 0px 0px 2px #00000029;
+      border-radius: 6px;
+      min-width: 123px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .submit-btn {
+    padding: 5px 15px;
+    font-size: 12px;
+    background-color: $hover-color;
+    color: $white;
+    display: inline-block;
   }
 }
