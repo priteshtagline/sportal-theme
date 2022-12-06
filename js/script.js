@@ -39,9 +39,27 @@ $(document).ready(function () {
       $('header').addClass('active');
     }
   });
+  $("#customer_nav_title").hide();
+  $(window).resize(function () {
+    if ($(window).width() <= 991) {
+      $("#humburge_menu").hide();
+      $("#reports-tab").on('click', function () {
+        $("#humburge_menu").show();
+      });
+      $("#customers-tab").on('click', function () {
+        $("#humburge_menu").show();
+      });
+      $("#settings-tab").on('click', function () {
+        $("#humburge_menu").show();
+      });
+    }
+    else {
+      $("#customer_nav_title").hide();
+    }
+  });
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
-    $('.navbar-brand').html('Settings');
+    $('.navbar-brand').html('Settings').show();
     $('#setting_nav_tab').show();
     $('#nav_search_field').hide();
   });
@@ -51,7 +69,6 @@ $(document).ready(function () {
   $("#dashboard-tab").on('click', function () {
     $('.navbar-brand').hide();
     $('#reports_nav_tab').hide();
-    $('#humburge_menu').hide();
   });
 
   $('.navbar-brand').hide();
@@ -69,7 +86,6 @@ $(document).ready(function () {
     $('#customer_tab').show();
     $('#customer_title').hide();
     $('#nav_search_field').show();
-
   });
 
   // Setting_nav_tab
@@ -85,23 +101,19 @@ $(document).ready(function () {
     $('.navbar-brand').html('Reports').show();
     $('#nav_search_field').hide();
     $('#reports_nav_tab').show();
-    // $('#humburge_menu').show();
   });
 
   // Customer_nav_tab
   $('#customer_subtab').hide();
   $('#nav-back-arrow').hide();
-  $('#humburge_menu').hide();
   $('#customer_subtab_content').hide();
   $('#customer_show_more_btn').on('click', function () {
     $('.navbar-brand').hide();
     $('#customer_title').hide();
-    $('#customer_nav_title').hide();
     $('#customer_subtab').show();
     $('#customer_subtab_content').show();
     $('#customer_main_module').hide();
     $('#nav-back-arrow').show();
-    $('#humburge_menu').show();
   })
   $('#nav-back-arrow').on('click', function () {
     $('.navbar-brand').show();
@@ -212,10 +224,8 @@ $(document).ready(function () {
   $('.sorting_select').on('change', function () {
     var value = $(this).val()
     if (value == 'custom') {
-      // $this.closest(".cards-header").child(".custom_date_picker").show();
       $(".custom_date_picker").show();
     } else {
-      // $this.closest(".cards-header").child(".custom_date_picker").hide();
       $(".custom_date_picker").hide();
     }
   });
