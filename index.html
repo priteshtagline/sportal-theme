@@ -32,6 +32,9 @@
       <div class="container-fluid pl-0 pl-md-0">
 
         <a class="navbar-brand" href="javascript:void(0)">Customers</a>
+
+        <a class="text-primary d-lg-none customer_nav_title d-inline-block ml-3" id="customer_nav_title"
+          href="javascript:void(0)">All Customers</a>
         <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
 
         <form class="d-flex" role="search">
@@ -293,9 +296,11 @@
             </ul>
           </div>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" id="humburge_menu" type="button" data-toggle="collapse"
+          data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-symbols-outlined humburge_menu">
+            sort
+          </span>
         </button>
       </div>
     </nav>
@@ -511,17 +516,24 @@
           <div class="row dashboard_head">
             <div class="col-md-12">
               <div class="dashboard_head_row">
-                <div class="dashboard_title_group">
-                  <h4 class="dashboard_title">
-                    Overview
-                  </h4>
-                  <select class="sorting_select" id="overview_select">
-                    <option selected>Today</option>
-                    <option>This Week</option>
-                    <option>This Month</option>
-                    <option>This Year</option>
-                    <option>Custom</option>
-                  </select>
+                <div>
+                  <div class="dashboard_title_group">
+                    <h4 class="dashboard_title">
+                      Overview
+                    </h4>
+                    <select class="sorting_select" id="overview_custom_select">
+                      <option selected value="today">Today</option>
+                      <option value="thisweek">This Week</option>
+                      <option value="thismonth">This Month</option>
+                      <option value="thisyear">This Year</option>
+                      <option value="custom">Custom</option>
+                    </select>
+                    <div class="custom_date_picker ml-3" id="custom_date">
+                      <input type="date" name="from_date" id="from_date" class="input_date">
+                      <input type="date" name="to_date" id="to_date" class="input_date">
+                      <input type="submit" value="Submit" class="submit-btn">
+                    </div>
+                  </div>
                 </div>
                 <div class="btn-group report_dropdown">
                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
@@ -1386,16 +1398,23 @@
               <div class="row report_head">
                 <div class="col-md-12">
                   <div class="report_title_group">
-                    <h4 class="report_title">
-                      Overview
-                    </h4>
-                    <select class="sorting_select" id="overview_select">
-                      <option selected>Today</option>
-                      <option>This Week</option>
-                      <option>This Month</option>
-                      <option>This Year</option>
-                      <option>Custom</option>
-                    </select>
+                    <div class="d-flex justify-content-between">
+                      <h4 class="report_title">
+                        Overview
+                      </h4>
+                      <select class="sorting_select" id="overview_custom_select">
+                        <option selected value="today">Today</option>
+                        <option value="thisweek">This Week</option>
+                        <option value="thismonth">This Month</option>
+                        <option value="thisyear">This Year</option>
+                        <option value="custom">Custom</option>
+                      </select>
+                    </div>
+                    <div class="custom_date_picker ml-3" id="custom_date">
+                      <input type="date" name="from_date" id="from_date" class="input_date">
+                      <input type="date" name="to_date" id="to_date" class="input_date">
+                      <input type="submit" value="Submit" class="submit-btn">
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -1632,16 +1651,23 @@
               <div class="row report_head">
                 <div class="col-md-12">
                   <div class="report_title_group">
-                    <h4 class="report_title">
-                      Overview
-                    </h4>
-                    <select class="sorting_select" id="overview_select">
-                      <option selected>Today</option>
-                      <option>This Week</option>
-                      <option>This Month</option>
-                      <option>This Year</option>
-                      <option>Custom</option>
-                    </select>
+                    <div class="d-flex justify-content-between">
+                      <h4 class="report_title">
+                        Overview
+                      </h4>
+                      <select class="sorting_select" id="overview_custom_select">
+                        <option selected value="today">Today</option>
+                        <option value="thisweek">This Week</option>
+                        <option value="thismonth">This Month</option>
+                        <option value="thisyear">This Year</option>
+                        <option value="custom">Custom</option>
+                      </select>
+                    </div>
+                    <div class="custom_date_picker ml-3" id="custom_date">
+                      <input type="date" name="from_date" id="from_date" class="input_date">
+                      <input type="date" name="to_date" id="to_date" class="input_date">
+                      <input type="submit" value="Submit" class="submit-btn">
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -1762,16 +1788,23 @@
               <div class="row report_head">
                 <div class="col-md-12">
                   <div class="report_title_group">
-                    <h4 class="report_title">
-                      Overview
-                    </h4>
-                    <select class="sorting_select" id="overview_select">
-                      <option selected>Today</option>
-                      <option>This Week</option>
-                      <option>This Month</option>
-                      <option>This Year</option>
-                      <option>Custom</option>
-                    </select>
+                    <div class="d-flex justify-content-between">
+                      <h4 class="report_title">
+                        Overview
+                      </h4>
+                      <select class="sorting_select" id="overview_custom_select">
+                        <option selected value="today">Today</option>
+                        <option value="thisweek">This Week</option>
+                        <option value="thismonth">This Month</option>
+                        <option value="thisyear">This Year</option>
+                        <option value="custom">Custom</option>
+                      </select>
+                    </div>
+                    <div class="custom_date_picker ml-3" id="custom_date">
+                      <input type="date" name="from_date" id="from_date" class="input_date">
+                      <input type="date" name="to_date" id="to_date" class="input_date">
+                      <input type="submit" value="Submit" class="submit-btn">
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-4">

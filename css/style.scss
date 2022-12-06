@@ -1153,6 +1153,14 @@ header {
           }
         }
       }
+
+      .customer_nav_list {
+        .nav-link {
+          @media (max-width:991px) {
+            display: none;
+          }
+        }
+      }
     }
 
     .side-nav-btn {
@@ -1190,6 +1198,10 @@ header {
       font-size: 20px;
       font-family: 'Outfit SemiBold';
       line-height: 24px;
+    }
+
+    .customer_nav_title {
+      font-size: 12px;
     }
 
     .search_group {
@@ -1438,6 +1450,15 @@ header {
         margin-left: auto;
         margin-right: 22px;
       }
+    }
+
+    .navbar-toggler {
+      color: $theme-primary-color;
+
+      .humburge_menu {
+        font-size: 32px;
+      }
+
     }
   }
 
@@ -3928,6 +3949,10 @@ header {
           font-size: 20px;
           margin-bottom: 0;
           font-family: 'Outfit SemiBold';
+
+          @media (max-width:991px) {
+            margin-right: 9px;
+          }
         }
       }
     }
@@ -4490,6 +4515,7 @@ header {
     .report_title_group {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 30px;
       margin-top: 10px;
 
