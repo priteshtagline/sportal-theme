@@ -1161,6 +1161,21 @@ header {
           }
         }
       }
+
+      @media (max-width:991px) {
+        margin-left: 0;
+
+        .navbar-nav {
+          display: inline-flex;
+          flex-direction: row;
+
+          .nav-item {
+            .nav-link {
+              padding-left: 0 !important;
+            }
+          }
+        }
+      }
     }
 
     .side-nav-btn {
@@ -1448,7 +1463,9 @@ header {
 
       @media (max-width: 991px) {
         margin-left: auto;
-        margin-right: 22px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -1467,6 +1484,7 @@ header {
 
     @media (max-width: 1024px) {
       margin-left: 78px;
+      width: calc(100% - 78px);
     }
 
     &.fixed-header {
@@ -1475,6 +1493,7 @@ header {
 
       @media (max-width: 1024px) {
         margin-left: 78px;
+        width: calc(100% - 78px);
       }
     }
 
