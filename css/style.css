@@ -4399,15 +4399,6 @@ header.active .side-nav-btn img {
   position: relative;
 }
 
-.dashboard_theme .dashboard_body .sales_overview_card .card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .dashboard_theme .dashboard_body .sales_overview_card .card-header .card-title {
   margin-right: 56px;
   font-family: 'Outfit Medium';
@@ -4771,12 +4762,6 @@ header.active .side-nav-btn img {
 
 .reports_theme .reports_body .card .card-header {
   border-top-left-radius: 12px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-top-right-radius: 12px;
   background-color: #ffffff;
   padding: 19px 20px 16px;
@@ -4838,5 +4823,40 @@ header.active .side-nav-btn img {
 
 .report_revenue_chart .apexcharts-marker {
   fill: #764AF3;
+}
+
+.custom_date_picker {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom_date_picker input.input_date {
+  padding: 8px;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  color: #000000;
+  background-color: #f9f9f9;
+  border-color: transparent;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+  box-shadow: inset 0px 0px 2px #00000029;
+  border-radius: 6px;
+  min-width: 123px;
+}
+
+.custom_date_picker input:not(:last-child) {
+  margin-right: 10px;
+}
+
+.custom_date_picker .submit-btn {
+  padding: 5px 15px;
+  font-size: 12px;
+  background-color: #a98ff1;
+  color: #ffffff;
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
