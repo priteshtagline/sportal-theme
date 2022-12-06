@@ -4686,10 +4686,19 @@ header {
       box-shadow: inset 0px 0px 2px #00000029;
       border-radius: 6px;
       min-width: 123px;
+
+      @media (max-width:1440px) {
+        min-width: 104px;
+        padding: 6px;
+      }
     }
 
     &:not(:last-child) {
       margin-right: 10px;
+
+      @media (max-width:1440px) {
+        margin-right: 5px;
+      }
     }
   }
 
@@ -4699,5 +4708,9 @@ header {
     background-color: $hover-color;
     color: $white;
     display: inline-block;
+
+    @media (max-width:1440px) {
+      padding: 5px 0px;
+    }
   }
 }

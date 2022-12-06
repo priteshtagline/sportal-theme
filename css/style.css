@@ -4848,8 +4848,21 @@ header.active .side-nav-btn img {
   min-width: 123px;
 }
 
+@media (max-width: 1440px) {
+  .custom_date_picker input.input_date {
+    min-width: 104px;
+    padding: 6px;
+  }
+}
+
 .custom_date_picker input:not(:last-child) {
   margin-right: 10px;
+}
+
+@media (max-width: 1440px) {
+  .custom_date_picker input:not(:last-child) {
+    margin-right: 5px;
+  }
 }
 
 .custom_date_picker .submit-btn {
@@ -4858,5 +4871,11 @@ header.active .side-nav-btn img {
   background-color: #a98ff1;
   color: #ffffff;
   display: inline-block;
+}
+
+@media (max-width: 1440px) {
+  .custom_date_picker .submit-btn {
+    padding: 5px 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
