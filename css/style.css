@@ -1192,7 +1192,7 @@ header .navbar .navbar_menu .navbar-nav .nav-item .nav-link.active::before {
   margin: 0 auto;
   height: 4px;
   background-color: #764af3;
-  bottom: -29px;
+  bottom: -25px;
 }
 
 @media (max-width: 991px) {
@@ -4975,6 +4975,32 @@ header.active .side-nav-btn img {
   border: 1px solid #ECECEC;
   font-size: 12px;
   padding: 15px;
+}
+
+.billing_form .textinput::-webkit-outer-spin-button, .billing_form .textinput::-webkit-inner-spin-button {
+  display: none;
+}
+
+.billing_form .input_percentage {
+  position: relative;
+  padding-right: 30px;
+}
+
+.billing_form .input_percentage:before {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 100%;
+  background-image: url(../images/percentage.svg);
+  background-repeat: no-repeat;
+  right: 6px;
+  top: 44px;
+  color: #000000;
+  font-size: 15px;
+}
+
+.billing_form .input_percentage .textinput {
+  padding-right: 50px;
 }
 
 .billing_form .select2-selection__rendered {
