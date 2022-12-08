@@ -1135,7 +1135,7 @@ header {
                 margin: 0 auto;
                 height: 4px;
                 background-color: #764af3;
-                bottom: -29px;
+                bottom: -25px;
 
                 @media (max-width:991px) {
                   display: none;
@@ -4814,7 +4814,35 @@ header {
     border: 1px solid #ECECEC;
     font-size: 12px;
     padding: 15px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
   }
+
+  .input_percentage {
+    position: relative;
+    padding-right: 30px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 100%;
+      background-image: url(../images/percentage.svg);
+      background-repeat: no-repeat;
+      right: 6px;
+      top: 44px;
+      color: #000000;
+      font-size: 15px;
+    }
+
+    .textinput {
+      padding-right: 50px;
+    }
+  }
+
 
   .select2-selection__rendered {
     border: 1px solid #ECECEC;
