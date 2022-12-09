@@ -31,19 +31,34 @@ $(document).ready(function () {
     $(this).toggleClass('active')
   })
 
-
   // Notification_module
   $('#notification-back-arrow').hide();
+  $('.notification_section').hide();
   $("#notification_see_all_button").on('click', function () {
     $('.navbar-brand').html('Notifications').show();
     $('#nav_search_field').hide();
+    $('.notification_section').show();
     $('#notification-back-arrow').show();
     let activate_element = $(".sidebar").children(".features-list").children(".features-item").children("a.active");
-    let activate_element1 = $(".main-content").children(".tab-content").children(".tab-pane.show.active");
-    activate_element1.removeClass("show active")
     activate_element.removeClass("active");
     activate_element.attr('aria-expanded', 'false');
+    let activate_element1 = $(".main-content").children(".tab-content").children(".tab-pane.show.active");
+    activate_element1.removeClass("show active")
+    let activate_element2 = $("#header").children(".navbar").children(".container-fluid").children(".nav-right").children(".btn-group").children(".notification-btn");
+    activate_element2.addClass("collapsed");
+    let activate_element3 = $("#header").children(".navbar").children(".container-fluid").children(".nav-right").children(".btn-group").children(".notification_menu");
+    activate_element3.removeClass("show");
   });
+
+  $(".notification_close_btn").on('click', function () {
+    let activate_element4 = $(".notification_close_btn").closest(".tab-pane");
+    activate_element4.removeClass("active show");
+    let activate_element5 = $("#v-pills-notification-tab").children(".nav-link")
+    activate_element5.removeClass("active unread_message");
+    console.log(activate_element4);
+    console.log(activate_element5);
+  });
+
   // sidebar resize
   $(window).resize(function () {
     if ($(window).width() <= 1024) {

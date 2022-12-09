@@ -5072,12 +5072,12 @@ header.active .side-nav-btn img {
 .notification_section .notification_left .notification_list .nav-link.unread_message .card::before {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   top: 50%;
   border-radius: 50%;
   background-color: #764af3;
-  right: 10px;
+  right: 15px;
   z-index: 11;
 }
 
@@ -5199,8 +5199,11 @@ header.active .side-nav-btn img {
   font-family: 'Outfit Medium';
 }
 
-.notification_section .notification_content .card .card-header .btn-close {
+.notification_section .notification_content .card .card-header .notification_close_btn {
   line-height: 12px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .notification_section .notification_content .card .card-body {
