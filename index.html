@@ -31,6 +31,10 @@
       </button>
       <div class="container-fluid pl-0 pl-md-0">
 
+        <a href="#" class="back_arrow mr-3" id="notification-back-arrow">
+          <img src="images/back-arrow.svg" alt="back_arrow_icon">
+        </a>
+
         <a class="navbar-brand" href="javascript:void(0)">Customers</a>
 
         <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
@@ -135,10 +139,10 @@
         <div class="nav-right">
           <div class="btn-group">
             <button class="btn notification-btn collapsed" type="button" data-toggle="collapse"
-              data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              data-target="#notification_collapse" aria-expanded="false" aria-controls="notification_collapse">
               <img src="images/notification.svg" alt="notification">
             </button>
-            <div class="collapse notification_menu shadow-sm dropdown-menu-md-end" id="collapseExample">
+            <div class="collapse notification_menu shadow-sm dropdown-menu-md-end" id="notification_collapse">
               <div class="card card-body">
                 <p class="head"> Notification</p>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -165,6 +169,7 @@
                           <div class="profile">
                             <img src="images/user.png" alt="user_profile" class="user_profile">
                             <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
                             </div>
                           </div>
                           <div class="item_details">
@@ -178,6 +183,7 @@
                           <div class="profile">
                             <img src="images/user.png" alt="user_profile" class="user_profile">
                             <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
                             </div>
                           </div>
                           <div class="item_details">
@@ -191,6 +197,7 @@
                           <div class="profile">
                             <img src="images/user.png" alt="user_profile" class="user_profile">
                             <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
                             </div>
                           </div>
                           <div class="item_details">
@@ -204,6 +211,35 @@
                           <div class="profile">
                             <img src="images/user.png" alt="user_profile" class="user_profile">
                             <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
+                            </div>
+                          </div>
+                          <div class="item_details">
+                            <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                            <span>Just Now</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="items">
+                          <div class="profile">
+                            <img src="images/user.png" alt="user_profile" class="user_profile">
+                            <div class="user_badge">
+                              <img src="images/date.svg" alt="calendar">
                             </div>
                           </div>
                           <div class="item_details">
@@ -213,7 +249,7 @@
                         </div>
                       </li>
                     </ul>
-                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                    <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
                   </div>
                   <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
                     tabindex="0">
@@ -245,7 +281,7 @@
                         </div>
                       </li>
                     </ul>
-                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                    <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
                   </div>
                   <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
                     tabindex="0">
@@ -277,7 +313,7 @@
                         </div>
                       </li>
                     </ul>
-                    <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                    <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
                   </div>
                 </div>
               </div>
@@ -329,7 +365,7 @@
       </div>
       <ul class="features-list nav nav-tabs">
         <li class="features-item dashboard nav-item main-features-list">
-          <a href="#" class="nav-link  active" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
+          <a href="#" class="nav-link active" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
             type="button" role="tab" aria-controls="dashboard" aria-selected="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <path id="_icon__home_house_" data-name="🦆 icon _home house_"
@@ -3571,6 +3607,299 @@
 
         </div>
         <div class="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="logout-tab">Logout</div>
+      </div>
+    </div>
+
+    <!-- Notification_content -->
+    <div class="notification_section">
+      <div class="row">
+        <div class="col-md-12 header">
+          <h5>All Notifications</h5>
+          <span>5 unread</span>
+          <h6>New & Unread</h6>
+        </div>
+        <div class="col-md-7">
+          <div class="notification_left">
+            <div class="nav notification_list flex-column nav-pills" id="v-pills-notification-tab" role="tablist"
+              aria-orientation="vertical">
+              <button class="nav-link unread_message" id="v-pills-nav-1-tab" data-toggle="pill"
+                data-target="#v-pills-nav-1" type="button" role="tab" aria-controls="v-pills-nav-1"
+                aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+
+              </button>
+              <button class="nav-link" id="v-pills-nav-2-tab" data-toggle="pill" data-target="#v-pills-nav-2"
+                type="button" role="tab" aria-controls="v-pills-nav-2" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge bg_red">
+                        <img src="images/date_danger.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+
+              </button>
+              <button class="nav-link" id="v-pills-nav-3-tab" data-toggle="pill" data-target="#v-pills-nav-3"
+                type="button" role="tab" aria-controls="v-pills-nav-3" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-4-tab" data-toggle="pill" data-target="#v-pills-nav-4"
+                type="button" role="tab" aria-controls="v-pills-nav-4" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge bg_red">
+                        <img src="images/date_danger.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-5-tab" data-toggle="pill" data-target="#v-pills-nav-5"
+                type="button" role="tab" aria-controls="v-pills-nav-5" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-6-tab" data-toggle="pill" data-target="#v-pills-nav-6"
+                type="button" role="tab" aria-controls="v-pills-nav-6" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge bg_red">
+                        <img src="images/date_danger.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-7-tab" data-toggle="pill" data-target="#v-pills-nav-7"
+                type="button" role="tab" aria-controls="v-pills-nav-7" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-8-tab" data-toggle="pill" data-target="#v-pills-nav-8"
+                type="button" role="tab" aria-controls="v-pills-nav-8" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-9-tab" data-toggle="pill" data-target="#v-pills-nav-9"
+                type="button" role="tab" aria-controls="v-pills-nav-9" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge">
+                        <img src="images/date.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="nav-link" id="v-pills-nav-10-tab" data-toggle="pill" data-target="#v-pills-nav-10"
+                type="button" role="tab" aria-controls="v-pills-nav-10" aria-selected="false">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="profile_block">
+                      <img src="http://142.93.222.204:8003/static/images/user_profile.png" alt="profile"
+                        class="profile_image">
+                      <div class="user_badge bg_red">
+                        <img src="images/date_danger.svg" alt="calendar">
+                      </div>
+                    </div>
+                    <div class="profile_info">
+                      <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                      <span>Just Now</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="tab-content notification_content" id="v-pills-notification-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-nav-1" role="tabpanel"
+              aria-labelledby="v-pills-nav-1-tab">
+              <div class="card">
+                <div class="card-header">
+                  <h6>Notification Details</h6>
+                  <a href="" class="btn-close">
+                    <span class="material-symbols-outlined">
+                      close
+                    </span>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <p>Reservation # 3341</p>
+                  <table class="card-table">
+                    <tbody>
+                      <tr>
+                        <td><span>Branch</span></td>
+                        <td><span>East Boulevard</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Game</span></td>
+                        <td><span>Badminton</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Court</span>
+                        </td>
+                        <td><span>Court # 3</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reserved By</span>
+                        </td>
+                        <td>
+                          <div class="profile_block">
+                            <img src="images/profile.png" alt="profile">
+                            <span>Hashim Raza
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Date</span>
+                        </td>
+                        <td><span>24-Sept-2022</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Time</span>
+                        </td>
+                        <td><span>06:00 pm - 07:00 pm</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Amount</span></td>
+                        <td><span>35 AED</span></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">
+                          <button class="btn btn-primary w-100">View Details</button>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-2" role="tabpanel" aria-labelledby="v-pills-nav-2-tab">b
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-3" role="tabpanel" aria-labelledby="v-pills-nav-3-tab">c
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-4" role="tabpanel" aria-labelledby="v-pills-nav-4-tab">d
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-5" role="tabpanel" aria-labelledby="v-pills-nav-5-tab">c
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-6" role="tabpanel" aria-labelledby="v-pills-nav-6-tab">d
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-7" role="tabpanel" aria-labelledby="v-pills-nav-7-tab">c
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-8" role="tabpanel" aria-labelledby="v-pills-nav-8-tab">d
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-9" role="tabpanel" aria-labelledby="v-pills-nav-9-tab">c
+            </div>
+            <div class="tab-pane fade" id="v-pills-nav-10" role="tabpanel" aria-labelledby="v-pills-nav-10-tab">d
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

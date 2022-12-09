@@ -1361,11 +1361,15 @@ header .navbar .nav-right .btn-group .notification_menu {
   position: absolute;
   left: -123px;
   right: 0;
-  top: 50px;
+  top: 55px;
   width: 100%;
   height: auto;
+  border-radius: 8px;
   z-index: 9;
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 5px 25px #0000000F;
+          box-shadow: 0px 5px 25px #0000000F;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   min-width: 290px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1374,19 +1378,22 @@ header .navbar .nav-right .btn-group .notification_menu {
 header .navbar .nav-right .btn-group .notification_menu::before {
   position: absolute;
   content: "";
-  top: -5px;
+  top: -20px;
   left: 0px;
   right: 0;
   width: 5px;
   margin: 0 auto;
   border-width: 10px;
   border-style: solid;
+  -webkit-box-shadow: 0px 5px 25px #0000000F;
+          box-shadow: 0px 5px 25px #0000000F;
   border-color: transparent transparent #ffffff transparent;
 }
 
 header .navbar .nav-right .btn-group .notification_menu .card-body {
   border: none;
   padding: 0;
+  border-radius: 8px;
 }
 
 @media (max-width: 1200px) {
@@ -1416,6 +1423,7 @@ header .navbar .nav-right .btn-group .nav-tabs .nav-item .nav-link {
   border: none;
   border-radius: 8px;
   font-size: 10px;
+  cursor: pointer;
   line-height: 12px;
   font-family: "Outfit Regular";
 }
@@ -5031,5 +5039,223 @@ header.active .side-nav-btn img {
     padding: 10px 20px;
     font-size: 12px;
   }
+}
+
+.notification_section .header h5 {
+  font-size: 16px;
+  font-family: 'Outfit SemiBold';
+}
+
+.notification_section .header span {
+  font-size: 12px;
+  color: #A4A9BC;
+  margin-bottom: 23px;
+}
+
+.notification_section .header h6 {
+  font-size: 14px;
+  margin-bottom: 21px;
+}
+
+.notification_section .notification_left .notification_list .nav-link {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff;
+}
+
+.notification_section .notification_left .notification_list .nav-link.unread_message .card {
+  position: relative;
+}
+
+.notification_section .notification_left .notification_list .nav-link.unread_message .card::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  border-radius: 50%;
+  background-color: #764af3;
+  right: 10px;
+  z-index: 11;
+}
+
+.notification_section .notification_left .notification_list .nav-link.active {
+  background-color: #ffffff;
+  border: 1px solid #764af3;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card {
+  border: none;
+  -webkit-box-shadow: 0px 5px 10px #0000000D;
+          box-shadow: 0px 5px 10px #0000000D;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body {
+  padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_block {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_block .profile_image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_block .user_badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #764af3;
+  border-radius: 50%;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_block .user_badge.bg_red {
+  background-color: #EA1111;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_info p {
+  margin-bottom: 0;
+  font-size: 13px;
+  margin-bottom: 7px;
+  max-width: 400px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.notification_section .notification_left .notification_list .nav-link .card .card-body .profile_info span {
+  font-size: 11px;
+  margin-bottom: 0;
+  color: #A4A9BC;
+}
+
+.notification_section .notification_content .card {
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 5px 10px #0000000D;
+          box-shadow: 0px 5px 10px #0000000D;
+  border: none;
+  max-width: 464px;
+  margin-left: auto;
+}
+
+.notification_section .notification_content .card .card-header {
+  padding: 20px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: 0.6px solid #E4E4E4;
+}
+
+.notification_section .notification_content .card .card-header h6 {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-family: 'Outfit Medium';
+}
+
+.notification_section .notification_content .card .card-header .btn-close {
+  line-height: 12px;
+}
+
+.notification_section .notification_content .card .card-body {
+  padding: 24px 14px;
+}
+
+.notification_section .notification_content .card .card-body p {
+  font-size: 14px;
+  font-family: 'Outfit Medium';
+  margin-bottom: 8px;
+}
+
+.notification_section .notification_content .card .card-body .card-table {
+  width: 100%;
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td {
+  width: 50%;
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td span {
+  color: #A4A9BC;
+  font-size: 12px;
+  line-height: 30px;
+  font-family: 'Outfit Regular';
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td:last-child {
+  text-align: right;
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td .profile_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td .profile_block img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.notification_section .notification_content .card .card-body .card-table tbody tr td .profile_block span {
+  margin-bottom: 0;
+}
+
+.notification_section .notification_content .card .card-body .card-table tfoot .btn {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */

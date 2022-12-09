@@ -31,6 +31,19 @@ $(document).ready(function () {
     $(this).toggleClass('active')
   })
 
+
+  // Notification_module
+  $('#notification-back-arrow').hide();
+  $("#notification_see_all_button").on('click', function () {
+    $('.navbar-brand').html('Notifications').show();
+    $('#nav_search_field').hide();
+    $('#notification-back-arrow').show();
+    let activate_element = $(".sidebar").children(".features-list").children(".features-item").children("a.active");
+    let activate_element1 = $(".main-content").children(".tab-content").children(".tab-pane.show.active");
+    activate_element1.removeClass("show active")
+    activate_element.removeClass("active");
+    activate_element.attr('aria-expanded', 'false');
+  });
   // sidebar resize
   $(window).resize(function () {
     if ($(window).width() <= 1024) {
