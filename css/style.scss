@@ -5027,6 +5027,7 @@ header {
 
       .card-header {
         padding: 20px 14px;
+        border-radius: 14px 14px 0 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -5104,4 +5105,10 @@ header {
       }
     }
   }
+}
+
+a.disabled {
+  text-decoration: none;
+  color: black;
+  cursor: default;
 }
