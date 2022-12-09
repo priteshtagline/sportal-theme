@@ -1481,6 +1481,10 @@ header .navbar .nav-right .btn-group .tab-content .notification-list li .items .
   border-radius: 50%;
 }
 
+header .navbar .nav-right .btn-group .tab-content .notification-list li .items .profile .user_badge.bg_red {
+  background-color: #EA1111;
+}
+
 header .navbar .nav-right .btn-group .tab-content .notification-list li .items .item_details {
   margin-left: 7px;
   display: -webkit-box;
@@ -5057,7 +5061,15 @@ header.active .side-nav-btn img {
   margin-bottom: 21px;
 }
 
+.notification_section .notification_left .notification_list h3 {
+  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family: 'Outfit SemiBold';
+}
+
 .notification_section .notification_left .notification_list .nav-link {
+  width: 100%;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -5163,6 +5175,12 @@ header.active .side-nav-btn img {
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  .notification_section .notification_left .notification_list .nav-link .card .card-body .profile_info p {
+    max-width: 200px;
+  }
+}
+
 .notification_section .notification_left .notification_list .nav-link .card .card-body .profile_info span {
   font-size: 11px;
   margin-bottom: 0;
@@ -5175,6 +5193,7 @@ header.active .side-nav-btn img {
           box-shadow: 0px 5px 10px #0000000D;
   border: none;
   max-width: 464px;
+  margin-top: 40px;
   margin-left: auto;
 }
 
