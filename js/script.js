@@ -53,7 +53,7 @@ $(document).ready(function () {
   $(".notification_close_btn").on('click', function () {
     let activate_element4 = $(".notification_close_btn").closest(".tab-pane");
     activate_element4.removeClass("active show");
-    let activate_element5 = $("#v-pills-notification-tab").children(".nav-link")
+    let activate_element5 = $("#v-pills-notification-tab").children("li").children(".nav-link");
     activate_element5.removeClass("active unread_message");
     console.log(activate_element4);
     console.log(activate_element5);

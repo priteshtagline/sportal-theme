@@ -5199,6 +5199,7 @@ header.active .side-nav-btn img {
 
 .notification_section .notification_content .card .card-header {
   padding: 20px 14px;
+  border-radius: 14px 14px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5279,5 +5280,11 @@ header.active .side-nav-btn img {
 
 .notification_section .notification_content .card .card-body .card-table tfoot .btn {
   margin-top: 20px;
+}
+
+a.disabled {
+  text-decoration: none;
+  color: black;
+  cursor: default;
 }
 /*# sourceMappingURL=style.css.map */

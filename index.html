@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/mapbox_location_field/css/address_input.css">
   <link rel="stylesheet" href="/mapbox_location_field/css/map_input.css">
   <link rel="stylesheet" href="css/jquery.dataTables.css">
+  <link rel="stylesheet" href="css/pagination.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/fonts.css">
@@ -3624,208 +3625,402 @@
         </div>
         <div class="col-lg-7 col-md-6">
           <div class="notification_left">
-            <div class="nav notification_list flex-column nav-pills" id="v-pills-notification-tab" role="tablist"
+            <ul class="nav notification_list flex-column nav-pills" id="v-pills-notification-tab" role="tablist"
               aria-orientation="vertical">
-              <ul>
-                <li>
-                  <h3>Today</h3>
-                  <button class="nav-link unread_message" id="v-pills-nav-1-tab" data-toggle="pill"
-                    data-target="#v-pills-nav-1" type="button" role="tab" aria-controls="v-pills-nav-1"
-                    aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+              <li>
+                <h3>Today</h3>
+                <button class="nav-link unread_message" id="v-pills-nav-1-tab" data-toggle="pill"
+                  data-target="#v-pills-nav-1" type="button" role="tab" aria-controls="v-pills-nav-1"
+                  aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
                         </div>
                       </div>
+                      <div class="profile_info">
+                        <p>1 Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
                     </div>
+                  </div>
 
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-2-tab" data-toggle="pill" data-target="#v-pills-nav-2"
-                    type="button" role="tab" aria-controls="v-pills-nav-2" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge bg_red">
-                            <img src="images/date_danger.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-2-tab" data-toggle="pill" data-target="#v-pills-nav-2"
+                  type="button" role="tab" aria-controls="v-pills-nav-2" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
                         </div>
                       </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
                     </div>
+                  </div>
 
-                  </button>
-                </li>
-                <li>
-                  <h3>Yesterday</h3>
-                  <button class="nav-link" id="v-pills-nav-3-tab" data-toggle="pill" data-target="#v-pills-nav-3"
-                    type="button" role="tab" aria-controls="v-pills-nav-3" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+                </button>
+              </li>
+              <li>
+                <h3>Yesterday</h3>
+                <button class="nav-link" id="v-pills-nav-3-tab" data-toggle="pill" data-target="#v-pills-nav-3"
+                  type="button" role="tab" aria-controls="v-pills-nav-3" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
                         </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-4-tab" data-toggle="pill" data-target="#v-pills-nav-4"
-                    type="button" role="tab" aria-controls="v-pills-nav-4" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge bg_red">
-                            <img src="images/date_danger.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
-                        </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
                       </div>
                     </div>
-                  </button>
-                </li>
-                <li>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-4-tab" data-toggle="pill" data-target="#v-pills-nav-4"
+                  type="button" role="tab" aria-controls="v-pills-nav-4" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
 
-                  <button class="nav-link" id="v-pills-nav-5-tab" data-toggle="pill" data-target="#v-pills-nav-5"
-                    type="button" role="tab" aria-controls="v-pills-nav-5" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+                <button class="nav-link" id="v-pills-nav-5-tab" data-toggle="pill" data-target="#v-pills-nav-5"
+                  type="button" role="tab" aria-controls="v-pills-nav-5" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
                         </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-6-tab" data-toggle="pill" data-target="#v-pills-nav-6"
-                    type="button" role="tab" aria-controls="v-pills-nav-6" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge bg_red">
-                            <img src="images/date_danger.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
-                        </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
                       </div>
                     </div>
-                  </button>
-                </li>
-                <li>
-                  <h3>7 December 2022</h3>
-                  <button class="nav-link" id="v-pills-nav-7-tab" data-toggle="pill" data-target="#v-pills-nav-7"
-                    type="button" role="tab" aria-controls="v-pills-nav-7" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-6-tab" data-toggle="pill" data-target="#v-pills-nav-6"
+                  type="button" role="tab" aria-controls="v-pills-nav-6" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
                         </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-8-tab" data-toggle="pill" data-target="#v-pills-nav-8"
-                    type="button" role="tab" aria-controls="v-pills-nav-8" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
-                        </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
                       </div>
                     </div>
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-9-tab" data-toggle="pill" data-target="#v-pills-nav-9"
-                    type="button" role="tab" aria-controls="v-pills-nav-9" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge">
-                            <img src="images/date.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <h3>7 December 2022</h3>
+                <button class="nav-link" id="v-pills-nav-7-tab" data-toggle="pill" data-target="#v-pills-nav-7"
+                  type="button" role="tab" aria-controls="v-pills-nav-7" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
                         </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button class="nav-link" id="v-pills-nav-10-tab" data-toggle="pill" data-target="#v-pills-nav-10"
-                    type="button" role="tab" aria-controls="v-pills-nav-10" aria-selected="false">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="profile_block">
-                          <img src="images/user_profile.png" alt="profile" class="profile_image">
-                          <div class="user_badge bg_red">
-                            <img src="images/date_danger.svg" alt="calendar">
-                          </div>
-                        </div>
-                        <div class="profile_info">
-                          <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                          <span>Just Now</span>
-                        </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
                       </div>
                     </div>
-                  </button>
-                </li>
-              </ul>
-            </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-8-tab" data-toggle="pill" data-target="#v-pills-nav-8"
+                  type="button" role="tab" aria-controls="v-pills-nav-8" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-9-tab" data-toggle="pill" data-target="#v-pills-nav-9"
+                  type="button" role="tab" aria-controls="v-pills-nav-9" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-10-tab" data-toggle="pill" data-target="#v-pills-nav-10"
+                  type="button" role="tab" aria-controls="v-pills-nav-10" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <h3>Today</h3>
+                <button class="nav-link unread_message" id="v-pills-nav-1-tab" data-toggle="pill"
+                  data-target="#v-pills-nav-1" type="button" role="tab" aria-controls="v-pills-nav-1"
+                  aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>2 Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-2-tab" data-toggle="pill" data-target="#v-pills-nav-2"
+                  type="button" role="tab" aria-controls="v-pills-nav-2" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </button>
+              </li>
+              <li>
+                <h3>Yesterday</h3>
+                <button class="nav-link" id="v-pills-nav-3-tab" data-toggle="pill" data-target="#v-pills-nav-3"
+                  type="button" role="tab" aria-controls="v-pills-nav-3" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-4-tab" data-toggle="pill" data-target="#v-pills-nav-4"
+                  type="button" role="tab" aria-controls="v-pills-nav-4" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-5-tab" data-toggle="pill" data-target="#v-pills-nav-5"
+                  type="button" role="tab" aria-controls="v-pills-nav-5" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-6-tab" data-toggle="pill" data-target="#v-pills-nav-6"
+                  type="button" role="tab" aria-controls="v-pills-nav-6" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <h3>7 December 2022</h3>
+                <button class="nav-link" id="v-pills-nav-7-tab" data-toggle="pill" data-target="#v-pills-nav-7"
+                  type="button" role="tab" aria-controls="v-pills-nav-7" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-8-tab" data-toggle="pill" data-target="#v-pills-nav-8"
+                  type="button" role="tab" aria-controls="v-pills-nav-8" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-9-tab" data-toggle="pill" data-target="#v-pills-nav-9"
+                  type="button" role="tab" aria-controls="v-pills-nav-9" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge">
+                          <img src="images/date.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button class="nav-link" id="v-pills-nav-10-tab" data-toggle="pill" data-target="#v-pills-nav-10"
+                  type="button" role="tab" aria-controls="v-pills-nav-10" aria-selected="false">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile_block">
+                        <img src="images/user_profile.png" alt="profile" class="profile_image">
+                        <div class="user_badge bg_red">
+                          <img src="images/date_danger.svg" alt="calendar">
+                        </div>
+                      </div>
+                      <div class="profile_info">
+                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
+                        <span>Just Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="col-lg-5 col-md-6">
@@ -5260,6 +5455,7 @@
   <script src="js/select2.min.js"></script>
   <script src="js/jquery.dataTables.js"></script>
   <script src="js/apexcharts.js"></script>
+  <script src="js/pagination.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWIi_5aXlwnLrxreoh0ls6dsCTARKPNGs&callback=initAutocomplete&libraries=places&v=weekly"
@@ -5272,6 +5468,14 @@
   <script src="js/popper.min.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/script.js"></script>
+
+  <script>
+    $('#v-pills-notification-tab').pagination({
+      dataSource: [1, 2],
+      pageSize: 5,
+      className: 'paginationjs-theme-blue'
+    })
+  </script>
 </body>
 
 </html>
