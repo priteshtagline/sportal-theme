@@ -1193,7 +1193,7 @@ header .navbar .navbar_menu .navbar-nav .nav-item .nav-link.active::before {
   margin: 0 auto;
   height: 4px;
   background-color: #764af3;
-  bottom: -25px;
+  bottom: -29px;
 }
 
 @media (max-width: 991px) {
