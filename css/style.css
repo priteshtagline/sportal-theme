@@ -1406,11 +1406,12 @@ header .navbar .nav-right .btn-group p.head {
   font-size: 18px;
   padding: 16px 12px 0;
   margin-bottom: 0;
+  font-family: 'Outfit SemiBold';
 }
 
 header .navbar .nav-right .btn-group .nav-tabs {
   padding-bottom: 10px;
-  padding: 15px 12px;
+  padding: 8px 12px 15px;
 }
 
 header .navbar .nav-right .btn-group .nav-tabs .nav-item {
@@ -5060,6 +5061,7 @@ header.active .side-nav-btn img {
 
 .notification_section .header h6 {
   font-size: 14px;
+  font-family: 'Outfit Medium';
   margin-bottom: 21px;
 }
 
