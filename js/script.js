@@ -211,6 +211,23 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
+  // Notification_pagination
+  var items = $(".list-wrapper li");
+  var numItems = items.length;
+  var perPage = 10;
+  items.slice(perPage).hide();
+  $('#pagination-container').pagination({
+    items: numItems,
+    itemsOnPage: perPage,
+    prevText: "Previous",
+    nextText: "Next",
+    onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    }
+  });
+
   // Image Upload Javascript
   ("use strict");
   function dragNdrop(event) {
