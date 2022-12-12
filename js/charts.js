@@ -7,7 +7,7 @@ var timeline_chart_options = {
     name: 'Offline Booking',
     data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 85, 80, 25, 56, 61,]
   }],
-  colors: ['#A98FF1', '#764AF3',],
+  colors: ['#764AF3', '#A98FF1',],
   chart: {
     type: 'bar',
     height: 450
