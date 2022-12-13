@@ -739,7 +739,6 @@ input[type=checkbox] {
   }
 }
 
-
 // Sidebar
 .sidebar {
   position: fixed;
@@ -761,6 +760,8 @@ input[type=checkbox] {
   @media (max-width:1024px) {
     padding: 30px 15px;
   }
+
+
 
   .logo-wrapper {
     display: flex;
@@ -895,7 +896,8 @@ input[type=checkbox] {
     display: flex;
     flex-direction: column;
     border: none;
-
+    min-height: 400px;
+    height: calc(100vh - 200px);
     .features-item {
       position: relative;
       width: 100%;
@@ -977,7 +979,7 @@ input[type=checkbox] {
   }
 
   .footer-feature-list {
-    margin-top: 51px;
+    margin-top: auto;
   }
 
   .footer-bottom {
@@ -1078,6 +1080,7 @@ input[type=checkbox] {
     }
   }
 
+
 }
 
 // header
@@ -1090,7 +1093,7 @@ header {
   margin-left: 271px;
   width: calc(100% - 271px);
   transition: all 0.5s ease-in-out;
-  z-index: 1111111;
+  z-index: 1111;
 
   .navbar {
     padding: 19px 34px;
@@ -1191,15 +1194,21 @@ header {
       cursor: pointer;
       background-color: $white;
 
+      @media (max-width:1024px) {
+        margin-left: -30px;
+      }
+
       img {
         transition: all 0.9s ease-in-out;
         flex: 0 0 7px;
         transform: rotateZ(180deg);
       }
 
-      @media (max-width: 991px) {
+   
+      @media (max-width: 768px) {
         display: none;
       }
+
 
     }
 
@@ -1341,6 +1350,7 @@ header {
               cursor: pointer;
               line-height: 12px;
               font-family: "Outfit Regular";
+              background-color: #EFEFEF;
             }
 
             .active {
@@ -1496,9 +1506,15 @@ header {
       width: calc(100% - 78px);
     }
 
+    
     .side-nav-btn {
-      margin-left: -41px;
-
+      
+      @media (max-width:1024px) {
+        margin-left: -30px;
+      }
+      @media (min-width:1025px) {
+        margin-left: -41px;
+      }
       img {
         transform: rotateZ(0deg);
       }
@@ -4680,6 +4696,7 @@ header {
 
       .card-body {
         overflow-x: hidden;
+        padding: 8px 20px;
       }
 
       .apexcharts-canvas {

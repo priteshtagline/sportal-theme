@@ -82,6 +82,8 @@ $(document).ready(function () {
       });
     }
   });
+
+  
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
     $('.navbar-brand').html('Settings').show();
