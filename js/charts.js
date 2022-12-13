@@ -93,7 +93,6 @@ var sales_overview_options = {
     position: 'right',
     offsetX: 100,
     offsetY: 70,
-    height: 50,
   },
   plotOptions: {
     pie: {
