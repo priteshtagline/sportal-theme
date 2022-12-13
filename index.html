@@ -734,23 +734,6 @@
                             Offline Booking
                           </li>
                         </ul>
-
-                        <!-- <div class="legend">
-                          <div class="pretty p-svg p-smooth">
-                            <input type="checkbox" checked onclick="toggleSeries(this)" value="Series Column">
-                            <div class="state p-primary">
-                              <label>Online Booking</label>
-                            </div>
-                          </div>
-
-                          <div class="pretty p-svg p-smooth">
-                            <input type="checkbox" checked onclick="toggleSeries(this)" value="Series Area">
-                            <div class="state p-success">
-                              <label>Offline Booking</label>
-                            </div>
-                          </div>
-
-                        </div> -->
                       </div>
                       <div id="timeline_chart" class="chart"></div>
                     </div>
@@ -759,7 +742,7 @@
                 <div class="col-xl-6 col-12 mb-4 mb-xl-0">
                   <div class="card sales_overview_card h-100">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Sales Overview</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -776,10 +759,9 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <!-- <div id="sales_overview_chart" class="charts" data-legend-label="Testdsdsdsdsd"> -->
-                      <div id="sales_overview_chart" class="sales_overview_charts">
+                      <div id="sales_overview_chart" class="theme-charts sales_overview_charts"
+                        data-legend-label="Overview">
                       </div>
-                      <!-- <p class="chart_label">Sales Overview</p> -->
                     </div>
                   </div>
                 </div>
@@ -789,8 +771,7 @@
                       <h5 class="card-title">Player Analytics</h5>
                     </div>
                     <div class="card-body">
-                      <!-- <div id="player_analytics_chart" class="charts" data-legend-label="Testdsdsdsdsd"></div> -->
-                      <div id="player_analytics_chart"></div>
+                      <div id="player_analytics_chart" class="theme-charts" data-legend-label="Overview"></div>
                     </div>
                   </div>
                 </div>
@@ -1543,7 +1524,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Payment Type</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1567,7 +1548,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Sport</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1591,7 +1572,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Product</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1620,7 +1601,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Court Coverage</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1644,7 +1625,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Court Size</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1668,7 +1649,7 @@
                 <div class="col-xl-4 col-lg-6 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center">
                         <h5 class="card-title">Court Feature</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1698,7 +1679,7 @@
               <div class="row report_head">
                 <div class="col-md-12">
                   <div class="report_title_group">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
                       <h4 class="report_title">
                         Overview
                       </h4>
@@ -1781,7 +1762,7 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex">
+                      <div class="d-flex align-items-center">
                         <h5 class="card-title">Trend of their Product</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1805,7 +1786,7 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex">
+                      <div class="d-flex align-items-center">
                         <h5 class="card-title">Payment Type</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1835,7 +1816,7 @@
               <div class="row report_head">
                 <div class="col-md-12">
                   <div class="report_title_group">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
                       <h4 class="report_title">
                         Overview
                       </h4>
@@ -1932,7 +1913,7 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex">
+                      <div class="d-flex align-items-center">
                         <h5 class="card-title">Payment Type</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -1956,7 +1937,7 @@
                 <div class="col-xl-6 col-md-12 mb-4">
                   <div class="card">
                     <div class="card-header">
-                      <div class="d-flex">
+                      <div class="d-flex align-items-center">
                         <h5 class="card-title">Payment Type</h5>
                         <select class="sorting_select" id="overview_custom_select">
                           <option selected value="today">Today</option>
@@ -2074,7 +2055,6 @@
             </div>
           </form>
         </div>
-
         <!-- Billings End -->
 
       </div>
@@ -5559,6 +5539,15 @@
   <script src="js/popper.min.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/script.js"></script>
+
+  <script>
+    // $(".theme-charts").each(function () {
+    //   var attr = $(this).attr("data-legend-label");
+    //   if (typeof attr !== typeof undefined && attr !== false) {
+    //     console.log($(this).children(".apexcharts-canvas").children(".apexcharts-svg").children("foreignObject").children(".apexcharts-legend").prepend(`<h6>` + attr + `<h6 />`));
+    //   }
+    // });
+  </script>
 </body>
 
 </html>

@@ -250,15 +250,6 @@ $(document).ready(function () {
     tags: true
   });
 
-  // Navbar
-  jQuery(window).scroll(function () {
-    if (jQuery(window).scrollTop() >= 300) {
-      jQuery("header").addClass("fixed-header");
-    } else {
-      jQuery("header").removeClass("fixed-header");
-    }
-  });
-
   // DataTable
   $('.display').DataTable();
 
