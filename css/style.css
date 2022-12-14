@@ -207,7 +207,7 @@ input[type=checkbox] {
 }
 
 .select2-container {
-  z-index: 11;
+  z-index: 1111;
 }
 
 .btn-info {
@@ -649,12 +649,40 @@ input[type=checkbox] {
   color: #ffffff;
   background-color: #764af3;
   transition: all 0.5s ease-in-out;
-  z-index: 2;
+  z-index: 11111;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 @media (max-width: 1024px) {
   .sidebar {
     padding: 30px 15px;
+  }
+}
+.sidebar .side-nav-btn {
+  right: -8px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  top: 35px;
+  border-radius: 50%;
+  z-index: 100;
+  border: none;
+  margin-bottom: 0;
+  transition: all 0.9s ease-in-out;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.sidebar .side-nav-btn img {
+  transition: all 0.9s ease-in-out;
+  flex: 0 0 7px;
+  transform: rotateZ(180deg);
+}
+@media (max-width: 768px) {
+  .sidebar .side-nav-btn {
+    display: none;
   }
 }
 .sidebar .logo-wrapper {
@@ -846,6 +874,15 @@ input[type=checkbox] {
   width: 93px;
   transition: all 0.5s ease-in-out;
 }
+@media (min-width: 769px) {
+  .sidebar.active:hover {
+    width: 271px;
+  }
+  .sidebar.active:hover .footer-bottom, .sidebar.active:hover .profile-dropdown .user_name, .sidebar.active:hover .logo-wrapper span, .sidebar.active:hover .features-list .features-item a:hover .right-arrow, .sidebar.active:hover .profile-dropdown .profile::after, .sidebar.active:hover .features-list .features-item a .feature-text {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 @media (max-width: 1024px) {
   .sidebar.active {
     width: 78px;
@@ -927,6 +964,34 @@ header .navbar {
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.0588235294);
   transition: all 0.5s ease-in-out;
 }
+header .navbar .side-nav-btn {
+  margin-left: -41px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  top: 35px;
+  border-radius: 50%;
+  z-index: 1111;
+  border: none;
+  margin-bottom: 0;
+  transition: all 0.9s ease-in-out;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+header .navbar .side-nav-btn img {
+  transition: all 0.9s ease-in-out;
+  flex: 0 0 7px;
+  transform: rotateZ(180deg);
+}
+@media (max-width: 768px) {
+  header .navbar .side-nav-btn {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   header .navbar {
     padding: 19px 23px;
@@ -988,39 +1053,6 @@ header .navbar .navbar_menu .navbar-nav .nav-item .nav-link:hover {
   }
   header .navbar .navbar_menu .navbar-nav .nav-item .nav-link {
     padding-left: 0 !important;
-  }
-}
-header .navbar .side-nav-btn {
-  margin-left: -41px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 14px;
-  justify-content: center;
-  align-items: center;
-  top: 35px;
-  height: 14px;
-  border-radius: 50%;
-  z-index: 100;
-  border: none;
-  margin-bottom: 0;
-  transition: all 0.9s ease-in-out;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-@media (max-width: 1024px) {
-  header .navbar .side-nav-btn {
-    margin-left: -30px;
-  }
-}
-header .navbar .side-nav-btn img {
-  transition: all 0.9s ease-in-out;
-  flex: 0 0 7px;
-  transform: rotateZ(180deg);
-}
-@media (max-width: 768px) {
-  header .navbar .side-nav-btn {
-    display: none;
   }
 }
 header .navbar .navbar-brand {

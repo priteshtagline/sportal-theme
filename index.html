@@ -23,9 +23,6 @@
 
   <header id="header">
     <nav class="navbar navbar-expand-lg shadow-sm">
-      <button class="side-nav-btn" id="side_nav_btn">
-        <img src="images/nav-aerrow.svg" alt="nav-aerrow">
-      </button>
       <div class="container-fluid pl-0 pl-md-0">
 
         <a href="#" class="back_arrow mr-3" id="notification-back-arrow">
@@ -356,6 +353,9 @@
 
   <div id="sidebar">
     <div class="sidebar">
+      <button class="side-nav-btn" id="side_nav_btn">
+        <img src="images/nav-aerrow.svg" alt="nav-aerrow">
+      </button>
       <div class="logo-wrapper">
         <a href="javascript:void(0)" class="brand-row">
           <img src="images/logo.png" alt="brand" />
@@ -5303,8 +5303,8 @@
               <div class="modal-body">
                 <div class="form-group">
                   <!-- <label for="customer_country" class="m-top-15">Select Country</label> </br> -->
-                  <select class="w-100 select form-control" aria-label="schedule_reservation_label"
-                    id="schedule_reservation">
+                  <select class="w-100 select form-control" aria-label="schedule_reservation_1_label"
+                    id="schedule_reservation_1">
                     <option>Select Reservation</option>
                     <option value="Regular_Reservation" selected="selected">Regular Reservation</option>
                     <option value="ABC_Reservation">ABC Reservation</option>
@@ -5314,9 +5314,9 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="schedule_start1_time" class="m-top-15">Start Time</label> </br>
-                      <select class="w-100 select form-control" aria-label="schedule_reservation_label"
-                        id="schedule_start1_time">
+                      <label for="schedule_start2_time" class="m-top-15">Start Time</label> </br>
+                      <select class="w-100 select form-control" aria-label="schedule_start2_time_label"
+                        id="schedule_start2_time">
                         <option>Select Start Time</option>
                         <option value="1">12:00 pm</option>
                         <option value="2" selected="selected">01:00 pm</option>
@@ -5327,9 +5327,9 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="schedule_end_time" class="m-top-15">End Time</label> </br>
-                      <select class="w-100 select form-control" aria-label="schedule_end_time_label"
-                        id="schedule_end_time">
+                      <label for="schedule_end_2_time" class="m-top-15">End Time</label> </br>
+                      <select class="w-100 select form-control" aria-label="schedule_end_2_time_label"
+                        id="schedule_end_2_time">
                         <option>Select End Time</option>
                         <option value="1">12:00 pm</option>
                         <option value="2" selected="selected">01:00 pm</option>
@@ -5339,9 +5339,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="customer_schedule_court" class="m-top-15">Court</label> </br>
-                  <select class="w-100 select form-control" aria-label="customer_schedule_court_label"
-                    id="customer_schedule_court">
+                  <label for="customer_schedule_1_court" class="m-top-15">Court</label> </br>
+                  <select class="w-100 select form-control" aria-label="customer_schedule_1_court_label"
+                    id="customer_schedule_1_court">
                     <option>Select Court</option>
                     <option value="synthetic grass 1" selected="selected">Synthetic Grass 1</option>
                     <option value="synthetic grass 2">Synthetic Grass 2</option>
@@ -5353,7 +5353,7 @@
                     <div class="form-group">
                       <label for="reservation_payment" class="m-top-15">Payment</label> </br>
                       <select class="w-100 select form-control" aria-label="reservation_payment_label"
-                        id="schedule_start_time">
+                        id="reservation_payment">
                         <option selected="selected">Select Payment</option>
                         <option value="online">Online</option>
                         <option value="cash">Cash</option>

@@ -231,7 +231,7 @@ input[type=checkbox] {
 }
 
 .select2-container {
-  z-index: 11;
+  z-index: 1111;
 }
 
 .btn-info {
@@ -754,14 +754,46 @@ input[type=checkbox] {
   color: $white;
   background-color: $theme-primary-color;
   transition: all 0.5s ease-in-out;
-  z-index: 2;
+  z-index: 11111;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+
 
   @media (max-width:1024px) {
     padding: 30px 15px;
   }
 
+  .side-nav-btn {
+    right: -8px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 14px;
+    height: 14px;
+    justify-content: center;
+    align-items: center;
+    top: 35px;
+    border-radius: 50%;
+    z-index: 100;
+    border: none;
+    margin-bottom: 0;
+    transition: all 0.9s ease-in-out;
+    cursor: pointer;
+    background-color: $white;
 
+
+    img {
+      transition: all 0.9s ease-in-out;
+      flex: 0 0 7px;
+      transform: rotateZ(180deg);
+    }
+
+ 
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+  }
 
   .logo-wrapper {
     display: flex;
@@ -992,7 +1024,18 @@ input[type=checkbox] {
   &.active {
     width: 93px;
     transition: all 0.5s ease-in-out;
+    @media (min-width:769px) {
+      &:hover{
+        width: 271px;
+        // z-index: 111;
+        .footer-bottom, .profile-dropdown .user_name, .logo-wrapper span, .features-list .features-item a:hover .right-arrow, .profile-dropdown .profile::after, .features-list .features-item a .feature-text{
+          opacity: 1;
+          visibility: visible;
+        }
 
+      }
+    }
+   
     @media (max-width:1024px) {
       width: 78px;
     }
@@ -1102,6 +1145,39 @@ header {
     box-shadow: 0px 5px 25px #0000000F;
     transition: all 0.5s ease-in-out;
 
+    .side-nav-btn {
+      margin-left: -41px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 14px;
+      height: 14px;
+      justify-content: center;
+      align-items: center;
+      top: 35px;
+      border-radius: 50%;
+      z-index: 1111;
+      border: none;
+      margin-bottom: 0;
+      transition: all 0.9s ease-in-out;
+      cursor: pointer;
+      background-color: $white;
+  
+  
+      img {
+        transition: all 0.9s ease-in-out;
+        flex: 0 0 7px;
+        transform: rotateZ(180deg);
+      }
+  
+   
+      @media (max-width: 768px) {
+        display: none;
+      }
+  
+  
+    }
+
     @media (max-width:1024px) {
       padding: 19px 23px;
     }
@@ -1176,41 +1252,7 @@ header {
       }
     }
 
-    .side-nav-btn {
-      margin-left: -41px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      width: 14px;
-      justify-content: center;
-      align-items: center;
-      top: 35px;
-      height: 14px;
-      border-radius: 50%;
-      z-index: 100;
-      border: none;
-      margin-bottom: 0;
-      transition: all 0.9s ease-in-out;
-      cursor: pointer;
-      background-color: $white;
-
-      @media (max-width:1024px) {
-        margin-left: -30px;
-      }
-
-      img {
-        transition: all 0.9s ease-in-out;
-        flex: 0 0 7px;
-        transform: rotateZ(180deg);
-      }
-
    
-      @media (max-width: 768px) {
-        display: none;
-      }
-
-
-    }
 
     .navbar-brand {
       color: #000000;
@@ -1707,6 +1749,7 @@ header {
   transition: all 0.5s ease-in-out;
   padding: 36px;
   background-color: #f8fafb;
+
 
   &.active {
     margin-left: 93px;
