@@ -763,7 +763,7 @@ input[type=checkbox] {
   display: flex;
   flex-direction: column;
   border: none;
-  min-height: 400px;
+  min-height: 550px;
   height: calc(100vh - 200px);
 }
 .sidebar .features-list .features-item {
@@ -3981,6 +3981,19 @@ header.active .side-nav-btn img {
   }
 }
 
+.notification_section {
+  position: relative;
+  min-height: 790px;
+}
+@media (max-width: 1024px) {
+  .notification_section {
+    min-height: 665px;
+  }
+}
+.notification_section .notification_pagination {
+  position: absolute;
+  bottom: 0px;
+}
 .notification_section .header h5 {
   font-size: 16px;
   font-family: "Outfit SemiBold";
@@ -4195,4 +4208,10 @@ header.active .side-nav-btn img {
 .simple-pagination ul li .page-link.prev,
 .simple-pagination ul li .page-link.next {
   border: none;
+}
+
+.time_schedule_error {
+  font-size: 14px;
+  margin-left: 10px;
+  color: red;
 }/*# sourceMappingURL=style.css.map */
