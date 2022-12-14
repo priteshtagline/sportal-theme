@@ -231,7 +231,7 @@ input[type=checkbox] {
 }
 
 .select2-container {
-  z-index: 111111;
+  z-index: 11;
 }
 
 .btn-info {
@@ -1093,7 +1093,7 @@ header {
   margin-left: 271px;
   width: calc(100% - 271px);
   transition: all 0.5s ease-in-out;
-  z-index: 1111;
+  z-index: 111;
 
   .navbar {
     padding: 19px 34px;
@@ -1970,6 +1970,8 @@ header {
           .schedule_time {
             input[type=time] {
               border: 1px solid #000000;
+              pointer-events:inherit;
+              user-select:text;
             }
           }
 
@@ -1996,6 +1998,8 @@ header {
           input[type=time] {
             padding: 0;
             height: 26px;
+            pointer-events: none;
+            user-select: none;
             font-size: 13px;
             border: none;
             padding: 5px;
@@ -2005,8 +2009,6 @@ header {
               background: none;
               display: none;
             }
-
-
           }
 
           .off_time {
@@ -4816,6 +4818,7 @@ header {
   span {
     font-size: 12px;
     color: #A4A9BC;
+    z-index: 0;
   }
 
   span {

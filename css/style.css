@@ -207,7 +207,7 @@ input[type=checkbox] {
 }
 
 .select2-container {
-  z-index: 111111;
+  z-index: 11;
 }
 
 .btn-info {
@@ -918,7 +918,7 @@ header {
   margin-left: 271px;
   width: calc(100% - 271px);
   transition: all 0.5s ease-in-out;
-  z-index: 1111;
+  z-index: 111;
 }
 header .navbar {
   padding: 19px 34px;
@@ -1695,6 +1695,11 @@ header.active .side-nav-btn img {
 }
 .contact_info_form .form_card .schdeule_list .schedule_time_list.edit .schedule_time input[type=time] {
   border: 1px solid #000000;
+  pointer-events: inherit;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 .contact_info_form .form_card .schdeule_list .schedule_time_list.edit .btn-edit {
   display: none;
@@ -1715,6 +1720,11 @@ header.active .side-nav-btn img {
 .contact_info_form .form_card .schdeule_list .schedule_time_list .schedule_time input[type=time] {
   padding: 0;
   height: 26px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 13px;
   border: none;
   padding: 5px;
@@ -3913,6 +3923,7 @@ header.active .side-nav-btn img {
 .billing_form span {
   font-size: 12px;
   color: #A4A9BC;
+  z-index: 0;
 }
 .billing_form span.heading {
   color: #A4A9BC;
