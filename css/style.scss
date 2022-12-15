@@ -47,6 +47,96 @@ body {
   flex-direction: column;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: $theme-primary-color;
+  align-items: center;
+
+  .cubes {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+
+    .sk-cube {
+      width: 33%;
+      height: 33%;
+      background-color: #FFFFFF;
+
+      float: left;
+      animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+
+      &.sk-cube1 {
+        animation-delay: 0.2s;
+      }
+
+      &.sk-cube2 {
+        animation-delay: 0.3s;
+      }
+
+      &.sk-cube3 {
+        animation-delay: 0.4s;
+      }
+
+      &.sk-cube4 {
+        animation-delay: 0.1s;
+      }
+
+      &.sk-cube5 {
+        animation-delay: 0.2s;
+      }
+
+      &.sk-cube6 {
+        animation-delay: 0.3s;
+      }
+
+      &.sk-cube7 {
+        animation-delay: 0s;
+      }
+
+      &.sk-cube8 {
+        animation-delay: 0.1s;
+      }
+
+      &.sk-cube9 {
+        animation-delay: 0.2s;
+      }
+    }
+
+  }
+
+  @keyframes sk-cubeGridScaleDelay {
+
+    0%,
+    70%,
+    100% {
+      transform: scale3D(1, 1, 1);
+    }
+
+    35% {
+      transform: scale3D(0, 0, 1);
+    }
+  }
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -788,7 +878,7 @@ input[type="checkbox"] {
       transform: rotateZ(180deg);
     }
 
- 
+
     @media (max-width: 768px) {
       display: none;
     }
@@ -1025,18 +1115,25 @@ input[type="checkbox"] {
   &.active {
     width: 93px;
     transition: all 0.5s ease-in-out;
+
     @media (min-width:769px) {
-      &:hover{
+      &:hover {
         width: 271px;
+
         // z-index: 111;
-        .footer-bottom, .profile-dropdown .user_name, .logo-wrapper span, .features-list .features-item a:hover .right-arrow, .profile-dropdown .profile::after, .features-list .features-item a .feature-text{
+        .footer-bottom,
+        .profile-dropdown .user_name,
+        .logo-wrapper span,
+        .features-list .features-item a:hover .right-arrow,
+        .profile-dropdown .profile::after,
+        .features-list .features-item a .feature-text {
           opacity: 1;
           visibility: visible;
         }
 
       }
     }
-   
+
     @media (max-width:1024px) {
       width: 78px;
     }
@@ -1146,39 +1243,6 @@ header {
     box-shadow: 0px 5px 25px #0000000F;
     transition: all 0.5s ease-in-out;
 
-    .side-nav-btn {
-      margin-left: -41px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      width: 14px;
-      height: 14px;
-      justify-content: center;
-      align-items: center;
-      top: 35px;
-      border-radius: 50%;
-      z-index: 1111;
-      border: none;
-      margin-bottom: 0;
-      transition: all 0.9s ease-in-out;
-      cursor: pointer;
-      background-color: $white;
-  
-  
-      img {
-        transition: all 0.9s ease-in-out;
-        flex: 0 0 7px;
-        transform: rotateZ(180deg);
-      }
-  
-   
-      @media (max-width: 768px) {
-        display: none;
-      }
-  
-  
-    }
-
     @media (max-width:1024px) {
       padding: 19px 23px;
     }
@@ -1253,9 +1317,6 @@ header {
       }
     }
 
-<<<<<<< HEAD
-   
-=======
     .side-nav-btn {
       margin-left: -41px;
       position: absolute;
@@ -1291,7 +1352,6 @@ header {
 
 
     }
->>>>>>> b4d0c6c (spor-8/ scheduling-module designed)
 
     .navbar-brand {
       color: #000000;
@@ -1790,7 +1850,6 @@ header {
   transition: all 0.5s ease-in-out;
   padding: 36px;
   background-color: #f8fafb;
-
 
   &.active {
     margin-left: 93px;

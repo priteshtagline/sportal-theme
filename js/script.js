@@ -83,6 +83,12 @@ $(document).ready(function () {
     }
   });
 
+  // Loader
+  window.onload = function () {
+    document.querySelector(".loader").style.opacity = 0;
+    document.querySelector(".loader").style.visibility = "hidden";
+  }
+
 
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
@@ -295,6 +301,13 @@ document.addEventListener('DOMContentLoaded', function () {
     elms.innerHTML = '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
   }, 0);
 
+  $('.schedule_event_wrap .event-btns').hide()
+  $('.schedule_event').click(function () {
+    $(this).next('.event-btns').toggle();
+    var background_color = $(this).closest('.fc-timegrid-event').css('background-color');
+    console.log(background_color);
+    $(this).next('.event-btns').css('background', background_color);
+  });
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
@@ -404,11 +417,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
   });
   calendar.render();
-  $('.schedule_event_wrap .event-btns').hide()
-  $('.schedule_event').click(function () {
-    $(this).next('.event-btns').toggle();
-    var background_color = $(this).closest('.fc-timegrid-event').css('background-color');
-    console.log(background_color);
-    $(this).next('.event-btns').css('background', background_color);
-  });
 });
