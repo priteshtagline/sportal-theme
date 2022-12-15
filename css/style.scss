@@ -844,7 +844,7 @@ input[type="checkbox"] {
   color: $white;
   background-color: $theme-primary-color;
   transition: all 0.5s ease-in-out;
-  z-index: 11111;
+  z-index: 111;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 
@@ -867,16 +867,16 @@ input[type="checkbox"] {
     z-index: 100;
     border: none;
     margin-bottom: 0;
-    transition: all 0.9s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
     background-color: $white;
 
 
-    img {
-      transition: all 0.9s ease-in-out;
-      flex: 0 0 7px;
-      transform: rotateZ(180deg);
-    }
+    // img {
+    //   transition: all 0.5s ease-in-out;
+    //   flex: 0 0 7px;
+    //   transform: rotateZ(180deg);
+    // }
 
 
     @media (max-width: 768px) {
@@ -917,8 +917,11 @@ input[type="checkbox"] {
       .profile {
         background-color: $white;
 
-        .user_name {
+        .user_name{
           color: $theme-primary-color  !important;
+        }
+        .profile_icon{
+          fill: $theme-primary-color;
         }
 
         &::after {
@@ -932,13 +935,20 @@ input[type="checkbox"] {
         background-color: $white;
         min-width: 40px;
 
-        .user_name {
+        .user_name{
           color: $theme-primary-color  !important;
+        }
+
+        .profile_icon{
+          fill: $theme-primary-color;
         }
 
         &::after {
           color: $theme-primary-color  !important;
         }
+      }
+      .profile_icon{
+        color: $theme-primary-color;
       }
 
       .dropdown-menu {
@@ -972,7 +982,14 @@ input[type="checkbox"] {
         font-family: "Outfit Medium";
         font-size: 12px;
         color: $white;
+        vertical-align: middle;
         transition: all 0.5s ease-in-out;
+      }
+      .profile_icon{
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        fill: $white;
       }
 
       &::after {
@@ -1119,7 +1136,6 @@ input[type="checkbox"] {
     @media (min-width:769px) {
       &:hover {
         width: 271px;
-
         // z-index: 111;
         .footer-bottom,
         .profile-dropdown .user_name,
@@ -1130,7 +1146,6 @@ input[type="checkbox"] {
           opacity: 1;
           visibility: visible;
         }
-
       }
     }
 
@@ -1220,9 +1235,8 @@ input[type="checkbox"] {
       opacity: 0.65;
     }
   }
-
-
 }
+
 
 // header
 header {
@@ -1242,12 +1256,14 @@ header {
     background: $white;
     box-shadow: 0px 5px 25px #0000000F;
     transition: all 0.5s ease-in-out;
-
     @media (max-width:1024px) {
       padding: 19px 23px;
     }
 
     .navbar_menu {
+      @media (max-width: 991px) {
+        order: 3;
+      }
       margin-left: 72px;
 
       .navbar-nav {
@@ -1395,6 +1411,9 @@ header {
     }
 
     .nav-right {
+      @media(max-width:991px){
+        order: 2;
+      }
       .btn-group {
         position: relative;
 
@@ -1414,7 +1433,7 @@ header {
           img {
             border-radius: 50%;
             background-color: #EFEFEF;
-            transition: all 0.9s ease-in-out;
+            transition: all 0.5s ease-in-out;
             color: $theme-primary-color;
 
           }
@@ -1577,6 +1596,10 @@ header {
 
         .dropdown-menu {
           width: 100%;
+          @media (max-width:1200px) {
+            right: 0;
+            left: auto;
+          }
         }
 
         .profile-dropdown {
@@ -3137,7 +3160,7 @@ header {
 .divider_dropdown_group {
   button {
     background-color: transparent;
-    padding: 0;
+    padding: 0; 
     border: none;
     min-width: 30px;
     box-shadow: none;
@@ -5429,4 +5452,59 @@ header {
   font-size: 14px;
   margin-left: 10px;
   color: red;
+}
+
+.side-nav-btn {
+  transition: all 0.5s ease-in-out;
+  left: 265px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  top: 35px;
+  border-radius: 50%;
+  z-index: 999;
+  border: none;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: $white;
+  img {
+    flex: 0 0 7px;
+    transform: rotateZ(180deg);
+    transition: all 0.5s ease-in-out;
+  }
+  &.active {
+    left: 87px;
+    transition: all 0.5s ease-in-out;
+    @media (max-width:1024px) {
+      left: 71px;
+    }
+    img {
+      flex: 0 0 7px;
+      transform: rotateZ(0deg);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+#sidebar{
+  &.active{
+    &.hover{
+      .side-nav-btn{
+        left: 265px;
+        transition: all 0.5s ease-in-out;
+        img{
+          transition: all 0.5s ease-in-out;
+          flex: 0 0 7px;
+          transform: rotateZ(180deg);
+        }
+      }
+    }
+  }
 }

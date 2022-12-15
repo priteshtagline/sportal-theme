@@ -84,11 +84,9 @@ $(document).ready(function () {
   });
 
   // Loader
-  window.onload = function () {
-    document.querySelector(".loader").style.opacity = 0;
-    document.querySelector(".loader").style.visibility = "hidden";
-  }
-
+  $(window).on('load', function () {
+    $('.loader').css({ "opacity": "0", "visibility": "hidden" });
+   });
 
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
@@ -214,10 +212,16 @@ $(document).ready(function () {
   // Sidebar collapse
   $("#side_nav_btn").on("click", function () {
     $(".sidebar").toggleClass("active");
+    $("#sidebar").toggleClass("active");
     $("header").toggleClass("active");
     $(".main-content").toggleClass("active");
     $(this).toggleClass("active");
   });
+  $(".sidebar").hover(
+    function () {
+      $("#sidebar.active").toggleClass("hover");
+    }
+  );
 
   // Notification_pagination
   var items = $(".list-wrapper li");
