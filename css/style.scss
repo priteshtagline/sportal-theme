@@ -858,37 +858,39 @@ input[type="checkbox"] {
     padding: 30px 15px;
   }
 
-  .side-nav-btn {
-    right: -8px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 14px;
-    height: 14px;
-    justify-content: center;
-    align-items: center;
-    top: 35px;
-    border-radius: 50%;
-    z-index: 100;
-    border: none;
-    margin-bottom: 0;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-    background-color: $white;
 
 
-    // img {
-    //   transition: all 0.5s ease-in-out;
-    //   flex: 0 0 7px;
-    //   transform: rotateZ(180deg);
-    // }
+  // .side-nav-btn {
+  //   right: -8px;
+  //   position: absolute;
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 14px;
+  //   height: 14px;
+  //   justify-content: center;
+  //   align-items: center;
+  //   top: 35px;
+  //   border-radius: 50%;
+  //   z-index: 100;
+  //   border: none;
+  //   margin-bottom: 0;
+  //   transition: all 0.5s ease-in-out;
+  //   cursor: pointer;
+  //   background-color: $white;
 
 
-    @media (max-width: 768px) {
-      display: none;
-    }
+  //   // img {
+  //   //   transition: all 0.5s ease-in-out;
+  //   //   flex: 0 0 7px;
+  //   //   transform: rotateZ(180deg);
+  //   // }
 
-  }
+
+  //   @media (max-width: 768px) {
+  //     display: none;
+  //   }
+
+  // }
 
   .logo-wrapper {
     display: flex;
@@ -1061,6 +1063,10 @@ input[type="checkbox"] {
         cursor: pointer;
         transition: all 0.5s ease-in-out;
 
+        @media (max-width:768px) {
+          min-width: 44px;
+          padding: 9px 10px;
+        }
         svg {
           flex: 0 0 24px;
         }
@@ -1141,6 +1147,7 @@ input[type="checkbox"] {
     width: 93px;
     transition: all 0.5s ease-in-out;
 
+    
     @media (min-width:769px) {
       &:hover {
         width: 271px;
@@ -1274,7 +1281,6 @@ header {
       @media (max-width: 991px) {
         order: 3;
       }
-
       margin-left: 72px;
 
       .navbar-nav {
@@ -1344,41 +1350,41 @@ header {
       }
     }
 
-    .side-nav-btn {
-      margin-left: -41px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      width: 14px;
-      justify-content: center;
-      align-items: center;
-      top: 35px;
-      height: 14px;
-      border-radius: 50%;
-      z-index: 100;
-      border: none;
-      margin-bottom: 0;
-      transition: all 0.9s ease-in-out;
-      cursor: pointer;
-      background-color: $white;
+    // .side-nav-btn {
+    //   margin-left: -41px;
+    //   position: absolute;
+    //   display: flex;
+    //   flex-direction: column;
+    //   width: 14px;
+    //   justify-content: center;
+    //   align-items: center;
+    //   top: 35px;
+    //   height: 14px;
+    //   border-radius: 50%;
+    //   z-index: 100;
+    //   border: none;
+    //   margin-bottom: 0;
+    //   transition: all 0.9s ease-in-out;
+    //   cursor: pointer;
+    //   background-color: $white;
 
-      @media (max-width:1024px) {
-        margin-left: -30px;
-      }
+    //   @media (max-width:1024px) {
+    //     margin-left: -30px;
+    //   }
 
-      img {
-        transition: all 0.9s ease-in-out;
-        flex: 0 0 7px;
-        transform: rotateZ(180deg);
-      }
-
-
-      @media (max-width: 768px) {
-        display: none;
-      }
+    //   img {
+    //     transition: all 0.9s ease-in-out;
+    //     flex: 0 0 7px;
+    //     transform: rotateZ(180deg);
+    //   }
 
 
-    }
+    //   @media (max-width: 768px) {
+    //     display: none;
+    //   }
+
+
+    // }
 
     .navbar-brand {
       color: #000000;
@@ -1667,6 +1673,9 @@ header {
     .navbar-toggler {
       color: $theme-primary-color;
 
+      @media (max-width:768px) {
+        display: block;
+      }
       .humburge_menu {
         font-size: 32px;
       }
@@ -2085,7 +2094,7 @@ header {
 
 .contact_info_form {
   .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 
     input[type=submit] {
       width: auto;
@@ -3817,6 +3826,7 @@ header {
         .fc-toolbar-title {
           min-width: 200px;
           font-size: 20px;
+          font-family:'Outfit Semibold' ;
         }
 
         button {
