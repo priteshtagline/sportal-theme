@@ -55,8 +55,6 @@ $(document).ready(function () {
     activate_element4.removeClass("active show");
     let activate_element5 = $("#v-pills-notification-tab").children("li").children(".nav-link");
     activate_element5.removeClass("active unread_message");
-    console.log(activate_element4);
-    console.log(activate_element5);
   });
 
   // sidebar resize
@@ -86,7 +84,7 @@ $(document).ready(function () {
   // Loader
   $(window).on('load', function () {
     $('.loader').css({ "opacity": "0", "visibility": "hidden" });
-   });
+  });
 
   // sidebar - navtab
   $("#settings-tab").on('click', function () {
