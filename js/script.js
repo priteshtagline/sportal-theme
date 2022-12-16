@@ -220,6 +220,9 @@ $(document).ready(function () {
       $("#sidebar.active").toggleClass("hover");
     }
   );
+  $(function(){
+    $('.navbar-toggler').removeAttr(style);
+});
 
   // Notification_pagination
   var items = $(".list-wrapper li");
