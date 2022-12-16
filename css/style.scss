@@ -1151,8 +1151,6 @@ input[type="checkbox"] {
     @media (min-width:769px) {
       &:hover {
         width: 271px;
-
-        // z-index: 111;
         .footer-bottom,
         .profile-dropdown .user_name,
         .logo-wrapper span,
@@ -1168,6 +1166,7 @@ input[type="checkbox"] {
     @media (max-width:1024px) {
       width: 78px;
     }
+
 
     .logo-wrapper {
       .brand-row {
@@ -1251,6 +1250,35 @@ input[type="checkbox"] {
       opacity: 0.65;
     }
   }
+
+  @media (max-width:768px) {
+    width: 78px;
+    .features-list .features-item a{
+      min-width: 44px;
+      padding: 9px 10px;
+    }
+    .profile-dropdown .profile{
+      padding: 9px 10px;
+      margin-left: 3px;
+      min-width: 44px;
+    }
+    .features-list .features-item a .feature-text{
+      opacity: 0;
+      visibility: hidden;
+    }
+     .logo-wrapper .brand-row{
+      padding-right: 0;
+      padding-left: 14px;
+     }
+     .logo-wrapper span,.profile-dropdown .user_name, .footer-bottom,.features-list .features-item a .right-arrow{
+      opacity: 0;
+      visibility: hidden;
+     }
+      .profile-dropdown .profile::after{
+        visibility: hidden;
+      }
+     
+  }
 }
 
 
@@ -1265,6 +1293,11 @@ header {
   width: calc(100% - 271px);
   transition: all 0.5s ease-in-out;
   z-index: 111;
+
+  @media (max-width:768px) {
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
 
   .navbar {
     padding: 19px 34px;
@@ -1904,6 +1937,11 @@ header {
       margin-left: 78px;
       max-width: calc(100% - 78px);
     }
+  }
+
+  @media (max-width:768px) {
+    margin-left: 78px;
+    max-width: calc(100% - 78px);
   }
 
   @media (max-width: 1024px) {
@@ -2599,7 +2637,6 @@ header {
 }
 
 .court_table {
-
   th,
   td {
     &:nth-child(6) {
@@ -5534,6 +5571,38 @@ header {
           transform: rotateZ(180deg);
         }
       }
+    }
+  }
+}
+
+// Notification_ pagination_for_backend
+
+.pagination-button-main {
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  .paginate_button{
+    position: relative;
+    display: block;
+    padding: 5px 13px;
+    color: #000000;
+    line-height: 1.5rem;
+    margin: 0;
+    border-radius: 2px;
+    min-width: 1.5em;
+    border: none;
+    background-color: transparent;
+    &.disabled{
+    color: #a4a9bc !important;
+    cursor: default;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+    &.current{
+      color: #ffffff !important;
+      border: none !important;
+      background-color: #764af3 !important;
     }
   }
 }
