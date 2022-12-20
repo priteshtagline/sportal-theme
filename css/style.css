@@ -205,6 +205,18 @@ p {
   font-family: "Outfit Regular";
 }
 
+.text-success {
+  color: #2CC176 !important;
+}
+
+.text-warning {
+  color: #C1802C !important;
+}
+
+.text-pink {
+  color: #C12C9E !important;
+}
+
 img,
 audio,
 video,
@@ -5872,5 +5884,26 @@ header.active .side-nav-btn img {
 
 .customer_modal.reservation_customer_modal .modal .modal-dialog {
   margin-right: 500px;
+}
+
+.tournament_module .title_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tournament_module .table-responsive tbody tr td:nth-child(2) {
+  width: 30%;
+}
+
+.tournament_module .table-responsive tbody tr td:nth-child(4), .tournament_module .table-responsive tbody tr td:nth-child(5) {
+  width: 13%;
+}
+
+.tournament_module .table-responsive tbody tr td:nth-child(8), .tournament_module .table-responsive tbody tr td:last-child {
+  width: 5%;
 }
 /*# sourceMappingURL=style.css.map */
