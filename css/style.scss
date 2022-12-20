@@ -45,6 +45,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  &.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
 
 @keyframes rotation {
@@ -1124,6 +1129,7 @@ input[type="checkbox"] {
           min-width: 44px;
           padding: 9px 8px;
         }
+
         svg {
           flex: 0 0 24px;
         }
@@ -1204,10 +1210,11 @@ input[type="checkbox"] {
     width: 93px;
     transition: all 0.5s ease-in-out;
 
-    
+
     @media (min-width:769px) {
       &:hover {
         width: 271px;
+
         .footer-bottom,
         .profile-dropdown .user_name,
         .logo-wrapper span,
@@ -1312,31 +1319,45 @@ input[type="checkbox"] {
 
   @media (max-width:768px) {
     width: 78px;
-    .features-list .features-item a{
+
+    .features-list .features-item a {
       min-width: 44px;
       padding: 9px 8px;
     }
+<<<<<<< Updated upstream
     .profile-dropdown .profile{
       padding: 9px 8px;
+=======
+
+    .profile-dropdown .profile {
+      padding: 9px 10px;
+>>>>>>> Stashed changes
       margin-left: 3px;
       min-width: 44px;
     }
-    .features-list .features-item a .feature-text{
+
+    .features-list .features-item a .feature-text {
       opacity: 0;
       visibility: hidden;
     }
-     .logo-wrapper .brand-row{
+
+    .logo-wrapper .brand-row {
       padding-right: 0;
       padding-left: 14px;
-     }
-     .logo-wrapper span,.profile-dropdown .user_name, .footer-bottom,.features-list .features-item a .right-arrow{
+    }
+
+    .logo-wrapper span,
+    .profile-dropdown .user_name,
+    .footer-bottom,
+    .features-list .features-item a .right-arrow {
       opacity: 0;
       visibility: hidden;
-     }
-      .profile-dropdown .profile::after{
-        visibility: hidden;
-      }
-     
+    }
+
+    .profile-dropdown .profile::after {
+      visibility: hidden;
+    }
+
   }
 }
 
@@ -1373,6 +1394,7 @@ header {
       @media (max-width: 991px) {
         order: 3;
       }
+
       margin-left: 72px;
 
       .navbar-nav {
@@ -1777,6 +1799,7 @@ header {
       @media (max-width:768px) {
         display: block;
       }
+
       .humburge_menu {
         font-size: 32px;
       }
@@ -2705,6 +2728,7 @@ header {
 }
 
 .court_table {
+
   th,
   td {
     &:nth-child(6) {
@@ -3746,6 +3770,7 @@ header {
 .schedule_modal {
   .modal {
     border-radius: 12px;
+    overflow: auto;
 
     @media screen and (min-width: 576px) {
       --bs-modal-margin: 154px;
@@ -3916,6 +3941,12 @@ header {
       max-width: calc(100% - 42px);
       background: #ffffff;
       padding-bottom: 26px;
+
+      .dataTables_wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 620px;
+      }
     }
   }
 }
@@ -3932,7 +3963,7 @@ header {
         .fc-toolbar-title {
           min-width: 200px;
           font-size: 20px;
-          font-family:'Outfit Semibold' ;
+          font-family: 'Outfit Semibold';
         }
 
         button {
@@ -4906,7 +4937,8 @@ header {
             display: inline-flex;
             align-items: center;
 
-            svg {
+            svg,
+            img {
               margin-right: 5px;
             }
 
@@ -4915,6 +4947,10 @@ header {
               color: $white;
               line-height: 11px;
             }
+          }
+
+          .btn-view {
+            background-color: $theme-primary-color;
           }
 
           .btn-cancel {
@@ -5650,7 +5686,8 @@ header {
   justify-content: right;
   display: flex;
   align-items: center;
-  .paginate_button{
+
+  .paginate_button {
     position: relative;
     display: block;
     padding: 5px 13px;
@@ -5661,17 +5698,36 @@ header {
     min-width: 1.5em;
     border: none;
     background-color: transparent;
-    &.disabled{
-    color: #a4a9bc !important;
-    cursor: default;
+
+    &.disabled {
+      color: #a4a9bc !important;
+      cursor: default;
     }
-    &:hover{
+
+    &:hover {
       text-decoration: none;
     }
-    &.current{
+
+    &.current {
       color: #ffffff !important;
       border: none !important;
       background-color: #764af3 !important;
     }
   }
 }
+<<<<<<< Updated upstream
+=======
+
+// reservation
+.customer_modal {
+  &.reservation_customer_modal {
+    .modal {
+      background: #00000070;
+
+      .modal-dialog {
+        margin-right: 500px;
+      }
+    }
+  }
+}
+>>>>>>> Stashed changes
