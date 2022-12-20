@@ -7,6 +7,14 @@ $(document).ready(function () {
     return ob;
   };
 
+  // Reservation_modal
+  $(".reservation_customer_modal .modal-footer .btn").on('click', function () {
+    $('body').css({ "height": "100vh", "overflow-y": "hidden" });
+  });
+  $("#add_schedule_modal .modal-footer .btn").on('click', function () {
+    $('body').css({ "overflow-y": "auto" });
+  });
+
   $(".select_image").select2({
     templateResult: format,
     templateSelection: function (option) {
@@ -220,9 +228,9 @@ $(document).ready(function () {
       $("#sidebar.active").toggleClass("hover");
     }
   );
-  $(function(){
+  $(function () {
     $('.navbar-toggler').removeAttr(style);
-});
+  });
 
   // Notification_pagination
   var items = $(".list-wrapper li");
@@ -267,7 +275,7 @@ $(document).ready(function () {
   $('.display').DataTable();
 
   // schedule
-  $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_shedule_modal");
+  $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_schedule_modal");
   // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
 
 
@@ -305,15 +313,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var elms = document.getElementsByClassName('fc-addButton-button').item(0)
     elms.innerHTML = '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
   }, 0);
-
-  $('.schedule_event_wrap .event-btns').hide()
-  $('.schedule_event').click(function () {
-    $(this).next('.event-btns').toggle();
-    var background_color = $(this).closest('.fc-timegrid-event').css('background-color');
-    console.log(background_color);
-    $(this).next('.event-btns').css('background', background_color);
-  });
-
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
     themeSystem: 'bootstrap4',
