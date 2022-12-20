@@ -834,6 +834,12 @@ input[type="checkbox"] {
   }
 }
 
+
+
+
+
+
+
 // Sidebar
 .sidebar {
   position: fixed;
@@ -851,6 +857,11 @@ input[type="checkbox"] {
   transition: all 0.5s ease-in-out;
   z-index: 111;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+
+
+
+
 
 
 
@@ -891,7 +902,33 @@ input[type="checkbox"] {
   //   }
 
   // }
+  &.active{
 
+    .dropdown-item{
+      padding: 0.25rem 8px !important;
+
+      span {  
+        visibility: hidden; 
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        white-space: nowrap;
+      }
+    }
+
+    &:hover{
+
+      .dropdown-item{
+        padding: 0.25rem 8px;  
+
+        span{
+          transition: all 0.5s ease-in-out;
+          margin-left: 14px;
+          opacity: 1 !important;
+          visibility: visible !important;  
+        } 
+      }
+    }
+  }
   .logo-wrapper {
     display: flex;
     align-items: center;
@@ -961,8 +998,9 @@ input[type="checkbox"] {
       }
 
       .dropdown-menu {
-        left: 0;
-        min-width: 44px;
+        left: 0 !important;
+        min-width: 40px;
+        
       }
     }
 
@@ -1013,6 +1051,7 @@ input[type="checkbox"] {
     }
 
     .dropdown-menu {
+      transform: none;
       border-radius: 8px;
       transition: 3s ease-out;
 
@@ -1021,10 +1060,24 @@ input[type="checkbox"] {
       }
 
       .dropdown-item {
+        padding: 0.25rem 24px;
         font-family: "Outfit Medium";
         font-size: 14px;
+        
+        svg{
+          flex: 0 0 24px;
+        }
+
+        span{
+          margin-left: 10px;
+        }
 
         &:hover {
+
+          svg{
+            fill: $theme-primary-color;
+          }
+
           color: $theme-primary-color;
           background-color: $theme-secodary-color;
         }
@@ -1032,6 +1085,10 @@ input[type="checkbox"] {
         &.active {
           color: $theme-primary-color;
           background-color: $theme-secodary-color;
+
+          svg{
+            fill: $theme-primary-color;
+          }
         }
       }
     }
@@ -1065,7 +1122,7 @@ input[type="checkbox"] {
 
         @media (max-width:768px) {
           min-width: 44px;
-          padding: 9px 10px;
+          padding: 9px 8px;
         }
         svg {
           flex: 0 0 24px;
@@ -1156,7 +1213,9 @@ input[type="checkbox"] {
         .logo-wrapper span,
         .features-list .features-item a:hover .right-arrow,
         .profile-dropdown .profile::after,
-        .features-list .features-item a .feature-text {
+        .features-list .features-item a .feature-text,
+        .sidebar.active:hover .dropdown-item span
+         {
           opacity: 1;
           visibility: visible;
         }
@@ -1182,7 +1241,7 @@ input[type="checkbox"] {
 
     .profile-dropdown {
       .profile {
-        padding: 9px 10px;
+        padding: 9px 8px;
         margin-left: 3px;
 
         &::after {
@@ -1200,7 +1259,7 @@ input[type="checkbox"] {
       .features-item {
         a {
           min-width: 44px;
-          padding: 9px 10px;
+          padding: 9px 8px;
 
           &:hover .right-arrow {
             opacity: 0;
@@ -1255,10 +1314,10 @@ input[type="checkbox"] {
     width: 78px;
     .features-list .features-item a{
       min-width: 44px;
-      padding: 9px 10px;
+      padding: 9px 8px;
     }
     .profile-dropdown .profile{
-      padding: 9px 10px;
+      padding: 9px 8px;
       margin-left: 3px;
       min-width: 44px;
     }
@@ -1576,8 +1635,17 @@ header {
 
           .notification-list {
             li {
+              padding: 5px;
+              border-radius: 7px;
+              transition: all 0.3s;
+
               &:not(:last-child) {
                 margin-bottom: 7px;
+              }
+
+              &:hover{
+                transition: all 0.3s;
+                background-color: rgba(118, 74, 243, 0.1);
               }
 
               .items {
@@ -3011,6 +3079,7 @@ header {
 
           .form-check-input {
             padding: 4px;
+            accent-color: $theme-primary-color;
             width: 11px;
             height: 11px;
             margin-right: 5px;
