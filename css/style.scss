@@ -839,12 +839,6 @@ input[type="checkbox"] {
   }
 }
 
-
-
-
-
-
-
 // Sidebar
 .sidebar {
   position: fixed;
@@ -863,77 +857,36 @@ input[type="checkbox"] {
   z-index: 111;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
-
-
-
-
-
-
-
   @media (max-width:1024px) {
     padding: 30px 15px;
   }
 
-
-
-  // .side-nav-btn {
-  //   right: -8px;
-  //   position: absolute;
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 14px;
-  //   height: 14px;
-  //   justify-content: center;
-  //   align-items: center;
-  //   top: 35px;
-  //   border-radius: 50%;
-  //   z-index: 100;
-  //   border: none;
-  //   margin-bottom: 0;
-  //   transition: all 0.5s ease-in-out;
-  //   cursor: pointer;
-  //   background-color: $white;
-
-
-  //   // img {
-  //   //   transition: all 0.5s ease-in-out;
-  //   //   flex: 0 0 7px;
-  //   //   transform: rotateZ(180deg);
-  //   // }
-
-
-  //   @media (max-width: 768px) {
-  //     display: none;
-  //   }
-
-  // }
-  &.active{
-
-    .dropdown-item{
+  &.active {
+    .dropdown-item {
       padding: 0.25rem 8px !important;
 
-      span {  
-        visibility: hidden; 
+      span {
+        visibility: hidden;
         opacity: 0;
         transition: all 0.5s ease-in-out;
         white-space: nowrap;
       }
     }
 
-    &:hover{
+    &:hover {
+      .dropdown-item {
+        padding: 0.25rem 8px;
 
-      .dropdown-item{
-        padding: 0.25rem 8px;  
-
-        span{
+        span {
           transition: all 0.5s ease-in-out;
           margin-left: 14px;
           opacity: 1 !important;
-          visibility: visible !important;  
-        } 
+          visibility: visible !important;
+        }
       }
     }
   }
+
   .logo-wrapper {
     display: flex;
     align-items: center;
@@ -1005,7 +958,7 @@ input[type="checkbox"] {
       .dropdown-menu {
         left: 0 !important;
         min-width: 40px;
-        
+
       }
     }
 
@@ -1068,18 +1021,18 @@ input[type="checkbox"] {
         padding: 0.25rem 24px;
         font-family: "Outfit Medium";
         font-size: 14px;
-        
-        svg{
+
+        svg {
           flex: 0 0 24px;
         }
 
-        span{
+        span {
           margin-left: 10px;
         }
 
         &:hover {
 
-          svg{
+          svg {
             fill: $theme-primary-color;
           }
 
@@ -1091,7 +1044,7 @@ input[type="checkbox"] {
           color: $theme-primary-color;
           background-color: $theme-secodary-color;
 
-          svg{
+          svg {
             fill: $theme-primary-color;
           }
         }
@@ -1221,8 +1174,7 @@ input[type="checkbox"] {
         .features-list .features-item a:hover .right-arrow,
         .profile-dropdown .profile::after,
         .features-list .features-item a .feature-text,
-        .sidebar.active:hover .dropdown-item span
-         {
+        .sidebar.active:hover .dropdown-item span {
           opacity: 1;
           visibility: visible;
         }
@@ -1324,14 +1276,9 @@ input[type="checkbox"] {
       min-width: 44px;
       padding: 9px 8px;
     }
-<<<<<<< Updated upstream
-    .profile-dropdown .profile{
-      padding: 9px 8px;
-=======
 
     .profile-dropdown .profile {
-      padding: 9px 10px;
->>>>>>> Stashed changes
+      padding: 9px 8px;
       margin-left: 3px;
       min-width: 44px;
     }
@@ -1665,7 +1612,7 @@ header {
                 margin-bottom: 7px;
               }
 
-              &:hover{
+              &:hover {
                 transition: all 0.3s;
                 background-color: rgba(118, 74, 243, 0.1);
               }
@@ -2497,10 +2444,6 @@ header {
       }
     }
   }
-
-
-
-
 }
 
 // Courts Page Css
@@ -5715,8 +5658,6 @@ header {
     }
   }
 }
-<<<<<<< Updated upstream
-=======
 
 // reservation
 .customer_modal {
@@ -5730,4 +5671,3 @@ header {
     }
   }
 }
->>>>>>> Stashed changes
