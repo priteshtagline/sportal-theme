@@ -758,6 +758,24 @@ input[type=checkbox] {
     padding: 30px 15px;
   }
 }
+.sidebar.active .dropdown-item {
+  padding: 0.25rem 8px !important;
+}
+.sidebar.active .dropdown-item span {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+}
+.sidebar.active:hover .dropdown-item {
+  padding: 0.25rem 8px;
+}
+.sidebar.active:hover .dropdown-item span {
+  transition: all 0.5s ease-in-out;
+  margin-left: 14px;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 .sidebar .logo-wrapper {
   display: flex;
   align-items: center;
@@ -810,8 +828,8 @@ input[type=checkbox] {
   color: #764af3;
 }
 .sidebar .profile-dropdown.active .dropdown-menu {
-  left: 0;
-  min-width: 44px;
+  left: 0 !important;
+  min-width: 40px;
 }
 .sidebar .profile-dropdown .profile {
   padding: 9px 24px;
@@ -855,6 +873,7 @@ input[type=checkbox] {
   transition: all 0.5s ease-in-out;
 }
 .sidebar .profile-dropdown .dropdown-menu {
+  transform: none;
   border-radius: 8px;
   transition: 3s ease-out;
 }
@@ -862,16 +881,29 @@ input[type=checkbox] {
   top: 80%;
 }
 .sidebar .profile-dropdown .dropdown-menu .dropdown-item {
+  padding: 0.25rem 24px;
   font-family: "Outfit Medium";
   font-size: 14px;
+}
+.sidebar .profile-dropdown .dropdown-menu .dropdown-item svg {
+  flex: 0 0 24px;
+}
+.sidebar .profile-dropdown .dropdown-menu .dropdown-item span {
+  margin-left: 10px;
 }
 .sidebar .profile-dropdown .dropdown-menu .dropdown-item:hover {
   color: #764af3;
   background-color: #ececec;
 }
+.sidebar .profile-dropdown .dropdown-menu .dropdown-item:hover svg {
+  fill: #764af3;
+}
 .sidebar .profile-dropdown .dropdown-menu .dropdown-item.active {
   color: #764af3;
   background-color: #ececec;
+}
+.sidebar .profile-dropdown .dropdown-menu .dropdown-item.active svg {
+  fill: #764af3;
 }
 .sidebar .profile-dropdown .show {
   width: 100%;
@@ -901,7 +933,7 @@ input[type=checkbox] {
 @media (max-width: 768px) {
   .sidebar .features-list .features-item a {
     min-width: 44px;
-    padding: 9px 10px;
+    padding: 9px 8px;
   }
 }
 .sidebar .features-list .features-item a svg {
@@ -978,7 +1010,8 @@ input[type=checkbox] {
 .sidebar.active:hover .logo-wrapper span,
 .sidebar.active:hover .features-list .features-item a:hover .right-arrow,
 .sidebar.active:hover .profile-dropdown .profile::after,
-.sidebar.active:hover .features-list .features-item a .feature-text {
+.sidebar.active:hover .features-list .features-item a .feature-text,
+.sidebar.active:hover .sidebar.active:hover .dropdown-item span {
     opacity: 1;
     visibility: visible;
   }
@@ -997,7 +1030,7 @@ input[type=checkbox] {
   opacity: 0;
 }
 .sidebar.active .profile-dropdown .profile {
-  padding: 9px 10px;
+  padding: 9px 8px;
   margin-left: 3px;
 }
 .sidebar.active .profile-dropdown .profile::after {
@@ -1009,7 +1042,7 @@ input[type=checkbox] {
 }
 .sidebar.active .features-list .features-item a {
   min-width: 44px;
-  padding: 9px 10px;
+  padding: 9px 8px;
 }
 .sidebar.active .features-list .features-item a:hover .right-arrow {
   opacity: 0;
@@ -1051,10 +1084,10 @@ input[type=checkbox] {
   }
   .sidebar .features-list .features-item a {
     min-width: 44px;
-    padding: 9px 10px;
+    padding: 9px 8px;
   }
   .sidebar .profile-dropdown .profile {
-    padding: 9px 10px;
+    padding: 9px 8px;
     margin-left: 3px;
     min-width: 44px;
   }
@@ -1302,8 +1335,17 @@ header .navbar .nav-right .btn-group .nav-tabs .nav-item .active {
 header .navbar .nav-right .btn-group .tab-content {
   padding: 15px 12px;
 }
+header .navbar .nav-right .btn-group .tab-content .notification-list li {
+  padding: 5px;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
 header .navbar .nav-right .btn-group .tab-content .notification-list li:not(:last-child) {
   margin-bottom: 7px;
+}
+header .navbar .nav-right .btn-group .tab-content .notification-list li:hover {
+  transition: all 0.3s;
+  background-color: rgba(118, 74, 243, 0.1);
 }
 header .navbar .nav-right .btn-group .tab-content .notification-list li .items {
   display: flex;
@@ -2532,6 +2574,7 @@ header.active .side-nav-btn img {
 }
 .setting_popup .modal-body .admin_popup_table table .form-check .form-check-input {
   padding: 4px;
+  accent-color: #764af3;
   width: 11px;
   height: 11px;
   margin-right: 5px;
