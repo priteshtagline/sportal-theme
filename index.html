@@ -2598,18 +2598,39 @@
       <div class="tab-pane fade" id="tournaments" role="tabpanel" aria-labelledby="tournaments-tab">
         <!-- Tournament Start -->
         <div class="tournament_module" id="tournament_main_module">
-          <div class="tournament_top_row">
-            <div class="title_block">
+          <div class="tournament_top_row d-flex justify-content-between align-items-center">
+            <div class="title_block align-items-center">
               <h6>Active Tournaments</h6>
-              <button class="btn">
+              <button class="btn tournament-filter">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403">
                   <path id="filter"
                     d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z"
                     transform="translate(-1.687 -1.125)" fill="currencolor" />
                 </svg>
               </button>
+              <div class="tournament-filter-popup">
+                <p class="head-filter">Filter(s)</p>
+                <div class="sport-tournament">
+                  <p>Sport</p>
+                  <span><input type="checkbox" id="football_tournament"><label for="football_tournament">Football</label></span>
+                  <span><input type="checkbox" id="tennis_tournament"><label for="tennis_tournament">Tennis</label></span>
+                  <span><input type="checkbox" id="badminton_tournament"><label for="badminton_tournament">Badminton</label></span>
+                  <span><input type="checkbox" id="table_tennis_tournament"><label for="">Table Tennis</label></span>
+                </div>
+                <div class="sport-tournament">
+                  <p>Status</p>
+                  <span><input type="checkbox" id="active_tournament"><label for="">Active</label></span>
+                  <span><input type="checkbox" id="active_tournament"><label for="">Completed</label></span>
+                  <span><input type="checkbox" id="active_tournament"><label for="">Cancelled</label></span>
+                </div>
+                <div class="button-tournament-filter">
+                  <button class="btn btn-primary tournament-apply-filter">Apply Filter</button>
+                </div>
+              </div>
             </div>
-            <button class="btn btn-primary">+ Create New Tournament</button>
+            
+            <button class="btn btn-primary create-tournament">+ Create New Tournament</button>
+
           </div>
           <div class="table-responsive">
             <table id="table_id" class="display table">
@@ -2892,41 +2913,62 @@
               </tbody>
             </table>
           </div>
-          <div class="d-inline-block">
-            <button type="button" class="btn btn-primary" data-toggle="modal" href="#add_new_customer" role="button">+
-              Add New User</button>
-          </div>
         </div>
         <div class="tab-content" id="customer_subtab_content">
           <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
             aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
             <div class="profile_info_box">
-              <h6>Overview</h6>
               <form action="">
                 <div class="row">
                   <div class="col-lg-8">
                     <div class="card">
                       <div class="card-body">
                         <div class="row">
+                          <div class="col-lg-12">
+                            <div class="heading-tournamnt-tab">
+                              <h6>Create New Tournament</h6>
+                              <p>General Information</p>
+                            </div>
+                          </div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_fname">First Name</label>
+                            <label for="customer_fname">Name</label>
                             <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid"
                               placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_lname">Second Name</label>
-                            <input type="text" class="textinput form-control" id="customer_lname" value="Awan"
+                            <label for="Price">Price</label>
+                            <input type="text" class="textinput form-control" id="Price" value="56 AED"
                               placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_email">Email</label>
-                            <input type="email" class="textinput form-control" id="customer_email"
-                              value="moeed.shahid@yahoo.com" placeholder="">
+                            <label for="start_date">Start Date</label>
+                            <input type="Date" class="textinput form-control" id="start_date"
+                              value="" placeholder="DD/MM/YY">
                           </div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_phoneno" class=" mt-0">Phone Number</label>
-                            <input type="tel" class="textinput form-control" id="customer_phoneno"
-                              value="+9713336787103" placeholder="">
+                            <label for="end_date" class=" mt-0">End Date</label>
+                            <input type="Date" class="textinput form-control" id="end_date"
+                              value="" placeholder="DD/MM/YY">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="start_time">Start Time</label>
+                            <input type="Time" class="textinput form-control" id="start_time"
+                              value="" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="end_time" class=" mt-0">End Time</label>
+                            <input type="Time" class="textinput form-control" id="end_time"
+                              value="" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="customer_sport" class="m-top-15">Sport</label> </br>
+                            <select class="w-100 select form-control" aria-label="customer_sport_lable"
+                              id="customer_sport">
+                              <option selected="selected">Select Sport</option>
+                              <option value="Cricket">Cricket</option>
+                              <option value="Futsal">Futsal</option>
+                              <option value="Baseball">Baseball</option>
+                            </select>
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_gender" class=" m-top-15">Gender</label> </br>
@@ -2938,26 +2980,383 @@
                               <option value="other">Other</option>
                             </select>
                           </div>
+                          <div class="divider mt-4 mb-3"></div>
+                          <div class="col-lg-12">
+                            <div class="heading-tournamnt-tab">
+                              <p>General Information</p>
+                            </div>
+                          </div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_country" class="m-top-15">Select Country</label> </br>
-                            <select class="w-100 select form-control" aria-label="customer_country_label"
-                              id="customer_country">
-                              <option selected="selected">Select Country</option>
-                              <option value="UAE">United Arab Emirates</option>
-                              <option value="USA">United states of America</option>
-                              <option value="india">India</option>
+                            <label for="start_time">Welcome Pack</label>
+                            <input type="Text" class="textinput form-control" id="start_time"
+                              value="" placeholder="Write Here">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="Price(s)" class=" mt-0">Price(s)</label>
+                            <input type="Text" class="textinput form-control" id="Price(s)"
+                              value="" placeholder="1000 AED">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="bullet1_text">Bullet 1</label>
+                            <input type="Text" class="textinput form-control" id="bullet1_text"
+                              value="" placeholder="Write Here...">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="bullet2_text" class=" mt-0">Bullet 2</label>
+                            <input type="Text" class="textinput form-control" id="bullet2_text"
+                              value="" placeholder="Write Here...">
+                          </div>
+                          <div class="form-group col-lg-12">
+                            <label for="Description_text">Description</label>
+                            <textarea name="Description" id="Description" rows="8" placeholder="Write Here..."></textarea>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="d-flex">
+                              <input type="submit" value="Create Tournament" class="mt-4 btn btn-primary btn-submit">
+                              <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card image-card">
+                      <div class="card-body">
+                        <div class="image_upload">
+                          <div class="upload_image_text">
+                            <img src="images/upload.svg">
+                            <label>Add Profile Pictures</label>
+                          </div>
+                          <span class="dragBox">
+                            <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                              id="uploadFile" />
+                          </span>
+                          <div class="image_preview" id="preview"></div>
+                        </div>
+                          <div class="d-flex">
+                            <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
+                            <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="customer_reservation_tab_pane" role="tabpanel"
+            aria-labelledby="customer_reservation_tab_pane_label" tabindex="0">
+            <div class="customer_module">
+              <h6>Reservation Details</h6>
+              <div class="table-responsive">
+                <table id="table_id" class="display table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th><span>Date</span>
+                        <span class="heading_sorting">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
+                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
+                              <path id="Path_41" data-name="Path 41"
+                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
+                                transform="translate(0 0)" />
+                            </g>
+                          </svg>
+                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
+                            viewBox="0 0 4.805 3.1">
+                            <path id="Path_41" data-name="Path 41"
+                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
+                              transform="translate(-4.954 -9)" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th><span>Time</span>
+                        <span class="heading_sorting">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
+                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
+                              <path id="Path_41" data-name="Path 41"
+                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
+                                transform="translate(0 0)" />
+                            </g>
+                          </svg>
+                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
+                            viewBox="0 0 4.805 3.1">
+                            <path id="Path_41" data-name="Path 41"
+                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
+                              transform="translate(-4.954 -9)" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th><span>Price</span>
+                        <span class="heading_sorting">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
+                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
+                              <path id="Path_41" data-name="Path 41"
+                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
+                                transform="translate(0 0)" />
+                            </g>
+                          </svg>
+                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
+                            viewBox="0 0 4.805 3.1">
+                            <path id="Path_41" data-name="Path 41"
+                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
+                              transform="translate(-4.954 -9)" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th class="sorting_hide"><span>Reservation Status</span>
+                        <span class="heading_sorting">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
+                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
+                              <path id="Path_41" data-name="Path 41"
+                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
+                                transform="translate(0 0)" />
+                            </g>
+                          </svg>
+                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
+                            viewBox="0 0 4.805 3.1">
+                            <path id="Path_41" data-name="Path 41"
+                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
+                              transform="translate(-4.954 -9)" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th><span>Payment Status</span>
+                        <span class="heading_sorting">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
+                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
+                              <path id="Path_41" data-name="Path 41"
+                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
+                                transform="translate(0 0)" />
+                            </g>
+                          </svg>
+                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
+                            viewBox="0 0 4.805 3.1">
+                            <path id="Path_41" data-name="Path 41"
+                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
+                              transform="translate(-4.954 -9)" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th class="sorting_hide"></th>
+                      <th class="sorting_hide"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>
+                        27-Sep-2022
+                      </td>
+                      <td>10:00 am - 11:00 am</td>
+                      <td>25 AED</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
+                      <td>Paid</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td>
+                        <div class="btn-group divider_dropdown_group dropleft">
+                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                                data-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        24-Sep-2022
+                      </td>
+                      <td>04:00 pm - 05:00 pm</td>
+                      <td>35 AED</td>
+                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
+                      <td>Paid</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td>
+                        <div class="btn-group divider_dropdown_group dropleft">
+                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                                data-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        22-Sep-2022
+                      </td>
+                      <td>04:00 pm - 06:00 pm</td>
+                      <td>65 AED</td>
+                      <td><span class="btn btn-gray btn-sm radius-rounded">Unplayed</span></td>
+                      <td>Refund</td>
+                      <td><a href="#" class="text-primary">Show More</a></td>
+                      <td>
+                        <div class="btn-group divider_dropdown_group dropleft">
+                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Options
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider my-0">
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Block
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                                data-target="#delete_modal">
+                                Delete
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-gray" href="#">
+                                Restricted
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="customer_subtab_content">
+          <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
+            aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
+            <div class="profile_info_box">
+              <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="form-group col-lg-6">
+                            <label for="overview_start_date">Start Date</label>
+                            <input type="Date" class="textinput form-control" id="overview_start_date"
+                              value="" placeholder="DD/MM/YY">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_end_date" class=" mt-0">End Date</label>
+                            <input type="Date" class="textinput form-control" id="overview_end_date"
+                              value="" placeholder="DD/MM/YY">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_start_time">Start Time</label>
+                            <input type="Time" class="textinput form-control" id="overview_start_time"
+                              value="" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_end_time" class=" mt-0">End Time</label>
+                            <input type="Time" class="textinput form-control" id="overview_end_time"
+                              value="" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_sport" class="m-top-15">Sport</label> </br>
+                            <select class="w-100 select form-control" aria-label="overview_sport_lable"
+                              id="overview_sport">
+                              <option selected="selected">Select Sport</option>
+                              <option value="Cricket">Cricket</option>
+                              <option value="Futsal">Futsal</option>
+                              <option value="Baseball">Baseball</option>
                             </select>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_gender" class=" m-top-15">Gender</label> </br>
+                            <select class="w-100 select form-control" aria-label="overview_gender_label"
+                              id="overview_gender1">
+                              <option selected="selected">Select Gender</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
+                            <input type="number" class="textinput form-control" id="overview_maximum_number"
+                              value="25" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
+                            <input type="Date" class="textinput form-control" id="overview_last_entery"
+                              value="" placeholder="">
                           </div>
                           <div class="divider mt-4 mb-3"></div>
                           <div class="form-group col-lg-6">
-                            <label for="customer_status" class="m-top-15">Status</label> </br>
-                            <select class="w-100 select form-control" aria-label="customer_status_label"
-                              id="customer_status" class="lightGreenText">
-                              <option selected="selected" class="w-100 form-control">Select Status</option>
-                              <option value="Active">Active</option>
-                              <option value="Blocked">Blocked</option>
-                              <option value="Restricted">Restricted</option>
-                            </select>
+                            <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
+                            <input type="number" class="textinput form-control" id="overview_maximum_number"
+                              value="25" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
+                            <input type="Date" class="textinput form-control" id="overview_last_entery"
+                              value="" placeholder="">
                           </div>
                         </div>
                       </div>
@@ -3229,6 +3628,8 @@
             </div>
           </div>
         </div>
+        
+        
         <!-- Tournament End -->
       </div>
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
