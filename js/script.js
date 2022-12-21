@@ -422,3 +422,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   calendar.render();
 });
+
+
+
+// Tournament filter
+
+$(".tournament-filter").click(function(){
+  $(".tournament-filter-popup").toggleClass("active");
+});
+$(".tournament-filter").click(function(){
+  $(".tournament-filter").toggleClass("active");
+});
