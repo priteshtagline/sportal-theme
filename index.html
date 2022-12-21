@@ -3008,7 +3008,7 @@
                           </div>
                           <div class="form-group col-lg-12">
                             <label for="Description_text">Description</label>
-                            <textarea name="Description" id="Description" rows="8" placeholder="Write Here..."></textarea>
+                            <textarea name="Description" id="Description_text" rows="8" placeholder="Write Here..."></textarea>
                           </div>
                           <div class="col-md-12">
                             <div class="d-flex">
@@ -3285,7 +3285,6 @@
             </div>
           </div>
         </div>
-
         <div class="tab-content" id="customer_subtab_content">
           <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
             aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
@@ -3349,14 +3348,18 @@
                           </div>
                           <div class="divider mt-4 mb-3"></div>
                           <div class="form-group col-lg-6">
-                            <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
-                            <input type="number" class="textinput form-control" id="overview_maximum_number"
-                              value="25" placeholder="">
+                            <label for="overview_winning_prize">Winning Prize</label>
+                            <input type="text" class="textinput form-control" id="overview_winning_prize"
+                              value="750 AED" placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
-                            <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
-                            <input type="Date" class="textinput form-control" id="overview_last_entery"
-                              value="" placeholder="">
+                            <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
+                            <input type="text" class="textinput form-control" id="overview_last_entery"
+                              value="250 AED" placeholder="">
+                          </div>
+                          <div class="form-group col-lg-12">
+                            <label for="overview_Description" class=" mt-0">Description</label>
+                            <textarea id="overview_Description" rows="8" placeholder="Write Here..."></textarea>
                           </div>
                         </div>
                       </div>
@@ -3629,7 +3632,7 @@
           </div>
         </div>
         
-        
+
         <!-- Tournament End -->
       </div>
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
