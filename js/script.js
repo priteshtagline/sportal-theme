@@ -71,6 +71,29 @@ $(document).ready(function () {
     $("#new_tournament_form").show();
     $("#tournament_main_module").hide();
   });
+  $(".tournament_form .btn").on('click', function () {
+    $("#new_tournament_form").hide();
+    $("#tournament_main_module").show();
+  });
+
+  $("#tournament_nav_tab").hide();
+  $("#tournaments-tab").on('click', function () {
+    $('.navbar-brand').show().html('Tournament');
+    $("#nav_search_field").hide();
+  });
+
+  $("#tournaments_show_more_btn").on('click', function () {
+    $('.navbar-brand').hide();
+    $("#tournament_nav_tab").show();
+    $("#nav-back-arrow").show();
+    $("#tournament_main_module").hide();
+    $("#nav_search_field").hide();
+    $("#tournament_subtab_content").show();
+  });
+  $("#tournament_subtab_content").hide();
+
+
+
 
   // sidebar resize
   $(window).resize(function () {

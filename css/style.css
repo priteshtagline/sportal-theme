@@ -2550,6 +2550,7 @@ header.active .side-nav-btn img {
   background: #f9f9f9 0% 0% no-repeat padding-box;
   border: 1px dashed #ececec;
   border-radius: 4px;
+  padding: 15px;
   min-height: 250px;
   max-height: 225px;
   display: -webkit-box;
@@ -2592,6 +2593,7 @@ header.active .side-nav-btn img {
   line-height: 14px;
   color: #a4a9bc;
   margin: 14px 0 0;
+  text-align: center;
 }
 
 .image_upload .dragBox input {
@@ -3852,7 +3854,7 @@ header.active .side-nav-btn img {
 }
 
 .profile_info_box .divider {
-  border: 0.6px solid #E4E4E4;
+  border-top: 0.6px solid #E4E4E4;
   width: 100%;
 }
 
@@ -6039,6 +6041,32 @@ header.active .side-nav-btn img {
   width: 5%;
 }
 
+.tournament_module .table-responsive tbody tr td:nth-child(8) img {
+  min-width: 13px;
+}
+
+.tournament_form .card .card-header {
+  padding-top: 27px;
+  padding-top: 20px;
+  background-color: #ffffff;
+}
+
+.tournament_form .card .card-header h6 {
+  margin-bottom: 0;
+  font-family: 'Outfit Medium';
+}
+
+.tournament_form .card .card-body .heading-tournamnt-tab h6 {
+  margin-bottom: 10px;
+}
+
+.tournament_form .card .card-body .heading-tournamnt-tab p {
+  font-size: 14px;
+  margin-bottom: 21px;
+  color: #A4A9BC;
+  font-weight: 400;
+}
+
 .tournament_form textarea {
   resize: none;
 }
@@ -6049,10 +6077,26 @@ header.active .side-nav-btn img {
   display: inline-flex;
 }
 
+@media (max-width: 991px) {
+  .tournament_form .form_btn_group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .tournament_form .form_btn_group .btn {
   min-width: 197px;
   font-size: 12px;
   border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+  .tournament_form .form_btn_group .btn {
+    display: block;
+  }
+  .tournament_form .form_btn_group .btn:last-child {
+    margin-top: 10px;
+  }
 }
 
 .tournament_form .image_upload {
@@ -6060,16 +6104,66 @@ header.active .side-nav-btn img {
   border-radius: 6px;
 }
 
-.tournament_form .image-card .button_group {
+.tournament_form input::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+  font-size: 16px;
+  fill: #A4A9BC;
+  color: #A4A9BC;
+  -webkit-filter: #A4A9BC;
+          filter: #A4A9BC;
+}
+
+.teams_box {
+  border-radius: 12px;
+  border: none;
+}
+
+.teams_box .card-header {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-.tournament_form .image-card .button_group .btn {
-  min-width: calc(50% - 8px);
-  cursor: pointer;
-  font-size: 12px;
-  border-radius: 6px;
+.teams_box .card-header .teams_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teams_box .card-header .teams_header .team_title {
+  margin-left: 13px;
+}
+
+.teams_box .card-header .teams_header .team_title h6 {
+  font-family: 'Outfit SemiBold';
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+
+.teams_box .card-header .teams_header .team_title p {
+  font-size: 14px;
+  color: #A4A9BC;
+  margin-bottom: 0;
+}
+
+.teams_box .card-header .btn {
+  background-color: #ffffff;
+  padding: 0;
+  min-width: inherit;
+  color: #A4A9BC;
+  font-size: 22px;
 }
 /*# sourceMappingURL=style.css.map */
