@@ -141,6 +141,29 @@
                 </ul>
               </div>
             </li>
+            <!-- For Tournament Header -->
+            <li class="nav-item" id="tournament_nav_tab">
+              <div>
+                <ul class="navbar-nav setting-nav nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)"
+                      id="tournament_overview_tab" data-toggle="tab" data-target="#tournament_overview_tab_pane"
+                      type="button" role="tab" aria-controls="tournament_overview_tab_pane"
+                      aria-selected="true">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="tournament_brackets_tab" data-toggle="tab"
+                      data-target="#tournament_brackets_tab_pane" type="button" role="tab"
+                      aria-controls="tournament_brackets_tab_pane" aria-selected="false">Brackets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="tournament_teams_tab" data-toggle="tab"
+                      data-target="#tournament_teams_tab_pane" type="button" role="tab"
+                      aria-controls="tournament_teams_tab_pane" aria-selected="false">Teams</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="nav-right">
@@ -2921,7 +2944,7 @@
         <div class="profile_info_box tournament_form" id="new_tournament_form">
           <form action="">
             <div class="row">
-              <div class="col-lg-8">
+              <div class="col-lg-8 col-md-6">
                 <div class="card">
                   <div class="card-body">
                     <div class="row">
@@ -2931,32 +2954,32 @@
                           <p>General Information</p>
                         </div>
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="customer_fname">Name</label>
                         <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid" placeholder="">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="Price">Price</label>
                         <input type="text" class="textinput form-control" id="Price" value="56 AED" placeholder="">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="start_date">Start Date</label>
                         <input type="Date" class="textinput form-control" id="start_date" value=""
                           placeholder="DD/MM/YY">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="end_date" class=" mt-0">End Date</label>
                         <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="start_time">Start Time</label>
                         <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="end_time" class=" mt-0">End Time</label>
                         <input type="Time" class="textinput form-control" id="end_time" value="" placeholder="">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="customer_sport" class="m-top-15">Sport</label> </br>
                         <select class="w-100 select form-control" aria-label="customer_sport_lable" id="customer_sport">
                           <option selected="selected">Select Sport</option>
@@ -2965,7 +2988,7 @@
                           <option value="Baseball">Baseball</option>
                         </select>
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="customer_gender" class=" m-top-15">Gender</label> </br>
                         <select class="w-100 select form-control" aria-label="customer_gender_label"
                           id="customer_gender1">
@@ -2975,27 +2998,47 @@
                           <option value="other">Other</option>
                         </select>
                       </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
+                        <input type="number" class="textinput form-control" id="overview_maximum_number" value="25"
+                          placeholder="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
+                        <input type="Date" class="textinput form-control" id="overview_last_entery" value=""
+                          placeholder="">
+                      </div>
                       <div class="divider mt-4 mb-3"></div>
                       <div class="col-lg-12">
                         <div class="heading-tournamnt-tab">
                           <p>Additional Information</p>
                         </div>
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="start_time">Welcome Pack</label>
                         <input type="Text" class="textinput form-control" id="welcome_pack" value=""
                           placeholder="Write Here">
                       </div>
-                      <div class="form-group col-lg-6">
-                        <label for="Price(s)" class=" mt-0">Price(s)</label>
-                        <input type="Text" class="textinput form-control" id="Price(s)" value="" placeholder="1000 AED">
+                      <div class="form-group col-xl-6">
+                        <label for="Prize(s)" class=" mt-0">Prize(s)</label>
+                        <input type="Text" class="textinput form-control" id="Price(s)" value="">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
+                        <label for="overview_winning_prize">Winning Prize</label>
+                        <input type="text" class="textinput form-control" id="overview_winning_prize" value=""
+                          placeholder="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
+                        <input type="text" class="textinput form-control" id="overview_last_entery" value=""
+                          placeholder="">
+                      </div>
+                      <div class="form-group col-xl-6">
                         <label for="bullet1_text">Bullet 1</label>
                         <input type="Text" class="textinput form-control" id="bullet1_text" value=""
                           placeholder="Write Here...">
                       </div>
-                      <div class="form-group col-lg-6">
+                      <div class="form-group col-xl-6">
                         <label for="bullet2_text" class=" mt-0">Bullet 2</label>
                         <input type="Text" class="textinput form-control" id="bullet2_text" value=""
                           placeholder="Write Here...">
@@ -3007,16 +3050,19 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form_btn_group">
-                          <input type="submit" value="Create Tournament" class="mt-4 btn btn-primary btn-submit">
-                          <input type="reset" value="Cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                          <input type="submit" value="Create Tournament" class="btn btn-primary btn-submit">
+                          <input type="reset" value="Cancel" class="btn btn-light btn-submit ml-lg-3">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4 col-md-6">
                 <div class="card image-card">
+                  <div class="card-header">
+                    <h6>Tournament Poster</h6>
+                  </div>
                   <div class="card-body">
                     <div class="image_upload">
                       <div class="upload_image_text">
@@ -3030,8 +3076,7 @@
                               fill="#a4a9bc" fill-rule="evenodd" />
                           </g>
                         </svg>
-                        <label>Upload Picture or Drag an Image</label>
-                        <label class="mt-0">to upload</label>
+                        <label>Upload Picture or Drag an Image to upload</label>
                       </div>
                       <span class="dragBox">
                         <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
@@ -3039,389 +3084,17 @@
                       </span>
                       <div class="image_preview" id="preview"></div>
                     </div>
-                    <div class="button_group">
-                      <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
-                      <input type="reset" value="Cancel" class="mt-4 btn btn-light btn-submit ml-3">
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </form>
         </div>
-        <!-- <div class="tab-content" id="customer_subtab_content">
-          <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
-            aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
-            <div class="profile_info_box">
-              <form action="">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="heading-tournamnt-tab">
-                              <h6>Create New Tournament</h6>
-                              <p>General Information</p>
-                            </div>
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="customer_fname">Name</label>
-                            <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid"
-                              placeholder="">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="Price">Price</label>
-                            <input type="text" class="textinput form-control" id="Price" value="56 AED" placeholder="">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="start_date">Start Date</label>
-                            <input type="Date" class="textinput form-control" id="start_date" value=""
-                              placeholder="DD/MM/YY">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="end_date" class=" mt-0">End Date</label>
-                            <input type="Date" class="textinput form-control" id="end_date" value=""
-                              placeholder="DD/MM/YY">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="start_time">Start Time</label>
-                            <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="end_time" class=" mt-0">End Time</label>
-                            <input type="Time" class="textinput form-control" id="end_time" value="" placeholder="">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="customer_sport" class="m-top-15">Sport</label> </br>
-                            <select class="w-100 select form-control" aria-label="customer_sport_lable"
-                              id="customer_sport">
-                              <option selected="selected">Select Sport</option>
-                              <option value="Cricket">Cricket</option>
-                              <option value="Futsal">Futsal</option>
-                              <option value="Baseball">Baseball</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="customer_gender" class=" m-top-15">Gender</label> </br>
-                            <select class="w-100 select form-control" aria-label="customer_gender_label"
-                              id="customer_gender1">
-                              <option selected="selected">Select Gender</option>
-                              <option value="male">Male</option>
-                              <option value="female">Female</option>
-                              <option value="other">Other</option>
-                            </select>
-                          </div>
-                          <div class="divider mt-4 mb-3"></div>
-                          <div class="col-lg-12">
-                            <div class="heading-tournamnt-tab">
-                              <p>General Information</p>
-                            </div>
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="start_time">Welcome Pack</label>
-                            <input type="Text" class="textinput form-control" id="start_time" value=""
-                              placeholder="Write Here">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="Price(s)" class=" mt-0">Price(s)</label>
-                            <input type="Text" class="textinput form-control" id="Price(s)" value=""
-                              placeholder="1000 AED">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="bullet1_text">Bullet 1</label>
-                            <input type="Text" class="textinput form-control" id="bullet1_text" value=""
-                              placeholder="Write Here...">
-                          </div>
-                          <div class="form-group col-lg-6">
-                            <label for="bullet2_text" class=" mt-0">Bullet 2</label>
-                            <input type="Text" class="textinput form-control" id="bullet2_text" value=""
-                              placeholder="Write Here...">
-                          </div>
-                          <div class="form-group col-lg-12">
-                            <label for="Description_text">Description</label>
-                            <textarea name="Description" id="Description_text" rows="8"
-                              placeholder="Write Here..."></textarea>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="d-flex">
-                              <input type="submit" value="Create Tournament" class="mt-4 btn btn-primary btn-submit">
-                              <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card image-card">
-                      <div class="card-body">
-                        <div class="image_upload">
-                          <div class="upload_image_text">
-                            <img src="images/upload.svg">
-                            <label>Add Profile Pictures</label>
-                          </div>
-                          <span class="dragBox">
-                            <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                              id="uploadFile" />
-                          </span>
-                          <div class="image_preview" id="preview"></div>
-                        </div>
-                        <div class="d-flex">
-                          <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
-                          <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="customer_reservation_tab_pane" role="tabpanel"
-            aria-labelledby="customer_reservation_tab_pane_label" tabindex="0">
-            <div class="customer_module">
-              <h6>Reservation Details</h6>
-              <div class="table-responsive">
-                <table id="table_id" class="display table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><span>Date</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Time</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Price</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th class="sorting_hide"><span>Reservation Status</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Payment Status</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th class="sorting_hide"></th>
-                      <th class="sorting_hide"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>
-                        27-Sep-2022
-                      </td>
-                      <td>10:00 am - 11:00 am</td>
-                      <td>25 AED</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
-                      <td>Paid</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        24-Sep-2022
-                      </td>
-                      <td>04:00 pm - 05:00 pm</td>
-                      <td>35 AED</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
-                      <td>Paid</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        22-Sep-2022
-                      </td>
-                      <td>04:00 pm - 06:00 pm</td>
-                      <td>65 AED</td>
-                      <td><span class="btn btn-gray btn-sm radius-rounded">Unplayed</span></td>
-                      <td>Refund</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-content" id="customer_subtab_content">
-          <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
-            aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
-            <div class="profile_info_box">
+
+        <div class="tab-content" id="tournament_subtab_content">
+          <div class="tab-pane fade show active" id="tournament_overview_tab_pane" role="tabpanel"
+            aria-labelledby="tournament_overview_tab_pane_label" tabindex="0">
+            <div class="profile_info_box tournament_form">
               <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
               <form action="">
                 <div class="row">
@@ -3498,12 +3171,21 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="card">
                       <div class="card-body">
                         <div class="image_upload">
                           <div class="upload_image_text">
-                            <img src="images/upload.svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="28.456" viewBox="0 0 36 28.456">
+                              <g id="upload" transform="translate(0 -3.044)">
+                                <path id="Path_60" data-name="Path 60"
+                                  d="M1.125,18A1.125,1.125,0,0,1,2.25,19.125V27A2.25,2.25,0,0,0,4.5,29.25h27A2.25,2.25,0,0,0,33.75,27V19.125a1.125,1.125,0,0,1,2.25,0V27a4.5,4.5,0,0,1-4.5,4.5H4.5A4.5,4.5,0,0,1,0,27V19.125A1.125,1.125,0,0,1,1.125,18ZM11.25,10.921a1.125,1.125,0,0,0,1.591,0L18,5.76l5.159,5.159a1.125,1.125,0,1,0,1.591-1.59L18.8,3.375a1.125,1.125,0,0,0-1.593,0L11.25,9.329a1.125,1.125,0,0,0,0,1.593Z"
+                                  fill="#a4a9bc" fill-rule="evenodd"></path>
+                                <path id="Path_61" data-name="Path 61"
+                                  d="M18,4.5a1.125,1.125,0,0,1,1.125,1.125v18a1.125,1.125,0,0,1-2.25,0v-18A1.125,1.125,0,0,1,18,4.5Z"
+                                  fill="#a4a9bc" fill-rule="evenodd"></path>
+                              </g>
+                            </svg>
                             <label>Add Profile Pictures</label>
                           </div>
                           <span class="dragBox">
@@ -3515,251 +3197,43 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="d-inline-block">
-                      <input type="submit" value="Update Details" class="mt-4 btn btn-primary btn-submit">
-                    </div>
-                  </div>
                 </div>
               </form>
             </div>
           </div>
-          <div class="tab-pane fade" id="customer_reservation_tab_pane" role="tabpanel"
-            aria-labelledby="customer_reservation_tab_pane_label" tabindex="0">
-            <div class="customer_module">
-              <h6>Reservation Details</h6>
-              <div class="table-responsive">
-                <table id="table_id" class="display table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><span>Date</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Time</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Price</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th class="sorting_hide"><span>Reservation Status</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th><span>Payment Status</span>
-                        <span class="heading_sorting">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1" viewBox="0 0 4.805 3.1">
-                            <g id="caret-down-fill" transform="translate(4.805 3.1) rotate(180)">
-                              <path id="Path_41" data-name="Path 41"
-                                d="M2.091,2.959.1.687A.414.414,0,0,1,.415,0H4.39A.414.414,0,0,1,4.7.688L2.715,2.959a.414.414,0,0,1-.624,0Z"
-                                transform="translate(0 0)" />
-                            </g>
-                          </svg>
-                          <svg id="caret-down-fill" xmlns="http://www.w3.org/2000/svg" width="4.805" height="3.1"
-                            viewBox="0 0 4.805 3.1">
-                            <path id="Path_41" data-name="Path 41"
-                              d="M7.045,11.959,5.057,9.687A.414.414,0,0,1,5.369,9H9.344a.414.414,0,0,1,.312.688L7.669,11.959a.414.414,0,0,1-.624,0Z"
-                              transform="translate(-4.954 -9)" />
-                          </svg>
-                        </span>
-                      </th>
-                      <th class="sorting_hide"></th>
-                      <th class="sorting_hide"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>
-                        27-Sep-2022
-                      </td>
-                      <td>10:00 am - 11:00 am</td>
-                      <td>25 AED</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
-                      <td>Paid</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        24-Sep-2022
-                      </td>
-                      <td>04:00 pm - 05:00 pm</td>
-                      <td>35 AED</td>
-                      <td><span class="btn btn-info btn-sm radius-rounded">Played</span></td>
-                      <td>Paid</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        22-Sep-2022
-                      </td>
-                      <td>04:00 pm - 06:00 pm</td>
-                      <td>65 AED</td>
-                      <td><span class="btn btn-gray btn-sm radius-rounded">Unplayed</span></td>
-                      <td>Refund</td>
-                      <td><a href="#" class="text-primary">Show More</a></td>
-                      <td>
-                        <div class="btn-group divider_dropdown_group dropleft">
-                          <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
-                            aria-expanded="false">
-                            ...
-                          </button>
-                          <ul class="dropdown-menu ">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Options
-                              </a>
-                            </li>
-                            <li>
-                              <hr class="dropdown-divider my-0">
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Block
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                                data-target="#delete_modal">
-                                Delete
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item text-gray" href="#">
-                                Restricted
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div class="tab-pane fade" id="tournament_brackets_tab_pane" role="tabpanel"
+            aria-labelledby="tournament_brackets_tab_pane_label" tabindex="0">
+            brackets
+          </div>
+          <div class="tab-pane fade" id="tournament_teams_tab_pane" role="tabpanel"
+            aria-labelledby="tournament_teams_tab_pane_label" tabindex="0">
+            TEams
+          </div>
+        </div>
+
+        <!-- <div class="tournament_module">
+          <div class="tournament_top_row d-flex justify-content-between align-items-center">
+            <div class="title_block align-items-center">
+              <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
+            </div>
+            <button class="btn btn-primary create-tournament" id="create_team_button">+ Create New Team</button>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="teams_box card">
+                <div class="card-header">
+                  <div class="teams_header">
+                    <img src="images/teams_1.png" alt="teams_logo">
+                    <div class="team_title">
+                      <h6> Al Jaleel FC</h6>
+                      <p>Futsal Team</p>
+                    </div>
+                  </div>
+                  <button class="btn">...</button>
+                </div>
+                <div class="card-body">
+
+                </div>
               </div>
             </div>
           </div>

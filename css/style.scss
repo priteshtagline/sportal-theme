@@ -2349,6 +2349,7 @@ header {
   background: #f9f9f9 0% 0% no-repeat padding-box;
   border: 1px dashed $theme-secodary-color;
   border-radius: 4px;
+  padding: 15px;
   min-height: 250px;
   max-height: 225px;
   display: flex;
@@ -2373,6 +2374,7 @@ header {
       line-height: 14px;
       color: $gray-color;
       margin: 14px 0 0;
+      text-align: center;
     }
   }
 
@@ -3643,7 +3645,7 @@ header {
   }
 
   .divider {
-    border: 0.6px solid #E4E4E4;
+    border-top: 0.6px solid #E4E4E4;
     width: 100%;
   }
 
@@ -5836,42 +5838,49 @@ header {
           &:last-child {
             width: 5%;
           }
+
+          &:nth-child(8) {
+            img {
+              min-width: 13px;
+            }
+          }
         }
       }
     }
   }
+
 }
 
 
-
-// .card {
-//   .card-body {
-
-//     .btn {
-//       min-width: 250px;
-//       max-width: 200px;
-
-//       @media (max-width:991px) {
-//         min-width: calc(50% - 8px);
-//         max-width: calc(50% - 8px);
-//       }
-//     }
-
-//     .heading-tournamnt-tab {
-//       h6 {
-//         margin-bottom: 10px;
-//       }
-
-//       p {
-//         font-size: 14px;
-//         margin-bottom: 21px;
-//         color: #A4A9BC;
-//         font-weight: 400;
-//       }
-//     }
-//   }
-// }
 .tournament_form {
+  .card {
+    .card-header {
+      padding-top: 27px;
+      padding-top: 20px;
+      background-color: $white;
+
+      h6 {
+        margin-bottom: 0;
+        font-family: 'Outfit Medium';
+      }
+    }
+
+    .card-body {
+      .heading-tournamnt-tab {
+        h6 {
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 21px;
+          color: #A4A9BC;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
   textarea {
     resize: none;
   }
@@ -5879,10 +5888,22 @@ header {
   .form_btn_group {
     display: inline-flex;
 
+    @media (max-width:991px) {
+      flex-wrap: wrap;
+    }
+
     .btn {
       min-width: 197px;
       font-size: 12px;
       border-radius: 6px;
+
+      @media (max-width:991px) {
+        display: block;
+
+        &:last-child {
+          margin-top: 10px;
+        }
+      }
     }
   }
 
@@ -5891,16 +5912,57 @@ header {
     border-radius: 6px;
   }
 
-  .image-card {
-    .button_group {
-      display: flex;
+  input {
+    &::-webkit-calendar-picker-indicator {
+      filter: invert(0.5);
+      font-size: 16px;
+      fill: #A4A9BC;
+      color: #A4A9BC;
+      filter: #A4A9BC;
+    }
+  }
+}
 
-      .btn {
-        min-width: calc(50% - 8px);
-        cursor: pointer;
-        font-size: 12px;
-        border-radius: 6px;
+.teams_box {
+  border-radius: 12px;
+  border: none;
+
+
+  .card-header {
+    background-color: $white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    .teams_header {
+      display: flex;
+      align-items: center;
+
+      .team_title {
+        margin-left: 13px;
+
+        h6 {
+          font-family: 'Outfit SemiBold';
+          font-size: 18px;
+          margin-bottom: 9px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #A4A9BC;
+          margin-bottom: 0;
+        }
       }
+    }
+
+    .btn {
+      background-color: $white;
+      padding: 0;
+      min-width: inherit;
+      color: #A4A9BC;
+      font-size: 22px;
     }
   }
 }
