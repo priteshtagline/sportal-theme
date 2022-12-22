@@ -65,6 +65,13 @@ $(document).ready(function () {
     activate_element5.removeClass("active unread_message");
   });
 
+  // tournament route
+  $("#new_tournament_form").hide();
+  $("#create_tournament_btn").on('click', function () {
+    $("#new_tournament_form").show();
+    $("#tournament_main_module").hide();
+  });
+
   // sidebar resize
   $(window).resize(function () {
     if ($(window).width() <= 1024) {
@@ -427,9 +434,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Tournament filter
 
-$(".tournament-filter").click(function(){
+$(".tournament-filter").click(function () {
   $(".tournament-filter-popup").toggleClass("active");
 });
-$(".tournament-filter").click(function(){
+$(".tournament-filter").click(function () {
   $(".tournament-filter").toggleClass("active");
 });

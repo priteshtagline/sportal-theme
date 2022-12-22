@@ -3568,6 +3568,8 @@ header {
 
   .card {
     border: none;
+    box-shadow: 0px 3px 8px #0000000F;
+    border-radius: 12px;
   }
 
   .form-group {
@@ -5688,17 +5690,17 @@ header {
 
 // Tournaments_module
 .tournament_module {
-  
+
   .title_block {
     position: relative;
     display: flex;
     justify-content: space-between;
-    
-    h6{
+
+    h6 {
       margin-bottom: 0;
     }
-    
-    .tournament-filter-popup{
+
+    .tournament-filter-popup {
       transition: all 2.5s ease-in;
       position: absolute;
       top: 125%;
@@ -5708,58 +5710,63 @@ header {
       display: none;
       background-color: #FFFFFF;
       border-radius: 8px;
-      box-shadow: 0px 5px 25px rgb(0 0 0 / 6%);
+      box-shadow: 0px 3px 8px #0000000F;
       padding: 8px 0px;
-      
 
-      .button-tournament-filter{
+
+      .button-tournament-filter {
         padding: 0px 9px;
-        
-        .tournament-apply-filter{
+
+        .tournament-apply-filter {
           width: 100%;
-        } 
+          font-size: 14px;
+          font-family: 'Outfit Medium';
+        }
       }
 
-      .head-filter{
+      .head-filter {
         padding-left: 9px;
         color: #000000;
         font-size: 12px;
         padding-bottom: 7px;
         border-bottom: 1px solid #E4E4E4;
       }
-      .sport-tournament{
+
+      .sport-tournament {
         padding: 0px 9px;
         border-bottom: 1px solid #E4E4E4;
         margin-bottom: 8px;
 
-        p{
+        p {
           font-size: 10px;
+          font-family: 'Outfit SemiBold';
           margin-bottom: 8px;
         }
-        
-        span{
+
+        span {
           font-weight: 400;
           margin-bottom: 5px;
           font-size: 12px;
           color: $gray-color;
           display: flex;
-          
-          label{
+
+          label {
             margin: 0;
           }
-          
-          input{
+
+          input {
             accent-color: $theme-primary-color;
             margin-right: 5px;
           }
         }
       }
-      
-      &.active{
+
+      &.active {
         display: block;
       }
     }
-    .tournament-filter{
+
+    .tournament-filter {
       margin-left: 20px;
       border-radius: 50%;
       background-color: transparent;
@@ -5769,18 +5776,19 @@ header {
       transition: all 0.5s;
       height: auto;
 
-      &.active, &:hover{
+      &.active,
+      &:hover {
         background-color: $theme-primary-color;
         border: 1px solid $theme-primary-color;
         transition: all 0.5s;
 
-        svg{
+        svg {
           fill: #FFFFFF;
           transition: all 0.3s;
         }
       }
-      
-      svg{
+
+      svg {
         transition: all 0.3s;
         fill: $gray-color;
         height: 12px;
@@ -5789,10 +5797,10 @@ header {
     }
   }
 
-  .tournament_top_row{
+  .tournament_top_row {
     margin-bottom: 20px;
 
-    .create-tournament{
+    .create-tournament {
       border-radius: 8px;
       background-color: #764AF3;
       padding: 8px 12px;
@@ -5834,34 +5842,65 @@ header {
   }
 }
 
-.image-card{
-  .btn{
-    min-width: calc(50% - 8px) !important;
+
+
+// .card {
+//   .card-body {
+
+//     .btn {
+//       min-width: 250px;
+//       max-width: 200px;
+
+//       @media (max-width:991px) {
+//         min-width: calc(50% - 8px);
+//         max-width: calc(50% - 8px);
+//       }
+//     }
+
+//     .heading-tournamnt-tab {
+//       h6 {
+//         margin-bottom: 10px;
+//       }
+
+//       p {
+//         font-size: 14px;
+//         margin-bottom: 21px;
+//         color: #A4A9BC;
+//         font-weight: 400;
+//       }
+//     }
+//   }
+// }
+.tournament_form {
+  textarea {
+    resize: none;
+  }
+
+  .form_btn_group {
+    display: inline-flex;
+
+    .btn {
+      min-width: 197px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+  }
+
+  .image_upload {
+    border: 2px dashed #ececec;
+    border-radius: 6px;
+  }
+
+  .image-card {
+    .button_group {
+      display: flex;
+
+      .btn {
+        min-width: calc(50% - 8px);
+        cursor: pointer;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+    }
   }
 }
-.card{
-  .card-body{
-
-    .btn{
-      min-width: 250px;
-      max-width: 200px;
-
-      @media (max-width:991px) {
-        min-width: calc(50% - 8px);  
-        max-width: calc(50% - 8px);  
-      } 
-    }
-    .heading-tournamnt-tab{
-      h6{
-        margin-bottom: 10px;
-      }
-      p{
-        font-size: 14px;
-        margin-bottom: 21px;
-        color: #A4A9BC;
-        font-weight: 400;
-      }
-    }
-  }
-}
-
