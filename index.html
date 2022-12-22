@@ -2612,9 +2612,12 @@
                 <p class="head-filter">Filter(s)</p>
                 <div class="sport-tournament">
                   <p>Sport</p>
-                  <span><input type="checkbox" id="football_tournament"><label for="football_tournament">Football</label></span>
-                  <span><input type="checkbox" id="tennis_tournament"><label for="tennis_tournament">Tennis</label></span>
-                  <span><input type="checkbox" id="badminton_tournament"><label for="badminton_tournament">Badminton</label></span>
+                  <span><input type="checkbox" id="football_tournament"><label
+                      for="football_tournament">Football</label></span>
+                  <span><input type="checkbox" id="tennis_tournament"><label
+                      for="tennis_tournament">Tennis</label></span>
+                  <span><input type="checkbox" id="badminton_tournament"><label
+                      for="badminton_tournament">Badminton</label></span>
                   <span><input type="checkbox" id="table_tennis_tournament"><label for="">Table Tennis</label></span>
                 </div>
                 <div class="sport-tournament">
@@ -2628,8 +2631,9 @@
                 </div>
               </div>
             </div>
-            
-            <button class="btn btn-primary create-tournament">+ Create New Tournament</button>
+
+            <button class="btn btn-primary create-tournament" id="create_tournament_btn">+ Create New
+              Tournament</button>
 
           </div>
           <div class="table-responsive">
@@ -2750,7 +2754,7 @@
                       <ul class="dropdown-menu ">
                         <li>
                           <a class="dropdown-item" href="#">
-                            Options
+                            Manage
                           </a>
                         </li>
                         <li>
@@ -2758,17 +2762,17 @@
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Block
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
-                            Delete
+                            Edit
                           </a>
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Restricted
+                            Reschedule
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Cancel
                           </a>
                         </li>
                       </ul>
@@ -2795,7 +2799,7 @@
                       <ul class="dropdown-menu ">
                         <li>
                           <a class="dropdown-item" href="#">
-                            Options
+                            Manage
                           </a>
                         </li>
                         <li>
@@ -2803,17 +2807,17 @@
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Block
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
-                            Delete
+                            Edit
                           </a>
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Restricted
+                            Reschedule
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Cancel
                           </a>
                         </li>
                       </ul>
@@ -2840,7 +2844,7 @@
                       <ul class="dropdown-menu ">
                         <li>
                           <a class="dropdown-item" href="#">
-                            Options
+                            Manage
                           </a>
                         </li>
                         <li>
@@ -2848,17 +2852,17 @@
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Block
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
-                            Delete
+                            Edit
                           </a>
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Restricted
+                            Reschedule
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Cancel
                           </a>
                         </li>
                       </ul>
@@ -2885,7 +2889,7 @@
                       <ul class="dropdown-menu ">
                         <li>
                           <a class="dropdown-item" href="#">
-                            Options
+                            Manage
                           </a>
                         </li>
                         <li>
@@ -2893,17 +2897,17 @@
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Block
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
-                            Delete
+                            Edit
                           </a>
                         </li>
                         <li>
                           <a class="dropdown-item text-gray" href="#">
-                            Restricted
+                            Reschedule
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-gray" href="#">
+                            Cancel
                           </a>
                         </li>
                       </ul>
@@ -2914,7 +2918,138 @@
             </table>
           </div>
         </div>
-        <div class="tab-content" id="customer_subtab_content">
+        <div class="profile_info_box tournament_form" id="new_tournament_form">
+          <form action="">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="heading-tournamnt-tab">
+                          <h6>Create New Tournament</h6>
+                          <p>General Information</p>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="customer_fname">Name</label>
+                        <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid" placeholder="">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="Price">Price</label>
+                        <input type="text" class="textinput form-control" id="Price" value="56 AED" placeholder="">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="start_date">Start Date</label>
+                        <input type="Date" class="textinput form-control" id="start_date" value=""
+                          placeholder="DD/MM/YY">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="end_date" class=" mt-0">End Date</label>
+                        <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="start_time">Start Time</label>
+                        <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="end_time" class=" mt-0">End Time</label>
+                        <input type="Time" class="textinput form-control" id="end_time" value="" placeholder="">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="customer_sport" class="m-top-15">Sport</label> </br>
+                        <select class="w-100 select form-control" aria-label="customer_sport_lable" id="customer_sport">
+                          <option selected="selected">Select Sport</option>
+                          <option value="Cricket">Cricket</option>
+                          <option value="Futsal">Futsal</option>
+                          <option value="Baseball">Baseball</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="customer_gender" class=" m-top-15">Gender</label> </br>
+                        <select class="w-100 select form-control" aria-label="customer_gender_label"
+                          id="customer_gender1">
+                          <option selected="selected">Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="divider mt-4 mb-3"></div>
+                      <div class="col-lg-12">
+                        <div class="heading-tournamnt-tab">
+                          <p>Additional Information</p>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="start_time">Welcome Pack</label>
+                        <input type="Text" class="textinput form-control" id="welcome_pack" value=""
+                          placeholder="Write Here">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="Price(s)" class=" mt-0">Price(s)</label>
+                        <input type="Text" class="textinput form-control" id="Price(s)" value="" placeholder="1000 AED">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="bullet1_text">Bullet 1</label>
+                        <input type="Text" class="textinput form-control" id="bullet1_text" value=""
+                          placeholder="Write Here...">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="bullet2_text" class=" mt-0">Bullet 2</label>
+                        <input type="Text" class="textinput form-control" id="bullet2_text" value=""
+                          placeholder="Write Here...">
+                      </div>
+                      <div class="form-group col-lg-12">
+                        <label for="Description_text">Description</label>
+                        <textarea name="Description" id="Description_text" rows="8"
+                          placeholder="Write Here..."></textarea>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form_btn_group">
+                          <input type="submit" value="Create Tournament" class="mt-4 btn btn-primary btn-submit">
+                          <input type="reset" value="Cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card image-card">
+                  <div class="card-body">
+                    <div class="image_upload">
+                      <div class="upload_image_text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="28.456" viewBox="0 0 36 28.456">
+                          <g id="upload" transform="translate(0 -3.044)">
+                            <path id="Path_60" data-name="Path 60"
+                              d="M1.125,18A1.125,1.125,0,0,1,2.25,19.125V27A2.25,2.25,0,0,0,4.5,29.25h27A2.25,2.25,0,0,0,33.75,27V19.125a1.125,1.125,0,0,1,2.25,0V27a4.5,4.5,0,0,1-4.5,4.5H4.5A4.5,4.5,0,0,1,0,27V19.125A1.125,1.125,0,0,1,1.125,18ZM11.25,10.921a1.125,1.125,0,0,0,1.591,0L18,5.76l5.159,5.159a1.125,1.125,0,1,0,1.591-1.59L18.8,3.375a1.125,1.125,0,0,0-1.593,0L11.25,9.329a1.125,1.125,0,0,0,0,1.593Z"
+                              fill="#a4a9bc" fill-rule="evenodd" />
+                            <path id="Path_61" data-name="Path 61"
+                              d="M18,4.5a1.125,1.125,0,0,1,1.125,1.125v18a1.125,1.125,0,0,1-2.25,0v-18A1.125,1.125,0,0,1,18,4.5Z"
+                              fill="#a4a9bc" fill-rule="evenodd" />
+                          </g>
+                        </svg>
+                        <label>Upload Picture or Drag an Image</label>
+                        <label class="mt-0">to upload</label>
+                      </div>
+                      <span class="dragBox">
+                        <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                          id="uploadFile" />
+                      </span>
+                      <div class="image_preview" id="preview"></div>
+                    </div>
+                    <div class="button_group">
+                      <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
+                      <input type="reset" value="Cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="tab-content" id="customer_subtab_content">
           <div class="tab-pane fade show active" id="customer_profile_info_tab_pane" role="tabpanel"
             aria-labelledby="customer_profile_info_tab_pane_label" tabindex="0">
             <div class="profile_info_box">
@@ -2937,28 +3072,25 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="Price">Price</label>
-                            <input type="text" class="textinput form-control" id="Price" value="56 AED"
-                              placeholder="">
+                            <input type="text" class="textinput form-control" id="Price" value="56 AED" placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="start_date">Start Date</label>
-                            <input type="Date" class="textinput form-control" id="start_date"
-                              value="" placeholder="DD/MM/YY">
+                            <input type="Date" class="textinput form-control" id="start_date" value=""
+                              placeholder="DD/MM/YY">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="end_date" class=" mt-0">End Date</label>
-                            <input type="Date" class="textinput form-control" id="end_date"
-                              value="" placeholder="DD/MM/YY">
+                            <input type="Date" class="textinput form-control" id="end_date" value=""
+                              placeholder="DD/MM/YY">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="start_time">Start Time</label>
-                            <input type="Time" class="textinput form-control" id="start_time"
-                              value="" placeholder="">
+                            <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="end_time" class=" mt-0">End Time</label>
-                            <input type="Time" class="textinput form-control" id="end_time"
-                              value="" placeholder="">
+                            <input type="Time" class="textinput form-control" id="end_time" value="" placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_sport" class="m-top-15">Sport</label> </br>
@@ -2988,27 +3120,28 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="start_time">Welcome Pack</label>
-                            <input type="Text" class="textinput form-control" id="start_time"
-                              value="" placeholder="Write Here">
+                            <input type="Text" class="textinput form-control" id="start_time" value=""
+                              placeholder="Write Here">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="Price(s)" class=" mt-0">Price(s)</label>
-                            <input type="Text" class="textinput form-control" id="Price(s)"
-                              value="" placeholder="1000 AED">
+                            <input type="Text" class="textinput form-control" id="Price(s)" value=""
+                              placeholder="1000 AED">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="bullet1_text">Bullet 1</label>
-                            <input type="Text" class="textinput form-control" id="bullet1_text"
-                              value="" placeholder="Write Here...">
+                            <input type="Text" class="textinput form-control" id="bullet1_text" value=""
+                              placeholder="Write Here...">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="bullet2_text" class=" mt-0">Bullet 2</label>
-                            <input type="Text" class="textinput form-control" id="bullet2_text"
-                              value="" placeholder="Write Here...">
+                            <input type="Text" class="textinput form-control" id="bullet2_text" value=""
+                              placeholder="Write Here...">
                           </div>
                           <div class="form-group col-lg-12">
                             <label for="Description_text">Description</label>
-                            <textarea name="Description" id="Description_text" rows="8" placeholder="Write Here..."></textarea>
+                            <textarea name="Description" id="Description_text" rows="8"
+                              placeholder="Write Here..."></textarea>
                           </div>
                           <div class="col-md-12">
                             <div class="d-flex">
@@ -3034,10 +3167,10 @@
                           </span>
                           <div class="image_preview" id="preview"></div>
                         </div>
-                          <div class="d-flex">
-                            <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
-                            <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
-                          </div>
+                        <div class="d-flex">
+                          <input type="submit" value="Confirm" class="mt-4 btn btn-primary btn-submit">
+                          <input type="reset" value="cancel" class="mt-4 btn btn-light btn-submit ml-3">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3298,23 +3431,23 @@
                         <div class="row">
                           <div class="form-group col-lg-6">
                             <label for="overview_start_date">Start Date</label>
-                            <input type="Date" class="textinput form-control" id="overview_start_date"
-                              value="" placeholder="DD/MM/YY">
+                            <input type="Date" class="textinput form-control" id="overview_start_date" value=""
+                              placeholder="DD/MM/YY">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_end_date" class=" mt-0">End Date</label>
-                            <input type="Date" class="textinput form-control" id="overview_end_date"
-                              value="" placeholder="DD/MM/YY">
+                            <input type="Date" class="textinput form-control" id="overview_end_date" value=""
+                              placeholder="DD/MM/YY">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_start_time">Start Time</label>
-                            <input type="Time" class="textinput form-control" id="overview_start_time"
-                              value="" placeholder="">
+                            <input type="Time" class="textinput form-control" id="overview_start_time" value=""
+                              placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_end_time" class=" mt-0">End Time</label>
-                            <input type="Time" class="textinput form-control" id="overview_end_time"
-                              value="" placeholder="">
+                            <input type="Time" class="textinput form-control" id="overview_end_time" value=""
+                              placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_sport" class="m-top-15">Sport</label> </br>
@@ -3338,13 +3471,13 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
-                            <input type="number" class="textinput form-control" id="overview_maximum_number"
-                              value="25" placeholder="">
+                            <input type="number" class="textinput form-control" id="overview_maximum_number" value="25"
+                              placeholder="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
-                            <input type="Date" class="textinput form-control" id="overview_last_entery"
-                              value="" placeholder="">
+                            <input type="Date" class="textinput form-control" id="overview_last_entery" value=""
+                              placeholder="">
                           </div>
                           <div class="divider mt-4 mb-3"></div>
                           <div class="form-group col-lg-6">
@@ -3354,8 +3487,8 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
-                            <input type="text" class="textinput form-control" id="overview_last_entery"
-                              value="250 AED" placeholder="">
+                            <input type="text" class="textinput form-control" id="overview_last_entery" value="250 AED"
+                              placeholder="">
                           </div>
                           <div class="form-group col-lg-12">
                             <label for="overview_Description" class=" mt-0">Description</label>
@@ -3630,8 +3763,7 @@
               </div>
             </div>
           </div>
-        </div>
-        
+        </div> -->
 
         <!-- Tournament End -->
       </div>
