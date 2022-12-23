@@ -381,7 +381,7 @@ input[type="checkbox"] {
 }
 
 .select2-container {
-  z-index: 11;
+  z-index: 1111;
 }
 
 .btn-info {
@@ -6117,6 +6117,9 @@ header.active .side-nav-btn img {
 .teams_box {
   border-radius: 12px;
   border: none;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 3px 8px #0000000f;
+          box-shadow: 0px 3px 8px #0000000f;
 }
 
 .teams_box .card-header {
@@ -6124,14 +6127,15 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  border-bottom: 0;
 }
 
 .teams_box .card-header .teams_header {
@@ -6145,6 +6149,12 @@ header.active .side-nav-btn img {
 
 .teams_box .card-header .teams_header .team_title {
   margin-left: 13px;
+}
+
+.teams_box .card-header .teams_header .team_title img {
+  border-radius: 9px;
+  width: 58px;
+  height: 58px;
 }
 
 .teams_box .card-header .teams_header .team_title h6 {
@@ -6165,5 +6175,239 @@ header.active .side-nav-btn img {
   min-width: inherit;
   color: #A4A9BC;
   font-size: 22px;
+  margin-top: -5px;
+}
+
+.teams_box .card-body .team_member {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 13px;
+}
+
+.teams_box .card-body .team_member img {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+
+.teams_box .card-body .team_member p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.tournament_modal .modal {
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 576px) {
+  .tournament_modal .modal {
+    --bs-modal-margin: 154px;
+  }
+}
+
+.tournament_modal .modal .modal-dialog {
+  max-width: 420px;
+}
+
+@media screen and (min-width: 576px) {
+  .tournament_modal .modal .modal-dialog.reschedule_modal {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .tournament_modal .modal .modal-dialog {
+    margin-right: 21px;
+    margin-left: auto;
+    margin-top: 175px;
+  }
+}
+
+.tournament_modal .modal .modal-dialog .modal-content {
+  border-radius: 12px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-header {
+  padding: 23px 18px 20px;
+  border-bottom: 0.6px solid #e4e4e4;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #000000;
+  font-family: "Outfit Medium";
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body {
+  padding: 20px 18px 24px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .form-group {
+  margin-bottom: 10px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .form-group .btn {
+  font-size: 12px;
+  background-color: #A98FF1;
+  color: #ffffff;
+  border: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body label {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  color: #a4a9bc;
+  margin-bottom: 8px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body input,
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .textinput {
+  padding: 14px 10px;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  color: #000000;
+  background-color: #f9f9f9;
+  border-color: transparent;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+  border-radius: 6px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body input::-webkit-calendar-picker-indicator,
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .textinput::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+  font-size: 16px;
+  fill: #A4A9BC;
+  color: #A4A9BC;
+  -webkit-filter: #A4A9BC;
+          filter: #A4A9BC;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body select {
+  background-color: #F9F9F9;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  background-image: url(/images/select-arrow.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: right 20px top 18px;
+  background-size: 8px;
+  position: relative;
+  font-size: 12px;
+  height: 43px;
+  border: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body select:focus {
+  outline: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body textarea {
+  resize: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .image_upload {
+  min-height: 116px;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+  border: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text img {
+  width: 21px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .image_upload .upload_image_text label {
+  color: #000000;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .image_upload .btn_delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 23px;
+  border: none;
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #DEDEDE;
+  z-index: 11111;
+  cursor: pointer;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .location {
+  width: 100%;
+  height: 116px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .location iframe {
+  border-radius: 6px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .padding-body {
+  padding: 10px 18px 16px !important;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer {
+  padding: 20px 18px 18px 17px;
+  border-top: 0.6px solid #e4e4e4;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer input,
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer button {
+  padding: 14px 0px;
+  max-width: 190px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer input:last-child,
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer button:last-child {
+  color: #a4a9bc;
+  background-image: none;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer input:last-child:hover,
+.tournament_modal .modal .modal-dialog .modal-content .modal-footer button:last-child:hover {
+  color: #ffffff;
+}
+
+.tournament_modal .modal .modal-dialog .modal-content .padding-footer {
+  padding: 16px 18px 18px 14px !important;
+}
+
+@media screen and (min-width: 576px) {
+  .tournament_modal .modal .model-open-margin {
+    margin-bottom: 38px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
