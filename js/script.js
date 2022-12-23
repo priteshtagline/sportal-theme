@@ -75,7 +75,15 @@ $(document).ready(function () {
     $("#new_tournament_form").hide();
     $("#tournament_main_module").show();
   });
-
+  $("#edit_tournament_form").hide();
+  $("#tournament_edit").on('click', function () {
+    $("#edit_tournament_form").show();
+    $("#tournament_main_module").hide();
+  });
+  $("#edit_tournament_form .btn").on('click', function () {
+    $("#edit_tournament_form").hide();
+    $("#tournament_main_module").show();
+  });
   $("#tournament_nav_tab").hide();
   $("#tournaments-tab").on('click', function () {
     $('.navbar-brand').show().html('Tournament');
@@ -283,7 +291,7 @@ $(document).ready(function () {
   ("use strict");
   function dragNdrop(event) {
     var fileName = URL.createObjectURL(event.target.files[0]);
-    var preview = document.getElementById("preview");
+    var preview = document.getElementsByClassName("image_preview");
     var previewImg = document.createElement("img");
     previewImg.setAttribute("src", fileName);
     preview.innerHTML = "";

@@ -2298,23 +2298,21 @@
                         <div class="row">
                           <div class="form-group col-lg-6">
                             <label for="customer_fname">First Name</label>
-                            <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid"
-                              placeholder="">
+                            <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_lname">Second Name</label>
-                            <input type="text" class="textinput form-control" id="customer_lname" value="Awan"
-                              placeholder="">
+                            <input type="text" class="textinput form-control" id="customer_lname" value="Awan">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_email">Email</label>
                             <input type="email" class="textinput form-control" id="customer_email"
-                              value="moeed.shahid@yahoo.com" placeholder="">
+                              value="moeed.shahid@yahoo.com">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_phoneno" class=" mt-0">Phone Number</label>
                             <input type="tel" class="textinput form-control" id="customer_phoneno"
-                              value="+9713336787103" placeholder="">
+                              value="+9713336787103">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="customer_gender" class=" m-top-15">Gender</label> </br>
@@ -2654,10 +2652,8 @@
                 </div>
               </div>
             </div>
-
             <button class="btn btn-primary create-tournament" id="create_tournament_btn">+ Create New
               Tournament</button>
-
           </div>
           <div class="table-responsive">
             <table id="table_id" class="display table">
@@ -2784,12 +2780,13 @@
                           <hr class="dropdown-divider my-0">
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_edit">
                             Edit
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_reschedule" data-toggle="modal"
+                            data-target="#tournament_reschedule_modal">
                             Reschedule
                           </a>
                         </li>
@@ -2829,12 +2826,13 @@
                           <hr class="dropdown-divider my-0">
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_edit">
                             Edit
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_reschedule" data-toggle="modal"
+                            data-target="#tournament_reschedule_modal">
                             Reschedule
                           </a>
                         </li>
@@ -2874,12 +2872,13 @@
                           <hr class="dropdown-divider my-0">
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_edit">
                             Edit
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_reschedule" data-toggle="modal"
+                            data-target="#tournament_reschedule_modal">
                             Reschedule
                           </a>
                         </li>
@@ -2919,12 +2918,13 @@
                           <hr class="dropdown-divider my-0">
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_edit">
                             Edit
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item text-gray" href="#">
+                          <a class="dropdown-item text-gray" id="tournament_reschedule" data-toggle="modal"
+                            data-target="#tournament_reschedule_modal">
                             Reschedule
                           </a>
                         </li>
@@ -2956,11 +2956,11 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="customer_fname">Name</label>
-                        <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid" placeholder="">
+                        <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="Price">Price</label>
-                        <input type="text" class="textinput form-control" id="Price" value="56 AED" placeholder="">
+                        <input type="text" class="textinput form-control" id="Price" value="56 AED">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="start_date">Start Date</label>
@@ -2973,11 +2973,11 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="start_time">Start Time</label>
-                        <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="">
+                        <input type="Time" class="textinput form-control" id="start_time" value="">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="end_time" class=" mt-0">End Time</label>
-                        <input type="Time" class="textinput form-control" id="end_time" value="" placeholder="">
+                        <input type="Time" class="textinput form-control" id="end_time" value="">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="customer_sport" class="m-top-15">Sport</label> </br>
@@ -3000,13 +3000,11 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
-                        <input type="number" class="textinput form-control" id="overview_maximum_number" value="25"
-                          placeholder="">
+                        <input type="number" class="textinput form-control" id="overview_maximum_number" value="25">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
-                        <input type="Date" class="textinput form-control" id="overview_last_entery" value=""
-                          placeholder="">
+                        <input type="Date" class="textinput form-control" id="overview_last_entery" value="">
                       </div>
                       <div class="divider mt-4 mb-3"></div>
                       <div class="col-lg-12">
@@ -3025,13 +3023,11 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="overview_winning_prize">Winning Prize</label>
-                        <input type="text" class="textinput form-control" id="overview_winning_prize" value=""
-                          placeholder="">
+                        <input type="text" class="textinput form-control" id="overview_winning_prize" value="">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
-                        <input type="text" class="textinput form-control" id="overview_last_entery" value=""
-                          placeholder="">
+                        <input type="text" class="textinput form-control" id="overview_last_entery" value="">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="bullet1_text">Bullet 1</label>
@@ -3091,6 +3087,151 @@
           </form>
         </div>
 
+        <div class="profile_info_box tournament_form" id="edit_tournament_form">
+          <form action="">
+            <div class="row">
+              <div class="col-lg-8 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="heading-tournamnt-tab">
+                          <h6>Edit Tournament</h6>
+                          <p>General Information</p>
+                        </div>
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="customer_fname">Name</label>
+                        <input type="text" class="textinput form-control" id="Name" value="Moeed Shahid">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="Price">Price</label>
+                        <input type="text" class="textinput form-control" id="Price" value="56 AED">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="start_date">Start Date</label>
+                        <input type="Date" class="textinput form-control" id="start_date" value=""
+                          placeholder="DD/MM/YY">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="end_date" class=" mt-0">End Date</label>
+                        <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="start_time">Start Time</label>
+                        <input type="Time" class="textinput form-control" id="start_time" value="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="end_time" class=" mt-0">End Time</label>
+                        <input type="Time" class="textinput form-control" id="end_time" value="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="customer_sport" class="m-top-15">Sport</label> </br>
+                        <select class="w-100 select form-control" aria-label="customer_sport_lable" id="customer_sport">
+                          <option selected="selected">Select Sport</option>
+                          <option value="Cricket">Cricket</option>
+                          <option value="Futsal">Futsal</option>
+                          <option value="Baseball">Baseball</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="customer_gender" class=" m-top-15">Gender</label> </br>
+                        <select class="w-100 select form-control" aria-label="customer_gender_label"
+                          id="customer_gender1">
+                          <option selected="selected">Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
+                        <input type="number" class="textinput form-control" id="overview_maximum_number" value="25">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
+                        <input type="Date" class="textinput form-control" id="overview_last_entery" value="">
+                      </div>
+                      <div class="divider mt-4 mb-3"></div>
+                      <div class="col-lg-12">
+                        <div class="heading-tournamnt-tab">
+                          <p>Additional Information</p>
+                        </div>
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="start_time">Welcome Pack</label>
+                        <input type="Text" class="textinput form-control" id="welcome_pack" value=""
+                          placeholder="Write Here">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="Prize(s)" class=" mt-0">Prize(s)</label>
+                        <input type="Text" class="textinput form-control" id="Price(s)" value="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_winning_prize">Winning Prize</label>
+                        <input type="text" class="textinput form-control" id="overview_winning_prize" value="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
+                        <input type="text" class="textinput form-control" id="overview_last_entery" value="">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="bullet1_text">Bullet 1</label>
+                        <input type="Text" class="textinput form-control" id="bullet1_text" value=""
+                          placeholder="Write Here...">
+                      </div>
+                      <div class="form-group col-xl-6">
+                        <label for="bullet2_text" class=" mt-0">Bullet 2</label>
+                        <input type="Text" class="textinput form-control" id="bullet2_text" value=""
+                          placeholder="Write Here...">
+                      </div>
+                      <div class="form-group col-lg-12">
+                        <label for="Description_text">Description</label>
+                        <textarea name="Description" id="Description_text" rows="8"
+                          placeholder="Write Here..."></textarea>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form_btn_group">
+                          <input type="submit" value="Update Tournament" class="btn btn-primary btn-submit">
+                          <input type="reset" value="Cancel" class="btn btn-light btn-submit ml-lg-3">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="card image-card">
+                  <div class="card-header">
+                    <h6>Tournament Poster</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="image_upload">
+                      <div class="upload_image_text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="28.456" viewBox="0 0 36 28.456">
+                          <g id="upload" transform="translate(0 -3.044)">
+                            <path id="Path_60" data-name="Path 60"
+                              d="M1.125,18A1.125,1.125,0,0,1,2.25,19.125V27A2.25,2.25,0,0,0,4.5,29.25h27A2.25,2.25,0,0,0,33.75,27V19.125a1.125,1.125,0,0,1,2.25,0V27a4.5,4.5,0,0,1-4.5,4.5H4.5A4.5,4.5,0,0,1,0,27V19.125A1.125,1.125,0,0,1,1.125,18ZM11.25,10.921a1.125,1.125,0,0,0,1.591,0L18,5.76l5.159,5.159a1.125,1.125,0,1,0,1.591-1.59L18.8,3.375a1.125,1.125,0,0,0-1.593,0L11.25,9.329a1.125,1.125,0,0,0,0,1.593Z"
+                              fill="#a4a9bc" fill-rule="evenodd" />
+                            <path id="Path_61" data-name="Path 61"
+                              d="M18,4.5a1.125,1.125,0,0,1,1.125,1.125v18a1.125,1.125,0,0,1-2.25,0v-18A1.125,1.125,0,0,1,18,4.5Z"
+                              fill="#a4a9bc" fill-rule="evenodd" />
+                          </g>
+                        </svg>
+                        <label>Upload Picture or Drag an Image to upload</label>
+                      </div>
+                      <span class="dragBox">
+                        <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                          id="uploadFile" />
+                      </span>
+                      <div class="image_preview" id="preview"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
         <div class="tab-content" id="tournament_subtab_content">
           <div class="tab-pane fade show active" id="tournament_overview_tab_pane" role="tabpanel"
             aria-labelledby="tournament_overview_tab_pane_label" tabindex="0">
@@ -3114,13 +3255,11 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_start_time">Start Time</label>
-                            <input type="Time" class="textinput form-control" id="overview_start_time" value=""
-                              placeholder="">
+                            <input type="Time" class="textinput form-control" id="overview_start_time" value="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_end_time" class=" mt-0">End Time</label>
-                            <input type="Time" class="textinput form-control" id="overview_end_time" value=""
-                              placeholder="">
+                            <input type="Time" class="textinput form-control" id="overview_end_time" value="">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_sport" class="m-top-15">Sport</label> </br>
@@ -3144,24 +3283,21 @@
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_maximum_number">Maximum Number of Teams Allowed</label>
-                            <input type="number" class="textinput form-control" id="overview_maximum_number" value="25"
-                              placeholder="">
+                            <input type="number" class="textinput form-control" id="overview_maximum_number" value="25">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_last_entery" class=" mt-0">Last Date of Entry</label>
-                            <input type="Date" class="textinput form-control" id="overview_last_entery" value=""
-                              placeholder="">
+                            <input type="Date" class="textinput form-control" id="overview_last_entery" value="">
                           </div>
                           <div class="divider mt-4 mb-3"></div>
                           <div class="form-group col-lg-6">
                             <label for="overview_winning_prize">Winning Prize</label>
                             <input type="text" class="textinput form-control" id="overview_winning_prize"
-                              value="750 AED" placeholder="">
+                              value="750 AED">
                           </div>
                           <div class="form-group col-lg-6">
                             <label for="overview_last_entery" class=" mt-0">Runners Up Prize</label>
-                            <input type="text" class="textinput form-control" id="overview_last_entery" value="250 AED"
-                              placeholder="">
+                            <input type="text" class="textinput form-control" id="overview_last_entery" value="250 AED">
                           </div>
                           <div class="form-group col-lg-12">
                             <label for="overview_Description" class=" mt-0">Description</label>
@@ -3201,43 +3337,555 @@
               </form>
             </div>
           </div>
+
           <div class="tab-pane fade" id="tournament_brackets_tab_pane" role="tabpanel"
             aria-labelledby="tournament_brackets_tab_pane_label" tabindex="0">
             brackets
           </div>
+
           <div class="tab-pane fade" id="tournament_teams_tab_pane" role="tabpanel"
             aria-labelledby="tournament_teams_tab_pane_label" tabindex="0">
-            TEams
-          </div>
-        </div>
-
-        <!-- <div class="tournament_module">
-          <div class="tournament_top_row d-flex justify-content-between align-items-center">
-            <div class="title_block align-items-center">
-              <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
-            </div>
-            <button class="btn btn-primary create-tournament" id="create_team_button">+ Create New Team</button>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="teams_box card">
-                <div class="card-header">
-                  <div class="teams_header">
-                    <img src="images/teams_1.png" alt="teams_logo">
-                    <div class="team_title">
-                      <h6> Al Jaleel FC</h6>
-                      <p>Futsal Team</p>
+            <div class="tournament_module">
+              <div class="tournament_top_row d-flex justify-content-between align-items-center">
+                <div class="title_block align-items-center">
+                  <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
+                </div>
+                <button class="btn btn-primary create-tournament" id="create_team_button" data-toggle="modal"
+                  data-target="#create_team_modal">+ Create New Team</button>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_1.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6> Al Jaleel FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <button class="btn">...</button>
                 </div>
-                <div class="card-body">
-
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_2.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>NationalGolesti</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_3.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>Ultra FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_4.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>RajaAthletic</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_5.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>Golesti FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_6.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>Al Waleed FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_7.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6>Al Jaleel FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                  <div class="teams_box card">
+                    <div class="card-header">
+                      <div class="teams_header">
+                        <img src="images/teams_8.png" alt="teams_logo">
+                        <div class="team_title">
+                          <h6> Al Jaleel FC</h6>
+                          <p>Futsal Team</p>
+                        </div>
+                      </div>
+                      <button class="btn">...</button>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_2.png" alt="team_member">
+                            <p>Brandon Adams</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_3.png" alt="team_member">
+                            <p>Adam Wood</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_4.png" alt="team_member">
+                            <p>Jeremy Reid</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_5.png" alt="team_member">
+                            <p>Justin Lee</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_6.png" alt="team_member">
+                            <p>Richard Hill</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_8.png" alt="team_member">
+                            <p>Harry Andrews</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_9.png" alt="team_member">
+                            <p>Richard Valdez</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 col-xl-6">
+                          <div class="team_member">
+                            <img src="images/user_10.png" alt="team_member">
+                            <p>Walter Carpenter</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- Tournament End -->
       </div>
@@ -3449,7 +4097,7 @@
                               <div class="modal-body">
                                 <div class="form-group">
                                   <label for="amenties_name" class="mt-0">Amneties Name</label>
-                                  <input type="text" class="input" id="amenties_name" placeholder="">
+                                  <input type="text" class="input" id="amenties_name">
                                 </div>
                               </div>
                               <div class="modal-footer">
@@ -5337,7 +5985,7 @@
               <div class="modal-body">
                 <div class="form-group mb-0">
                   <label for="Name" class="mt-0">Court Name</label>
-                  <input type="email" class="input textinput form-control" id="Name" placeholder="">
+                  <input type="email" class="input textinput form-control" id="Name">
                 </div>
                 <div class="form-group mb-0">
                   <label for="select_box_1" class="m-top-15">Court Type</label> </br>
@@ -5421,7 +6069,7 @@
               <div class="modal-body padding-body">
                 <div class="form-group mb-0">
                   <label for="Name" class="mt-0">Court Name</label>
-                  <input type="email" class="textinput form-control" id="Name" placeholder="">
+                  <input type="email" class="textinput form-control" id="Name">
                 </div>
                 <div class="form-group mb-0">
                   <label for="Name" class="mt-3">Court Type</label>
@@ -6138,6 +6786,113 @@
               </div>
               <div class="modal-footer">
                 <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
+                <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create new team in Tournament -->
+    <div class="tournament_modal">
+      <div class="modal fade" id="create_team_modal" tabindex="-1" aria-labelledby="create_team_modal_Label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Add New Team</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="team_name" class="mt-0">Team Name</label>
+                  <input type="text" class="textinput form-control" id="team_name">
+                </div>
+                <div class="form-group">
+                  <label for="add_team_member" class="m-top-15">Add Team Member(s)</label> </br>
+                  <select class="w-100 select form-control" aria-label="add_team_member_label" id="add_team_member">
+                    <option selected="selected">Player Name</option>
+                    <option value="member_1">Brandon Adams</option>
+                    <option value="member_2">Jeremy Reid</option>
+                    <option value="member_3">Richard Hill</option>
+                    <option value="member_4">Richard Valdez</option>
+                    <option value="member_5">Adam Wood</option>
+                    <option value="member_6">Justin Lee</option>
+                    <option value="member_7">Harry Andrews</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-inline-block">
+                    <input type="submit" value="+ Add Team Member" class="btn btn-primary" id="add_team">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="mt-3">Add Team Logo</label>
+                  <div class="image_upload">
+                    <div class="upload_image_text">
+                      <img src="images/upload.svg">
+                      <label>Upload Picture</label>
+                    </div>
+                    <button class="btn_delete"><img src="images/image_delete_icon.svg" alt="delete_icon"></button>
+                    <span class="dragBox">
+                      <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                        id="uploadFile" />
+                    </span>
+                    <div class="image_preview" id="preview"></div>
+                  </div>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-inline-block">
+                    <input type="submit" value="Submit" class="btn btn-primary add_picture_btn" id="add_picture">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
+                <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reschedule modal -->
+    <div class="tournament_modal">
+      <div class="modal fade" id="tournament_reschedule_modal" tabindex="-1"
+        aria-labelledby="tournament_reschedule_modal_Label" aria-hidden="true">
+        <div class="modal-dialog reschedule_modal">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Reschedule Tournament</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="tournament_name">Tournament Name</label>
+                  <input type="text" class="textinput form-control" id="tournament_name"
+                    value="Mountain Dew Dream Fest Futsal Championship 22">
+                </div>
+                <div class="form-group">
+                  <label for="start_date">Start Date</label>
+                  <input type="Date" class="textinput form-control" id="start_date" value="" placeholder="DD/MM/YY">
+                </div>
+                <div class="form-group">
+                  <label for="end_date" class=" mt-0">End Date</label>
+                  <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                </div>
+                <div class="form-group">
+                  <label for="start_time">Start Time</label>
+                  <input type="Time" class="textinput form-control" id="start_time" value="">
+                </div>
+                <div class="form-group">
+                  <label for="end_time" class=" mt-0">End Time</label>
+                  <input type="Time" class="textinput form-control" id="end_time" value="">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Submit">
                 <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
               </div>
             </form>
