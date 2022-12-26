@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Accept a payment</title>
+  <meta name="description" content="A demo of a payment on Stripe" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="checkout.css" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <style>
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Payment Invitation template -->
+  <div
+    style="background-color: #5469d4;padding: 40px 20px 20px;border-radius: 12px;max-width:400px;width: 100%;margin: 0 auto;">
+    <table style="width: 100%;">
+      <thead>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <a href="#"><img src="https://www.linkpicture.com/q/sportal-logo.png" alt="Brand"></a>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <div style="border-radius: 12px;background-color: #FFFFFF;padding: 20px;margin-top: 50px;">
+              <table style="width: 100%;">
+                <tbody style="color: #000000;">
+                  <tr>
+                    <td>
+                      <p>Reservation Customer </p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.customer}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Reservation Start Date </p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.customer}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Reservation Customer </p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.start_date}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Reservation Start Time </p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.start_time}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Reservation End Time</p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.end_time}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Reservation Price </p>
+                    </td>
+                    <td>
+                      <p>:- {{reservation.price}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center;">
+                      <a href="https://taglineinfotech.com/"
+                        style="padding: 15px 20px;display: block;margin-top: 15px;background-color:#5469d4;border-radius: 4px; color: #ffffff;text-decoration: none;">Pay
+                        Now</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
