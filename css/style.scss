@@ -6188,3 +6188,89 @@ header {
     }
   }
 }
+
+
+
+#tournament_brackets_tab_pane{
+  .profile_info_box{
+    
+    .tournament-chatroom-button{
+      margin-left: auto;
+      font-size: 12px;
+      padding: 9px 11px;
+      height: fit-content;
+      line-height: 12px;
+      border-radius: 50px;
+      
+      svg{
+        margin-right: 6px;
+      }
+    }
+  }
+  
+  .tournament_brackets_subtab{
+
+    .nav-pills{
+
+      li{
+        margin-right: 38px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        .tournament_subtab_tab{
+          transition: all 0.3s ease-in-out;
+          background-color: #FFFFFF;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0px 3px 8px #00000006;
+          padding: 14px 10px 14px 14px;
+          text-align: left;
+          width: 178px;
+          justify-content: space-between;
+
+          a{
+            transition: all 0.3s ease-in-out;
+            padding: 6px;
+            background-color: #ECECEC;
+            box-shadow: 0 0 2px #00000020 inset;
+            display: flex;
+            border-radius: 4px;
+            path{
+              fill: $gray-color;
+            }
+          }
+
+          .tournament_button_content{
+            span{
+              color: $gray-color;
+              transition: all 0.3s ease-in-out;
+              font-size: 12px;
+            }
+            p{
+              transition: all 0.3s ease-in-out;
+              font-size: 14px;
+              margin: 5px 0 0 0;
+            }
+          }
+          &:hover,
+          &.active{
+            transition: all 0.3s ease-in-out;
+            background-color: #A98FF1;
+            span,
+            p{
+              color: $white;
+            }
+            a{
+              background-color: $white;
+              path{
+                fill: $hover-color;
+              }
+            }
+          }  
+        }
+      }
+    }
+  }
+}
