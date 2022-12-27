@@ -3374,14 +3374,14 @@
               </div>
                 <!-- Tournament-Brackets-Subtab -->
                 <div class="tournament_brackets_subtab">
-                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link active d-flex tournament_subtab_tab" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                         <div class="tournament_button_content">
                           <span>Pre-Quarter</span>
                           <p>Sept 28, 2022</p>
                         </div>
-                        <a href="#" class="edit_tournament_time">
+                        <a href="#" class="edit_tournament_time" data-toggle="modal" data-target="#edit_brackets_tab">
                           <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                           <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
                           </svg>
@@ -3394,7 +3394,7 @@
                           <span>Pre-Quarter</span>
                           <p>Sept 29, 2022</p>
                         </div>
-                        <a href="#">
+                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
                           <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                           <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
                           </svg>
@@ -3407,7 +3407,7 @@
                           <span>Pre-Quarter</span>
                           <p>Oct 01, 2022</p>
                         </div>
-                        <a href="#">
+                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
                           <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                           <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
                           </svg>
@@ -3420,7 +3420,7 @@
                           <span>Pre-Quarter</span>
                           <p>Oct 01, 2022</p>
                         </div>
-                        <a href="#">
+                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
                           <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                           <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
                           </svg>
@@ -3429,11 +3429,243 @@
                     </li>
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">snhuxsb</div>
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <div class="match match-1 mb-5">
+                            <span class="match_number">Match 1</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2 mb-5">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                          <div class="match match-1 mb-5">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2 mb-5">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                          <div class="match match-1 mb-5">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2 mb-5">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                          <div class="match match-1 mb-5">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center flex-wrap">
+                          <div class="match match-1">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                          <div class="match match-1">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>                          
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center flex-wrap">
+                          <div class="match match-1">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match match-2">
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>                    
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center flex-wrap">
+                          <div class="match match-1">
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <img src="images/team.png" alt="">
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <img src="images/team.png" alt="">
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>             
+                        </div>
+                      </div>
+
+
+                    </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">sdv</div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">svdvsdf</div>
                   </div>
-                </div>       
+                </div>   
+                
+                <!-- Tournament-Edit-Schedule -->
+                <div class="tournament_modal">
+                  <div class="modal fade" id="edit_brackets_tab" tabindex="-1" aria-labelledby="create_team_modal_Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <form action="">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Edit Schedule</h5>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                              <label for="Tournament_Stage" class="m-top-15">Tournament Stage</label> </br>
+                              <select class="w-100 select form-control" aria-label="add_team_member_label" id="Tournament_Stage">
+                                <option selected="selected">Quater Final</option>
+                                <option value="semi">Semi Final</option>
+                                <option value="Final">Final</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="select_date" class="m-top-15">Select Date</label>
+                              <input type="date" id="brackets_select_date">
+                            </div>
+                            <div class="form-group">
+                              <label for="select_date" class="m-top-15">Select Time</label>
+                              <input type="time" id="brackets_select_time">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Update">
+                            <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
           </div>
 
@@ -3459,7 +3691,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3525,7 +3789,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3591,7 +3887,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3657,7 +3985,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3723,7 +4083,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3789,7 +4181,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3855,7 +4279,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3921,7 +4377,39 @@
                           <p>Futsal Team</p>
                         </div>
                       </div>
-                      <button class="btn">...</button>
+                      <div class="btn-group divider_dropdown_group dropleft">
+                        <button type="button" class="btn dropdown-toggle p-0" data-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              Options
+                            </a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider my-0">
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#edit_team_modal">
+                              Edit
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
+                              data-target="#delete_modal">
+                              Delete
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-gray" href="#">
+                              Cancel
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -3980,6 +4468,71 @@
               </div>
             </div>
           </div>
+
+          <!-- Team Edit Popup -->
+          <div class="tournament_modal">
+            <div class="modal fade" id="edit_team_modal" tabindex="-1" aria-labelledby="create_team_modal_Label"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <form action="">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">Edit Team</h5>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="team_name" class="mt-0">Team Name</label>
+                        <input type="text" class="textinput form-control" id="team_name">
+                      </div>
+                      <div class="form-group">
+                        <label for="add_team_member" class="m-top-15">Add Team Member(s)</label> </br>
+                        <select class="w-100 select form-control" aria-label="add_team_member_label" id="add_team_member">
+                          <option selected="selected">Player Name</option>
+                          <option value="member_1">Brandon Adams</option>
+                          <option value="member_2">Jeremy Reid</option>
+                          <option value="member_3">Richard Hill</option>
+                          <option value="member_4">Richard Valdez</option>
+                          <option value="member_5">Adam Wood</option>
+                          <option value="member_6">Justin Lee</option>
+                          <option value="member_7">Harry Andrews</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-0">
+                        <div class="d-inline-block">
+                          <input type="submit" value="+ Add Team Member" class="btn btn-primary" id="add_team">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="mt-3">Add Team Logo</label>
+                        <div class="image_upload">
+                          <div class="upload_image_text">
+                            <img src="images/upload.svg">
+                            <label>Upload Picture</label>
+                          </div>
+                          <button class="btn_delete"><img src="images/image_delete_icon.svg" alt="delete_icon"></button>
+                          <span class="dragBox">
+                            <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                              id="uploadFile" />
+                          </span>
+                          <div class="image_preview" id="preview"></div>
+                        </div>
+                      </div>
+                      <div class="form-group mb-0">
+                        <div class="d-inline-block">
+                          <input type="submit" value="Submit" class="btn btn-primary add_picture_btn" id="add_picture">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
+                      <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Tournament End -->

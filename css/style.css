@@ -5041,6 +5041,53 @@ header.active .side-nav-btn img {
 #tournament_brackets_tab_pane .profile_info_box .tournament-chatroom-button svg {
   margin-right: 6px;
 }
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match {
+  width: 100%;
+  padding-left: 30px;
+  position: relative;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match_number {
+  font-size: 10px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  color: #A4A9BC;
+  position: absolute;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team {
+  width: 160px;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  padding: 8px;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team img {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team p {
+  font-size: 12px;
+  color: #000000;
+  margin: 0;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team .team-point {
+  background-color: #FFFFFF;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: auto;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team.winners {
+  background-color: #764AF3;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team.winners p {
+  color: #FFFFFF;
+}
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li {
   margin-right: 38px;
 }
