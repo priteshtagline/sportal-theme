@@ -442,8 +442,8 @@
       <ul class="features-list nav nav-tabs">
 
         <li class="features-item dashboard nav-item main-features-list">
-          <a href="#" class="nav-link active" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
-            type="button" role="tab" aria-controls="dashboard" aria-selected="true">
+          <a href="#" class="nav-link" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
+            type="button" role="tab" aria-controls="dashboard" aria-selected="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <path id="_icon__home_house_" data-name="🦆 icon _home house_"
                 d="M8.784.45a.549.549,0,0,1,.33.11l7.438,5.578a1.422,1.422,0,0,1,.566,1.132V15.7A1.416,1.416,0,0,1,15.7,17.118h-3.83A1.416,1.416,0,0,1,10.458,15.7V10.446H7.11V15.7A1.416,1.416,0,0,1,5.7,17.118H1.865A1.416,1.416,0,0,1,.45,15.7V7.27a1.422,1.422,0,0,1,.566-1.132L8.454.56A.549.549,0,0,1,8.784.45ZM15.7,16.018a.315.315,0,0,0,.315-.315V7.27a.316.316,0,0,0-.126-.252L8.784,1.688,1.676,7.018a.316.316,0,0,0-.126.252V15.7a.315.315,0,0,0,.315.315H5.7A.315.315,0,0,0,6.01,15.7V9.9a.55.55,0,0,1,.55-.55h4.448a.55.55,0,0,1,.55.55V15.7a.315.315,0,0,0,.315.315Z"
@@ -454,8 +454,8 @@
           </a>
         </li>
         <li class="features-item schedule nav-item">
-          <a href="#" class="nav-link" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
-            role="tab" aria-controls="schedule" aria-selected="false">
+          <a href="#" class="nav-link active" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
+            role="tab" aria-controls="schedule" aria-selected="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="18.397" viewBox="0 0 16.668 18.397">
               <g id="_icon__calendar_appointment_date_" data-name="🦆 icon _calendar appointment date_"
                 transform="translate(0.55 0.55)">
@@ -631,7 +631,7 @@
 
   <div class="main-content" id="main-content">
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+      <div class="tab-pane fade" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
         <!-- Dashboard Start-->
         <div class="dashboard_theme">
           <div class="row dashboard_head">
@@ -981,10 +981,32 @@
         </div>
         <!-- Dashboard End-->
       </div>
-      <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+      <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
         <!-- Schedule Start -->
         <div class="card">
           <div class="card-body">
+            <div class="tournament-filter-popup filter-popup-schedule">
+              <p class="head-filter">Filter(s)</p>
+              <div class="sport-tournament">
+                <p>Sport</p>
+                <span><input type="checkbox" id="football_tournament"><label
+                    for="football_tournament">Football</label></span>
+                <span><input type="checkbox" id="tennis_tournament"><label
+                    for="tennis_tournament">Tennis</label></span>
+                <span><input type="checkbox" id="badminton_tournament"><label
+                    for="badminton_tournament">Badminton</label></span>
+                <span><input type="checkbox" id="table_tennis_tournament"><label for="">Table Tennis</label></span>
+              </div>
+              <div class="sport-tournament">
+                <p>Status</p>
+                <span><input type="checkbox" id="active_tournament"><label for="">Active</label></span>
+                <span><input type="checkbox" id="active_tournament"><label for="">Completed</label></span>
+                <span><input type="checkbox" id="active_tournament"><label for="">Cancelled</label></span>
+              </div>
+              <div class="button-tournament-filter">
+                <button class="btn btn-primary tournament-apply-filter">Apply Filter</button>
+              </div>
+            </div>
             <div id='calendar'>
             </div>
             <div class="table-responsive" id="list_view_table">
