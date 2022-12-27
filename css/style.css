@@ -5041,6 +5041,57 @@ header.active .side-nav-btn img {
 #tournament_brackets_tab_pane .profile_info_box .tournament-chatroom-button svg {
   margin-right: 6px;
 }
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row {
+  overflow-x: auto;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::after {
+  position: absolute;
+  content: "";
+  right: 15%;
+  top: 50%;
+  height: 50%;
+  width: 20px;
+  border: 1px solid #707070;
+  border-left: 0;
+  transform: translateY(-50%);
+}
+@media (max-width: 1550px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::after {
+    right: 0%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::after {
+    right: -11%;
+  }
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::before {
+  position: absolute;
+  content: "";
+  right: calc(15% - 10px);
+  top: 50%;
+  height: 0.5px;
+  width: 10px;
+  background-color: #707070;
+  transform: translateY(-50%);
+}
+@media (max-width: 1550px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::before {
+    right: -10px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .row .connect-match::before {
+    right: calc(-11% - 10px);
+  }
+}
 #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match {
   width: 100%;
   padding-left: 30px;
@@ -5055,21 +5106,36 @@ header.active .side-nav-btn img {
   position: absolute;
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team {
-  width: 160px;
+  width: 180px;
   background-color: #EEEEEE;
   border-radius: 4px;
   padding: 8px;
 }
-#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team img {
+@media (max-width: 1400px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team {
+    width: 160px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1100px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team {
+    width: 150px;
+  }
+}
+#tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team .team-logo {
+  background-color: #764AF3;
   height: 26px;
   width: 26px;
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 50%;
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team p {
   font-size: 12px;
   color: #000000;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 80px;
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .tab-content .match .match-team .team-point {
   background-color: #FFFFFF;
@@ -5091,6 +5157,11 @@ header.active .side-nav-btn img {
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li {
   margin-right: 38px;
 }
+@media (max-width: 991px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li {
+    margin-right: 20px;
+  }
+}
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li:last-child {
   margin-right: 0;
 }
@@ -5104,6 +5175,11 @@ header.active .side-nav-btn img {
   text-align: left;
   width: 178px;
   justify-content: space-between;
+}
+@media (max-width: 991px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab {
+    width: 140px;
+  }
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab a {
   transition: all 0.3s ease-in-out;
@@ -5125,6 +5201,11 @@ header.active .side-nav-btn img {
   transition: all 0.3s ease-in-out;
   font-size: 14px;
   margin: 5px 0 0 0;
+}
+@media (max-width: 991px) {
+  #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab .tournament_button_content p {
+    margin: 0;
+  }
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab:hover, #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab.active {
   transition: all 0.3s ease-in-out;
