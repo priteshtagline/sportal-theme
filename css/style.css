@@ -3274,6 +3274,9 @@ header.active .side-nav-btn img {
   min-height: 620px;
 }
 
+#calendar .fc-header-toolbar {
+  position: relative;
+}
 #calendar .fc-header-toolbar .fc-toolbar-chunk {
   display: flex;
   flex-wrap: wrap;
@@ -3301,6 +3304,10 @@ header.active .side-nav-btn img {
   align-items: center;
   justify-content: center;
 }
+#calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.active {
+  background-color: #764af3;
+  color: #ffffff;
+}
 #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button:hover {
   background-color: #764af3;
   color: #ffffff;
@@ -3315,6 +3322,7 @@ header.active .side-nav-btn img {
   border-bottom-left-radius: 50% !important;
 }
 #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.fc-filterButton-button {
+  position: relative;
   margin-left: 5px;
 }
 #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
@@ -3483,6 +3491,7 @@ header.active .side-nav-btn img {
   border-radius: 0;
 }
 #calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
+  cursor: pointer;
   padding: 0;
 }
 #calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .fc-event-time {
@@ -3571,6 +3580,7 @@ header.active .side-nav-btn img {
   color: #707070;
 }
 .schedule_event_wrap .event-btns {
+  display: none;
   margin-top: 9px;
   padding: 6px;
 }
@@ -4889,6 +4899,9 @@ header.active .side-nav-btn img {
 .tournament_modal .modal .modal-dialog .modal-content .modal-body .form-group {
   margin-bottom: 10px;
 }
+.tournament_modal .modal .modal-dialog .modal-content .modal-body .form-group #schedule_reservation_1 {
+  background-color: red;
+}
 .tournament_modal .modal .modal-dialog .modal-content .modal-body .form-group .btn {
   font-size: 12px;
   background-color: #A98FF1;
@@ -5080,4 +5093,68 @@ header.active .side-nav-btn img {
 }
 #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab:hover a path, #tournament_brackets_tab_pane .tournament_brackets_subtab .nav-pills li .tournament_subtab_tab.active a path {
   fill: #a98ff1;
+}
+
+#schedule {
+  position: relative;
+}
+#schedule .tournament-filter-popup {
+  text-align: left;
+  transition: all 2.5s ease-in;
+  position: absolute;
+  top: 37px;
+  left: 0%;
+  width: 180px;
+  z-index: 2;
+  display: none;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0588235294);
+  padding: 8px 0px;
+}
+#schedule .tournament-filter-popup .button-tournament-filter {
+  padding: 0px 9px;
+}
+#schedule .tournament-filter-popup .button-tournament-filter .tournament-apply-filter {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 7px !important;
+  font-family: "Outfit Medium";
+  background-color: #764af3 !important;
+  color: #FFFFFF !important;
+  padding: 12px 0 !important;
+}
+#schedule .tournament-filter-popup .head-filter {
+  padding-left: 9px;
+  color: #000000;
+  font-size: 12px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #E4E4E4;
+}
+#schedule .tournament-filter-popup .sport-tournament {
+  padding: 0px 9px;
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 8px;
+}
+#schedule .tournament-filter-popup .sport-tournament p {
+  font-size: 10px;
+  font-family: "Outfit SemiBold";
+  margin-bottom: 8px;
+}
+#schedule .tournament-filter-popup .sport-tournament span {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #a4a9bc;
+  display: flex;
+}
+#schedule .tournament-filter-popup .sport-tournament span label {
+  margin: 0;
+}
+#schedule .tournament-filter-popup .sport-tournament span input {
+  accent-color: #764af3;
+  margin-right: 5px;
+}
+#schedule .tournament-filter-popup.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

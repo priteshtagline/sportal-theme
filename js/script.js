@@ -267,7 +267,7 @@ $(document).ready(function () {
     }
   );
   $(function () {
-    $('.navbar-toggler').removeAttr(style);
+    // $('.navbar-toggler').removeAttr(style);
   });
 
   // Notification_pagination
@@ -357,7 +357,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     customButtons: {
       filterButton: {
-        html: '<svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403"><path id="filter" d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z" transform="translate(-1.687 -1.125)" fill="currentcolor" /></svg>;'
+        html: '<svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403"><path id="filter" d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z" transform="translate(-1.687 -1.125)" fill="currentcolor" /></svg>; ',
+          click: function() {
+            $(".fc-filterButton-button").toggleClass("active");
+            $(".filter-popup-schedule").toggleClass("active");
+            $(".fc-header-toolbar .fc-filterButton-button").append( $( ".filter-popup-schedule" ) );
+          },
       },
       menuButton: {
         html: '<span class="material-symbols-outlined">list</span>;'
@@ -456,7 +461,16 @@ document.addEventListener('DOMContentLoaded', function () {
         element.find(".fc-title").append("<p>hello</p>" + event.additionalInfo);
       }
     },
-    // eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
+    eventClick: function(info) {
+      console.log();
+      $('.schedule_event').click(function(){
+        $(this).next('.event-btns').toggle();
+        var background_color = $(this).closest('.fc-timegrid-event').css('background-color');
+        console.log(background_color);
+        $(this).next('.event-btns').css('background', background_color);
+      });
+    },
+    //  eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
   });
   calendar.render();
 });
@@ -471,3 +485,4 @@ $(".tournament-filter").click(function () {
 $(".tournament-filter").click(function () {
   $(".tournament-filter").toggleClass("active");
 });
+

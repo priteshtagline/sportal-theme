@@ -3915,6 +3915,7 @@ header {
 // Calender
 #calendar {
   .fc-header-toolbar {
+    position: relative;
     .fc-toolbar-chunk {
       display: flex;
       flex-wrap: wrap;
@@ -3944,6 +3945,11 @@ header {
           align-items: center;
           justify-content: center;
 
+          &.active{
+            background-color: #764af3;
+            color: #ffffff;
+          }
+
           &:hover {
             background-color: $theme-primary-color;
             color: $white;
@@ -3961,6 +3967,7 @@ header {
           }
 
           &.fc-filterButton-button {
+            position: relative;
             margin-left: 5px;
 
           }
@@ -4200,6 +4207,7 @@ header {
                         border-radius: 0;
 
                         .fc-event-main {
+                          cursor: pointer;
                           padding: 0;
 
                           .fc-event-time {
@@ -4353,6 +4361,7 @@ header {
   }
 
   .event-btns {
+    display: none;
     margin-top: 9px;
     padding: 6px;
 
@@ -6037,6 +6046,10 @@ header {
 
           .form-group {
             margin-bottom: 10px;
+            
+            #schedule_reservation_1{
+              background-color: red;
+            }
 
             .btn {
               font-size: 12px;
@@ -6271,6 +6284,80 @@ header {
           }  
         }
       }
+    }
+  }
+}
+
+#schedule{
+  position: relative;
+  .tournament-filter-popup {
+    text-align: left;
+    transition: all 2.5s ease-in;
+    position: absolute;
+    top: 37px;
+    left: 0%;
+    width: 180px;
+    z-index: 2;
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px #0000000F;
+    padding: 8px 0px;
+
+
+    .button-tournament-filter {
+      padding: 0px 9px;
+
+      .tournament-apply-filter {
+        width: 100%;
+        font-size: 14px ;
+        border-radius: 7px !important;
+        font-family: 'Outfit Medium';
+        background-color: #764af3 !important;
+        color: #FFFFFF !important;
+        padding: 12px 0 !important;
+      }
+    }
+
+    .head-filter {
+      padding-left: 9px;
+      color: #000000;
+      font-size: 12px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #E4E4E4;
+    }
+
+    .sport-tournament {
+      padding: 0px 9px;
+      border-bottom: 1px solid #E4E4E4;
+      margin-bottom: 8px;
+
+      p {
+        font-size: 10px;
+        font-family: 'Outfit SemiBold';
+        margin-bottom: 8px;
+      }
+
+      span {
+        font-weight: 400;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: $gray-color;
+        display: flex;
+
+        label {
+          margin: 0;
+        }
+
+        input {
+          accent-color: $theme-primary-color;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
     }
   }
 }
