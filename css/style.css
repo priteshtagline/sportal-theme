@@ -1157,12 +1157,14 @@ input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   border: none;
-  min-height: 550px;
+  min-height: 600px;
   height: calc(100vh - 200px);
 }
 
@@ -1172,6 +1174,10 @@ input[type="checkbox"] {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   margin-bottom: 15px;
+}
+
+.sidebar .features-list .features-item.tournaments {
+  margin-bottom: 50px;
 }
 
 .sidebar .features-list .features-item a {
@@ -4129,8 +4135,6 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4140,6 +4144,17 @@ header.active .side-nav-btn img {
   min-width: 200px;
   font-size: 20px;
   font-family: 'Outfit Semibold';
+}
+
+@media (max-width: 1024px) {
+  #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
+    width: 150px;
+    font-size: 16px;
+    min-width: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button {
@@ -4200,6 +4215,12 @@ header.active .side-nav-btn img {
   border-radius: 24px;
   -webkit-box-shadow: inset 0px 0px 2px #00000029;
           box-shadow: inset 0px 0px 2px #00000029;
+}
+
+@media (max-width: 1400px) {
+  #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+    margin-left: auto;
+  }
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group {
@@ -4326,6 +4347,7 @@ header.active .side-nav-btn img {
 
 #calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
   font-size: 10px;
+  color: #000000;
 }
 
 #calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events {
@@ -4493,9 +4515,23 @@ header.active .side-nav-btn img {
   background-color: rgba(118, 74, 243, 0.1);
 }
 
+#calendar .fc-view-harness .fc-list-table .fc-list-day .fc-list-day-cushion .fc-list-day-text {
+  color: black;
+}
+
+#calendar .fc-view-harness .fc-list-table .fc-list-event td {
+  font-size: 14px;
+}
+
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
-  min-width: 200px;
+  min-width: 300px;
   vertical-align: middle;
+}
+
+@media (max-width: 1440px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
+    min-width: 200px;
+  }
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-graphic {
@@ -4514,6 +4550,7 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 145px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -4553,6 +4590,24 @@ header.active .side-nav-btn img {
   color: #000000;
 }
 
+#calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
+  min-width: 400px;
+}
+
+@media (max-width: 1440px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
+    min-width: 250px;
+    width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+#calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .time {
+  display: none;
+}
+
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .schedule_profile {
   margin-top: 0;
 }
@@ -4561,6 +4616,13 @@ header.active .side-nav-btn img {
   margin-left: 100px;
   margin-top: 0;
   display: block;
+  min-width: 145px;
+}
+
+@media (max-width: 1440px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
+    margin-left: 20px;
+  }
 }
 
 #calendar .schedule_event_wrap .schedule_event {
@@ -4581,6 +4643,9 @@ header.active .side-nav-btn img {
 #calendar .schedule_event_wrap .schedule_event .time {
   font-size: 10px;
   color: #707070;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #calendar .schedule_event_wrap .schedule_event .court_title {
@@ -4613,6 +4678,9 @@ header.active .side-nav-btn img {
   margin-left: 6px;
   font-size: 10px;
   color: #707070;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #calendar .schedule_event_wrap .event-btns {
@@ -4646,6 +4714,10 @@ header.active .side-nav-btn img {
 #calendar .schedule_event_wrap .event-btns .btn.btn-cancel {
   margin-left: 11px;
   background-color: #ff6f6f;
+}
+
+#calendar .schedule_event_wrap .event-btns .btn.btn-view {
+  background-color: #764af3;
 }
 
 .dashboard_theme .dashboard_head .dashboard_head_row {
@@ -6007,6 +6079,8 @@ header.active .side-nav-btn img {
 
 .tournament_module .title_block h6 {
   margin-bottom: 0;
+  font-size: 16px;
+  font-family: 'Outfit SemiBold';
 }
 
 .tournament_module .title_block .tournament-filter-popup {
@@ -6852,5 +6926,13 @@ header.active .side-nav-btn img {
 
 #schedule .tournament-filter-popup.active {
   display: block;
+}
+
+.fc .fc-list-event:hover td {
+  background-color: inherit;
+}
+
+.fc-list-day-text {
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

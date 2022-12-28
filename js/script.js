@@ -369,28 +369,31 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       addButton: {
         html: '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
-      }
+      },
     },
     buttonText: {
       month: 'Monthly',
       week: 'Weekly',
       day: 'Daily',
-      list: 'List'
+      listDay: 'List',
     },
     headerToolbar: {
       left: 'title prev,next filterButton',
       center: 'timeGridDay,timeGridWeek,dayGridMonth',
-      right: 'menuButton addButton listMonth',
+      right: 'menuButton addButton listDay',
     },
     initialView: 'timeGridWeek',
-    editable: true,
+    editable: false,
     weekNumbers: false,
+    dayMaxEvents: true,
     firstDay: Monday = 1,
     showNonCurrentDates: false,
     contentHeight: 'auto',
     allDaySlot: false,
     slotLabelInterval: "01:00",
     fixedWeekCount: false,
+    navLinks: true,
+    dayHeaderFormat: { weekday: 'long' },
     views: {
       dayGridMonth: {
         titleFormat: { month: 'long' }
@@ -398,97 +401,83 @@ document.addEventListener('DOMContentLoaded', function () {
       dayGridWeek: {
         titleFormat: '{DD.{MM.}}YYYY'
       },
-      // Updated
-      listMonth: { buttonText: 'list month' },
-      //
     },
-    initialDate: "2022-09-01",
+    initialDate: "2022-08-29",
     eventContent: function (arg) {
       return { html: arg.event.title };
     },
+
     events: [
       {
-        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span></div></div>',
         start: '2022-08-29T00:00:00',
         end: '2022-08-29T01:00:00',
         color: "#DDECFF",
       },
       {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Badminton Court # 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-08-30T01:00:00',
         end: '2022-08-30T02:00:00',
         color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-02T04:00:00',
-        end: '2022-09-02T05:00:00',
+        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 4</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-01T02:00:00',
+        end: '2022-09-01T03:00:00',
         color: "#DDFFF5",
       },
       {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-08-31T03:00:00',
-        end: '2022-08-31T4:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-08-30T08:00:00',
-        end: '2022-08-30T09:00:00',
-        color: "#DDECFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-08-30T06:00:00',
-        end: '2022-08-30T07:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-08-31T06:00:00',
-        end: '2022-08-31T07:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-01T05:00:00',
-        end: '2022-09-01T6:00:00',
-        color: "#DDECFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-08-29T00:00:00',
-        end: '2022-08-29T01:00:00',
-        color: "#DDFFF5",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-01T05:00:00',
-        end: '2022-09-01T6:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-01T7:00:00',
-        end: '2022-09-01T8:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-01T09:00:00',
-        end: '2022-09-01T10:00:00',
-        color: "#F1DDFF",
-      },
-      {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-02T04:00:00',
         end: '2022-09-02T05:00:00',
         color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
-        start: '2022-09-03T02:00:00',
-        end: '2022-09-03T03:00:00',
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Courtyard # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-03T05:00:00',
+        end: '2022-09-03T06:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-04T06:00:00',
+        end: '2022-09-04T07:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Badminton Court # 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-29T02:00:00',
+        end: '2022-08-29T03:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 4</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-29T04:00:00',
+        end: '2022-08-29T05:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-01T06:00:00',
+        end: '2022-09-01T07:00:00',
+        color: "#DDFFF5",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Badminton Court # 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-02T08:00:00',
+        end: '2022-09-02T09:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Badminton Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-01T03:00:00',
+        end: '2022-09-01T04:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 4</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-01T00:00:00',
+        end: '2022-09-01T01:00:00',
         color: "#F1DDFF",
       },
     ],
@@ -497,11 +486,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var background_color = $(info.el).css('background-color');
       $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").css('background', background_color);
     },
-    //  eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
   });
   calendar.render();
 });
-
 
 
 // Tournament filter
@@ -512,4 +499,3 @@ $(".tournament-filter").click(function () {
 $(".tournament-filter").click(function () {
   $(".tournament-filter").toggleClass("active");
 });
-
