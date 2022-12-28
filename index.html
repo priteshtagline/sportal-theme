@@ -442,8 +442,8 @@
       <ul class="features-list nav nav-tabs">
 
         <li class="features-item dashboard nav-item main-features-list">
-          <a href="#" class="nav-link" id="dashboard-tab" data-toggle="tab" data-target="#dashboard"
-            type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+          <a href="#" class="nav-link" id="dashboard-tab" data-toggle="tab" data-target="#dashboard" type="button"
+            role="tab" aria-controls="dashboard" aria-selected="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <path id="_icon__home_house_" data-name="🦆 icon _home house_"
                 d="M8.784.45a.549.549,0,0,1,.33.11l7.438,5.578a1.422,1.422,0,0,1,.566,1.132V15.7A1.416,1.416,0,0,1,15.7,17.118h-3.83A1.416,1.416,0,0,1,10.458,15.7V10.446H7.11V15.7A1.416,1.416,0,0,1,5.7,17.118H1.865A1.416,1.416,0,0,1,.45,15.7V7.27a1.422,1.422,0,0,1,.566-1.132L8.454.56A.549.549,0,0,1,8.784.45ZM15.7,16.018a.315.315,0,0,0,.315-.315V7.27a.316.316,0,0,0-.126-.252L8.784,1.688,1.676,7.018a.316.316,0,0,0-.126.252V15.7a.315.315,0,0,0,.315.315H5.7A.315.315,0,0,0,6.01,15.7V9.9a.55.55,0,0,1,.55-.55h4.448a.55.55,0,0,1,.55.55V15.7a.315.315,0,0,0,.315.315Z"
@@ -991,20 +991,22 @@
                 <p>Sport</p>
                 <span><input type="checkbox" id="football_tournament"><label
                     for="football_tournament">Football</label></span>
-                <span><input type="checkbox" id="tennis_tournament"><label
-                    for="tennis_tournament">Tennis</label></span>
+                <span><input type="checkbox" id="tennis_tournament"><label for="tennis_tournament">Tennis</label></span>
                 <span><input type="checkbox" id="badminton_tournament"><label
                     for="badminton_tournament">Badminton</label></span>
-                <span><input type="checkbox" id="table_tennis_tournament"><label for="">Table Tennis</label></span>
+                <span><input type="checkbox" id="table_tennis_tournament"><label for="table_tennis_tournament">Table
+                    Tennis</label></span>
               </div>
               <div class="sport-tournament">
-                <p>Status</p>
-                <span><input type="checkbox" id="active_tournament"><label for="">Active</label></span>
-                <span><input type="checkbox" id="active_tournament"><label for="">Completed</label></span>
-                <span><input type="checkbox" id="active_tournament"><label for="">Cancelled</label></span>
+                <p>Surfaces</p>
+                <span><input type="checkbox" id="Indoor_tournament"><label for="Indoor_tournament">Indoor</label></span>
+                <span><input type="checkbox" id="synthetic_grass_tournament"><label
+                    for="synthetic_grass_tournament">Synthetic Grass</label></span>
+                <span><input type="checkbox" id="natural_grass_tournament"><label for="natural_grass_tournament">Natural
+                    Grass</label></span>
               </div>
               <div class="button-tournament-filter">
-                <button class="btn btn-primary tournament-apply-filter">Apply Filter</button>
+                <input type="submit" class="btn btn-primary tournament-apply-filter" value="Apply Filter">
               </div>
             </div>
             <div id='calendar'>
@@ -3364,1220 +3366,1203 @@
           <!-- Tournament_Brackets -->
           <div class="tab-pane fade" id="tournament_brackets_tab_pane" role="tabpanel"
             aria-labelledby="tournament_brackets_tab_pane_label" tabindex="0">
-              <div class="d-flex profile_info_box">
-                <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
-                <button class="btn btn-primary tournament-chatroom-button">
-                  <svg id="Component_60_1" data-name="Component 60 – 1" xmlns="http://www.w3.org/2000/svg" width="11.211" height="10.462" viewBox="0 0 11.211 10.462">
-                    <path id="Path_80" data-name="Path 80" d="M5.605,12.06c3.1,0,5.605-2.2,5.605-4.9S8.7,2.25,5.605,2.25,0,4.446,0,7.155a4.551,4.551,0,0,0,1.381,3.223,7.49,7.49,0,0,1-.54,2.078.182.182,0,0,0,.191.254,10.235,10.235,0,0,0,2.929-.864,6.348,6.348,0,0,0,1.645.214Z" transform="translate(0 -2.25)" fill="#fff"/>
-                  </svg>
-                  ChatRoom</button>
-              </div>
-                <!-- Tournament-Brackets-Subtab -->
-                <div class="tournament_brackets_subtab">
-                  <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active d-flex tournament_subtab_tab" id="pills-pre-quarter-tab" data-toggle="pill" data-target="#pre-quarter-tab" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                        <div class="tournament_button_content">
-                          <span>Pre-Quarter</span>
-                          <p>Sept 28, 2022</p>
-                        </div>
-                        <a href="#" class="edit_tournament_time" data-toggle="modal" data-target="#edit_brackets_tab">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
-                          <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
-                          </svg>
-                        </a>
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link tournament_subtab_tab d-flex" id="pills-quarter-final-tab" data-toggle="pill" data-target="#quarter-final-tab" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                        <div class="tournament_button_content">
-                          <span>Pre-Quarter</span>
-                          <p>Sept 29, 2022</p>
-                        </div>
-                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
-                          <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
-                          </svg>
-                        </a>
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link tournament_subtab_tab d-flex" id="pills-semi-final-tab" data-toggle="pill" data-target="#semi-final-tab" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-                        <div class="tournament_button_content">
-                          <span>Pre-Quarter</span>
-                          <p>Oct 01, 2022</p>
-                        </div>
-                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
-                          <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
-                          </svg>
-                        </a>
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link tournament_subtab_tab d-flex" id="pills-final-tab" data-toggle="pill" data-target="#final-tab" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-                        <div class="tournament_button_content">
-                          <span>Pre-Quarter</span>
-                          <p>Oct 01, 2022</p>
-                        </div>
-                        <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
-                          <path id="edit" d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z" fill="#764af3"/>
-                          </svg>
-                        </a>
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pre-quarter-tab" role="tabpanel" aria-labelledby="pills-pre-quarter-tab">
-                      <div class="row flex-nowrap">
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="first-match-row">
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 1</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Team Wolves</p>
-                                  <span class="team-point">1</span>
-                                </div>
+            <div class="d-flex profile_info_box">
+              <h6>Mountain Dew Dream Fest Futsal Championship 22</h6>
+              <button class="btn btn-primary tournament-chatroom-button">
+                <svg id="Component_60_1" data-name="Component 60 – 1" xmlns="http://www.w3.org/2000/svg" width="11.211"
+                  height="10.462" viewBox="0 0 11.211 10.462">
+                  <path id="Path_80" data-name="Path 80"
+                    d="M5.605,12.06c3.1,0,5.605-2.2,5.605-4.9S8.7,2.25,5.605,2.25,0,4.446,0,7.155a4.551,4.551,0,0,0,1.381,3.223,7.49,7.49,0,0,1-.54,2.078.182.182,0,0,0,.191.254,10.235,10.235,0,0,0,2.929-.864,6.348,6.348,0,0,0,1.645.214Z"
+                    transform="translate(0 -2.25)" fill="#fff" />
+                </svg>
+                ChatRoom</button>
+            </div>
+
+            <!-- Tournament-Brackets-Subtab -->
+            <div class="tournament_brackets_subtab">
+              <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active d-flex tournament_subtab_tab" id="pills-pre-quarter-tab"
+                    data-toggle="pill" data-target="#pre-quarter-tab" type="button" role="tab"
+                    aria-controls="pills-home" aria-selected="true">
+                    <div class="tournament_button_content">
+                      <span>Pre-Quarter</span>
+                      <p>Sept 28, 2022</p>
+                    </div>
+                    <a href="#" class="edit_tournament_time" data-toggle="modal" data-target="#edit_brackets_tab">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
+                        <path id="edit"
+                          d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
+                          fill="#764af3" />
+                      </svg>
+                    </a>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link tournament_subtab_tab d-flex" id="pills-quarter-final-tab" data-toggle="pill"
+                    data-target="#quarter-final-tab" type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="false">
+                    <div class="tournament_button_content">
+                      <span>Pre-Quarter</span>
+                      <p>Sept 29, 2022</p>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
+                        <path id="edit"
+                          d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
+                          fill="#764af3" />
+                      </svg>
+                    </a>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link tournament_subtab_tab d-flex" id="pills-semi-final-tab" data-toggle="pill"
+                    data-target="#semi-final-tab" type="button" role="tab" aria-controls="pills-contact"
+                    aria-selected="false">
+                    <div class="tournament_button_content">
+                      <span>Pre-Quarter</span>
+                      <p>Oct 01, 2022</p>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
+                        <path id="edit"
+                          d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
+                          fill="#764af3" />
+                      </svg>
+                    </a>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link tournament_subtab_tab d-flex" id="pills-final-tab" data-toggle="pill"
+                    data-target="#final-tab" type="button" role="tab" aria-controls="pills-contact"
+                    aria-selected="false">
+                    <div class="tournament_button_content">
+                      <span>Pre-Quarter</span>
+                      <p>Oct 01, 2022</p>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
+                        <path id="edit"
+                          d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
+                          fill="#764af3" />
+                      </svg>
+                    </a>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pre-quarter-tab" role="tabpanel"
+                  aria-labelledby="pills-pre-quarter-tab">
+                  <div class="row flex-nowrap">
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="first-match-row">
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 1</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 2</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ney5</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 3</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">5</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Sporty FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 4</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Real Brasilia</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                              </div>
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 5</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Golesti FC</p>
-                                  <span class="team-point">0</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">3</span>
-                                </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 2</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 6</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>NationalGolesti</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
+                              <p>Ney5</p>
+                              <span class="team-point">2</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 7</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Lion FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">1</span>
-                                </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 8</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Tiger FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">6</span>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 9</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 3</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match">
-                                <span class="match_number">Match 10</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">5</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 11</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match">
-                                <span class="match_number">Match 12</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                              <p>Sporty FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 4</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                            </div>     
-                          </div>                  
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="third-match-row h-100">
-                            <div class="connect-match d-flex align-items-center flex-wrap h-100">
-                              <div class="match">
-                                <span class="match_number">Match 13</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M7</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M8</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                              <p>Real Brasilia</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match">
-                                <span class="match_number">Match 14</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M9</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M10</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>                    
+                              <p>3 Star FC</p>
+                              <span class="team-point">4</span>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
-                            <div class="match">
-                              <span class="match_number">Match 15</span>
-                              <div class="match-team d-flex align-items-center mb-2">
-                                <div class="team-logo"></div>
-                                <p>Winner M11</p>
-                                <span class="team-point">-</span>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 5</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match-team d-flex align-items-center">
-                                <div class="team-logo"></div>
-                                <p>Winner M12</p>
-                                <span class="team-point">-</span>
+                              <p>Golesti FC</p>
+                              <span class="team-point">0</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                            </div>     
-                          </div>        
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 6</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">4</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>NationalGolesti</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 7</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Lion FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 8</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Tiger FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="quarter-final-tab" role="tabpanel" aria-labelledby="pills-quarter-final-tab">
-                      <div class="row flex-nowrap">
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="first-match-row">
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 1</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Team Wolves</p>
-                                  <span class="team-point">1</span>
-                                </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 9</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 2</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ney5</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 3</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">5</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Sporty FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 4</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Real Brasilia</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 5</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Golesti FC</p>
-                                  <span class="team-point">0</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">3</span>
-                                </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 10</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 6</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>NationalGolesti</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 7</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Lion FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">1</span>
-                                </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 8</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Tiger FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">-</span>
                             </div>
                           </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 9</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 11</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match">
-                                <span class="match_number">Match 10</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 11</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">-</span>
-                                </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match">
-                                <span class="match_number">Match 12</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                            </div>     
-                          </div>                  
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="third-match-row h-100">
-                            <div class="connect-match d-flex align-items-center flex-wrap h-100">
-                              <div class="match">
-                                <span class="match_number">Match 13</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M7</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M8</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 14</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M9</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M10</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>                    
+                              <p>RajaAthletic</p>
+                              <span class="team-point">-</span>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
-                            <div class="match">
-                              <span class="match_number">Match 15</span>
-                              <div class="match-team d-flex align-items-center mb-2">
-                                <div class="team-logo"></div>
-                                <p>Winner M11</p>
-                                <span class="team-point">-</span>
+                          <div class="match">
+                            <span class="match_number">Match 12</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                              <div class="match-team d-flex align-items-center">
-                                <div class="team-logo"></div>
-                                <p>Winner M12</p>
-                                <span class="team-point">-</span>
+                              <p>King FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
                               </div>
-                            </div>     
-                          </div>        
+                              <p>Joy Wolves</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="semi-final-tab" role="tabpanel" aria-labelledby="pills-semi-final-tab">
-                      <div class="row flex-nowrap">
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="first-match-row">
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 1</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Team Wolves</p>
-                                  <span class="team-point">1</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 2</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ney5</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="third-match-row h-100">
+                        <div class="connect-match d-flex align-items-center flex-wrap h-100">
+                          <div class="match">
+                            <span class="match_number">Match 13</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M7</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 3</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">5</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Sporty FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 4</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Real Brasilia</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 5</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Golesti FC</p>
-                                  <span class="team-point">0</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 6</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>NationalGolesti</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 7</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Lion FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">1</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 8</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Tiger FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M8</p>
+                              <span class="team-point">-</span>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 9</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 10</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
+                          <div class="match">
+                            <span class="match_number">Match 14</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M9</p>
+                              <span class="team-point">-</span>
                             </div>
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 11</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 12</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                            </div>     
-                          </div>                  
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="third-match-row h-100">
-                            <div class="connect-match d-flex align-items-center flex-wrap h-100">
-                              <div class="match">
-                                <span class="match_number">Match 13</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M7</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M8</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 14</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M9</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M10</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>                    
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M10</p>
+                              <span class="team-point">-</span>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
-                            <div class="match">
-                              <span class="match_number">Match 15</span>
-                              <div class="match-team d-flex align-items-center mb-2">
-                                <div class="team-logo"></div>
-                                <p>Winner M11</p>
-                                <span class="team-point">-</span>
-                              </div>
-                              <div class="match-team d-flex align-items-center">
-                                <div class="team-logo"></div>
-                                <p>Winner M12</p>
-                                <span class="team-point">-</span>
-                              </div>
-                            </div>     
-                          </div>        
                         </div>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="final-tab" role="tabpanel" aria-labelledby="pills-final-tab">
-                      <div class="row flex-nowrap">
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="first-match-row">
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 1</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Team Wolves</p>
-                                  <span class="team-point">1</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 2</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ney5</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 3</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">5</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Sporty FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 4</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Real Brasilia</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 5</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Golesti FC</p>
-                                  <span class="team-point">0</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 6</span>
-                                <div class="match-team winners d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">4</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>NationalGolesti</p>
-                                  <span class="team-point">3</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match my-4">
-                                <span class="match_number">Match 7</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Lion FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">1</span>
-                                </div>
-                              </div>
-                              <div class="match my-4">
-                                <span class="match_number">Match 8</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Tiger FC</p>
-                                  <span class="team-point">2</span>
-                                </div>
-                                <div class="match-team winners d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">6</span>
-                                </div>
-                              </div>
-                            </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
+                        <div class="match">
+                          <span class="match_number">Match 15</span>
+                          <div class="match-team d-flex align-items-center mb-2">
+                            <div class="team-logo"></div>
+                            <p>Winner M11</p>
+                            <span class="team-point">-</span>
+                          </div>
+                          <div class="match-team d-flex align-items-center">
+                            <div class="team-logo"></div>
+                            <p>Winner M12</p>
+                            <span class="team-point">-</span>
                           </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 9</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Ultra FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>FC Kopeki</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 10</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al Waleed FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>3 Star FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="connect-match">
-                              <div class="match">
-                                <span class="match_number">Match 11</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Al-Jabli FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>RajaAthletic</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 12</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>King FC</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo">
-                                    <img src="images/team.png" alt="">
-                                  </div>
-                                  <p>Joy Wolves</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                            </div>     
-                          </div>                  
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="third-match-row h-100">
-                            <div class="connect-match d-flex align-items-center flex-wrap h-100">
-                              <div class="match">
-                                <span class="match_number">Match 13</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M7</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M8</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>
-                              <div class="match">
-                                <span class="match_number">Match 14</span>
-                                <div class="match-team d-flex align-items-center mb-2">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M9</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                                <div class="match-team d-flex align-items-center">
-                                  <div class="team-logo"></div>
-                                  <p>Winner M10</p>
-                                  <span class="team-point">-</span>
-                                </div>
-                              </div>                    
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-5">
-                          <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
-                            <div class="match">
-                              <span class="match_number">Match 15</span>
-                              <div class="match-team d-flex align-items-center mb-2">
-                                <div class="team-logo"></div>
-                                <p>Winner M11</p>
-                                <span class="team-point">-</span>
-                              </div>
-                              <div class="match-team d-flex align-items-center">
-                                <div class="team-logo"></div>
-                                <p>Winner M12</p>
-                                <span class="team-point">-</span>
-                              </div>
-                            </div>     
-                          </div>        
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>   
-                
-                <!-- Tournament-Edit-Schedule -->
-                <div class="tournament_modal">
-                  <div class="modal fade" id="edit_brackets_tab" tabindex="-1" aria-labelledby="create_team_modal_Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <form action="">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">Edit Schedule</h5>
-                          </div>
-                          <div class="modal-body">
-                            <div class="form-group">
-                              <label for="Tournament_Stage" class="m-top-15">Tournament Stage</label> </br>
-                              <select class="w-100 select form-control" aria-label="add_team_member_label" id="Tournament_Stage">
-                                <option selected="selected">Quater Final</option>
-                                <option value="semi">Semi Final</option>
-                                <option value="Final">Final</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label for="select_date" class="m-top-15">Select Date</label>
-                              <input type="date" id="brackets_select_date">
-                            </div>
-                            <div class="form-group">
-                              <label for="select_date" class="m-top-15">Select Time</label>
-                              <input type="time" id="brackets_select_time">
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Update">
-                            <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
-                          </div>
-                        </form>
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <div class="tab-pane fade" id="quarter-final-tab" role="tabpanel"
+                  aria-labelledby="pills-quarter-final-tab">
+                  <div class="row flex-nowrap">
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="first-match-row">
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 1</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 2</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ney5</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 3</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">5</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Sporty FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 4</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Real Brasilia</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">4</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 5</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Golesti FC</p>
+                              <span class="team-point">0</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 6</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">4</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>NationalGolesti</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 7</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Lion FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 8</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Tiger FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 9</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 10</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 11</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 12</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="third-match-row h-100">
+                        <div class="connect-match d-flex align-items-center flex-wrap h-100">
+                          <div class="match">
+                            <span class="match_number">Match 13</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M7</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M8</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 14</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M9</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M10</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
+                        <div class="match">
+                          <span class="match_number">Match 15</span>
+                          <div class="match-team d-flex align-items-center mb-2">
+                            <div class="team-logo"></div>
+                            <p>Winner M11</p>
+                            <span class="team-point">-</span>
+                          </div>
+                          <div class="match-team d-flex align-items-center">
+                            <div class="team-logo"></div>
+                            <p>Winner M12</p>
+                            <span class="team-point">-</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="semi-final-tab" role="tabpanel" aria-labelledby="pills-semi-final-tab">
+                  <div class="row flex-nowrap">
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="first-match-row">
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 1</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 2</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ney5</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 3</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">5</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Sporty FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 4</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Real Brasilia</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">4</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 5</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Golesti FC</p>
+                              <span class="team-point">0</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 6</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">4</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>NationalGolesti</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 7</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Lion FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 8</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Tiger FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 9</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 10</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 11</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 12</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="third-match-row h-100">
+                        <div class="connect-match d-flex align-items-center flex-wrap h-100">
+                          <div class="match">
+                            <span class="match_number">Match 13</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M7</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M8</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 14</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M9</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M10</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
+                        <div class="match">
+                          <span class="match_number">Match 15</span>
+                          <div class="match-team d-flex align-items-center mb-2">
+                            <div class="team-logo"></div>
+                            <p>Winner M11</p>
+                            <span class="team-point">-</span>
+                          </div>
+                          <div class="match-team d-flex align-items-center">
+                            <div class="team-logo"></div>
+                            <p>Winner M12</p>
+                            <span class="team-point">-</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="final-tab" role="tabpanel" aria-labelledby="pills-final-tab">
+                  <div class="row flex-nowrap">
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="first-match-row">
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 1</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Team Wolves</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 2</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ney5</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 3</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">5</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Sporty FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 4</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Real Brasilia</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">4</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 5</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Golesti FC</p>
+                              <span class="team-point">0</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 6</span>
+                            <div class="match-team winners d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">4</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>NationalGolesti</p>
+                              <span class="team-point">3</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match my-4">
+                            <span class="match_number">Match 7</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Lion FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">1</span>
+                            </div>
+                          </div>
+                          <div class="match my-4">
+                            <span class="match_number">Match 8</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Tiger FC</p>
+                              <span class="team-point">2</span>
+                            </div>
+                            <div class="match-team winners d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">6</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="second-match-row d-xl-flex align-items-center flex-wrap h-100">
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 9</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Ultra FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>FC Kopeki</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 10</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al Waleed FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>3 Star FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="connect-match">
+                          <div class="match">
+                            <span class="match_number">Match 11</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Al-Jabli FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>RajaAthletic</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 12</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>King FC</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo">
+                                <img src="images/team.png" alt="">
+                              </div>
+                              <p>Joy Wolves</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="third-match-row h-100">
+                        <div class="connect-match d-flex align-items-center flex-wrap h-100">
+                          <div class="match">
+                            <span class="match_number">Match 13</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M7</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M8</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                          <div class="match">
+                            <span class="match_number">Match 14</span>
+                            <div class="match-team d-flex align-items-center mb-2">
+                              <div class="team-logo"></div>
+                              <p>Winner M9</p>
+                              <span class="team-point">-</span>
+                            </div>
+                            <div class="match-team d-flex align-items-center">
+                              <div class="team-logo"></div>
+                              <p>Winner M10</p>
+                              <span class="team-point">-</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-5">
+                      <div class="fourth-match-row d-flex align-items-center flex-wrap h-100">
+                        <div class="match">
+                          <span class="match_number">Match 15</span>
+                          <div class="match-team d-flex align-items-center mb-2">
+                            <div class="team-logo"></div>
+                            <p>Winner M11</p>
+                            <span class="team-point">-</span>
+                          </div>
+                          <div class="match-team d-flex align-items-center">
+                            <div class="team-logo"></div>
+                            <p>Winner M12</p>
+                            <span class="team-point">-</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Tournament_Teams -->
@@ -4623,8 +4608,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -4721,8 +4705,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -4819,8 +4802,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -4917,8 +4899,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -5015,8 +4996,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -5113,8 +5093,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -5211,8 +5190,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -5309,8 +5287,7 @@
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item text-gray" href="#" data-toggle="modal"
-                              data-target="#delete_modal">
+                            <a class="dropdown-item text-gray" href="#" data-toggle="modal" data-target="#delete_modal">
                               Delete
                             </a>
                           </li>
@@ -5379,71 +5356,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Team Edit Popup -->
-          <div class="tournament_modal">
-            <div class="modal fade" id="edit_team_modal" tabindex="-1" aria-labelledby="create_team_modal_Label"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <form action="">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel">Edit Team</h5>
-                    </div>
-                    <div class="modal-body">
-                      <div class="form-group">
-                        <label for="team_name" class="mt-0">Team Name</label>
-                        <input type="text" class="textinput form-control" id="team_name">
-                      </div>
-                      <div class="form-group">
-                        <label for="add_team_member" class="m-top-15">Add Team Member(s)</label> </br>
-                        <select class="w-100 select form-control" aria-label="add_team_member_label" id="add_team_member">
-                          <option selected="selected">Player Name</option>
-                          <option value="member_1">Brandon Adams</option>
-                          <option value="member_2">Jeremy Reid</option>
-                          <option value="member_3">Richard Hill</option>
-                          <option value="member_4">Richard Valdez</option>
-                          <option value="member_5">Adam Wood</option>
-                          <option value="member_6">Justin Lee</option>
-                          <option value="member_7">Harry Andrews</option>
-                        </select>
-                      </div>
-                      <div class="form-group mb-0">
-                        <div class="d-inline-block">
-                          <input type="submit" value="+ Add Team Member" class="btn btn-primary" id="add_team">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="mt-3">Add Team Logo</label>
-                        <div class="image_upload">
-                          <div class="upload_image_text">
-                            <img src="images/upload.svg">
-                            <label>Upload Picture</label>
-                          </div>
-                          <button class="btn_delete"><img src="images/image_delete_icon.svg" alt="delete_icon"></button>
-                          <span class="dragBox">
-                            <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                              id="uploadFile" />
-                          </span>
-                          <div class="image_preview" id="preview"></div>
-                        </div>
-                      </div>
-                      <div class="form-group mb-0">
-                        <div class="d-inline-block">
-                          <input type="submit" value="Submit" class="btn btn-primary add_picture_btn" id="add_picture">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
-                      <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <!-- Tournament End -->
@@ -6437,7 +6349,8 @@
                         </div>
                       </div>
                       <div class="profile_info">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2. Hashim Raza has cancelled
+                        <p>Hashim Raza has cancelled their reservation for football court # 2. Hashim Raza has
+                          cancelled
                           their reservation for football court # 2. Hashim Raza has cancelled their reservation for
                           football court # 2.</p>
                         <span>Just Now</span>
@@ -8452,6 +8365,70 @@
               </div>
               <div class="modal-footer">
                 <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Submit">
+                <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Edit Popup -->
+    <div class="tournament_modal">
+      <div class="modal fade" id="edit_team_modal" tabindex="-1" aria-labelledby="create_team_modal_Label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Edit Team</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="team_name" class="mt-0">Team Name</label>
+                  <input type="text" class="textinput form-control" id="team_name">
+                </div>
+                <div class="form-group">
+                  <label for="add_team_member" class="m-top-15">Add Team Member(s)</label> </br>
+                  <select class="w-100 select form-control" aria-label="add_team_member_label" id="add_team_member">
+                    <option selected="selected">Player Name</option>
+                    <option value="member_1">Brandon Adams</option>
+                    <option value="member_2">Jeremy Reid</option>
+                    <option value="member_3">Richard Hill</option>
+                    <option value="member_4">Richard Valdez</option>
+                    <option value="member_5">Adam Wood</option>
+                    <option value="member_6">Justin Lee</option>
+                    <option value="member_7">Harry Andrews</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-inline-block">
+                    <input type="submit" value="+ Add Team Member" class="btn btn-primary" id="add_team">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="mt-3">Add Team Logo</label>
+                  <div class="image_upload">
+                    <div class="upload_image_text">
+                      <img src="images/upload.svg">
+                      <label>Upload Picture</label>
+                    </div>
+                    <button class="btn_delete"><img src="images/image_delete_icon.svg" alt="delete_icon"></button>
+                    <span class="dragBox">
+                      <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                        id="uploadFile" />
+                    </span>
+                    <div class="image_preview" id="preview"></div>
+                  </div>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-inline-block">
+                    <input type="submit" value="Submit" class="btn btn-primary add_picture_btn" id="add_picture">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
                 <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
               </div>
             </form>

@@ -358,11 +358,11 @@ document.addEventListener('DOMContentLoaded', function () {
     customButtons: {
       filterButton: {
         html: '<svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403"><path id="filter" d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z" transform="translate(-1.687 -1.125)" fill="currentcolor" /></svg>; ',
-          click: function() {
-            $(".fc-filterButton-button").toggleClass("active");
-            $(".filter-popup-schedule").toggleClass("active");
-            $(".fc-header-toolbar .fc-filterButton-button").append( $( ".filter-popup-schedule" ) );
-          },
+        click: function () {
+          $(".fc-filterButton-button").toggleClass("active");
+          $(".filter-popup-schedule").toggleClass("active");
+          $(".fc-header-toolbar .fc-filterButton-button").append($(".filter-popup-schedule"));
+        },
       },
       menuButton: {
         html: '<span class="material-symbols-outlined">list</span>;'
@@ -380,18 +380,16 @@ document.addEventListener('DOMContentLoaded', function () {
     headerToolbar: {
       left: 'title prev,next filterButton',
       center: 'timeGridDay,timeGridWeek,dayGridMonth',
-      right: 'menuButton addButton',
+      right: 'menuButton addButton listMonth',
     },
     initialView: 'timeGridWeek',
     editable: true,
     weekNumbers: false,
-    expandRows: 4,
     firstDay: Monday = 1,
     showNonCurrentDates: false,
     contentHeight: 'auto',
     allDaySlot: false,
     slotLabelInterval: "01:00",
-    editable: false,
     fixedWeekCount: false,
     views: {
       dayGridMonth: {
@@ -400,6 +398,9 @@ document.addEventListener('DOMContentLoaded', function () {
       dayGridWeek: {
         titleFormat: '{DD.{MM.}}YYYY'
       },
+      // Updated
+      listMonth: { buttonText: 'list month' },
+      //
     },
     initialDate: "2022-09-01",
     eventContent: function (arg) {
@@ -407,68 +408,94 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     events: [
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-29T00:00:00',
+        end: '2022-08-29T01:00:00',
+        color: "#DDECFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-30T01:00:00',
+        end: '2022-08-30T02:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-02T04:00:00',
+        end: '2022-09-02T05:00:00',
+        color: "#DDFFF5",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-31T03:00:00',
+        end: '2022-08-31T4:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-08-30T08:00:00',
         end: '2022-08-30T09:00:00',
         color: "#DDECFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-08-30T06:00:00',
         end: '2022-08-30T07:00:00',
         color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-08-31T06:00:00',
         end: '2022-08-31T07:00:00',
-        color: "#DDFFF5",
+        color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-01T05:00:00',
         end: '2022-09-01T6:00:00',
         color: "#DDECFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_green_event"><div class="schedule_event"><span class="event_title">Tennis</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-08-29T00:00:00',
+        end: '2022-08-29T01:00:00',
+        color: "#DDFFF5",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        start: '2022-09-01T05:00:00',
+        end: '2022-09-01T6:00:00',
+        color: "#F1DDFF",
+      },
+      {
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-01T7:00:00',
         end: '2022-09-01T8:00:00',
-        color: "#DDECFF",
+        color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-01T09:00:00',
         end: '2022-09-01T10:00:00',
-        color: "#DDECFF",
+        color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-02T04:00:00',
         end: '2022-09-02T05:00:00',
         color: "#F1DDFF",
       },
       {
-        title: '<div class="schedule_event_wrap"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
+        title: '<div class="schedule_event_wrap light_pink_event"><div class="schedule_event"><span class="event_title">Badminton</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Futsal Court 1</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal"><img src="images/edit.svg" alt="Cancel"><span>Edit</span></a><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2022-09-03T02:00:00',
         end: '2022-09-03T03:00:00',
-        color: "#DDFFF5",
+        color: "#F1DDFF",
       },
     ],
-
-    eventRender: function (event, element) {
-      if (event.additionalInfo) {
-        element.find(".fc-title").append("<p>hello</p>" + event.additionalInfo);
-      }
-    },
-    eventClick: function(info) {
-      console.log();
-      $('.schedule_event').click(function(){
-        $(this).next('.event-btns').toggle();
-        var background_color = $(this).closest('.fc-timegrid-event').css('background-color');
-        console.log(background_color);
-        $(this).next('.event-btns').css('background', background_color);
-      });
+    eventClick: function (info) {
+      $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").toggle();
+      var background_color = $(info.el).css('background-color');
+      $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").css('background', background_color);
     },
     //  eventContent: { html: '<div class="monthly_event"><ul><li class="light_blue_event">Futsal (6 reservations)</li><li class="light_pink_event">Badminton (9 reservations)</li><li class="light_green_event">Tennis (4 reservations)</li></ul></div>' }
   });
