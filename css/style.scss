@@ -1070,9 +1070,10 @@ input[type="checkbox"] {
 
   .features-list {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     border: none;
-    min-height: 550px;
+    min-height: 600px;
     height: calc(100vh - 200px);
 
     .features-item {
@@ -1080,6 +1081,11 @@ input[type="checkbox"] {
       width: 100%;
       transition: all 0.5s ease-in-out;
       margin-bottom: 15px;
+
+
+      &.tournaments {
+        margin-bottom: 50px;
+      }
 
       a {
         display: flex;
@@ -3919,7 +3925,7 @@ header {
 
     .fc-toolbar-chunk {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       align-items: center;
 
       &:first-child {
@@ -3927,6 +3933,15 @@ header {
           min-width: 200px;
           font-size: 20px;
           font-family: 'Outfit Semibold';
+
+          @media (max-width: 1024px) {
+            width: 150px;
+            font-size: 16px;
+            min-width: auto;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
         }
 
         button {
@@ -3980,6 +3995,10 @@ header {
         margin-right: auto;
         border-radius: 24px;
         box-shadow: inset 0px 0px 2px #00000029;
+
+        @media (max-width:1400px) {
+          margin-left: auto;
+        }
 
         .fc-button-group {
           border-radius: 24px;
@@ -4108,6 +4127,7 @@ header {
 
                 .fc-daygrid-day-number {
                   font-size: 10px;
+                  color: $black;
                 }
               }
 
@@ -4160,47 +4180,6 @@ header {
                         }
                       }
                     }
-
-
-
-                    // .monthly_event {
-                    //   ul {
-                    //     display: inline-flex;
-                    //     flex-wrap: wrap;
-
-                    //     li {
-                    //       margin-right: 15px;
-                    //       margin-left: 11px;
-                    //       position: relative;
-                    //       margin-bottom: 9px;
-                    //       color: #000000;
-                    //       font-size: 11px;
-
-                    //       &::before {
-                    //         position: absolute;
-                    //         content: "";
-                    //         width: 4px;
-                    //         height: 19px;
-                    //         border-radius: 8px;
-                    //         top: 0;
-                    //         left: -9px;
-                    //         background-color: #DDECFF;
-                    //       }
-
-                    //       &.light_blue_event::before {
-                    //         background-color: $light_blue_event;
-                    //       }
-
-                    //       &.light_pink_event::before {
-                    //         background-color: $light_pink_event;
-                    //       }
-
-                    //       &.light_green_event::before {
-                    //         background-color: $light_green_event;
-                    //       }
-                    //     }
-                    //   }
-                    // }
                   }
                 }
               }
@@ -4254,14 +4233,6 @@ header {
                   .fc-timegrid-col-frame {
                     .fc-timegrid-col-events {
                       margin: 0 0.3px 0;
-
-                      // .fc-timegrid-event-harness {
-                      //   &:not(:first-child) {
-                      //     .fc-timegrid-event {
-                      //       margin-top: 100px;
-                      //     }
-                      //   }
-                      // }
 
                       .fc-timegrid-event {
                         margin-bottom: 0;
@@ -4378,13 +4349,25 @@ header {
       .fc-list-day {
         .fc-list-day-cushion {
           background-color: rgba(118, 74, 243, 0.1);
+
+          .fc-list-day-text {
+            color: black;
+          }
         }
       }
 
       .fc-list-event {
+        td {
+          font-size: 14px;
+        }
+
         .fc-list-event-time {
-          min-width: 200px;
+          min-width: 300px;
           vertical-align: middle;
+
+          @media (max-width:1440px) {
+            min-width: 200px;
+          }
         }
 
         .fc-list-event-graphic {
@@ -4401,6 +4384,7 @@ header {
         .fc-list-event-title {
           .schedule_event_wrap {
             display: flex;
+            min-width: 145px;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
@@ -4424,6 +4408,22 @@ header {
                 color: $black;
               }
 
+              .court_title {
+                min-width: 400px;
+
+                @media (max-width:1440px) {
+                  min-width: 250px;
+                  width: 250px;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  white-space: nowrap;
+                }
+              }
+
+              .time {
+                display: none;
+              }
+
               .schedule_profile {
                 margin-top: 0;
               }
@@ -4433,6 +4433,11 @@ header {
               margin-left: 100px;
               margin-top: 0;
               display: block;
+              min-width: 145px;
+
+              @media (max-width:1440px) {
+                margin-left: 20px;
+              }
             }
           }
         }
@@ -4458,6 +4463,9 @@ header {
       .time {
         font-size: 10px;
         color: #707070;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .court_title {
@@ -4483,6 +4491,9 @@ header {
           margin-left: 6px;
           font-size: 10px;
           color: #707070;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -4512,6 +4523,10 @@ header {
         &.btn-cancel {
           margin-left: 11px;
           background-color: #ff6f6f;
+        }
+
+        &.btn-view {
+          background-color: #764af3;
         }
       }
     }
@@ -5836,6 +5851,8 @@ header {
 
     h6 {
       margin-bottom: 0;
+      font-size: 16px;
+      font-family: 'Outfit SemiBold';
     }
 
     .tournament-filter-popup {
@@ -6331,8 +6348,6 @@ header {
   }
 }
 
-
-
 #tournament_brackets_tab_pane {
   .profile_info_box {
 
@@ -6631,4 +6646,12 @@ header {
       display: block;
     }
   }
+}
+
+.fc .fc-list-event:hover td {
+  background-color: inherit;
+}
+
+.fc-list-day-text {
+  font-size: 16px;
 }
