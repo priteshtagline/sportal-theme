@@ -406,7 +406,6 @@ document.addEventListener('DOMContentLoaded', function () {
     eventContent: function (arg) {
       return { html: arg.event.title };
     },
-
     events: [
       {
         title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span></div></div>',
@@ -481,10 +480,13 @@ document.addEventListener('DOMContentLoaded', function () {
         color: "#F1DDFF",
       },
     ],
-    eventClick: function (info) {
-      $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").toggle();
+    eventMouseEnter: function (info) {
+      $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").show();
       var background_color = $(info.el).css('background-color');
       $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").css('background', background_color);
+    },
+    eventMouseLeave: function (info) {
+      $(info.el).children("div.fc-event-main").children("div.schedule_event_wrap").children("div.event-btns").hide();
     },
   });
   calendar.render();

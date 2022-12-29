@@ -2981,20 +2981,19 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="start_date">Start Date</label>
-                        <input type="Date" class="textinput form-control" id="start_date" value=""
-                          placeholder="DD/MM/YY">
+                        <input type="Date" class="textinput form-control" id="start_date">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="end_date" class=" mt-0">End Date</label>
-                        <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                        <input type="Date" class="textinput form-control" id="end_date">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="start_time">Start Time</label>
-                        <input type="Time" class="textinput form-control" id="start_time" value="">
+                        <input type="Time" class="textinput form-control" id="start_time">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="end_time" class=" mt-0">End Time</label>
-                        <input type="Time" class="textinput form-control" id="end_time" value="">
+                        <input type="Time" class="textinput form-control" id="end_time">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="customer_sport" class="m-top-15">Sport</label> </br>
@@ -3132,7 +3131,7 @@
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="end_date" class=" mt-0">End Date</label>
-                        <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                        <input type="Date" class="textinput form-control" id="end_date">
                       </div>
                       <div class="form-group col-xl-6">
                         <label for="start_time">Start Time</label>
@@ -3382,7 +3381,7 @@
                       <span>Pre-Quarter</span>
                       <p>Sept 28, 2022</p>
                     </div>
-                    <a href="#" class="edit_tournament_time" data-toggle="modal" data-target="#edit_brackets_tab">
+                    <a href="#" class="edit_tournament_time" data-toggle="modal" data-target="#edit_brackets_tab_modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                         <path id="edit"
                           d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
@@ -3399,7 +3398,7 @@
                       <span>Pre-Quarter</span>
                       <p>Sept 29, 2022</p>
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab_modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                         <path id="edit"
                           d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
@@ -3416,7 +3415,7 @@
                       <span>Pre-Quarter</span>
                       <p>Oct 01, 2022</p>
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab_modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                         <path id="edit"
                           d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
@@ -3433,7 +3432,7 @@
                       <span>Pre-Quarter</span>
                       <p>Oct 01, 2022</p>
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab">
+                    <a href="#" data-toggle="modal" data-target="#edit_brackets_tab_modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="7.885" height="7.885" viewBox="0 0 7.885 7.885">
                         <path id="edit"
                           d="M0,6.242,4.846,1.4,6.489,3.039,1.643,7.885H0ZM7.762,1.766l-.8.8L5.318.924l.8-.8a.446.446,0,0,1,.616,0L7.762,1.15a.418.418,0,0,1,.123.308.418.418,0,0,1-.123.308Z"
@@ -8341,11 +8340,11 @@
                 </div>
                 <div class="form-group">
                   <label for="start_date">Start Date</label>
-                  <input type="Date" class="textinput form-control" id="start_date" value="" placeholder="DD/MM/YY">
+                  <input type="Date" class="textinput form-control" id="start_date">
                 </div>
                 <div class="form-group">
                   <label for="end_date" class=" mt-0">End Date</label>
-                  <input type="Date" class="textinput form-control" id="end_date" value="" placeholder="DD/MM/YY">
+                  <input type="Date" class="textinput form-control" id="end_date">
                 </div>
                 <div class="form-group">
                   <label for="start_time">Start Time</label>
@@ -8422,6 +8421,44 @@
               </div>
               <div class="modal-footer">
                 <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add User">
+                <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit schedule Modal brackets -->
+    <div class="tournament_modal">
+      <div class="modal fade" id="edit_brackets_tab_modal" tabindex="-1" aria-labelledby="edit_brackets_tab_modal_Label"
+        aria-hidden="true">
+        <div class="modal-dialog reschedule_modal">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Edit Schedule</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="tournament_stage">Tournament Stage</label>
+                  <select class="w-100 select form-control" aria-label="tournament_stage_label" id="tournament_stage">
+                    <option selected="selected">Quarter Final</option>
+                    <option value="value_1">Pre Quarter</option>
+                    <option value="value_2">Semi Finals</option>
+                    <option value="value_3">Finals</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="start_date">Stage Date</label>
+                  <input type="Date" class="textinput form-control" id="start_date" placeholder="Select Date">
+                </div>
+                <div class="form-group">
+                  <label for="start_time">Time</label>
+                  <input type="Time" class="textinput form-control" id="start_time" value="" placeholder="Select Time">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Submit">
                 <button class="btn btn-secondary btn-close" data-dismiss="modal" aria-label="Close">Cancel</button>
               </div>
             </form>
