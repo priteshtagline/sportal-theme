@@ -3896,23 +3896,27 @@ header {
 }
 
 #schedule {
-  .card-body {
-    position: relative;
+  .card {
+    border-radius: 12px;
 
-    #list_view_table {
-      position: absolute;
-      top: 146px;
-      left: 21px;
-      z-index: 1;
-      bottom: 21px;
-      max-width: calc(100% - 42px);
-      background: #ffffff;
-      padding-bottom: 26px;
+    .card-body {
+      position: relative;
 
-      .dataTables_wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 620px;
+      #list_view_table {
+        position: absolute;
+        top: 146px;
+        left: 21px;
+        z-index: 1;
+        bottom: 21px;
+        max-width: calc(100% - 42px);
+        background: #ffffff;
+        padding-bottom: 26px;
+
+        .dataTables_wrapper {
+          display: flex;
+          flex-direction: column;
+          min-height: 620px;
+        }
       }
     }
   }
@@ -4141,6 +4145,10 @@ header {
                 .fc-daygrid-event-harness {
                   margin-left: 15px;
                   width: calc(50% - 15px);
+
+                  @media (max-width:1024px) {
+                    width: 100%;
+                  }
 
                   .fc-daygrid-event {
                     background-color: $white;
