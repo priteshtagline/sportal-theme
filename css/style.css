@@ -4101,11 +4101,15 @@ header.active .side-nav-btn img {
   margin-right: 10px;
 }
 
-#schedule .card-body {
+#schedule .card {
+  border-radius: 12px;
+}
+
+#schedule .card .card-body {
   position: relative;
 }
 
-#schedule .card-body #list_view_table {
+#schedule .card .card-body #list_view_table {
   position: absolute;
   top: 146px;
   left: 21px;
@@ -4116,7 +4120,7 @@ header.active .side-nav-btn img {
   padding-bottom: 26px;
 }
 
-#schedule .card-body #list_view_table .dataTables_wrapper {
+#schedule .card .card-body #list_view_table .dataTables_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4366,6 +4370,12 @@ header.active .side-nav-btn img {
 #calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
   margin-left: 15px;
   width: calc(50% - 15px);
+}
+
+@media (max-width: 1024px) {
+  #calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
+    width: 100%;
+  }
 }
 
 #calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event {
