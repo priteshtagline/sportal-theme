@@ -260,6 +260,7 @@ $(document).ready(function () {
     $("header").toggleClass("active");
     $(".main-content").toggleClass("active");
     $(this).toggleClass("active");
+    // $("#calendar").fullCalendar('render');
   });
   $(".sidebar").hover(
     function () {
@@ -339,17 +340,18 @@ document.addEventListener('DOMContentLoaded', function () {
     var elms = document.getElementsByClassName('fc-filterButton-button').item(0)
     elms.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403"><path id="filter" d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z" transform="translate(-1.687 -1.125)" fill="currentcolor" ></svg>'
   }, 0);
+  $(".fc-listDay-button").append("<b>Appended text</b>");
 
-  var btn = document.getElementsByClassName("fc-menuButton-button");
-  setTimeout(() => {
-    var elms = document.getElementsByClassName('fc-menuButton-button').item(0)
-    elms.innerHTML = '<span class="material-symbols-outlined">list</span> <svg id="Group_215" data-name="Group 215" xmlns="http://www.w3.org/2000/svg" width="12.438" height="12.438" viewBox="0 0 12.438 12.438"><path id="Path_68" data-name="Path 68" d="M.777,4.582v7.774a.777.777,0,0,0,.777.777h9.328a.777.777,0,0,0,.777-.777V4.582ZM1.555,2.25A1.555,1.555,0,0,0,0,3.8v8.551a1.555,1.555,0,0,0,1.555,1.555h9.328a1.555,1.555,0,0,0,1.555-1.555V3.8A1.555,1.555,0,0,0,10.883,2.25Z" transform="translate(0 -1.473)" fill="currentcolor" fill-rule="evenodd"/><path id="Path_69" data-name="Path 69" d="M7.139,0a.389.389,0,0,1,.389.389V.777a.389.389,0,0,1-.777,0V.389A.389.389,0,0,1,7.139,0Zm7,0a.389.389,0,0,1,.389.389V.777a.389.389,0,0,1-.777,0V.389A.389.389,0,0,1,14.135,0Z" transform="translate(-4.418)" fill="currentcolor" fill-rule="evenodd"/><path id="Path_70" data-name="Path 70" d="M25.139,13.5h.777a.389.389,0,0,1,.389.389v.777a.389.389,0,0,1-.389.389h-.777a.389.389,0,0,1-.389-.389v-.777A.389.389,0,0,1,25.139,13.5Z" transform="translate(-16.199 -8.836)" fill="currentcolor"/></svg>'
-  }, 0);
-
-  var btn3 = document.getElementsByClassName("fc-addButton-button");
+  var btn2 = document.getElementsByClassName("fc-addButton-button");
   setTimeout(() => {
     var elms = document.getElementsByClassName('fc-addButton-button').item(0)
     elms.innerHTML = '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
+  }, 0);
+
+  var btn3 = document.getElementsByClassName("fc-listDay-button");
+  setTimeout(() => {
+    var elms = document.getElementsByClassName('fc-listDay-button').item(0)
+    elms.innerHTML = '<span class="material-symbols-outlined">list</span> <svg id="Group_215" data-name="Group 215" xmlns="http://www.w3.org/2000/svg" width="12.438" height="12.438" viewBox="0 0 12.438 12.438"><path id="Path_68" data-name="Path 68" d="M.777,4.582v7.774a.777.777,0,0,0,.777.777h9.328a.777.777,0,0,0,.777-.777V4.582ZM1.555,2.25A1.555,1.555,0,0,0,0,3.8v8.551a1.555,1.555,0,0,0,1.555,1.555h9.328a1.555,1.555,0,0,0,1.555-1.555V3.8A1.555,1.555,0,0,0,10.883,2.25Z" transform="translate(0 -1.473)" fill="currentcolor" fill-rule="evenodd"/><path id="Path_69" data-name="Path 69" d="M7.139,0a.389.389,0,0,1,.389.389V.777a.389.389,0,0,1-.777,0V.389A.389.389,0,0,1,7.139,0Zm7,0a.389.389,0,0,1,.389.389V.777a.389.389,0,0,1-.777,0V.389A.389.389,0,0,1,14.135,0Z" transform="translate(-4.418)" fill="currentcolor" fill-rule="evenodd"/><path id="Path_70" data-name="Path 70" d="M25.139,13.5h.777a.389.389,0,0,1,.389.389v.777a.389.389,0,0,1-.389.389h-.777a.389.389,0,0,1-.389-.389v-.777A.389.389,0,0,1,25.139,13.5Z" transform="translate(-16.199 -8.836)" fill="currentcolor"/></svg>'
   }, 0);
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
@@ -375,12 +377,12 @@ document.addEventListener('DOMContentLoaded', function () {
       month: 'Monthly',
       week: 'Weekly',
       day: 'Daily',
-      listDay: 'List',
+      listDay: ' ',
     },
     headerToolbar: {
       left: 'title prev,next filterButton',
       center: 'timeGridDay,timeGridWeek,dayGridMonth',
-      right: 'menuButton addButton listDay',
+      right: 'listDay addButton',
     },
     initialView: 'timeGridWeek',
     editable: false,
