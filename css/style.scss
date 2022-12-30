@@ -1748,6 +1748,70 @@ header {
             }
           }
         }
+
+        .profile-dropdown-menu {
+          border: 1px solid #A4A9BC;
+          border-radius: 11px;
+          margin-top: 5px;
+          padding-bottom: 0;
+
+          li {
+            .dropdown-item {
+              padding: 6px 10px;
+
+              img {
+                margin-right: 10px;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                vertical-align: middle;
+              }
+
+              span {
+                color: #A4A9BC;
+                font-size: 14px;
+                vertical-align: middle;
+              }
+
+              &.add-button {
+                padding: 10px 13px 12px;
+
+                .add_icon {
+                  color: $black;
+                  font-size: 22px;
+                  margin-right: 13px;
+                }
+
+                span {
+                  color: $black;
+                }
+              }
+
+              &:hover {
+                background-color: $theme-primary-color;
+
+                span,
+                .add_icon {
+                  color: $white;
+                }
+              }
+            }
+
+            .dropdown-divider {
+              border-color: #A4A9BC;
+            }
+
+            &:last-child {
+              .dropdown-item {
+                &:hover {
+                  border-bottom-left-radius: 11px;
+                  border-bottom-right-radius: 11px;
+                }
+              }
+            }
+          }
+
+        }
       }
 
       @media (max-width: 991px) {
@@ -3302,7 +3366,13 @@ header {
 
       &:first-child .dropdown-item {
         padding: 8px 7px;
+        pointer-events: none;
+
+        &:hover {
+          background-color: $white;
+        }
       }
+
     }
 
     .dropdown-divider {
@@ -6687,7 +6757,10 @@ header {
 
         input {
           accent-color: $theme-primary-color;
-          margin-right: 5px;
+        }
+
+        label {
+          padding-left: 5px;
         }
       }
     }

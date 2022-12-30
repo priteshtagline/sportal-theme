@@ -1,201 +1,378 @@
-<nav class="navbar navbar-expand-lg shadow-sm">
-  <button class="side-nav-btn" id="side_nav_btn">
-    <img src="/images/nav-aerrow.svg" alt="nav-aerrow">
-  </button>
-  <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:void(0)">Settings</a>
+<header id="header">
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container-fluid pl-0 pl-md-0">
+      <a href="#" class="back_arrow mr-3" id="notification-back-arrow">
+        <img src="images/back-arrow.svg" alt="back_arrow_icon">
+      </a>
 
-    <!-- <form class="d-flex" role="search">
-      <div class="input-group search_group">
-        <input type="search" class="form-control" placeholder="Search....." aria-label="search"
-          aria-describedby="search-btn">
-        <button class="btn d-flex align-items-center" type="button" id="search-btn"><img src="/images/magnify.svg"
-            alt="magnify"></button>
+      <a class="navbar-brand" href="javascript:void(0)">Customers</a>
+
+      <!-- <a class="navbar-brand" href="javascript:void(0)">Settings</a> -->
+
+      <form class="d-flex" role="search">
+        <div class="input-group search_group" id="nav_search_field">
+          <input type="search" class="form-control" placeholder="Search....." aria-label="search"
+            aria-describedby="search-btn">
+          <button class="btn d-flex align-items-center" type="button" id="search-btn"><img src="images/magnify.svg"
+              alt="magnify"></button>
+        </div>
+      </form>
+
+      <a class="text-primary ml-3" id="customer_nav_title" href="javascript:void(0)">All Customers</a>
+
+      <!-- back arrow -->
+      <a href="#" class="back_arrow" id="nav-back-arrow">
+        <img src="images/back-arrow.svg" alt="back_arrow_icon">
+      </a>
+
+      <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav setting-nav nav nav-tabs me-auto my-2 my-lg-0 navbar-nav-scroll" id="settings_nav_tab"
+          role="tablist" style="--scroll-height: 100px;">
+          <!-- For Setting Header -->
+
+          <li class="nav-item" id="setting_nav_tab">
+            <div>
+              <ul class="navbar-nav setting-nav nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="setting_overview_tab"
+                    data-toggle="tab" data-target="#setting_overview_tab_pane" type="button" role="tab"
+                    aria-controls="setting_overview_tab_pane" aria-selected="true">Overview</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="setting_courts_tab" data-toggle="tab"
+                    data-target="#setting_courts_tab_pane" type="button" role="tab"
+                    aria-controls="setting_courts_tab_pane" aria-selected="false">Courts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="setting_pricing_tab" data-toggle="tab"
+                    data-target="#setting_pricing_tab_pane" type="button" role="tab"
+                    aria-controls="setting_pricing_tab_pane" aria-selected="false">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="setting_admins_tab" data-toggle="tab"
+                    data-target="#setting_admins_tab_pane" type="button" role="tab" aria-controls="setting_admins_tab"
+                    aria-selected="false">Admins</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- For Customer Header -->
+          <li class="nav-item" id="customer_tab">
+            <div class="nav-item d-flex flex-wrap">
+              <ul class="customer_nav_list">
+                <li class="nav-item">
+                  <a class="nav-link text-primary" id="customer_title" href="javascript:void(0)">All Customers</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav nav nav-tabs" id="customer_subtab">
+                <li class="nav-item">
+                  <a class="nav-link nav-tab active" aria-current="page" href="javascript:void(0)"
+                    id="customer_profile_info_tab" data-toggle="tab" data-target="#customer_profile_info_tab_pane"
+                    type="button" role="tab" aria-controls="customer_profile_info_tab_pane" aria-selected="true">Profile
+                    Details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-tab" href="javascript:void(0)" id="customer_reservation_tab" data-toggle="tab"
+                    data-target="#customer_reservation_tab_pane" type="button" role="tab"
+                    aria-controls="customer_reservation_tab_pane" aria-selected="false">Reservation History</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- For Reports Header -->
+          <li class="nav-item" id="reports_nav_tab">
+            <div>
+              <ul class="navbar-nav setting-nav nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="reports_booking_tab"
+                    data-toggle="tab" data-target="#reports_booking_tab_pane" type="button" role="tab"
+                    aria-controls="reports_booking_tab_pane" aria-selected="true">Bookings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="reports_revenue_tab" data-toggle="tab"
+                    data-target="#reports_revenue_tab_pane" type="button" role="tab"
+                    aria-controls="reports_revenue_tab_pane" aria-selected="false">Revenue</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="reports_players_tab" data-toggle="tab"
+                    data-target="#reports_players_tab_pane" type="button" role="tab"
+                    aria-controls="reports_players_tab_pane" aria-selected="false">Players</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- For Tournament Header -->
+          <li class="nav-item" id="tournament_nav_tab">
+            <div>
+              <ul class="navbar-nav setting-nav nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="javascript:void(0)" id="tournament_overview_tab"
+                    data-toggle="tab" data-target="#tournament_overview_tab_pane" type="button" role="tab"
+                    aria-controls="tournament_overview_tab_pane" aria-selected="true">Overview</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="tournament_brackets_tab" data-toggle="tab"
+                    data-target="#tournament_brackets_tab_pane" type="button" role="tab"
+                    aria-controls="tournament_brackets_tab_pane" aria-selected="false">Brackets</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" id="tournament_teams_tab" data-toggle="tab"
+                    data-target="#tournament_teams_tab_pane" type="button" role="tab"
+                    aria-controls="tournament_teams_tab_pane" aria-selected="false">Teams</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
-    </form> -->
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar_menu navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="javascript:void(0)">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Courts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Admins</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <div class="btn-group">
-        <button class="btn notification-btn collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          <img src="/images/notification.svg" alt="notification">
-        </button>
-        <div class="collapse notification_menu shadow-sm dropdown-menu-md-end" id="collapseExample">
-          <div class="card card-body">
-            <p class="head"> Notification</p>
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                  type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                  type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Reservations</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                  type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Unread</button>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                tabindex="0">
-                <ul class="notification-list">
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+      <div class="nav-right">
+        <div class="btn-group">
+          <button class="btn notification-btn collapsed" type="button" data-toggle="collapse"
+            data-target="#notification_collapse" aria-expanded="false" aria-controls="notification_collapse">
+            <img src="images/notification.svg" alt="notification">
+          </button>
+          <div class="collapse notification_menu shadow-sm dropdown-menu-md-end" id="notification_collapse">
+            <div class="card card-body">
+              <p class="head"> Notification</p>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false">Reservations</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Unread</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <ul class="notification-list">
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge">
+                            <img src="images/date.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge bg_red">
+                            <img src="images/date_danger.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge">
+                            <img src="images/date.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge bg_red">
+                            <img src="images/date_danger.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <a href="javascript:void(0)" class="see_all_btn">See All</a>
-              </div>
-              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                tabindex="0">
-                <ul class="notification-list">
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge">
+                            <img src="images/date.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge bg_red">
+                            <img src="images/date_danger.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <a href="javascript:void(0)" class="see_all_btn">See All</a>
-              </div>
-              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-                tabindex="0">
-                <ul class="notification-list">
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                  </ul>
+                  <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <ul class="notification-list">
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge">
+                            <img src="images/date.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="items">
-                      <div class="profile">
-                        <img src="/images/user.png" alt="user_profile" class="user_profile">
-                        <div class="user_badge">
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge bg_red">
+                            <img src="images/date_danger.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
                         </div>
                       </div>
-                      <div class="item_details">
-                        <p>Hashim Raza has cancelled their reservation for football court # 2.</p>
-                        <span>Just Now</span>
+                    </li>
+                  </ul>
+                  <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
+                </div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                  tabindex="0">
+                  <ul class="notification-list">
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge">
+                            <img src="images/date.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
-                <a href="javascript:void(0)" class="see_all_btn">See All</a>
+                    </li>
+                    <li>
+                      <div class="items">
+                        <div class="profile">
+                          <img src="images/user.png" alt="user_profile" class="user_profile">
+                          <div class="user_badge bg_red">
+                            <img src="images/date_danger.svg" alt="calendar">
+                          </div>
+                        </div>
+                        <div class="item_details">
+                          <a href="javascript:void(0)">Hashim Raza has cancelled their reservation for football court
+                            # 2.</a>
+                          <span>Just Now</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a href="javascript:void(0)" class="see_all_btn" id="notification_see_all_button">See All</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn profile-dropdown dropdown-toggle" data-bs-toggle="dropdown"
-          data-bs-display="static" aria-expanded="false">
-          <img src="/images/user-logo.png" alt="profile" class="profile_image">
-          <span>beach front</span>
+        <div class="btn-group">
+          <button type="button" class="btn profile-dropdown dropdown-toggle" data-toggle="dropdown"
+            data-display="static" aria-expanded="false">
+            <img src="images/user-logo.png" alt="profile" class="profile_image">
+            <span>beach front</span>
+          </button>
+          <ul class="dropdown-menu profile-dropdown-menu dropdown-menu-md-end">
+            <li>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <img src="images/user-logo.png" alt="profile" class="profile_image">
+                <span>Stadium Plus</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <img src="images/user-logo.png" alt="profile" class="profile_image">
+                <span>Downtown Pro</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <img src="images/user-logo.png" alt="profile" class="profile_image">
+                <span>Beverly Hills</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="javascript:void(0)">
+                <img src="images/user-logo.png" alt="profile" class="profile_image">
+                <span>Stadia Pro</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider my-0">
+            </li>
+            <li>
+              <a class="dropdown-item add-button" href="javascript:void(0)">
+                <span class="material-symbols-rounded add_icon">add_circle</span>
+                <span>Create New</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" id="humburge_menu" type="button" data-toggle="collapse"
+          data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-symbols-outlined humburge_menu">
+            sort
+          </span>
         </button>
-        <ul class="dropdown-menu dropdown-menu-md-end">
-          <li><a class="dropdown-item" href="javascript:void(0)">Menu item 1</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)">Menu item 2</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)">Menu item 3</a></li>
-        </ul>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>

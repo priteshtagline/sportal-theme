@@ -1848,6 +1848,63 @@ header .navbar .nav-right .btn-group .profile-dropdown::after {
   }
 }
 
+header .navbar .nav-right .btn-group .profile-dropdown-menu {
+  border: 1px solid #A4A9BC;
+  border-radius: 11px;
+  margin-top: 5px;
+  padding-bottom: 0;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item {
+  padding: 6px 10px;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item img {
+  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item span {
+  color: #A4A9BC;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item.add-button {
+  padding: 10px 13px 12px;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item.add-button .add_icon {
+  color: #000000;
+  font-size: 22px;
+  margin-right: 13px;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item.add-button span {
+  color: #000000;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item:hover {
+  background-color: #764af3;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item:hover span,
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item:hover .add_icon {
+  color: #ffffff;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-divider {
+  border-color: #A4A9BC;
+}
+
+header .navbar .nav-right .btn-group .profile-dropdown-menu li:last-child .dropdown-item:hover {
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
 @media (max-width: 991px) {
   header .navbar .nav-right {
     margin-left: auto;
@@ -3517,6 +3574,11 @@ header.active .side-nav-btn img {
 
 .divider_dropdown_group .dropdown-menu li:first-child .dropdown-item {
   padding: 8px 7px;
+  pointer-events: none;
+}
+
+.divider_dropdown_group .dropdown-menu li:first-child .dropdown-item:hover {
+  background-color: #ffffff;
 }
 
 .divider_dropdown_group .dropdown-menu .dropdown-divider {
@@ -6989,7 +7051,10 @@ header.active .side-nav-btn img {
 
 #schedule .tournament-filter-popup .sport-tournament span input {
   accent-color: #764af3;
-  margin-right: 5px;
+}
+
+#schedule .tournament-filter-popup .sport-tournament span label {
+  padding-left: 5px;
 }
 
 #schedule .tournament-filter-popup.active {
