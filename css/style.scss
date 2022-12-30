@@ -4032,7 +4032,7 @@ header {
       }
 
       &:last-child {
-        .fc-menuButton-button {
+        .fc-listDay-button {
           width: 30px;
           height: 30px;
           justify-content: center;
@@ -4060,7 +4060,10 @@ header {
             display: none;
           }
 
-          &.active {
+          &.fc-button-active {
+            background-color: $theme-primary-color;
+            color: $white;
+
             span {
               display: none;
             }
@@ -4471,6 +4474,9 @@ header {
       .court_title {
         font-size: 8px;
         color: #707070;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .schedule_profile {
@@ -4502,6 +4508,16 @@ header {
       display: none;
       margin-top: 9px;
       padding: 6px;
+      border-left: 1px solid #ffffff;
+      margin-left: -1px;
+      border-right: 1px solid #FFFFFF;
+      margin-right: -1px;
+
+      @media (max-width:1199px) {
+        text-align: center;
+        padding: 2px 2px 6px;
+        margin-top: 2px;
+      }
 
       .btn {
         padding: 6px 12px;
@@ -4509,20 +4525,46 @@ header {
         display: inline-flex;
         align-items: center;
 
+        @media (max-width:1500px) {
+          padding: 3px 8px;
+        }
+
+        @media (max-width:1199px) {
+          min-width: 49px;
+          padding: 3px 6px;
+        }
+
         span {
           font-size: 9px;
           color: #ffffff;
           line-height: 11px;
           margin-left: 5px;
+
+          @media (max-width:1360px) {
+            font-size: 7px;
+            margin-left: 5px;
+          }
         }
 
         &.btn-edit {
           background-color: #8bbcfa;
+
+          @media (max-width:1199px) {
+            margin-bottom: 3px;
+          }
         }
 
         &.btn-cancel {
           margin-left: 11px;
           background-color: #ff6f6f;
+
+          @media (max-width:1360px) {
+            margin-left: 5px;
+          }
+
+          @media (max-width:1199px) {
+            margin-left: 0px;
+          }
         }
 
         &.btn-view {
