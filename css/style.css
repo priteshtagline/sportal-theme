@@ -4628,13 +4628,22 @@ header.active .side-nav-btn img {
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
-  min-width: 300px;
+  min-width: 160px;
   vertical-align: middle;
 }
 
 @media (max-width: 1440px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
     min-width: 160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
+    width: 80px;
+    min-width: 80px;
+    font-size: 12px;
+    white-space: break-spaces;
   }
 }
 
@@ -4690,24 +4699,49 @@ header.active .side-nav-btn img {
   white-space: nowrap;
 }
 
+@media (max-width: 1200px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .event_title {
+    font-size: 12px;
+    min-width: 55px;
+    width: 55px;
+  }
+}
+
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .time,
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title,
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .user_name {
   font-size: 14px;
   color: #000000;
+  padding: 0 5px;
+}
+
+@media (max-width: 1200px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .time,
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title,
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .user_name {
+    font-size: 12px;
+  }
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
-  min-width: 400px;
+  min-width: 270px;
+  width: 270px;
 }
 
 @media (max-width: 1440px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
-    min-width: 250px;
-    width: 250px;
+    min-width: 200px;
+    width: 200px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 1440px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
+    min-width: 100px;
+    width: 100px;
   }
 }
 
@@ -4717,6 +4751,7 @@ header.active .side-nav-btn img {
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .schedule_profile {
   margin-top: 0;
+  padding: 0 5px;
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
@@ -4738,6 +4773,15 @@ header.active .side-nav-btn img {
   }
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns .btn-cancel {
     margin-left: 5px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
+    min-width: 110px;
+    margin-left: 8px;
+    padding-bottom: 3px;
+    width: 110px;
   }
 }
 
@@ -4891,6 +4935,36 @@ header.active .side-nav-btn img {
 #calendar .fc-timegrid-col.fc-day-today,
 #calendar .fc-daygrid-day.fc-day-today {
   background-color: transparent;
+}
+
+#calendar .list_status {
+  display: none;
+}
+
+#calendar .list_status.btn {
+  padding: 2px 11px;
+  font-size: 12px;
+  min-width: 60px;
+}
+
+@media (max-width: 1200px) {
+  #calendar .list_status.btn {
+    padding: 2px 2px 2px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #calendar .list_status.btn {
+    padding: 0px 11px;
+    font-size: 10px;
+    line-height: 15px;
+    min-width: 54px;
+    margin-bottom: 0;
+  }
+}
+
+#calendar .fc-list-event .list_status {
+  display: block;
 }
 
 .dashboard_theme .dashboard_head .dashboard_head_row {
