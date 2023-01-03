@@ -64,7 +64,7 @@ body {
 
 .loader {
   position: fixed;
-  z-index: 9999999;
+  z-index: 999999999;
   top: 0;
   left: 0;
   right: 0;
@@ -265,6 +265,14 @@ input[type="checkbox"] {
 
 }
 
+.modal-backdrop {
+  z-index: 999999;
+}
+
+.modal {
+  z-index: 9999999;
+}
+
 .btn {
   font-size: 16px;
   line-height: 20px;
@@ -337,8 +345,10 @@ input[type="checkbox"] {
   padding: 7px;
 }
 
-.select2-container {
-  z-index: 1111;
+.modal-open {
+  .select2-container {
+    z-index: 9999999;
+  }
 }
 
 .btn-info {
@@ -359,6 +369,12 @@ input[type="checkbox"] {
     padding: 3px 14px;
     min-width: 70px;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
+  }
 }
 
 .btn-warning {
@@ -375,6 +391,12 @@ input[type="checkbox"] {
     padding: 3px 14px;
     min-width: 70px;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
+  }
 }
 
 .btn-danger {
@@ -382,6 +404,12 @@ input[type="checkbox"] {
     font-size: 12px;
     padding: 3px 14px;
     min-width: 70px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
   }
 }
 
@@ -866,7 +894,7 @@ input[type="checkbox"] {
   color: $white;
   background-color: $theme-primary-color;
   transition: all 0.5s ease-in-out;
-  z-index: 111;
+  z-index: 9999;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
   @media (max-width:1024px) {
@@ -1337,7 +1365,7 @@ header {
   margin-left: 271px;
   width: calc(100% - 271px);
   transition: all 0.5s ease-in-out;
-  z-index: 111;
+  z-index: 9999;
 
   @media (max-width:768px) {
     width: calc(100% - 78px);
@@ -4100,13 +4128,21 @@ header {
               background-color: $theme-primary-color;
               color: $white;
               border-radius: 24px;
+
+              &:hover {
+                z-index: 1;
+              }
+            }
+
+            &:hover {
+              z-index: inherit;
             }
           }
         }
       }
 
       &:last-child {
-        .fc-listDay-button {
+        .fc-listMonth-button {
           width: 30px;
           height: 30px;
           justify-content: center;
@@ -4134,18 +4170,18 @@ header {
             display: none;
           }
 
-          &.fc-button-active {
-            background-color: $theme-primary-color;
-            color: $white;
+          // &.fc-button-active {
+          //   background-color: $theme-primary-color;
+          //   color: $white;
 
-            span {
-              display: none;
-            }
+          //   span {
+          //     display: none;
+          //   }
 
-            svg {
-              display: block;
-            }
-          }
+          //   svg {
+          //     display: block;
+          //   }
+          // }
         }
 
         .fc-addButton-button {
@@ -4447,7 +4483,7 @@ header {
           vertical-align: middle;
 
           @media (max-width:1440px) {
-            min-width: 200px;
+            min-width: 160px;
           }
         }
 
@@ -4478,8 +4514,11 @@ header {
               justify-content: space-between;
 
               .event_title {
-                min-width: 150px;
+                min-width: 80px;
                 font-size: 14px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
               }
 
               .time,
@@ -4518,6 +4557,14 @@ header {
 
               @media (max-width:1440px) {
                 margin-left: 20px;
+              }
+
+              @media (max-width:1199px) {
+                min-width: 120px;
+
+                .btn-cancel {
+                  margin-left: 5px;
+                }
               }
             }
           }
@@ -4592,7 +4639,7 @@ header {
       margin-right: -1px;
 
       @media (max-width:1199px) {
-        text-align: center;
+        // text-align: center;
         padding: 2px 2px 6px;
         margin-top: 2px;
       }
@@ -5864,7 +5911,7 @@ header {
   align-items: center;
   top: 35px;
   border-radius: 50%;
-  z-index: 999;
+  z-index: 99999;
   border: none;
   margin-bottom: 0;
   cursor: pointer;
