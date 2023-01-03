@@ -67,7 +67,7 @@ body.modal-open {
 
 .loader {
   position: fixed;
-  z-index: 9999999;
+  z-index: 999999999;
   top: 0;
   left: 0;
   right: 0;
@@ -312,6 +312,14 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
+.modal-backdrop {
+  z-index: 999999;
+}
+
+.modal {
+  z-index: 9999999;
+}
+
 .btn {
   font-size: 16px;
   line-height: 20px;
@@ -380,8 +388,8 @@ input[type="checkbox"] {
   padding: 7px;
 }
 
-.select2-container {
-  z-index: 1111;
+.modal-open .select2-container {
+  z-index: 9999999;
 }
 
 .btn-info {
@@ -404,6 +412,14 @@ input[type="checkbox"] {
   }
 }
 
+@media (max-width: 1024px) {
+  .btn-info {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
+  }
+}
+
 .btn-warning {
   background-color: #e0a800;
   border-color: #e0a800;
@@ -423,10 +439,26 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 1024px) {
+  .btn-warning {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
   .btn-danger {
     font-size: 12px;
     padding: 3px 14px;
     min-width: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-danger {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 50px;
   }
 }
 
@@ -938,7 +970,7 @@ input[type="checkbox"] {
   background-color: #764af3;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 111;
+  z-index: 9999;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -1420,7 +1452,7 @@ header {
   width: calc(100% - 271px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 111;
+  z-index: 9999;
 }
 
 @media (max-width: 768px) {
@@ -4319,7 +4351,15 @@ header.active .side-nav-btn img {
   border-radius: 24px;
 }
 
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button {
+#calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button.fc-button-active:hover {
+  z-index: 1;
+}
+
+#calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button:hover {
+  z-index: inherit;
+}
+
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button {
   width: 30px;
   height: 30px;
   -webkit-box-pack: center;
@@ -4343,30 +4383,17 @@ header.active .side-nav-btn img {
   transition: all 0.5s ease-in-out;
 }
 
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button:hover {
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button:hover {
   background-color: #764af3;
   color: #ffffff;
 }
 
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button span {
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button span {
   font-size: 21px;
 }
 
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button svg {
+#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button svg {
   display: none;
-}
-
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button.fc-button-active {
-  background-color: #764af3;
-  color: #ffffff;
-}
-
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button.fc-button-active span {
-  display: none;
-}
-
-#calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listDay-button.fc-button-active svg {
-  display: block;
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button {
@@ -4607,7 +4634,7 @@ header.active .side-nav-btn img {
 
 @media (max-width: 1440px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
-    min-width: 200px;
+    min-width: 160px;
   }
 }
 
@@ -4656,8 +4683,11 @@ header.active .side-nav-btn img {
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .event_title {
-  min-width: 150px;
+  min-width: 80px;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .time,
@@ -4699,6 +4729,15 @@ header.active .side-nav-btn img {
 @media (max-width: 1440px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
+    min-width: 120px;
+  }
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns .btn-cancel {
+    margin-left: 5px;
   }
 }
 
@@ -4775,7 +4814,6 @@ header.active .side-nav-btn img {
 
 @media (max-width: 1199px) {
   #calendar .schedule_event_wrap .event-btns {
-    text-align: center;
     padding: 2px 2px 6px;
     margin-top: 2px;
   }
@@ -6088,7 +6126,7 @@ header.active .side-nav-btn img {
           align-items: center;
   top: 35px;
   border-radius: 50%;
-  z-index: 999;
+  z-index: 99999;
   border: none;
   margin-bottom: 0;
   cursor: pointer;
