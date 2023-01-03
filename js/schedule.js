@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
         titleFormat: '{DD.{MM.}}YYYY'
       },
     },
-    initialDate: "2022-08-29",
+    initialDate: "2023-01-03",
     eventContent: function (arg) {
       return { html: arg.event.title };
     },
     events: [
       {
         title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div></div><div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span></div></div>',
-        start: '2022-08-29T00:00:00',
-        end: '2022-08-29T01:00:00',
+        start: '2023-01-03T00:00:00',
+        end: '2023-01-03T01:00:00',
         color: "#DDECFF",
       },
       {
