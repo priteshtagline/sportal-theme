@@ -4479,11 +4479,18 @@ header {
         }
 
         .fc-list-event-time {
-          min-width: 300px;
+          min-width: 160px;
           vertical-align: middle;
 
           @media (max-width:1440px) {
             min-width: 160px;
+          }
+
+          @media (max-width:1200px) {
+            width: 80px;
+            min-width: 80px;
+            font-size: 12px;
+            white-space: break-spaces;
           }
         }
 
@@ -4519,6 +4526,12 @@ header {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
+
+                @media (max-width:1200px) {
+                  font-size: 12px;
+                  min-width: 55px;
+                  width: 55px;
+                }
               }
 
               .time,
@@ -4526,17 +4539,29 @@ header {
               .user_name {
                 font-size: 14px;
                 color: $black;
+                padding: 0 5px;
+
+                @media (max-width:1200px) {
+                  font-size: 12px;
+                }
               }
 
+
               .court_title {
-                min-width: 400px;
+                min-width: 270px;
+                width: 270px;
 
                 @media (max-width:1440px) {
-                  min-width: 250px;
-                  width: 250px;
+                  min-width: 200px;
+                  width: 200px;
                   text-overflow: ellipsis;
                   overflow: hidden;
                   white-space: nowrap;
+                }
+
+                @media (max-width:1440px) {
+                  min-width: 100px;
+                  width: 100px;
                 }
               }
 
@@ -4546,6 +4571,7 @@ header {
 
               .schedule_profile {
                 margin-top: 0;
+                padding: 0 5px;
               }
             }
 
@@ -4565,6 +4591,13 @@ header {
                 .btn-cancel {
                   margin-left: 5px;
                 }
+              }
+
+              @media (max-width:1199px) {
+                min-width: 110px;
+                margin-left: 8px;
+                padding-bottom: 3px;
+                width: 110px;
               }
             }
           }
@@ -4703,6 +4736,36 @@ header {
   .fc-daygrid-day {
     &.fc-day-today {
       background-color: transparent;
+    }
+  }
+
+  .list_status {
+    display: none;
+
+    &.btn {
+      padding: 2px 11px;
+      font-size: 12px;
+      min-width: 60px;
+
+      @media (max-width: 1200px) {
+        padding: 2px 2px 2px;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0px 11px;
+        font-size: 10px;
+        line-height: 15px;
+        min-width: 54px;
+        margin-bottom: 0;
+      }
+    }
+
+
+  }
+
+  .fc-list-event {
+    .list_status {
+      display: block;
     }
   }
 }
