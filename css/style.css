@@ -4888,6 +4888,11 @@ header.active .side-nav-btn img {
   background-color: #764af3;
 }
 
+#calendar .fc-timegrid-col.fc-day-today,
+#calendar .fc-daygrid-day.fc-day-today {
+  background-color: transparent;
+}
+
 .dashboard_theme .dashboard_head .dashboard_head_row {
   display: -webkit-box;
   display: -ms-flexbox;

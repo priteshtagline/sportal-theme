@@ -4698,6 +4698,13 @@ header {
       }
     }
   }
+
+  .fc-timegrid-col,
+  .fc-daygrid-day {
+    &.fc-day-today {
+      background-color: transparent;
+    }
+  }
 }
 
 // Dashboard_module
