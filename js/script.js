@@ -267,9 +267,6 @@ $(document).ready(function () {
       $("#sidebar.active").toggleClass("hover");
     }
   );
-  $(function () {
-    // $('.navbar-toggler').removeAttr(style);
-  });
 
   // Notification_pagination
   var items = $(".list-wrapper li");
@@ -343,16 +340,7 @@ $(document).ready(function () {
     if (!$(e.target).is('.navbar .notification_menu')) {
       $('.collapse').collapse('hide');
     }
-  });;
-
-
-  // $(".theme-charts").each(function () {
-  //   var attr = $(this).attr("data-legend-label");
-  //   if (typeof attr !== typeof undefined && attr !== false) {
-  //     console.log($(this).children(".apexcharts-canvas").children(".apexcharts-svg").children("foreignObject").children(".apexcharts-legend").prepend(`<h6>` + attr + `<h6 />`));
-  //   }
-  // })
-
+  });
 });
 
 
