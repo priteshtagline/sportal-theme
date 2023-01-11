@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         click: function () {
           $(".fc-filterButton-button").toggleClass("active");
           $(".filter-popup-schedule").toggleClass("active");
-          $(".fc-header-toolbar .fc-filterButton-button").append($(".filter-popup-schedule"));
+          // $(".fc-header-toolbar .fc-filterButton-button").append($(".filter-popup-schedule"));
+          $(".fc-header-toolbar .fc-toolbar-chunk:first-child").append($(".filter-popup-schedule"));
         },
       },
       menuButton: {
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     events: [
       {
-        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div><span class="btn list_status btn-info btn-sm radius-rounded">Active</span></div><div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span></div></div>',
+        title: '<div class="schedule_event_wrap light_blue_event"><div class="schedule_event"><span class="event_title">Futsal</span><span class="time">08:00 - 09:00 am</span><span class="court_title">Beach Front Arena - Court # 2</span><div class="schedule_profile"><img src="images/user_profile.png" alt="profile"><span class="user_name">Moeed Shahid</span></div><span class="btn list_status btn-info btn-sm radius-rounded">Active</span></div><div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg" alt="Cancel"><span>Cancel</span></a></div></div>',
         start: '2023-01-03T00:00:00',
         end: '2023-01-03T01:00:00',
         color: "#DDECFF",
@@ -158,3 +159,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   calendar.render();
 });
+

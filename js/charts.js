@@ -184,7 +184,10 @@ var player_analytics_options = {
     type: 'area',
     toolbar: {
       show: false,
-    }
+    },
+    zoom: {
+      enabled: false,
+    },
   },
   dataLabels: {
     enabled: false
@@ -249,7 +252,10 @@ var reports_revenue_options = {
     type: 'line',
     toolbar: {
       show: false,
-    }
+    },
+    zoom: {
+      enabled: false,
+    },
   },
   plotOptions: {
     bar: {
@@ -753,7 +759,7 @@ var reports_court_feature_options = {
   },
   legend: {
     position: 'right',
-    offsetY: 50,
+    offsetY: 25,
     offsetX: -10,
     height: 150,
     fontSize: '10px',
@@ -1100,7 +1106,10 @@ var report_player_activity_options = {
     type: 'area',
     toolbar: {
       show: false,
-    }
+    },
+    zoom: {
+      enabled: false,
+    },
   },
   dataLabels: {
     enabled: false

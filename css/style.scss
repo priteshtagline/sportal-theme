@@ -356,8 +356,13 @@ input[type="checkbox"] {
   border-color: $theme-info;
   color: $white;
 
-  &:hover,
   &:active,
+  &:hover {
+    background-color: $theme-info  !important;
+    border-color: $theme-info  !important;
+    color: $white  !important;
+  }
+
   &:disabled {
     background-color: $hover-color;
     border-color: $hover-color;
@@ -373,7 +378,7 @@ input[type="checkbox"] {
   @media (max-width: 1024px) {
     font-size: 10px;
     padding: 0px 9px;
-    min-width: 50px;
+    min-width: 62px;
   }
 }
 
@@ -382,8 +387,11 @@ input[type="checkbox"] {
   border-color: $theme-warning;
   color: $white;
 
-  &:hover {
-    color: $white;
+  &:hover,
+  &:active {
+    background-color: $theme-warning  !important;
+    border-color: $theme-warning  !important;
+    color: $white  !important;
   }
 
   @media (max-width: 1024px) {
@@ -393,13 +401,21 @@ input[type="checkbox"] {
   }
 
   @media (max-width: 1024px) {
-    font-size: 10px;
-    padding: 0px 9px;
-    min-width: 50px;
+    font-size: 9px;
+    padding: 0px 6px;
+    min-width: 62px;
   }
 }
 
 .btn-danger {
+
+  &:hover,
+  &:active {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+  }
+
   @media (max-width: 1024px) {
     font-size: 12px;
     padding: 3px 14px;
@@ -409,7 +425,45 @@ input[type="checkbox"] {
   @media (max-width: 1024px) {
     font-size: 10px;
     padding: 0px 9px;
-    min-width: 50px;
+    min-width: 62px;
+  }
+}
+
+.btn-light {
+
+  &:hover,
+  &:active {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 62px;
+  }
+}
+
+.btn-gray {
+  &.btn-sm {
+    @media (max-width: 1024px) {
+      font-size: 12px;
+      padding: 3px 14px;
+      min-width: 70px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 10px;
+      padding: 0px 9px;
+      min-width: 62px;
+    }
   }
 }
 
@@ -796,6 +850,10 @@ input[type="checkbox"] {
 
           &:hover {
             box-shadow: none;
+          }
+
+          @media (max-width: 1350px) {
+            padding: 14px 10px;
           }
 
           @media (max-width: 1024px) {
@@ -3351,6 +3409,7 @@ header {
   .user_image {
     width: 37px;
     height: 37px;
+    flex: 0 0 37px;
     border-radius: 50%;
     margin-right: 16px;
   }
@@ -3390,6 +3449,12 @@ header {
     li {
       .dropdown-item {
         padding: 4px 5px;
+
+        &:active,
+        &:hover {
+          background-color: $theme-primary-color;
+          color: $white  !important;
+        }
       }
 
       &:first-child .dropdown-item {
@@ -4026,6 +4091,7 @@ header {
     position: relative;
 
     .fc-toolbar-chunk {
+      position: relative;
       display: flex;
       // flex-wrap: wrap;
       align-items: center;
@@ -4727,6 +4793,15 @@ header {
 
         &.btn-view {
           background-color: #764af3;
+          padding: 6px 10px;
+
+          img {
+            width: 8px;
+          }
+
+          @media (max-width: 1500px) {
+            padding: 4px 7px;
+          }
         }
       }
     }
@@ -5382,6 +5457,7 @@ header {
 
       .card-body {
         padding: 22px 17px;
+        min-height: 182px;
 
         .card_head_block {
           display: inline-flex;
@@ -5485,7 +5561,7 @@ header {
 
       .card-body {
         overflow-x: hidden;
-        padding: 8px 20px;
+        padding: 15px 20px;
       }
 
       .apexcharts-canvas {
@@ -6331,14 +6407,15 @@ header {
       display: flex;
       align-items: center;
 
+      img {
+        border-radius: 9px;
+        width: 58px;
+        height: 58px;
+      }
+
       .team_title {
         margin-left: 13px;
 
-        img {
-          border-radius: 9px;
-          width: 58px;
-          height: 58px;
-        }
 
         h6 {
           font-family: 'Outfit SemiBold';
@@ -6817,7 +6894,7 @@ header {
     transition: all 2.5s ease-in;
     position: absolute;
     top: 37px;
-    left: 0%;
+    right: -50%;
     width: 180px;
     z-index: 2;
     display: none;

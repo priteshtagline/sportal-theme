@@ -398,7 +398,13 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
-.btn-info:hover, .btn-info:active, .btn-info:disabled {
+.btn-info:active, .btn-info:hover {
+  background-color: #4e9afe !important;
+  border-color: #4e9afe !important;
+  color: #ffffff !important;
+}
+
+.btn-info:disabled {
   background-color: #a98ff1;
   border-color: #a98ff1;
   color: #ffffff;
@@ -416,7 +422,7 @@ input[type="checkbox"] {
   .btn-info {
     font-size: 10px;
     padding: 0px 9px;
-    min-width: 50px;
+    min-width: 62px;
   }
 }
 
@@ -426,8 +432,10 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
-.btn-warning:hover {
-  color: #ffffff;
+.btn-warning:hover, .btn-warning:active {
+  background-color: #e0a800 !important;
+  border-color: #e0a800 !important;
+  color: #ffffff !important;
 }
 
 @media (max-width: 1024px) {
@@ -440,10 +448,16 @@ input[type="checkbox"] {
 
 @media (max-width: 1024px) {
   .btn-warning {
-    font-size: 10px;
-    padding: 0px 9px;
-    min-width: 50px;
+    font-size: 9px;
+    padding: 0px 6px;
+    min-width: 62px;
   }
+}
+
+.btn-danger:hover, .btn-danger:active {
+  color: #fff !important;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
 }
 
 @media (max-width: 1024px) {
@@ -458,7 +472,45 @@ input[type="checkbox"] {
   .btn-danger {
     font-size: 10px;
     padding: 0px 9px;
-    min-width: 50px;
+    min-width: 62px;
+  }
+}
+
+.btn-light:hover, .btn-light:active {
+  color: #212529 !important;
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+}
+
+@media (max-width: 1024px) {
+  .btn-light {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-light {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 62px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-gray.btn-sm {
+    font-size: 12px;
+    padding: 3px 14px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-gray.btn-sm {
+    font-size: 10px;
+    padding: 0px 9px;
+    min-width: 62px;
   }
 }
 
@@ -870,6 +922,12 @@ input[type="checkbox"] {
 .table-responsive .table tbody tr td:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media (max-width: 1350px) {
+  .table-responsive .table tbody tr td {
+    padding: 14px 10px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3565,6 +3623,9 @@ header.active .side-nav-btn img {
 .table_profile_group .user_image {
   width: 37px;
   height: 37px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 37px;
+          flex: 0 0 37px;
   border-radius: 50%;
   margin-right: 16px;
 }
@@ -3602,6 +3663,11 @@ header.active .side-nav-btn img {
 
 .divider_dropdown_group .dropdown-menu li .dropdown-item {
   padding: 4px 5px;
+}
+
+.divider_dropdown_group .dropdown-menu li .dropdown-item:active, .divider_dropdown_group .dropdown-menu li .dropdown-item:hover {
+  background-color: #764af3;
+  color: #ffffff !important;
 }
 
 .divider_dropdown_group .dropdown-menu li:first-child .dropdown-item {
@@ -4230,6 +4296,7 @@ header.active .side-nav-btn img {
 }
 
 #calendar .fc-header-toolbar .fc-toolbar-chunk {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4930,6 +4997,17 @@ header.active .side-nav-btn img {
 
 #calendar .schedule_event_wrap .event-btns .btn.btn-view {
   background-color: #764af3;
+  padding: 6px 10px;
+}
+
+#calendar .schedule_event_wrap .event-btns .btn.btn-view img {
+  width: 8px;
+}
+
+@media (max-width: 1500px) {
+  #calendar .schedule_event_wrap .event-btns .btn.btn-view {
+    padding: 4px 7px;
+  }
 }
 
 #calendar .fc-timegrid-col.fc-day-today,
@@ -5570,6 +5648,7 @@ header.active .side-nav-btn img {
 
 .reports_theme .report_head .card .card-body {
   padding: 22px 17px;
+  min-height: 182px;
 }
 
 .reports_theme .report_head .card .card-body .card_head_block {
@@ -5691,7 +5770,7 @@ header.active .side-nav-btn img {
 
 .reports_theme .reports_body .card .card-body {
   overflow-x: hidden;
-  padding: 8px 20px;
+  padding: 15px 20px;
 }
 
 @media (max-width: 1199px) {
@@ -6573,14 +6652,14 @@ header.active .side-nav-btn img {
           align-items: center;
 }
 
-.teams_box .card-header .teams_header .team_title {
-  margin-left: 13px;
-}
-
-.teams_box .card-header .teams_header .team_title img {
+.teams_box .card-header .teams_header img {
   border-radius: 9px;
   width: 58px;
   height: 58px;
+}
+
+.teams_box .card-header .teams_header .team_title {
+  margin-left: 13px;
 }
 
 .teams_box .card-header .teams_header .team_title h6 {
@@ -7104,7 +7183,7 @@ header.active .side-nav-btn img {
   transition: all 2.5s ease-in;
   position: absolute;
   top: 37px;
-  left: 0%;
+  right: -50%;
   width: 180px;
   z-index: 2;
   display: none;
