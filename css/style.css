@@ -1156,8 +1156,8 @@ input[type="checkbox"] {
 .sidebar .profile-dropdown .profile .profile_image {
   width: 20px;
   height: 20px;
-  margin-top: -9px;
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .sidebar .profile-dropdown .profile .user_name {
@@ -4761,6 +4761,10 @@ header.active .side-nav-btn img {
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .event_title {
   min-width: 80px;
   font-size: 14px;
+  max-width: 150px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -4793,15 +4797,18 @@ header.active .side-nav-btn img {
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
   min-width: 270px;
   width: 270px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  white-space: nowrap;
 }
 
 @media (max-width: 1440px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
     min-width: 200px;
     width: 200px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
   }
 }
 
@@ -4818,7 +4825,20 @@ header.active .side-nav-btn img {
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .schedule_profile {
   margin-top: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0 5px;
+  min-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .schedule_profile {
+    min-width: 130px;
+  }
 }
 
 #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
@@ -5043,6 +5063,7 @@ header.active .side-nav-btn img {
 
 #calendar .fc-list-event .list_status {
   display: block;
+  cursor: auto;
 }
 
 .dashboard_theme .dashboard_head .dashboard_head_row {
@@ -6436,11 +6457,33 @@ header.active .side-nav-btn img {
 }
 
 .tournament_module .title_block .tournament-filter-popup .head-filter {
-  padding-left: 9px;
   color: #000000;
-  font-size: 12px;
-  padding-bottom: 7px;
   border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 10px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tournament_module .title_block .tournament-filter-popup .head-filter span {
+  padding-bottom: 7px;
+  padding-left: 9px;
+}
+
+.tournament_module .title_block .tournament-filter-popup .head-filter .btn-input {
+  font-size: 12px;
+  padding: 0 11px 7px 0;
+  border: none;
+  color: #764af3;
+  text-align: right;
+  cursor: pointer;
 }
 
 .tournament_module .title_block .tournament-filter-popup .sport-tournament {
@@ -6621,6 +6664,7 @@ header.active .side-nav-btn img {
 
 .teams_box {
   border-radius: 12px;
+  height: 100%;
   border: none;
   margin-bottom: 30px;
   -webkit-box-shadow: 0px 3px 8px #0000000f;
@@ -7209,11 +7253,33 @@ header.active .side-nav-btn img {
 }
 
 #schedule .tournament-filter-popup .head-filter {
-  padding-left: 9px;
   color: #000000;
-  font-size: 12px;
-  padding-bottom: 7px;
   border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 10px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#schedule .tournament-filter-popup .head-filter span {
+  padding-bottom: 7px;
+  padding-left: 9px;
+}
+
+#schedule .tournament-filter-popup .head-filter .btn-input {
+  font-size: 12px;
+  padding: 0 11px 7px 0;
+  border: none;
+  color: #764af3;
+  text-align: right;
+  cursor: pointer;
 }
 
 #schedule .tournament-filter-popup .sport-tournament {
