@@ -357,10 +357,32 @@ var payment_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -442,10 +464,32 @@ var payment_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -523,10 +567,32 @@ var reports_product_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -608,10 +674,32 @@ var reports_court_coverage_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -694,10 +782,32 @@ var reports_court_size_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -780,10 +890,32 @@ var reports_court_feature_options = {
     pie: {
       customScale: 0.9,
       offsetX: 0,
-
       donut: {
         size: '70%',
         offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '40px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
       }
     }
   },
@@ -1048,11 +1180,35 @@ var reports_revenue_payment_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
+      offsetX: 0,
       donut: {
         size: '80%',
-      },
-      offsetY: 0,
-    },
+        offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '55px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
+      }
+    }
   },
   responsive: [
     {
@@ -1196,11 +1352,35 @@ var reports_player_payment_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
+      offsetX: 0,
       donut: {
         size: '80%',
-      },
-      offsetY: 0,
-    },
+        offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '55px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
+      }
+    }
   },
   responsive: [
     {
@@ -1277,11 +1457,35 @@ var reports_player_payment_1_options = {
   plotOptions: {
     pie: {
       customScale: 0.9,
+      offsetX: 0,
       donut: {
         size: '80%',
-      },
-      offsetY: 0,
-    },
+        offsetY: 0,
+        labels: {
+          show: true,
+          name: {
+            show: false,
+          },
+          value: {
+            show: true,
+            fontSize: '55px',
+            offsetY: 16,
+            formatter: function (val) {
+              return val
+            }
+          },
+          total: {
+            show: true,
+            color: '#373d3f',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => {
+                return a + b
+              }, 0)
+            },
+          }
+        }
+      }
+    }
   },
   responsive: [
     {
