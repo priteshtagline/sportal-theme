@@ -2481,8 +2481,8 @@ header {
         }
 
         label {
-          min-width: 120px;
-          margin-right: 35px;
+          min-width: 155px;
+          padding-right: 35px;
           font-size: 14px;
           line-height: 17px;
         }
@@ -7022,4 +7022,25 @@ header {
 
 .fc-list-day-text {
   font-size: 16px;
+}
+
+.ui-timepicker-wrapper {
+  z-index: 11111111;
+  min-width: 176px;
+  border-radius: 6px;
+
+  .ui-timepicker-list {
+    li {
+      font-size: 14px;
+
+      &.ui-timepicker-selected {
+        background-color: $theme-primary-color;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
 }
