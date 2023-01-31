@@ -206,7 +206,7 @@ $(document).ready(function () {
   })
 
   // scheduletime for setting overview
-  $('.btn').on('click', function () {
+  $('.schedule_time .btn').on('click', function () {
     $(this).closest('li.schedule_time_list').toggleClass('edit');
   })
   $(".form_card .btn-reset").click(function () {
