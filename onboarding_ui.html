@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportal</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png" />
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet"
+    href="https://www.jonthornton.com/jquery-timepicker/documentation-assets/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/material-icons.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="loader">
+    <div class="cubes">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+
+  <div class="onboarding_navbar">
+    <img src="images/sportal-theme-logo.png" alt="sportal-theme">
+  </div>
+
+  <div class="onboarding_sidebar">
+    <div class="top_block">
+      <p class="progress_head">Step 1</p>
+      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+        aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+
+      <!-- Step-1 -->
+
+      <!-- <div class="header_block">
+        <h6>General Information</h6>
+        <p>Lorem ipsum dolor set amit del Partido fi real madrid as </p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="club_name">Club Name</label>
+            <input type="text" class="textinput form-control" id="club_name">
+          </div>
+          <div class="form-group">
+            <label for="club_country">Country</label>
+            <input type="text" class="textinput form-control" id="club_country">
+          </div>
+          <div class="form-group">
+            <label for="club_city">City</label>
+            <input type="text" class="textinput form-control" id="club_city">
+          </div>
+          <div class="form-group">
+            <label for="club_address">Street Address</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="club_postal_code">Club Name</label>
+            <input type="text" class="textinput form-control" id="club_postal_code">
+          </div>
+          <div class="form-group">
+            <label for="club_language">Language selection</label>
+            <select class="input w-100 select form-control" id="club_language" aria-label="Default select example">
+              <option selected>Select</option>
+              <option value="1">English</option>
+              <option value="2">Gujarati</option>
+              <option value="3">US English</option>
+            </select>
+          </div>
+        </form>
+      </div> -->
+
+      <!-- Step-2 -->
+      <!-- <div class="header_block">
+        <h6>Is the pin in the Right Place?</h6>
+        <p>If needed, you can adjust the pin on the map manually in the
+          right location</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="club_name">Locate your court</label>
+            <div class="map-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.841321363062!2d72.88527441526007!3d21.238139985885333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2c4c9fc0c9%3A0xd6cbadcdb8553ef4!2sTagline%20Infotech%20LLP!5e0!3m2!1sen!2sin!4v1675063897817!5m2!1sen!2sin"
+                width="453" height="231" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </form>
+      </div> -->
+
+      <!-- Step-3 -->
+      <!-- <div class="header_block">
+        <h6>What Facilities do you offer?</h6>
+        <p>These are just the facilities players usually expect, but you can
+          add even more after you publish</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="" class="check_form">
+          <div class="form-group">
+            <input type="checkbox" id="wifi_facility" class="inputcheck">
+            <label for="wifi_facility">Wi-Fi</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="parking_facility" class="inputcheck">
+            <label for="parking_facility">Free Parking</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="lockers_facility" class="inputcheck">
+            <label for="lockers_facility">Lockers</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="changeroom_facility" class="inputcheck">
+            <label for="changeroom_facility">Changeroom</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="cafeteria_facility" class="inputcheck">
+            <label for="cafeteria_facility">Cafeteria</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="restaurant_facility" class="inputcheck">
+            <label for="restaurant_facility">Restaurant</label>
+          </div>
+        </form>
+      </div> -->
+
+      <!-- Step-4 -->
+      <!-- <div class="header_block">
+        <h6>Opening Hours</h6>
+        <p>Show your working schedule to your customers</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="" class="schedule_form">
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="monday_switch" checked />
+              <label for="monday_switch" class="mb-0"></label>
+            </span>
+            <label for="monday_switch" class="label">Monday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="tuesday_switch" checked />
+              <label for="tuesday_switch" class="mb-0"></label>
+            </span>
+            <label for="tuesday_switch" class="label">Tuesday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="wednesday_switch" checked />
+              <label for="wednesday_switch" class="mb-0"></label>
+            </span>
+            <label for="wednesday_switch" class="label">Wednesday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="thursday_switch" checked />
+              <label for="thursday_switch" class="mb-0"></label>
+            </span>
+            <label for="thursday_switch" class="label">Thursday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="friday_switch" checked />
+              <label for="friday_switch" class="mb-0"></label>
+            </span>
+            <label for="friday_switch" class="label">Friday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="saturday_switch" checked />
+              <label for="saturday_switch" class="mb-0"></label>
+            </span>
+            <label for="saturday_switch" class="label">Saturday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="switch">
+              <input type="checkbox" id="sunday_switch" />
+              <label for="sunday_switch" class="mb-0"></label>
+            </span>
+            <label for="sunday_switch" class="label">Sunday</label>
+            <div class="input_group">
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="From"
+                autocomplete="off">
+              <span>-</span>
+              <input id="schedule_start2_time" type="text" class="time time-dropdown" placeholder="To"
+                autocomplete="off">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-edit" type="button">Edit</button>
+              <button class="btn btn-save" type="button">Save</button>
+            </div>
+          </div>
+        </form>
+      </div> -->
+
+      <!-- Step-5 -->
+      <!-- <div class="header_block">
+        <h6>Create Court</h6>
+        <p>Show your working schedule to your customers</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="sports_name">Sport Name</label>
+            <select class="input w-100 select form-control" id="sports_name" aria-label="Default select example">
+              <option value="1">Futsal</option>
+              <option value="2">Football</option>
+              <option value="3">Cricket</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="court_count">Court Count</label>
+            <select class="input w-100 select form-control" id="court_count" aria-label="Default select example">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="club_address">Street Address</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <div class="d-flex justify-content-between align-items-center">
+              <label for="bookable_online" class="mb-0">Bookable Online</label>
+              <span class="switch"><input type="checkbox" id="bookable_online" checked /><label for="bookable_online"
+                  class="mb-0"></label></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="d-flex justify-content-between align-items-center">
+              <label for="shared_court" class="mb-0">Shared Court</label>
+              <span class="switch"><input type="checkbox" id="shared_court" checked /><label for="shared_court"
+                  class="mb-0"></label></span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-hover">+ Add New Court</button>
+        </form>
+      </div> -->
+
+      <!-- Step-6 -->
+      <div class="header_block">
+        <h6>Set Pricing</h6>
+        <p>Set the pricing of the courts and games</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="sports_name">Tennis / Padel Tennis - Pricing Per Hour (Singles)</label>`
+          </div>
+          <button type="button" class="btn btn-hover">+ Add New Court</button>
+        </form>
+      </div>
+
+
+
+
+    </div>
+    <div class="steps_buttons">
+      <button class="btn btn-active">Next</button>
+      <button class="btn">Skip</button>
+    </div>
+  </div>
+
+  <div class="onboarding_content">
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+      kasd gubergren, no sea
+    </p>
+    <img src="images/pc-dashboard.png" alt="dashboard-ui">
+  </div>
+
+  <!-- Script -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="https://www.jonthornton.com/jquery-timepicker/jquery.timepicker.js"></script>
+  <script src="https://www.jonthornton.com/jquery-timepicker/documentation-assets/bootstrap-datepicker.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/popper.min.js"></script>
+
+  <script>
+    $(window).on('load', function () {
+      $('.loader').css({ "opacity": "0", "visibility": "hidden" });
+    });
+
+    $(document).ready(function () {
+
+      $(".select").select2({
+        tags: true
+      });
+      $(function () {
+        $('.time-dropdown').timepicker();
+      });
+
+
+      // Onboarding 
+      $('.onboarding_form .schedule_form .btn-save').hide();
+      $('.onboarding_form .schedule_form .btn-edit').on('click', function () {
+        $(this).hide();
+        $(this).closest('.form-group').addClass('edit');
+        $(this).closest('.button-group').children(".btn-save").show();
+      });
+      $('.onboarding_form .schedule_form .btn-save').on('click', function () {
+        $(this).hide();
+        $(this).closest('.form-group').removeClass('edit');
+        $(this).closest('.button-group').children(".btn-edit").show();
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>
