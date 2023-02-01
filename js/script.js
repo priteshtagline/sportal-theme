@@ -342,23 +342,12 @@ $(document).ready(function () {
   //   }
   // });
 
-  // $("body").click(function () {
-  //   var $target = $(e.target);
-  //   if (!$target.is(".filter-popup-schedule") || !$target.is(".filter-popup-schedule").children()) {
-  //     $("body").find(".filter-popup-schedule").fadeOut().removeClass('active');
-  //   }
-  // });
-
-  // If an event gets to the body
   $("body").click(function () {
-    $(".filter-popup-schedule").fadeOut().removeClass("active");
+    var $target = $(e.target);
+    if (!$target.is(".filter-popup-schedule") || !$target.is(".filter-popup-schedule").children()) {
+      $("body").find(".filter-popup-schedule").fadeOut().removeClass('active');
+    }
   });
-
-  // Prevent events from getting pass .popup
-  $(".popup").click(function (e) {
-    e.stopPropagation();
-  });
-
 });
 
 
