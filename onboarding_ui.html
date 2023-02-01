@@ -48,7 +48,7 @@
 
       <!-- Step-1 -->
 
-      <!-- <div class="header_block">
+      <div class="header_block">
         <h6>General Information</h6>
         <p>Lorem ipsum dolor set amit del Partido fi real madrid as </p>
       </div>
@@ -71,7 +71,7 @@
             <input type="text" class="textinput form-control" id="club_address">
           </div>
           <div class="form-group">
-            <label for="club_postal_code">Club Name</label>
+            <label for="club_postal_code">Postal Code</label>
             <input type="text" class="textinput form-control" id="club_postal_code">
           </div>
           <div class="form-group">
@@ -84,7 +84,7 @@
             </select>
           </div>
         </form>
-      </div> -->
+      </div>
 
       <!-- Step-2 -->
       <!-- <div class="header_block">
@@ -292,6 +292,19 @@
               <option value="3">Cricket</option>
             </select>
           </div>
+          <div class="form-group mb-2">
+            <label>Court Type</label>
+          </div>
+          <div class="form-group check-group">
+            <div class="group">
+              <input type="radio" class="btn-check" id="indoor_court" name="court_group" autocomplete="off" checked>
+              <label class="btn" for="indoor_court">Indoor</label>
+            </div>
+            <div class="group">
+              <input type="radio" class="btn-check" id="synthetic_court" name="court_group" autocomplete="off">
+              <label class="btn" for="synthetic_court">Synthetic</label>
+            </div>
+          </div>
           <div class="form-group">
             <label for="court_count">Court Count</label>
             <select class="input w-100 select form-control" id="court_count" aria-label="Default select example">
@@ -300,43 +313,213 @@
               <option value="3">3</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="club_address">Street Address</label>
-            <input type="text" class="textinput form-control" id="club_address">
+          <div class="form-group switch-group">
+            <label for="bookable_online1">Bookable Online</label>
+            <span class="switch">
+              <input type="checkbox" id="bookable_online1" />
+              <label for="bookable_online1" class="mb-0"></label>
+            </span>
           </div>
-          <div class="form-group">
-            <div class="d-flex justify-content-between align-items-center">
-              <label for="bookable_online" class="mb-0">Bookable Online</label>
-              <span class="switch"><input type="checkbox" id="bookable_online" checked /><label for="bookable_online"
-                  class="mb-0"></label></span>
-            </div>
+          <div class="form-group switch-group mb-4">
+            <label for="shared_court1">Shared Court</label>
+            <span class="switch">
+              <input type="checkbox" id="shared_court1" />
+              <label for="shared_court1" class="mb-0"></label>
+            </span>
           </div>
-          <div class="form-group">
-            <div class="d-flex justify-content-between align-items-center">
-              <label for="shared_court" class="mb-0">Shared Court</label>
-              <span class="switch"><input type="checkbox" id="shared_court" checked /><label for="shared_court"
-                  class="mb-0"></label></span>
-            </div>
-          </div>
+
           <button type="button" class="btn btn-hover">+ Add New Court</button>
         </form>
       </div> -->
 
       <!-- Step-6 -->
-      <div class="header_block">
+      <!-- <div class="header_block">
         <h6>Set Pricing</h6>
         <p>Set the pricing of the courts and games</p>
       </div>
       <div class="onboarding_form">
+        <form action="" class="pricing_form">
+          <div class="form-group ">
+            <label for="sports_name" class="mt-3 mb-0">Tennis / Padel Tennis - Pricing Per Hour (Singles)</label>
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">60 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">90 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">120 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="mt-3 mb-0">Tennis / Padel Tennis - Pricing Per Hour (Singles)</label>
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">60 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">90 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">120 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="mt-3 mb-0">Pricing Per Sport</label>
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">Futsal 30 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">Tennis 30 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+          <div class="form-group">
+            <label for="sports_name" class="dark-lable">Badminton 30 mins game</label>
+            <input type="text" class="textinput form-control" id="club_address">
+          </div>
+        </form>
+      </div> -->
+
+
+      <!-- Step-7 -->
+      <!-- <div class="header_block">
+        <h6>Booking Limits</h6>
+        <p>Set the limit to the courts and manage the activities</p>
+      </div>
+      <div class="onboarding_form">
         <form action="">
           <div class="form-group">
-            <label for="sports_name">Tennis / Padel Tennis - Pricing Per Hour (Singles)</label>`
+            <label for="book_limit">Book Ahead Limit</label>
+            <input type="text" class="textinput" id="book_limit" value="3">
           </div>
-          <button type="button" class="btn btn-hover">+ Add New Court</button>
+          <div class="form-group">
+            <label for="cancel_time">Cancellation Time (hours)</label>
+            <input type="text" class="textinput" id="cancel_time" value="12 Hours">
+          </div>
+          <div class="form-group">
+            <label for="max_booking">Maximum Bookings Per Day</label>
+            <input type="text" class="textinput" id="max_booking" value="12 per game">
+          </div>
         </form>
+      </div> -->
+
+      <!-- Step-8 -->
+      <!-- <div class="header_block">
+        <h6>Upload Images</h6>
+        <p>Add the best photos to display the features of the court
+          to great impression</p>
       </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label class="mt-3" for="uploadFile3">Upload Images</label>
+            <div class="image_upload">
+              <div class="upload_image_text">
+                <img src="images/upload.svg">
+                <label>Upload Picture</label>
+              </div>
+              <button type="reset" class="btn_delete"><img src="images/image_delete_icon.svg"
+                  alt="delete_icon"></button>
+              <span class="dragBox">
+                <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="uploadFile3" />
+              </span>
+              <div class="image_preview" id="preview"></div>
+            </div>
+          </div>
+        </form>
+      </div> -->
 
+      <!-- Step-9 -->
+      <!-- <div class="header_block">
+        <h6>Contact Information</h6>
+        <p>Add the contact information for your club so that players can
+          reach out.</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" class="textinput" id="website" value="www.sportalwebsite.com">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="textinput" id="email" value="contact@sportalwebsite.com">
+          </div>
+          <div class="form-group">
+            <label for="phone_no">Phone Number</label>
+            <input type="tel" class="textinput" id="phone_no" value="+ 971 xxx xxxx xxxxx">
+          </div>
+        </form>
+      </div> -->
 
+      <!-- Step-10 -->
+      <!-- <div class="header_block">
+        <h6>Company Information</h6>
+        <p>Add the company information for your club so that players can
+          reach out.</p>
+      </div>
+      <div class="onboarding_form">
+        <form action="">
+          <div class="form-group">
+            <label for="company_name">Company Name</label>
+            <input type="text" class="textinput" id="company_name" value="Official Name of the Company">
+          </div>
+          <div class="form-group">
+            <label for="company_email">Email</label>
+            <input type="email" class="textinput" id="company_email" value="loremipsum@dummy.com">
+          </div>
+          <div class="form-group">
+            <label for="company_no">Phone Number</label>
+            <input type="tel" class="textinput" id="company_no" value="+ 971 xxx xxxx xxxxx">
+          </div>
+          <div class="form-group">
+            <label for="company_id_type">Tax ID Type</label>
+            <input type="email" class="textinput" id="company_id_type" value="United Arab Emirates">
+          </div>
+          <div class="form-group">
+            <label for="company_id_no">Tax ID Number</label>
+            <input type="text" class="textinput" id="company_id_no" value="EIDxxxxxxxxxx">
+          </div>
+          <div class="form-group">
+            <label for="company_vat_tax">VAT/TAX</label>
+            <input type="email" class="textinput" id="company_vat_tax" value="EIDxxxxxxxxxx">
+          </div>
+          <div class="form-group">
+            <label for="company_address">Company Address</label>
+            <input type="text" class="textinput" id="company_address" value="Lorem ipsum dolor set amit">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="company_city">City</label>
+                <input type="text" class="textinput" id="company_city" value="Dubai">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="company_country">Country</label>
+                <input type="text" class="textinput" id="company_country" value="United Arab Emirates">
+              </div>
+            </div>
+          </div>
+          <label for=""> Bank Information</label>
+          <div class="form-group">
+            <label for="company_address">International Banking Account Number</label>
+            <input type="number" class="textinput form-control" id="company_address" value="XXXXXXXXXXXXXXXXXXXXXX">
+          </div>
+          <div class="form-group">
+            <label for="bic_swift">BIC/Swift</label>
+            <input type="text" class="textinput form-control" id="bic_swift" value="8 or 11 digit">
+          </div>
+        </form>
+      </div> -->
 
 
     </div>
@@ -392,7 +575,6 @@
       });
 
     });
-
   </script>
 </body>
 
