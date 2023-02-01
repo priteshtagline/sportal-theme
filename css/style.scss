@@ -4853,6 +4853,18 @@ header {
     .list_status {
       display: block;
       cursor: auto;
+      &.btn-info{
+        background-color: #87bbff;
+        border-color: #87bbff;
+      }
+      &.btn-danger{
+        background-color: #ff7481;
+        border-color: #ff7481;
+      }
+      &.btn-success{
+        background-color: #6edd87;
+        border-color: #6edd87;
+      }
     }
   }
 }
@@ -7418,17 +7430,31 @@ header {
   padding: 77px 71px;
   height: calc(100vh - 87px);
   overflow: hidden;
+  @media (max-width:1440px) {
+    // padding: 77px 40px 77px 0px;
+    margin-left: 500px;
+    width: calc(100% - 500px);
+    padding: 50px;
+  }
 
   p {
     font-size: 26px;
     margin-bottom: 65px;
   }
+  .onboarding-img{
 
-  img {
-    position: absolute;
-    max-width: inherit;
-    left: -140px;
-    width: 1645px;
-    height: 855px;
+    img {
+      position: absolute;
+      // max-width: inherit;
+      // left: -140px;
+      // width: 1645px;
+      // height: 855px;
+      max-width: 100%;
+      @media (max-width:1440px) {
+        // left: -99px;
+        width: 835px;
+      }
+    }
   }
+
 }
