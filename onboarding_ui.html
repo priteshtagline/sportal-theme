@@ -36,7 +36,7 @@
 
   <div class="onboarding_navbar">
     <img src="images/sportal-theme-logo.png" alt="sportal-theme">
-    <span class="material-symbols-outlined humburge_menu toggle-icon" onclick="toggleSidebar(this)">
+    <span class="material-symbols-outlined toggle-icon">
       sort
     </span>
   </div>
@@ -390,7 +390,6 @@
         </form>
       </div> -->
 
-
       <!-- Step-7 -->
       <!-- <div class="header_block">
         <h6>Booking Limits</h6>
@@ -540,53 +539,17 @@
     </p>
     <!-- step img-1 -->
     <div class="onboarding-img">
-      <img src="images/pc-dashboard1.png" alt="dashboard-ui">
+      <!-- <img src="images/pc-dashboard.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-2.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-3.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-4.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-5.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/pc-dashboard.png" alt="dashboard-ui"> -->
+      <img src="images/Step-2.png" alt="dashboard-ui">
+      <!-- <img src="images/Step-3.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-4.png" alt="dashboard-ui"> -->
+      <!-- <img src="images/Step-5.png" alt="dashboard-ui"> -->
     </div>
-
-    <!-- step img-2 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-2.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step img-3 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-3.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step img-4 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-4.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step img-5 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-5.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step img-6 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/pc-dashboard1.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step-img-7 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-2.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step img-8 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-3.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step-img-9 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-4.png" alt="dashboard-ui">
-    </div> -->
-
-    <!-- step-img-10 -->
-    <!-- <div class="onboarding-img">
-      <img src="images/Step-5.png" alt="dashboard-ui">
-    </div> -->
   </div>
 
   <!-- Script -->
@@ -623,6 +586,10 @@
         $(this).hide();
         $(this).closest('.form-group').removeClass('edit');
         $(this).closest('.button-group').children(".btn-edit").show();
+      });
+
+      $('.toggle-icon').on('click', function () {
+        $(this).closest('.onboarding_navbar').siblings("#onboarding_sidebar").toggleClass("active");
       });
 
     });

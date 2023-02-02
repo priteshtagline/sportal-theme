@@ -1606,25 +1606,18 @@ header {
           height: 42px;
           background-color: $white;
 
-          &:focus {
-            box-shadow: none;
+          &:hover {
+            img {
+              background-color: #EFEFEF;
+            }
           }
 
           img {
             border-radius: 50%;
-            background-color: #EFEFEF;
             transition: all 0.5s ease-in-out;
             color: $theme-primary-color;
 
           }
-
-          &.collapsed {
-            img {
-              background-color: $white;
-            }
-          }
-
-
         }
 
         .notification_menu {
@@ -4853,15 +4846,18 @@ header {
     .list_status {
       display: block;
       cursor: auto;
-      &.btn-info{
+
+      &.btn-info {
         background-color: #87bbff;
         border-color: #87bbff;
       }
-      &.btn-danger{
+
+      &.btn-danger {
         background-color: #ff7481;
         border-color: #ff7481;
       }
-      &.btn-success{
+
+      &.btn-success {
         background-color: #6edd87;
         border-color: #6edd87;
       }
@@ -7067,11 +7063,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .toggle-icon{
+
+  .toggle-icon {
     display: none;
     color: $theme-primary-color;
     font-size: 32px;
-    @media (max-width: 991px) {
+
+    @media (max-width: 1024px) {
       display: block;
     }
   }
@@ -7080,31 +7078,47 @@ header {
 .onboarding_sidebar {
   position: fixed;
   margin-top: 87px;
-  width: 560px;
+  max-width: 560px;
+  width: 100%;
   background-color: #ffffff;
+  transition: all 0.5s ease-in-out;
   box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.06);
   z-index: 111;
 
   @media (max-width: 1440px) {
-    width: 450px;
+    max-width: 450px;
   }
+
   @media (max-width: 1200px) {
-    width: 420px;
+    max-width: 420px;
   }
-  @media (max-width: 1100px) {
-    width: 360px;
+
+  @media (max-width: 1024px) {
+    max-width: 50%;
+    right: -50%;
+    box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.06);
   }
+
   @media (max-width: 991px) {
-    // display: none;
-    right: -360px;
+    max-width: 75%;
+    right: -75%;
   }
-  &.active{
-    right: 0;
+
+  &.active {
+    @media (max-width: 1024px) {
+      right: 0;
+    }
   }
+
+
   .top_block {
-    padding: 20px 30px;
+    padding: 20px 50px;
     height: calc(100vh - 172px);
     overflow-y: auto;
+
+    @media (max-width: 1440px) {
+      height: calc(100vh - 162px);
+    }
 
     .progress_head {
       font-size: 12px;
@@ -7220,6 +7234,10 @@ header {
 
         .switch {
           margin-top: -73px;
+
+          @media (max-width: 1024px) {
+            margin-top: -26px;
+          }
         }
 
         .label {
@@ -7228,6 +7246,13 @@ header {
           font-size: 14px;
           min-width: 73px;
           margin-right: 10px;
+
+          @media (max-width: 1440px) {
+            min-width: 60px;
+            font-size: 12px;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
         }
 
         .input_group,
@@ -7246,22 +7271,40 @@ header {
           margin-right: 15px;
           min-width: 224px;
           min-height: 35px;
+
+          @media (max-width: 1440px) {
+            min-width: 190px;
+          }
+
           @media (max-width: 1200px) {
             margin-right: 0px;
             min-width: 210px;
           }
+
           span {
             margin: 0 14px;
+
+            @media (max-width:1440px) {
+              margin: 0 5px;
+            }
           }
 
           .time {
             min-width: 90px;
             font-size: 12px;
             padding: 9px 13px;
+
+            @media (max-width: 1440px) {
+              width: 71px;
+              font-size: 12px;
+              padding: 7px 7px;
+            }
+
             @media (max-width:1200px) {
-              min-width:auto;
+              min-width: auto;
               width: 80px;
-            }  
+            }
+
             &::placeholder {
               color: $black;
             }
@@ -7300,12 +7343,15 @@ header {
         width: 80%;
         align-items: center;
         margin-bottom: 16px;
+
         @media (max-width: 1440px) {
           width: 90%;
         }
+
         @media (max-width: 1200px) {
           width: 100%;
         }
+
         .dark-lable {
           font-size: 14px;
           color: #000;
@@ -7442,6 +7488,10 @@ header {
     align-items: center;
     border-top: 0.6px solid #e4e4e4;
 
+    @media (max-width: 1440px) {
+      padding: 15px 50px;
+    }
+
     .btn {
       max-width: 130px;
       width: 100%;
@@ -7463,40 +7513,67 @@ header {
   position: relative;
   margin-left: 560px;
   margin-top: 87px;
-  width: calc(100% - 560px);
+  max-width: calc(100% - 560px);
+  width: 100%;
   padding: 77px 71px 0px 71px;
   height: calc(100vh - 87px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
   @media (max-width:1440px) {
     margin-left: 450px;
-    width: calc(100% - 450px);
+    max-width: calc(100% - 450px);
+    padding: 50px 50px 0px 50px;
   }
+
   @media (max-width:1200px) {
     margin-left: 420px;
-    width: calc(100% - 420px);
-    padding: 60px 50px 0px;
+    max-width: calc(100% - 420px);
   }
-  @media (max-width:1100px) {
-    margin-left: 360px;
-    width: calc(100% - 360px);
-    padding: 60px 50px 0px;
-  }
-  @media (max-width:991px) {
+
+  @media (max-width:1024px) {
     margin-left: 0;
-    width: 100%;
-    padding: 60px 50px 0px;
+    max-width: 100%;
   }
+
   p {
     font-size: 26px;
     margin-bottom: 65px;
+
+    @media(max-width:1440px) {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
     @media (max-width: 1100px) {
       font-size: 18px;
       margin-bottom: 40px;
     }
   }
-  .onboarding-img{
+
+  .onboarding-img {
     margin-top: auto;
+
+    @media (max-width: 1024px) {
+      margin-top: 0;
+    }
+
+    img {
+      max-width: inherit;
+      margin-left: -200px;
+
+      @media (max-width:1200px) {
+        max-width: 200%;
+        margin-left: -170px;
+        margin-bottom: -150px;
+      }
+
+      @media (max-width:1024px) {
+        margin-left: 0;
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+    }
   }
 }
