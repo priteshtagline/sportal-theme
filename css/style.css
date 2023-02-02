@@ -1358,15 +1358,18 @@ header .navbar .nav-right .btn-group .notification-btn {
 header .navbar .nav-right .btn-group .notification-btn:focus {
   box-shadow: none;
 }
+
+header .navbar .nav-right .btn-group .notification-btn:hover img {
+  background-color: #EFEFEF;
+}
+
 header .navbar .nav-right .btn-group .notification-btn img {
   border-radius: 50%;
-  background-color: #EFEFEF;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   color: #764af3;
 }
-header .navbar .nav-right .btn-group .notification-btn.collapsed img {
-  background-color: #ffffff;
-}
+
 header .navbar .nav-right .btn-group .notification_menu {
   position: absolute;
   left: -123px;

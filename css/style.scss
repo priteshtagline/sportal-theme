@@ -1610,21 +1610,19 @@ header {
             box-shadow: none;
           }
 
+          &:hover {
+            img {
+              background-color: #EFEFEF;
+            }
+          }
+
           img {
             border-radius: 50%;
-            background-color: #EFEFEF;
+
             transition: all 0.5s ease-in-out;
             color: $theme-primary-color;
 
           }
-
-          &.collapsed {
-            img {
-              background-color: $white;
-            }
-          }
-
-
         }
 
         .notification_menu {
