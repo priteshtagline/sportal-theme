@@ -312,8 +312,6 @@ $(document).ready(function () {
 
   // schedule
   $(".fc-addButton-button").attr("data-toggle", "modal").attr("href", "#add_schedule_modal");
-  // $(".fc-filterButton-button").attr("data-toggle", "collapse").attr("href", "#schedule_filter").attr("type", "button").attr("aria-expanded", "#false").attr("aria-controls", "button").attr("aria-expanded", "#schedule_filter").append("<p>Append</p>");
-
 
   // chart selectbox
   $(".custom_date_picker").hide();
@@ -323,29 +321,6 @@ $(document).ready(function () {
       $(".custom_date_picker").show();
     } else {
       $(".custom_date_picker").hide();
-    }
-  });
-
-  // Tournament filter
-
-  $(".tournament-filter").click(function () {
-    $(".tournament-filter-popup").toggleClass("active");
-  });
-  $(".tournament-filter").click(function () {
-    $(".tournament-filter").toggleClass("active");
-  });
-
-  // Notification_dropdown
-  // $(document).click(function (e) {
-  //   if (!$(e.target).is('.navbar .notification_menu')) {
-  //     $('.collapse').collapse('hide');
-  //   }
-  // });
-
-  $("body").click(function () {
-    var $target = $(e.target);
-    if (!$target.is(".filter-popup-schedule") || !$target.is(".filter-popup-schedule").children()) {
-      $("body").find(".filter-popup-schedule").fadeOut().removeClass('active');
     }
   });
 });
