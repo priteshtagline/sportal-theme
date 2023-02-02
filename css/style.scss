@@ -1610,19 +1610,21 @@ header {
             box-shadow: none;
           }
 
-          &:hover {
-            img {
-              background-color: #EFEFEF;
-            }
-          }
-
           img {
             border-radius: 50%;
-
+            background-color: #EFEFEF;
             transition: all 0.5s ease-in-out;
             color: $theme-primary-color;
 
           }
+
+          &.collapsed {
+            img {
+              background-color: $white;
+            }
+          }
+
+
         }
 
         .notification_menu {
@@ -7062,6 +7064,17 @@ header {
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
   z-index: 11111;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .toggle-icon{
+    display: none;
+    color: $theme-primary-color;
+    font-size: 32px;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
 }
 
 .onboarding_sidebar {
@@ -7073,12 +7086,24 @@ header {
   z-index: 111;
 
   @media (max-width: 1440px) {
-    width: 500px;
+    width: 450px;
   }
-
+  @media (max-width: 1200px) {
+    width: 420px;
+  }
+  @media (max-width: 1100px) {
+    width: 360px;
+  }
+  @media (max-width: 991px) {
+    // display: none;
+    right: -360px;
+  }
+  &.active{
+    right: 0;
+  }
   .top_block {
-    padding: 20px 50px;
-    height: calc(100vh - 180px);
+    padding: 20px 30px;
+    height: calc(100vh - 172px);
     overflow-y: auto;
 
     .progress_head {
@@ -7201,7 +7226,8 @@ header {
           margin-bottom: 0;
           margin-left: 14px;
           font-size: 14px;
-          width: 180px;
+          min-width: 73px;
+          margin-right: 10px;
         }
 
         .input_group,
@@ -7217,10 +7243,13 @@ header {
         }
 
         .input_group {
-          margin-right: 40px;
+          margin-right: 15px;
           min-width: 224px;
           min-height: 35px;
-
+          @media (max-width: 1200px) {
+            margin-right: 0px;
+            min-width: 210px;
+          }
           span {
             margin: 0 14px;
           }
@@ -7229,7 +7258,10 @@ header {
             min-width: 90px;
             font-size: 12px;
             padding: 9px 13px;
-
+            @media (max-width:1200px) {
+              min-width:auto;
+              width: 80px;
+            }  
             &::placeholder {
               color: $black;
             }
@@ -7268,11 +7300,17 @@ header {
         width: 80%;
         align-items: center;
         margin-bottom: 16px;
-
+        @media (max-width: 1440px) {
+          width: 90%;
+        }
+        @media (max-width: 1200px) {
+          width: 100%;
+        }
         .dark-lable {
           font-size: 14px;
           color: #000;
           margin: 0;
+          margin-right: 5px;
           width: 50%;
         }
 
@@ -7399,18 +7437,19 @@ header {
 
   .steps_buttons {
     display: flex;
-    padding: 24px 50px;
+    padding: 20px 50px;
     justify-content: space-between;
     align-items: center;
     border-top: 0.6px solid #e4e4e4;
 
     .btn {
-      max-width: 140px;
+      max-width: 130px;
       width: 100%;
       border-radius: 8px;
       background-color: #f9f9f9;
       font-size: 16px;
       color: #a4a9bc;
+
 
       &.btn-active {
         background-color: $theme-primary-color;
@@ -7425,34 +7464,39 @@ header {
   margin-left: 560px;
   margin-top: 87px;
   width: calc(100% - 560px);
-  padding: 77px 71px;
+  padding: 77px 71px 0px 71px;
   height: calc(100vh - 87px);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   @media (max-width:1440px) {
-    // padding: 77px 40px 77px 0px;
-    margin-left: 500px;
-    width: calc(100% - 500px);
-    padding: 50px;
+    margin-left: 450px;
+    width: calc(100% - 450px);
   }
-
+  @media (max-width:1200px) {
+    margin-left: 420px;
+    width: calc(100% - 420px);
+    padding: 60px 50px 0px;
+  }
+  @media (max-width:1100px) {
+    margin-left: 360px;
+    width: calc(100% - 360px);
+    padding: 60px 50px 0px;
+  }
+  @media (max-width:991px) {
+    margin-left: 0;
+    width: 100%;
+    padding: 60px 50px 0px;
+  }
   p {
     font-size: 26px;
     margin-bottom: 65px;
-  }
-  .onboarding-img{
-
-    img {
-      position: absolute;
-      // max-width: inherit;
-      // left: -140px;
-      // width: 1645px;
-      // height: 855px;
-      max-width: 100%;
-      @media (max-width:1440px) {
-        // left: -99px;
-        width: 835px;
-      }
+    @media (max-width: 1100px) {
+      font-size: 18px;
+      margin-bottom: 40px;
     }
   }
-
+  .onboarding-img{
+    margin-top: auto;
+  }
 }

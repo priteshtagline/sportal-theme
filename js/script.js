@@ -323,6 +323,10 @@ $(document).ready(function () {
       $(".custom_date_picker").hide();
     }
   });
+  
+  function toggleSidebar(ref){
+    document.getElementsByClassName("onboarding_sidebar").classList.toggle('active');
+  }
 });
 
 
