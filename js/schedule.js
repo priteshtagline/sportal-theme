@@ -26,9 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
       filterButton: {
         html: '<svg xmlns="http://www.w3.org/2000/svg" width="10.833" height="11.403" viewBox="0 0 10.833 11.403"><path id="filter" d="M6.786,12.528H5.678V6.775L1.687,2.023v-.9H12.52v.894L8.719,6.77V10.6Zm-.347-.76h.033L7.959,10.28V6.5l3.694-4.618H2.564L6.438,6.5Z" transform="translate(-1.687 -1.125)" fill="currentcolor" /></svg>; ',
         click: function () {
-          $(".fc-filterButton-button").toggleClass("active");
-          $(".filter-popup-schedule").toggleClass("active");
-          // $(".fc-header-toolbar .fc-filterButton-button").append($(".filter-popup-schedule"));
+          // $(".fc-filterButton-button").toggleClass("active");
+          // $(".filter-popup-schedule").toggleClass("active");
           $(".fc-header-toolbar .fc-toolbar-chunk:first-child").append($(".filter-popup-schedule"));
         },
       },
@@ -158,5 +157,28 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
   calendar.render();
+
+  // Filter button in tournament,schedule and notification dropdown
+  var removeClass = true;
+  $("html").click(function () {
+    if (removeClass) {
+      $(".tournament-filter-popup").removeClass('active');
+      $('.fc-filterButton-button').removeClass("active");
+      $('.notification_menu').removeClass("show");
+    }
+    removeClass = true;
+  });
+  $(".tournament-filter-popup, .fc-filterButton-button, .tournament-filter, .notification-btn, .notification_menu").click(function () {
+    removeClass = false;
+  });
+  $(".fc-filterButton-button, .tournament-filter").on("click", function () {
+    $(this).toggleClass("active");
+    $(".tournament-filter-popup").toggleClass("active");
+    removeClass = false;
+  });
+  $(".notification-btn").on("click", function () {
+    $(".notification_menu").toggleClass("show");
+    removeClass = false;
+  });
 });
 
