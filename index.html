@@ -486,8 +486,8 @@
           </a>
         </li>
         <li class="features-item schedule nav-item">
-          <a href="#" class="nav-link active" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
-            role="tab" aria-controls="schedule" aria-selected="true">
+          <a href="#" class="nav-link" id="schedule-tab" data-toggle="tab" data-target="#schedule" type="button"
+            role="tab" aria-controls="schedule" aria-selected="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="18.397" viewBox="0 0 16.668 18.397">
               <g id="_icon__calendar_appointment_date_" data-name="🦆 icon _calendar appointment date_"
                 transform="translate(0.55 0.55)">
@@ -617,8 +617,8 @@
           </a>
         </li>
         <li class="features-item settings nav-item">
-          <a href="#" class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button"
-            role="tab" aria-controls="settings" aria-selected="false">
+          <a href="#" class="nav-link active" id="settings-tab" data-toggle="tab" data-target="#settings" type="button"
+            role="tab" aria-controls="settings" aria-selected="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.668" height="16.668" viewBox="0 0 16.668 16.668">
               <g id="_icon__settings_account_more_" data-name="🦆 icon _settings account more_"
                 transform="translate(0.55 0.55)">
@@ -1013,7 +1013,7 @@
         </div>
         <!-- Dashboard End-->
       </div>
-      <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+      <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
         <!-- Schedule Start -->
         <div class="card">
           <div class="card-body">
@@ -5367,9 +5367,9 @@
       </div>
       <div class="tab-pane fade" id="chatroom" role="tabpanel" aria-labelledby="chatroom-tab">chatroom</div>
       <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">information</div>
-      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+      <div class="tab-pane fade  show active" id="settings" role="tabpanel" aria-labelledby="settings-tab">
         <div class="tab-content" id="settings_nav_tab_content">
-          <div class="tab-pane fade show active" id="setting_overview_tab_pane" role="tabpanel"
+          <div class="tab-pane fade" id="setting_overview_tab_pane" role="tabpanel"
             aria-labelledby="setting_overview_tab" tabindex="0">
             <div class="contact_info_form">
               <h4 class="page-title">Contact Information</h4>
@@ -5919,124 +5919,46 @@
             </div>
           </div>
 
-          <div class="tab-pane fade" id="setting_pricing_tab_pane" role="tabpanel" aria-labelledby="setting_pricing_tab"
-            tabindex="0">
+          <div class="tab-pane fade  show active" id="setting_pricing_tab_pane" role="tabpanel"
+            aria-labelledby="setting_pricing_tab" tabindex="0">
             <div class="pricing-page">
-              <h4 class="page-title">Pricing Plans</h4>
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>
-                        <div class="pricing-title">Billing Type</div>
-                        <div class="switch-year">
-                          <span>Monthly</span>
-                          <span class="switch">
-                            <input type="checkbox" id="switch" />
-                            <label for="switch" class="mb-0"></label>
-                          </span>
-                          <span>Annually</span>
-                        </div>
-                      </th>
-                      <th>
-                        <div><span class="pricing-title">Free</span> <span class="edit-button"><a href="#"><img
-                                src="images/pencil.svg" alt="pencil"></a></span></span></div>
-                        <div class="switch-year"><span class="invisible">50AED</span></div>
-                      </th>
-                      <th>
-                        <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
-                                src="images/pencil.svg" alt="pencil"></a></span></div>
-                        <div class="switch-year">50 AED</div>
-                      </th>
-                      <th>
-                        <div><span class="pricing-title">Standard</span> <span class="edit-button"><a href="#"><img
-                                src="images/pencil.svg" alt="pencil"></a></span></div>
-                        <div class="switch-year">75 AED</div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td>Max Courts 10</td>
-                      <td>Unlimited Courts</td>
-                      <td>Unlimited Courts</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <div class="modules">Main Modules</div>
-                      </td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Chats</td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Customer Support</td>
-                      <td>48h response time</td>
-                      <td>8h response time</td>
-                      <td>highest priority with tickets/chats</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Customers</td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td>Matches</td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Payments</td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Reports</td>
-                      <td></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Schedule</td>
-                      <td></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Court Information Display</td>
-                      <td></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td class="pb-4">User Categories</td>
-                      <td class="pb-4"></td>
-                      <td class="pb-4"><span class="check-icon"><img src="images/check.svg"></span></td>
-                      <td class="pb-4"><span class="check-icon"><img src="images/check.svg"></span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card">
+                <div class="card-body">
+                  <div class="pricing-filter-popup" id="pricing-filter-popup">
+                    <form action="">
+                      <p class="head-filter">
+                        <span>Filter(s)</span><input type="reset" class="btn-input" value="Clear filter">
+                      </p>
+                      <div class="sport-tournament">
+                        <p>Sport</p>
+                        <span><input type="checkbox" id="football_tournament"><label
+                            for="football_tournament">Football</label></span>
+                        <span><input type="checkbox" id="tennis_tournament"><label
+                            for="tennis_tournament">Tennis</label></span>
+                        <span><input type="checkbox" id="badminton_tournament"><label
+                            for="badminton_tournament">Badminton</label></span>
+                        <span><input type="checkbox" id="table_tennis_tournament"><label
+                            for="table_tennis_tournament">Table
+                            Tennis</label></span>
+                      </div>
+                      <div class="sport-tournament">
+                        <p>Surfaces</p>
+                        <span><input type="checkbox" id="Indoor_tournament"><label
+                            for="Indoor_tournament">Indoor</label></span>
+                        <span><input type="checkbox" id="synthetic_grass_tournament"><label
+                            for="synthetic_grass_tournament">Synthetic Grass</label></span>
+                        <span><input type="checkbox" id="natural_grass_tournament"><label
+                            for="natural_grass_tournament">Natural
+                            Grass</label></span>
+                      </div>
+                      <div class="button-tournament-filter">
+                        <input type="submit" class="btn btn-primary tournament-apply-filter" value="Apply Filter">
+                      </div>
+                    </form>
+                  </div>
+                  <div id='pricing-calendar'>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -8559,6 +8481,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/schedule.js"></script>
+  <script src="js/pricing-page.js"></script>
   <script src="js/script.js"></script>
 
   <script>
