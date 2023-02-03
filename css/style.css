@@ -3073,175 +3073,201 @@ header.active .side-nav-btn img {
   color: #dc3545;
 }
 
-.pricing-page table thead tr th {
-  padding: 15px 10px 16px 15px;
-  font-size: 14px;
-  border-right: 0.5px solid #A4A9BC;
-  width: 25%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 160px;
-  overflow-x: hidden;
-}
-
-@media (max-width: 1024px) {
-  .pricing-page table thead tr th {
-    font-size: 12px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 160px;
-    overflow-x: hidden;
-  }
-}
-
-.pricing-page table thead tr th:nth-child(2) {
-  background-color: #cff5e5;
-}
-
-.pricing-page table thead tr th:nth-child(3) {
-  background-color: #d2e6ff;
-}
-
-.pricing-page table thead tr th:nth-child(4) {
-  border-right: none;
-  background-color: #dcd1fc;
-}
-
-.pricing-page table thead tr th .pricing-title {
-  letter-spacing: 0px;
-  font-family: "Outfit SemiBold";
-}
-
-.pricing-page table thead tr th .edit-button {
-  float: right;
-}
-
-.pricing-page table thead tr th .edit-button a {
-  background-color: #ffffff;
-  padding: 1px 6px 5px 6px;
-  border-radius: 4px;
-}
-
-.pricing-page table thead tr th .edit-button a img {
-  width: 10px;
-}
-
-.pricing-page table thead tr th .switch-year {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 1024px) {
-  .pricing-page table thead tr th .switch-year {
-    margin-top: 8px;
-  }
-}
-
-.pricing-page table thead tr th .switch-year .switch {
-  margin: 0 16px 0 10px;
-}
-
-.pricing-page table thead tr th .switch-year .switch input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-.pricing-page table thead tr th .switch-year .switch label {
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 16px;
-  height: 9px;
-  background: #a4a9bc;
-  border-radius: 100px;
+.pricing-page #pricing-calendar .fc-header-toolbar {
   position: relative;
 }
 
-.pricing-page table thead tr th .switch-year .switch label::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 7px;
-  height: 7px;
-  background: #ffffff;
-  border-radius: 90px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.pricing-page table thead tr th .switch-year .switch input:checked + label {
-  background: #764af3;
-}
-
-.pricing-page table thead tr th .switch-year .switch input:checked + label:after {
-  left: calc(100% - 1px);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.pricing-page table thead tr th .switch-year .switch label:active:after {
-  width: 7px;
-}
-
-.pricing-page table tbody tr:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.pricing-page table tbody tr td {
-  border-right: 0.5px solid #A4A9BC;
-  text-align: center;
-  padding: 15px 20px 0 20px;
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
+  min-width: 200px;
+  font-size: 20px;
+  font-family: 'Outfit Semibold';
 }
 
 @media (max-width: 1024px) {
-  .pricing-page table tbody tr td {
-    font-size: 12px;
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
+    width: 150px;
+    font-size: 16px;
+    min-width: auto;
     text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
-    max-width: 160px;
-    overflow-x: hidden;
-    padding: 8px 20px 5px 20px;
   }
 }
 
-.pricing-page table tbody tr td:first-child {
-  text-align: left;
-  color: #a4a9bc;
-}
-
-.pricing-page table tbody tr td:last-child {
-  border-right: none;
-}
-
-.pricing-page table tbody tr td .modules {
-  font-family: "Outfit SemiBold" !important;
-  color: #000000;
-}
-
-.pricing-page table tbody tr td .check-icon {
-  padding: 0px 4px 3px 4px;
-  background-color: #764af3;
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button {
+  min-width: 30px;
+  min-height: 30px;
   border-radius: 50%;
+  padding: 4px 0px;
+  color: #a4a9bc;
+  background-color: #f8fafb;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+  font-size: 13px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media (max-width: 1024px) {
-  .pricing-page table tbody tr td .check-icon {
-    padding: 0px 3px 3px 3px;
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.active {
+  background-color: #764af3;
+  color: #ffffff;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button:hover {
+  background-color: #764af3;
+  color: #ffffff;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.fc-prev-button {
+  border-top-right-radius: 50% !important;
+  border-bottom-right-radius: 50% !important;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.fc-next-button {
+  margin-left: 5px !important;
+  border-top-left-radius: 50% !important;
+  border-bottom-left-radius: 50% !important;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button.fc-filterButton-button {
+  position: relative;
+  margin-left: 5px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+  margin-left: 150px;
+  margin-right: auto;
+  border-radius: 24px;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+}
+
+@media (max-width: 1400px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+    margin-left: auto;
   }
 }
 
-.pricing-page table tbody tr td .check-icon img {
-  width: 14px;
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group {
+  border-radius: 24px;
+  background-color: #F8FAFB;
 }
 
-@media (max-width: 1024px) {
-  .pricing-page table tbody tr td .check-icon img {
-    width: 12px;
-  }
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button {
+  color: #A4A9BC;
+  border: none;
+  background-color: #F8FAFB;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 11px 15px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button.fc-timeGridDay-button {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button.fc-dayGridMonth-button {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button.fc-button-active {
+  background-color: #764af3;
+  color: #ffffff;
+  border-radius: 24px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button.fc-button-active:hover {
+  z-index: 1;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button:hover {
+  z-index: inherit;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button {
+  width: 30px;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-radius: 24px;
+  line-height: 10px;
+  color: #A4A9BC;
+  background-color: #F8FAFB;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button:hover {
+  background-color: #764af3;
+  color: #ffffff;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button span {
+  font-size: 21px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button svg {
+  display: none;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 14px 8px 9px;
+  min-width: auto;
+  margin-left: 11px;
+  border-radius: 8px;
+  background-color: #764af3;
+  color: #ffffff;
+  border: none;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-addButton-button span.add_icon {
+  margin-right: 10px;
 }
 
 .admin-page-table .table-responsive table {
@@ -4259,28 +4285,6 @@ header.active .side-nav-btn img {
 
 #schedule .card .card-body {
   position: relative;
-}
-
-#schedule .card .card-body #list_view_table {
-  position: absolute;
-  top: 146px;
-  left: 21px;
-  z-index: 1;
-  bottom: 21px;
-  max-width: calc(100% - 42px);
-  background: #ffffff;
-  padding-bottom: 26px;
-}
-
-#schedule .card .card-body #list_view_table .dataTables_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 620px;
 }
 
 #calendar .fc-header-toolbar {
@@ -7232,112 +7236,6 @@ header.active .side-nav-btn img {
   fill: #a98ff1;
 }
 
-#schedule {
-  position: relative;
-}
-
-#schedule .tournament-filter-popup {
-  text-align: left;
-  -webkit-transition: all 2.5s ease-in;
-  transition: all 2.5s ease-in;
-  position: absolute;
-  top: 37px;
-  right: -50%;
-  width: 180px;
-  z-index: 2;
-  display: none;
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 3px 8px #0000000F;
-          box-shadow: 0px 3px 8px #0000000F;
-  padding: 8px 0px;
-}
-
-#schedule .tournament-filter-popup .button-tournament-filter {
-  padding: 0px 9px;
-}
-
-#schedule .tournament-filter-popup .button-tournament-filter .tournament-apply-filter {
-  width: 100%;
-  font-size: 14px;
-  border-radius: 7px !important;
-  font-family: 'Outfit Medium';
-  background-color: #764af3 !important;
-  color: #FFFFFF !important;
-  padding: 12px 0 !important;
-}
-
-#schedule .tournament-filter-popup .head-filter {
-  color: #000000;
-  border-bottom: 1px solid #E4E4E4;
-  margin-bottom: 10px;
-  font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#schedule .tournament-filter-popup .head-filter span {
-  padding-bottom: 7px;
-  padding-left: 9px;
-}
-
-#schedule .tournament-filter-popup .head-filter .btn-input {
-  font-size: 12px;
-  padding: 0 11px 7px 0;
-  border: none;
-  color: #764af3;
-  text-align: right;
-  cursor: pointer;
-}
-
-#schedule .tournament-filter-popup .sport-tournament {
-  padding: 0px 9px;
-  border-bottom: 1px solid #E4E4E4;
-  margin-bottom: 8px;
-}
-
-#schedule .tournament-filter-popup .sport-tournament p {
-  font-size: 10px;
-  font-family: 'Outfit SemiBold';
-  margin-bottom: 8px;
-}
-
-#schedule .tournament-filter-popup .sport-tournament span {
-  font-weight: 400;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: #a4a9bc;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#schedule .tournament-filter-popup .sport-tournament span label {
-  margin: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-#schedule .tournament-filter-popup .sport-tournament span input {
-  accent-color: #764af3;
-}
-
-#schedule .tournament-filter-popup .sport-tournament span label {
-  padding-left: 5px;
-}
-
-#schedule .tournament-filter-popup.active {
-  display: block;
-}
-
 .fc .fc-list-event:hover td {
   background-color: inherit;
 }
@@ -7992,5 +7890,416 @@ header.active .side-nav-btn img {
     max-width: 100%;
     margin-bottom: 0;
   }
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk .fc-sportsDropdown-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk .fc-sportsDropdown-button .sorting_select {
+  border: 1px solid #764af3;
+  outline: none;
+  border-radius: 18px;
+  background-color: #ffffff;
+  color: #764af3;
+  font-size: 10px;
+  min-width: 92px;
+  background-size: 7px;
+  padding: 8px 13px;
+  -webkit-appearance: none;
+  background-image: url(../images/select_down.svg);
+  background-repeat: no-repeat;
+  background-position: 68px center;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button {
+  width: 30px;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-radius: 24px;
+  line-height: 10px;
+  color: #A4A9BC;
+  background-color: #F8FAFB;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
+  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button:hover {
+  background-color: #764af3;
+  color: #ffffff;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button span {
+  font-size: 21px;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button svg {
+  display: none;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 14px 8px 9px;
+  min-width: auto;
+  margin-left: 11px;
+  border-radius: 8px;
+  background-color: #764af3;
+  color: #ffffff;
+  border: none;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button span.add_icon {
+  margin-right: 10px;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller {
+  overflow: hidden !important;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th {
+  border-left: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th:not(:last-child) {
+  border-right: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame {
+  min-height: 120px;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+  font-size: 10px;
+  color: #000000;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
+  margin-left: 15px;
+  width: calc(50% - 15px);
+}
+
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
+    width: 100%;
+  }
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event {
+  background-color: #ffffff;
+  border: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap {
+  position: relative;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap:before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 19px;
+  border-radius: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -9px;
+  background-color: #DDECFF;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_blue_event::before {
+  background-color: #ddecff;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_pink_event::before {
+  background-color: #f1ddff;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_green_event::before {
+  background-color: #ddfff5;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event {
+  padding: 0;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .time,
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .court_title,
+#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .schedule_profile {
+  display: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th {
+  border-left: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
+  border-right: none;
+  width: 5.60%;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:first-child {
+  width: 5.60%;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis {
+  position: relative;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  background-image: url(../images/time.svg);
+  width: 26px;
+  height: 26px;
+  left: 0;
+  margin: 0 auto;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-slot {
+  height: 50px;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events {
+  margin: 0 0.3px 0;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
+  cursor: pointer;
+  padding: 0;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .fc-event-time {
+  color: #707070;
+  font-size: 10px;
+}
+
+#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {
+  border-left: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th:not(:first-child) {
+  border-right: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion {
+  padding: 26px 0 22px 0;
+  font-size: 12px;
+  color: #A4A9BC;
+  position: relative;
+}
+
+#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion:hover {
+  color: #764af3;
+}
+
+#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion::before {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #764af3;
+}
+
+#pricing-calendar .fc-view-harness .fc-view tbody .fc-scrollgrid-section-body .fc-scrollgrid-shrink-cushion {
+  color: #A4A9BC;
+  font-size: 12px;
+}
+
+#pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:first-child {
+  width: 6%;
+}
+
+#pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:last-child {
+  width: 94% !important;
+}
+
+#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table colgroup col {
+  width: 6% !important;
+}
+
+#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label {
+  width: 6%;
+  border-style: none;
+  position: relative;
+}
+
+#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label .fc-timegrid-slot-label-frame {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+}
+
+#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane {
+  width: 94%;
+}
+
+#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane.fc-timegrid-slot-minor {
+  border-style: none;
+}
+
+.tournament-filter-popup,
+.pricing-filter-popup {
+  text-align: left;
+  -webkit-transition: all 2.5s ease-in;
+  transition: all 2.5s ease-in;
+  position: absolute;
+  top: 37px;
+  right: -50%;
+  width: 180px;
+  z-index: 2;
+  display: none;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 3px 8px #0000000F;
+          box-shadow: 0px 3px 8px #0000000F;
+  padding: 8px 0px;
+}
+
+.tournament-filter-popup .button-tournament-filter,
+.pricing-filter-popup .button-tournament-filter {
+  padding: 0px 9px;
+}
+
+.tournament-filter-popup .button-tournament-filter .tournament-apply-filter,
+.pricing-filter-popup .button-tournament-filter .tournament-apply-filter {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 7px !important;
+  font-family: 'Outfit Medium';
+  background-color: #764af3 !important;
+  color: #FFFFFF !important;
+  padding: 12px 0 !important;
+}
+
+.tournament-filter-popup .head-filter,
+.pricing-filter-popup .head-filter {
+  color: #000000;
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 10px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tournament-filter-popup .head-filter span,
+.pricing-filter-popup .head-filter span {
+  padding-bottom: 7px;
+  padding-left: 9px;
+}
+
+.tournament-filter-popup .head-filter .btn-input,
+.pricing-filter-popup .head-filter .btn-input {
+  font-size: 12px;
+  padding: 0 11px 7px 0;
+  border: none;
+  color: #764af3;
+  text-align: right;
+  cursor: pointer;
+}
+
+.tournament-filter-popup .sport-tournament,
+.pricing-filter-popup .sport-tournament {
+  padding: 0px 9px;
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 8px;
+}
+
+.tournament-filter-popup .sport-tournament p,
+.pricing-filter-popup .sport-tournament p {
+  font-size: 10px;
+  font-family: 'Outfit SemiBold';
+  margin-bottom: 8px;
+}
+
+.tournament-filter-popup .sport-tournament span,
+.pricing-filter-popup .sport-tournament span {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #a4a9bc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tournament-filter-popup .sport-tournament span label,
+.pricing-filter-popup .sport-tournament span label {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.tournament-filter-popup .sport-tournament span input,
+.pricing-filter-popup .sport-tournament span input {
+  accent-color: #764af3;
+}
+
+.tournament-filter-popup .sport-tournament span label,
+.pricing-filter-popup .sport-tournament span label {
+  padding-left: 5px;
+}
+
+.tournament-filter-popup.active,
+.pricing-filter-popup.active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
