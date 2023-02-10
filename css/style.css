@@ -7475,10 +7475,6 @@ header.active .side-nav-btn img {
   pointer-events: all;
 }
 
-.onboarding_sidebar .top_block .schedule_form .form-group .switch {
-  margin-top: -73px;
-}
-
 @media (max-width: 1024px) {
   .onboarding_sidebar .top_block .schedule_form .form-group .switch {
     margin-top: -26px;
