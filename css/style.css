@@ -7303,7 +7303,7 @@ header.active .side-nav-btn img {
 .onboarding_navbar {
   position: fixed;
   width: 100%;
-  padding: 30px 50px;
+  padding: 24px 30px;
   -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
   z-index: 1055;
@@ -7323,6 +7323,7 @@ header.active .side-nav-btn img {
   display: none;
   color: #764af3;
   font-size: 32px;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -7333,8 +7334,8 @@ header.active .side-nav-btn img {
 
 .onboarding_sidebar {
   position: fixed;
-  margin-top: 87px;
-  max-width: 560px;
+  margin-top: 73px;
+  max-width: 440px;
   width: 100%;
   background-color: #ffffff;
   -webkit-transition: all 0.5s ease-in-out;
@@ -7344,31 +7345,12 @@ header.active .side-nav-btn img {
   z-index: 1054;
 }
 
-@media (max-width: 1440px) {
-  .onboarding_sidebar {
-    max-width: 450px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .onboarding_sidebar {
-    max-width: 420px;
-  }
-}
-
 @media (max-width: 1024px) {
   .onboarding_sidebar {
-    max-width: 50%;
-    right: -50%;
+    right: -450px;
+    bottom: 0;
     -webkit-box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.06);
             box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.06);
-  }
-}
-
-@media (max-width: 991px) {
-  .onboarding_sidebar {
-    max-width: 75%;
-    right: -75%;
   }
 }
 
@@ -7379,14 +7361,14 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_sidebar .top_block {
-  padding: 20px 50px;
-  height: calc(100vh - 172px);
+  padding: 20px 30px;
+  height: calc(100vh - 150px);
   overflow-y: auto;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .onboarding_sidebar .top_block {
-    height: calc(100vh - 162px);
+    height: calc(100vh - 163px);
   }
 }
 
@@ -7428,7 +7410,7 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_sidebar .top_block .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .onboarding_sidebar .top_block .form-group label {
@@ -7439,7 +7421,7 @@ header.active .side-nav-btn img {
 
 .onboarding_sidebar .top_block .form-group .textinput {
   border: none;
-  padding: 15px;
+  padding: 12px;
   font-size: 12px;
   color: #000;
   background: #F9F9F9 0% 0% no-repeat padding-box;
@@ -7496,7 +7478,7 @@ header.active .side-nav-btn img {
   margin-top: -73px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .onboarding_sidebar .top_block .schedule_form .form-group .switch {
     margin-top: -26px;
   }
@@ -7504,10 +7486,10 @@ header.active .side-nav-btn img {
 
 .onboarding_sidebar .top_block .schedule_form .form-group .label {
   margin-bottom: 0;
-  margin-left: 14px;
-  font-size: 14px;
+  font-size: 13px;
   min-width: 73px;
   margin-right: 10px;
+  color: #000000;
 }
 
 @media (max-width: 1440px) {
@@ -7532,23 +7514,6 @@ header.active .side-nav-btn img {
 .onboarding_sidebar .top_block .schedule_form .form-group .switch,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
   margin-right: 15px;
-  min-width: 224px;
-  min-height: 35px;
-}
-
-@media (max-width: 1440px) {
-  .onboarding_sidebar .top_block .schedule_form .form-group .switch,
-  .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
-    min-width: 190px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .onboarding_sidebar .top_block .schedule_form .form-group .switch,
-  .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
-    margin-right: 0px;
-    min-width: 210px;
-  }
 }
 
 .onboarding_sidebar .top_block .schedule_form .form-group .switch span,
@@ -7565,7 +7530,7 @@ header.active .side-nav-btn img {
 
 .onboarding_sidebar .top_block .schedule_form .form-group .switch .time,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
-  min-width: 90px;
+  min-width: 70px;
   font-size: 12px;
   padding: 9px 13px;
 }
@@ -7608,7 +7573,7 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_sidebar .top_block .schedule_form .form-group .button-group .btn {
-  padding: 5px 17px;
+  padding: 5px 12px;
   width: 50px;
   min-width: auto;
   font-size: 8px;
@@ -7632,7 +7597,7 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 95%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7795,7 +7760,7 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 50px;
+  padding: 20px 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -7805,18 +7770,13 @@ header.active .side-nav-btn img {
   border-top: 0.6px solid #e4e4e4;
 }
 
-@media (max-width: 1440px) {
-  .onboarding_sidebar .steps_buttons {
-    padding: 15px 50px;
-  }
-}
-
 .onboarding_sidebar .steps_buttons .btn {
   max-width: 130px;
   width: 100%;
+  padding: 10px;
   border-radius: 8px;
   background-color: #f9f9f9;
-  font-size: 16px;
+  font-size: 14px;
   color: #a4a9bc;
 }
 
@@ -7825,14 +7785,22 @@ header.active .side-nav-btn img {
   color: #ffffff;
 }
 
+.onboarding_sidebar .select2-selection .select2-selection__rendered {
+  padding: 7px 10px;
+}
+
+.onboarding_sidebar .select2-selection .select2-selection__arrow {
+  top: 8px !important;
+}
+
 .onboarding_content {
   position: relative;
-  margin-left: 560px;
-  margin-top: 87px;
-  max-width: calc(100% - 560px);
+  margin-left: 440px;
+  margin-top: 65px;
+  max-width: calc(100% - 440px);
   width: 100%;
-  padding: 77px 71px 0px 71px;
-  height: calc(100vh - 87px);
+  padding: 50px;
+  height: calc(100vh - 65px);
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7843,21 +7811,6 @@ header.active .side-nav-btn img {
           flex-direction: column;
 }
 
-@media (max-width: 1440px) {
-  .onboarding_content {
-    margin-left: 450px;
-    max-width: calc(100% - 450px);
-    padding: 50px 50px 0px 50px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .onboarding_content {
-    margin-left: 420px;
-    max-width: calc(100% - 420px);
-  }
-}
-
 @media (max-width: 1024px) {
   .onboarding_content {
     margin-left: 0;
@@ -7866,7 +7819,7 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_content p {
-  font-size: 26px;
+  font-size: 23px;
   margin-bottom: 65px;
 }
 
