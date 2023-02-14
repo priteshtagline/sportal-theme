@@ -7003,7 +7003,7 @@ header {
 .onboarding_navbar {
   position: fixed;
   width: 100%;
-  padding: 30px 50px;
+  padding: 24px 30px;
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
   z-index: 1055;
   background-color: #ffffff;
@@ -7015,6 +7015,7 @@ header {
     display: none;
     color: $theme-primary-color;
     font-size: 32px;
+    cursor: pointer;
 
     @media (max-width: 1024px) {
       display: block;
@@ -7024,31 +7025,18 @@ header {
 
 .onboarding_sidebar {
   position: fixed;
-  margin-top: 87px;
-  max-width: 560px;
+  margin-top: 73px;
+  max-width: 440px;
   width: 100%;
   background-color: #ffffff;
   transition: all 0.5s ease-in-out;
   box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.06);
   z-index: 1054;
 
-  @media (max-width: 1440px) {
-    max-width: 450px;
-  }
-
-  @media (max-width: 1200px) {
-    max-width: 420px;
-  }
-
   @media (max-width: 1024px) {
-    max-width: 50%;
-    right: -50%;
+    right: -450px;
+    bottom: 0;
     box-shadow: -5px 0px 25px rgba(0, 0, 0, 0.06);
-  }
-
-  @media (max-width: 991px) {
-    max-width: 75%;
-    right: -75%;
   }
 
   &.active {
@@ -7059,12 +7047,12 @@ header {
 
 
   .top_block {
-    padding: 20px 50px;
-    height: calc(100vh - 172px);
+    padding: 20px 30px;
+    height: calc(100vh - 150px);
     overflow-y: auto;
 
-    @media (max-width: 1440px) {
-      height: calc(100vh - 162px);
+    @media (max-width: 1024px) {
+      height: calc(100vh - 163px);
     }
 
     .progress_head {
@@ -7104,7 +7092,7 @@ header {
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       label {
         font-size: 12px;
@@ -7114,7 +7102,7 @@ header {
 
       .textinput {
         border: none;
-        padding: 15px;
+        padding: 12px;
         font-size: 12px;
         color: #000;
         background: #F9F9F9 0% 0% no-repeat padding-box;
@@ -7163,7 +7151,6 @@ header {
           .switch,
           .input_group,
           .label {
-
             pointer-events: all;
           }
         }
@@ -7171,17 +7158,17 @@ header {
         .switch {
           margin-top: -73px;
 
-          @media (max-width: 1024px) {
+          @media (max-width: 1440px) {
             margin-top: -26px;
           }
         }
 
         .label {
           margin-bottom: 0;
-          margin-left: 14px;
-          font-size: 14px;
+          font-size: 13px;
           min-width: 73px;
           margin-right: 10px;
+          color: #000000;
 
           @media (max-width: 1440px) {
             min-width: 60px;
@@ -7200,17 +7187,6 @@ header {
         .switch,
         .input_group {
           margin-right: 15px;
-          min-width: 224px;
-          min-height: 35px;
-
-          @media (max-width: 1440px) {
-            min-width: 190px;
-          }
-
-          @media (max-width: 1200px) {
-            margin-right: 0px;
-            min-width: 210px;
-          }
 
           span {
             margin: 0 14px;
@@ -7221,7 +7197,7 @@ header {
           }
 
           .time {
-            min-width: 90px;
+            min-width: 70px;
             font-size: 12px;
             padding: 9px 13px;
 
@@ -7244,7 +7220,7 @@ header {
 
         .button-group {
           .btn {
-            padding: 5px 17px;
+            padding: 5px 12px;
             width: 50px;
             min-width: auto;
             font-size: 8px;
@@ -7271,7 +7247,7 @@ header {
 
       .form-group {
         display: flex;
-        width: 80%;
+        width: 95%;
         align-items: center;
         margin-bottom: 16px;
 
@@ -7415,21 +7391,18 @@ header {
 
   .steps_buttons {
     display: flex;
-    padding: 20px 50px;
+    padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
     border-top: 0.6px solid #e4e4e4;
 
-    @media (max-width: 1440px) {
-      padding: 15px 50px;
-    }
-
     .btn {
       max-width: 130px;
       width: 100%;
+      padding: 10px;
       border-radius: 8px;
       background-color: #f9f9f9;
-      font-size: 16px;
+      font-size: 14px;
       color: #a4a9bc;
 
 
@@ -7439,30 +7412,29 @@ header {
       }
     }
   }
+
+  .select2-selection {
+    .select2-selection__rendered {
+      padding: 7px 10px;
+    }
+
+    .select2-selection__arrow {
+      top: 8px !important;
+    }
+  }
 }
 
 .onboarding_content {
   position: relative;
-  margin-left: 560px;
-  margin-top: 87px;
-  max-width: calc(100% - 560px);
+  margin-left: 440px;
+  margin-top: 65px;
+  max-width: calc(100% - 440px);
   width: 100%;
-  padding: 77px 71px 0px 71px;
-  height: calc(100vh - 87px);
+  padding: 50px;
+  height: calc(100vh - 65px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
-  @media (max-width:1440px) {
-    margin-left: 450px;
-    max-width: calc(100% - 450px);
-    padding: 50px 50px 0px 50px;
-  }
-
-  @media (max-width:1200px) {
-    margin-left: 420px;
-    max-width: calc(100% - 420px);
-  }
 
   @media (max-width:1024px) {
     margin-left: 0;
@@ -7470,7 +7442,7 @@ header {
   }
 
   p {
-    font-size: 26px;
+    font-size: 23px;
     margin-bottom: 65px;
 
     @media(max-width:1440px) {
