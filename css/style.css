@@ -4614,18 +4614,26 @@ header.active .side-nav-btn img {
   margin: 0 0.3px 0;
 }
 
-#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event {
+#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event-harness {
+  z-index: auto !important;
+}
+
+#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event-harness .fc-timegrid-event {
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
 }
 
-#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
+#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event-harness .fc-timegrid-event .fc-event-main {
   cursor: pointer;
   padding: 0;
+  z-index: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .fc-event-time {
+#calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event-harness .fc-timegrid-event .fc-event-main .fc-event-time {
   color: #707070;
   font-size: 10px;
 }
@@ -4776,6 +4784,7 @@ header.active .side-nav-btn img {
     font-size: 12px;
     min-width: 55px;
     width: 55px;
+    max-width: 80px;
   }
 }
 
@@ -4813,10 +4822,17 @@ header.active .side-nav-btn img {
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1200px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
     min-width: 100px;
     width: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .court_title {
+    min-width: 80px;
+    width: 80px;
   }
 }
 
@@ -4834,6 +4850,12 @@ header.active .side-nav-btn img {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .schedule_event .schedule_profile {
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -4855,22 +4877,28 @@ header.active .side-nav-btn img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
     min-width: 120px;
+    margin-left: 8px;
+    padding-bottom: 5px;
+    width: 110px;
   }
   #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns .btn-cancel {
     margin-left: 5px;
   }
 }
 
-@media (max-width: 1199px) {
-  #calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .schedule_event_wrap .event-btns {
-    min-width: 110px;
-    margin-left: 8px;
-    padding-bottom: 3px;
-    width: 110px;
-  }
+#calendar .schedule_event_wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #calendar .schedule_event_wrap .schedule_event {
@@ -4905,7 +4933,7 @@ header.active .side-nav-btn img {
 }
 
 #calendar .schedule_event_wrap .schedule_event .schedule_profile {
-  margin-top: 16px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4939,15 +4967,21 @@ header.active .side-nav-btn img {
 
 #calendar .schedule_event_wrap .event-btns {
   display: none;
-  margin-top: 9px;
+  margin-top: 0px;
   padding: 6px;
   border-left: 1px solid #ffffff;
   margin-left: -1px;
   border-right: 1px solid #FFFFFF;
   margin-right: -1px;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  width: 101%;
+  left: 0;
+  right: 0;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   #calendar .schedule_event_wrap .event-btns {
     padding: 2px 2px 6px;
     margin-top: 2px;
@@ -4971,7 +5005,7 @@ header.active .side-nav-btn img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   #calendar .schedule_event_wrap .event-btns .btn {
     min-width: 49px;
     padding: 3px 6px;
@@ -4996,12 +5030,6 @@ header.active .side-nav-btn img {
   background-color: #8bbcfa;
 }
 
-@media (max-width: 1199px) {
-  #calendar .schedule_event_wrap .event-btns .btn.btn-edit {
-    margin-bottom: 3px;
-  }
-}
-
 #calendar .schedule_event_wrap .event-btns .btn.btn-cancel {
   margin-left: 11px;
   background-color: #ff6f6f;
@@ -5013,7 +5041,7 @@ header.active .side-nav-btn img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   #calendar .schedule_event_wrap .event-btns .btn.btn-cancel {
     margin-left: 0px;
   }
@@ -5046,7 +5074,7 @@ header.active .side-nav-btn img {
 #calendar .list_status.btn {
   padding: 2px 11px;
   font-size: 12px;
-  min-width: 80px;
+  min-width: 88px;
 }
 
 @media (max-width: 1200px) {
@@ -5057,7 +5085,7 @@ header.active .side-nav-btn img {
 
 @media (max-width: 1024px) {
   #calendar .list_status.btn {
-    padding: 0px 11px;
+    padding: 2px 11px;
     font-size: 10px;
     line-height: 15px;
     min-width: 54px;
@@ -6607,6 +6635,10 @@ header.active .side-nav-btn img {
   min-width: 13px;
 }
 
+.tournament_module .team-row > [class*="col-"] {
+  margin-bottom: 24px;
+}
+
 .tournament_form .card .card-header {
   padding-top: 27px;
   padding-top: 20px;
@@ -6679,6 +6711,7 @@ header.active .side-nav-btn img {
 .teams_box {
   border-radius: 12px;
   border: none;
+  height: 100%;
   margin-bottom: 30px;
   -webkit-box-shadow: 0px 3px 8px #0000000f;
           box-shadow: 0px 3px 8px #0000000f;
@@ -6738,6 +6771,10 @@ header.active .side-nav-btn img {
   color: #A4A9BC;
   font-size: 22px;
   margin-top: -5px;
+}
+
+.teams_box .card-body {
+  padding-bottom: 0;
 }
 
 .teams_box .card-body .team_member {
