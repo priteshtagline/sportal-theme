@@ -3890,6 +3890,12 @@ header {
   }
 }
 
+.onboarding_body {
+  .select2-container {
+    z-index: 1055;
+  }
+}
+
 .select2-selection__rendered[title="Active"] {
   background-color: #42D599 !important;
   color: $white  !important;
@@ -6971,7 +6977,7 @@ header {
   width: 100%;
   padding: 30px 50px;
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
-  z-index: 11111;
+  z-index: 1055;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -6996,7 +7002,7 @@ header {
   background-color: #ffffff;
   transition: all 0.5s ease-in-out;
   box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.06);
-  z-index: 111;
+  z-index: 1054;
 
   @media (max-width: 1440px) {
     max-width: 450px;
@@ -7047,21 +7053,10 @@ header {
       margin-bottom: 17px;
 
       .progress-bar {
-        animation: load 3s normal forwards;
         box-shadow: 0 10px 40px -10px #ffffff;
         border-radius: 16px;
         background: $theme-primary-color;
         height: 6px;
-      }
-
-      @keyframes load {
-        0% {
-          width: 0;
-        }
-
-        100% {
-          width: 68%;
-        }
       }
     }
 
