@@ -7475,6 +7475,10 @@ header.active .side-nav-btn img {
   pointer-events: all;
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch {
+  margin-top: -73px;
+}
+
 @media (max-width: 1024px) {
   .onboarding_sidebar .top_block .schedule_form .form-group .switch {
     margin-top: -26px;
@@ -7509,11 +7513,6 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_sidebar .top_block .schedule_form .form-group .switch,
-.onboarding_sidebar .top_block .schedule_form .form-group .input_group,
-.onboarding_sidebar .top_block .schedule_form .form-group .label {
-  pointer-events: none;
-}
-
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
   margin-right: 15px;
   min-width: 224px;
@@ -7521,28 +7520,33 @@ header.active .side-nav-btn img {
 }
 
 @media (max-width: 1440px) {
+  .onboarding_sidebar .top_block .schedule_form .form-group .switch,
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
     min-width: 190px;
   }
 }
 
 @media (max-width: 1200px) {
+  .onboarding_sidebar .top_block .schedule_form .form-group .switch,
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group {
     margin-right: 0px;
     min-width: 210px;
   }
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch span,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group span {
   margin: 0 14px;
 }
 
 @media (max-width: 1440px) {
+  .onboarding_sidebar .top_block .schedule_form .form-group .switch span,
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group span {
     margin: 0 5px;
   }
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch .time,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
   min-width: 90px;
   font-size: 12px;
@@ -7550,6 +7554,7 @@ header.active .side-nav-btn img {
 }
 
 @media (max-width: 1440px) {
+  .onboarding_sidebar .top_block .schedule_form .form-group .switch .time,
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
     width: 71px;
     font-size: 12px;
@@ -7558,24 +7563,29 @@ header.active .side-nav-btn img {
 }
 
 @media (max-width: 1200px) {
+  .onboarding_sidebar .top_block .schedule_form .form-group .switch .time,
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
     min-width: auto;
     width: 80px;
   }
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch .time::-webkit-input-placeholder,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time::-webkit-input-placeholder {
   color: #000000;
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch .time:-ms-input-placeholder,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time:-ms-input-placeholder {
   color: #000000;
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch .time::-ms-input-placeholder,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time::-ms-input-placeholder {
   color: #000000;
 }
 
+.onboarding_sidebar .top_block .schedule_form .form-group .switch .time::placeholder,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time::placeholder {
   color: #000000;
 }
