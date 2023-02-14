@@ -108,9 +108,11 @@ $(document).ready(function () {
   // sidebar resize
   $(window).resize(function () {
     if ($(window).width() <= 1024) {
+      $('#sidebar').addClass('active');
       $('.sidebar').addClass('active');
+      $('#sidebar .side-nav-btn').addClass('active');
       $('.main-content').addClass('active');
-      $('header').addClass('active');
+      $('#header').addClass('active');
     }
   });
   $("#customer_nav_title").hide();
