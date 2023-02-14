@@ -8078,11 +8078,11 @@ header.active .side-nav-btn img {
 
 #pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
   border-right: none;
-  width: 5.60%;
+  width: 85px;
 }
 
 #pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:first-child {
-  width: 5.60%;
+  width: 91px;
 }
 
 #pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis {
@@ -8161,11 +8161,11 @@ header.active .side-nav-btn img {
 }
 
 #pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:first-child {
-  width: 6%;
+  width: 150px;
 }
 
 #pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:last-child {
-  width: 94% !important;
+  width: 594px !important;
 }
 
 #pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table colgroup col {

@@ -7676,11 +7676,11 @@ header {
 
               &:not(:first-child) {
                 border-right: none;
-                width: 5.60%;
+                width: 85px;
               }
 
               &:first-child {
-                width: 5.60%;
+                width: 91px;
               }
 
               &.fc-timegrid-axis {
@@ -7790,11 +7790,11 @@ header {
           tr {
             th {
               &:first-child {
-                width: 6%;
+                width: 150px;
               }
 
               &:last-child {
-                width: 94% !important;
+                width: 594px !important;
               }
             }
           }
