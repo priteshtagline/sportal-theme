@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       center: 'timeGridDay,timeGridWeek',
       right: 'sportsDropdown listWeek pricingAdd',
     },
-    initialView: 'timeGridDay',
+    initialView: 'timeGridWeek',
     editable: false,
     weekNumbers: false,
     dayMaxEvents: true,
