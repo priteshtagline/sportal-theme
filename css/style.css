@@ -4093,6 +4093,10 @@ header.active .side-nav-btn img {
   color: #ffffff;
 }
 
+.onboarding_body .select2-container {
+  z-index: 1055;
+}
+
 .select2-selection__rendered[title="Active"] {
   background-color: #42D599 !important;
   color: #ffffff !important;
@@ -7269,7 +7273,7 @@ header.active .side-nav-btn img {
   padding: 30px 50px;
   -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
-  z-index: 11111;
+  z-index: 1055;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7304,7 +7308,7 @@ header.active .side-nav-btn img {
   transition: all 0.5s ease-in-out;
   -webkit-box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.06);
           box-shadow: 5px 0px 25px rgba(0, 0, 0, 0.06);
-  z-index: 111;
+  z-index: 1054;
 }
 
 @media (max-width: 1440px) {
@@ -7368,31 +7372,11 @@ header.active .side-nav-btn img {
 }
 
 .onboarding_sidebar .top_block .progress .progress-bar {
-  -webkit-animation: load 3s normal forwards;
-          animation: load 3s normal forwards;
   -webkit-box-shadow: 0 10px 40px -10px #ffffff;
           box-shadow: 0 10px 40px -10px #ffffff;
   border-radius: 16px;
   background: #764af3;
   height: 6px;
-}
-
-@-webkit-keyframes load {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 68%;
-  }
-}
-
-@keyframes load {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 68%;
-  }
 }
 
 .onboarding_sidebar .top_block .header_block {
