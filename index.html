@@ -8458,6 +8458,242 @@
         </div>
       </div>
     </div>
+
+    <!-- Add price Modal in pricing module -->
+    <div class="tournament_modal price_modal">
+      <div class="modal fade" id="add_pricing_modal" tabindex="-1" aria-labelledby="add_pricing_modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog model-open-margin">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h4 class="modal-title" id="add_pricing_modalLabel">Add Price</h4>
+              </div>
+              <div class="modal-body padding-body">
+                <h6 class="form_label mt-2 mb-0">Rules</h6>
+                <div class="form-group">
+                  <label for="Name" class="mt-2">Court Ruled by this PriceName</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
+                    <option selected>All Courts</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <h6 class="form_label">Pricing</h6>
+                <div class="form-group mb-0">
+                  <label for="Name" class="mt-1">Select intervals to set Pricing</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
+                    <option selected>30 min, 60 min</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <label for="core11" class="mb-0">Different Pricing for Doubles (if Applicable)</label>
+                    <span class="switch"><input type="checkbox" id="core11" /><label for="core11"
+                        class="mb-0"></label></span>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="form-group mb-0">
+                      <label for="interval" class="mt-0">Interval</label>
+                      <input type="text" class="textinput form-control" id="interval">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-0">
+                      <label for="price" class="mt-0">Price</label>
+                      <input type="text" class="textinput form-control" id="price">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="interval" class="mt-0">Interval</label>
+                      <input type="text" class="textinput form-control" id="interval">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="price" class="mt-0">Price</label>
+                      <input type="text" class="textinput form-control" id="price">
+                    </div>
+                  </div>
+                </div>
+                <h6 class="form_label mt-2">Date & Time</h6>
+                <!-- <div class="row mt-2">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_start_date" class="mt-0">Start Date</label>
+                      <input id="pricing_start_date" type="date" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_end_date" class="mt-0">End Date</label>
+                      <input id="pricing_end_date" type="date" autocomplete="off">
+                    </div>
+                  </div>
+                </div> -->
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_start_time" class="mt-0">Start Time</label>
+                      <input id="pricing_start_time" type="text" class="time time-dropdown" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_end_time" class="mt-0">End Time</label>
+                      <input id="pricing_end_time" type="text" class="time time-dropdown" autocomplete="off">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 d-flex justify-content-between">
+                    <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
+                    <input type="checkbox" class="text-check" id="weekdays">
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-6 d-flex justify-content-between">
+                    <label for="weekends" class="text-black" class="mt-0">Weekends</label>
+                    <input type="checkbox" class="text-check" id="weekends">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer padding-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add Price">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit price Modal in pricing module -->
+    <div class="tournament_modal price_modal">
+      <div class="modal fade" id="edit_pricing_modal" tabindex="-1" aria-labelledby="edit_pricing_modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog model-open-margin">
+          <div class="modal-content">
+            <form action="">
+              <div class="modal-header">
+                <h4 class="modal-title" id="add_pricing_modalLabel">Add Price</h4>
+              </div>
+              <div class="modal-body padding-body">
+                <h6 class="form_label mt-2 mb-0">Rules</h6>
+                <div class="form-group">
+                  <label for="Name" class="mt-2">Court Ruled by this PriceName</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
+                    <option selected>All Courts</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <h6 class="form_label">Pricing</h6>
+                <div class="form-group mb-0">
+                  <label for="Name" class="mt-1">Select intervals to set Pricing</label>
+                  <select class="input w-100 select form-control" aria-label="Default select example">
+                    <option selected>30 min, 60 min</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <label for="core11" class="mb-0">Different Pricing for Doubles (if Applicable)</label>
+                    <span class="switch"><input type="checkbox" id="core11" /><label for="core11"
+                        class="mb-0"></label></span>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="form-group mb-0">
+                      <label for="interval" class="mt-0">Interval</label>
+                      <input type="text" class="textinput form-control" id="interval">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-0">
+                      <label for="price" class="mt-0">Price</label>
+                      <input type="text" class="textinput form-control" id="price">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="interval" class="mt-0">Interval</label>
+                      <input type="text" class="textinput form-control" id="interval">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="price" class="mt-0">Price</label>
+                      <input type="text" class="textinput form-control" id="price">
+                    </div>
+                  </div>
+                </div>
+                <h6 class="form_label mt-2">Date & Time</h6>
+                <!-- <div class="row mt-2">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_start_date" class="mt-0">Start Date</label>
+                      <input id="pricing_start_date" type="date" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_end_date" class="mt-0">End Date</label>
+                      <input id="pricing_end_date" type="date" autocomplete="off">
+                    </div>
+                  </div>
+                </div> -->
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_start_time" class="mt-0">Start Time</label>
+                      <input id="pricing_start_time" type="text" class="time time-dropdown" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="pricing_end_time" class="mt-0">End Time</label>
+                      <input id="pricing_end_time" type="text" class="time time-dropdown" autocomplete="off">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 d-flex justify-content-between">
+                    <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
+                    <input type="checkbox" class="text-check" id="weekdays">
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-6 d-flex justify-content-between">
+                    <label for="weekends" class="text-black" class="mt-0">Weekends</label>
+                    <input type="checkbox" class="text-check" id="weekends">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer padding-footer">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add Price">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 

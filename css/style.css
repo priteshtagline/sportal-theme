@@ -807,6 +807,12 @@ input[type="checkbox"] {
           justify-content: center;
 }
 
+.select2-container.select-2 .selection .select2-selection.select2-selection--multiple {
+  overflow: hidden;
+  min-height: 57px;
+  height: auto;
+}
+
 .dataTables_length,
 .dataTables_filter,
 .dataTables_info {
@@ -3311,7 +3317,7 @@ header.active .side-nav-btn img {
   width: 100%;
   margin-right: 35px;
   margin-left: auto;
-  margin-bottom: 186px;
+  margin-top: 154px;
 }
 
 .setting_popup .modal-body {
@@ -8077,6 +8083,10 @@ header.active .side-nav-btn img {
   height: 50px;
 }
 
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col.fc-day-today {
+  background-color: transparent;
+}
+
 #pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events {
   margin: 0 0.3px 0;
 }
@@ -8090,11 +8100,30 @@ header.active .side-nav-btn img {
 #pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
   cursor: pointer;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .fc-event-time {
-  color: #707070;
-  font-size: 10px;
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event {
+  text-align: center;
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event h6 {
+  font-size: 16px;
+  font-family: 'Outfit SemiBold';
+}
+
+#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event p {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 #pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {
@@ -8162,6 +8191,31 @@ header.active .side-nav-btn img {
 
 #pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane.fc-timegrid-slot-minor {
   border-style: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-day-cushion .fc-list-day-text {
+  color: #000000;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
+  font-size: 14px;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title {
+  padding: 12px;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_event h6 {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_event p {
+  display: none;
+}
+
+#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-graphic {
+  padding-left: 100px;
 }
 
 .tournament-filter-popup,
@@ -8277,5 +8331,23 @@ header.active .side-nav-btn img {
 .tournament-filter-popup.active,
 .pricing-filter-popup.active {
   display: block;
+}
+
+.price_modal .modal .modal-dialog .modal-content .modal-body h6 {
+  font-size: 14px;
+}
+
+.price_modal .modal .modal-dialog .modal-content .modal-body .text-check {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #EEEEEE;
+  accent-color: #764af3;
+}
+
+.price_modal .modal .modal-dialog .modal-content .modal-body .text-black {
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */

@@ -338,19 +338,19 @@ $(document).ready(function () {
   var removeClass = true;
   $("html").click(function () {
     if (removeClass) {
-      $(".tournament-filter-popup").removeClass('active');
+      $(".pricing-filter-popup").removeClass('active');
       $('.fc-filterButton-button').removeClass("active");
       $('.fc-pricingfilter-button').removeClass("active");
       $('.notification_menu').removeClass("show");
     }
     removeClass = true;
   });
-  $(".fc-pricingfilter-button,.pricing-filter-popup,.tournament-filter-popup, .fc-filterButton-button, .tournament-filter, .notification-btn, .notification_menu").click(function () {
+  $(".fc-pricingfilter-button,.pricing-filter-popup,.pricing-filter-popup, .fc-filterButton-button, .tournament-filter, .notification-btn, .notification_menu").click(function () {
     removeClass = false;
   });
   $(".fc-filterButton-button, .tournament-filter").on("click", function () {
     $(this).toggleClass("active");
-    $(".tournament-filter-popup").toggleClass("active");
+    $(".pricing-filter-popup").toggleClass("active");
     removeClass = false;
   });
   $(".fc-pricingfilter-button").on("click", function () {
