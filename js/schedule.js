@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     weekNumbers: false,
     dayMaxEvents: true,
     firstDay: Monday = 1,
-    showNonCurrentDates: false,
+    // showNonCurrentDates: false,
     contentHeight: 'auto',
     allDaySlot: false,
     slotLabelInterval: "01:00",

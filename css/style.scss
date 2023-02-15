@@ -736,6 +736,21 @@ input[type="checkbox"] {
   }
 }
 
+
+.select2-container {
+  &.select-2 {
+    .selection {
+      .select2-selection {
+        &.select2-selection--multiple {
+          overflow: hidden;
+          min-height: 57px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
 .dataTables_length,
 .dataTables_filter,
 .dataTables_info {
@@ -3101,7 +3116,7 @@ header {
     width: 100%;
     margin-right: 35px;
     margin-left: auto;
-    margin-bottom: 186px;
+    margin-top: 154px;
   }
 
   .modal-body {
@@ -7707,6 +7722,12 @@ header {
                     height: 50px;
                   }
 
+                  .fc-timegrid-col {
+                    &.fc-day-today {
+                      background-color: transparent;
+                    }
+                  }
+
                   .fc-timegrid-col-frame {
                     .fc-timegrid-col-events {
                       margin: 0 0.3px 0;
@@ -7719,10 +7740,23 @@ header {
                         .fc-event-main {
                           cursor: pointer;
                           padding: 0;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
 
-                          .fc-event-time {
-                            color: #707070;
-                            font-size: 10px;
+                          .pricing_event {
+                            text-align: center;
+
+                            h6 {
+                              font-size: 16px;
+                              font-family: 'Outfit SemiBold';
+                            }
+
+                            p {
+                              color: $white;
+                              font-size: 12px;
+                              line-height: 14px;
+                            }
                           }
                         }
                       }
@@ -7834,6 +7868,39 @@ header {
         }
       }
     }
+
+    .fc-list-table {
+      .fc-list-day-cushion {
+        .fc-list-day-text {
+          color: $black;
+        }
+      }
+
+      .fc-list-event {
+        .fc-list-event-time {
+          font-size: 14px;
+        }
+
+        .fc-list-event-title {
+          padding: 12px;
+
+          .pricing_event {
+            h6 {
+              margin-bottom: 0;
+              font-size: 14px;
+            }
+
+            p {
+              display: none;
+            }
+          }
+        }
+
+        .fc-list-event-graphic {
+          padding-left: 100px;
+        }
+      }
+    }
   }
 }
 
@@ -7925,5 +7992,32 @@ header {
 
   &.active {
     display: block;
+  }
+}
+
+.price_modal {
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          h6 {
+            font-size: 14px;
+          }
+
+          .text-check {
+            box-shadow: none;
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #EEEEEE;
+            accent-color: $theme-primary-color;
+          }
+
+          .text-black {
+            color: #000000;
+          }
+        }
+      }
+    }
   }
 }

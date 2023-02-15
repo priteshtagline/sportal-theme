@@ -71,10 +71,16 @@ document.addEventListener('DOMContentLoaded', function () {
     weekNumbers: false,
     dayMaxEvents: true,
     firstDay: Monday = 1,
-    showNonCurrentDates: false,
     contentHeight: 'auto',
     allDaySlot: false,
     slotLabelInterval: "01:00",
+    eventTimeFormat: {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      meridiem: false
+    },
+    initialDate: "2023-02-13",
     fixedWeekCount: false,
     navLinks: true,
     dayHeaderFormat: { weekday: 'long' },
@@ -86,10 +92,53 @@ document.addEventListener('DOMContentLoaded', function () {
         titleFormat: '{DD.{MM.}}YYYY'
       },
     },
-    initialDate: "2023-01-03",
     eventContent: function (arg) {
       return { html: arg.event.title };
     },
+    events: [
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-13T00:00:00',
+        end: '2023-02-13T04:00:00',
+        color: "#764af3",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-13T04:00:00',
+        end: '2023-02-13T06:30:00',
+        color: "#42D599",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-14T00:00:00',
+        end: '2023-02-14T08:00:00',
+        color: "#764af3",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-15T00:00:00',
+        end: '2023-02-15T08:00:00',
+        color: "#764af3",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-16T00:00:00',
+        end: '2023-02-16T08:00:00',
+        color: "#764af3",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-17T00:00:00',
+        end: '2023-02-17T02:00:00',
+        color: "#764af3",
+      },
+      {
+        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        start: '2023-02-17T03:00:00',
+        end: '2023-02-17T08:00:00',
+        color: "#764af3",
+      },
+    ],
   });
   calendar.render();
 });
