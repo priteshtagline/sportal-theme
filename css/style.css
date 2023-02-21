@@ -385,10 +385,6 @@ input[type="checkbox"] {
   padding: 7px;
 }
 
-.modal-open .select2-container {
-  z-index: 1056;
-}
-
 .btn-info {
   background-color: #4e9afe;
   border-color: #4e9afe;
@@ -807,9 +803,8 @@ input[type="checkbox"] {
           justify-content: center;
 }
 
-.select2-container.select-2 .selection .select2-selection.select2-selection--multiple {
-  overflow: hidden;
-  min-height: 57px;
+.select2-container .selection .select2-selection.select2-selection--multiple {
+  overflow-y: auto;
   height: auto;
 }
 
@@ -1163,6 +1158,13 @@ input[type="checkbox"] {
   visibility: visible !important;
 }
 
+@media (max-width: 768px) {
+  #sidebar .sidebar.active:hover .dropdown-item span {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
 #sidebar .sidebar .logo-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1341,6 +1343,20 @@ input[type="checkbox"] {
 
 #sidebar .sidebar .profile-dropdown .show {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  #sidebar .sidebar .profile-dropdown .show {
+    width: 48px;
+    min-width: auto;
+  }
+  #sidebar .sidebar .profile-dropdown .show li .dropdown-item {
+    padding-left: 10px !important;
+  }
+  #sidebar .sidebar .profile-dropdown .show li .dropdown-item span {
+    visibility: hidden !important;
+    opacity: 0;
+  }
 }
 
 #sidebar .sidebar .features-list {
@@ -4875,6 +4891,10 @@ header.active .side-nav-btn img {
   margin-top: 0;
   display: block;
   min-width: 162px;
+  width: auto;
+  position: inherit;
+  z-index: 1;
+  border: none;
 }
 
 @media (max-width: 1440px) {
