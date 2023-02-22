@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var elms = document.getElementsByClassName('fc-sportsDropdown-button').item(0)
     elms.innerHTML = '<select class="sorting_select" id="overview_custom_select"><option selected value = "futsal">Futsal</option><option value="football">Football</option><option value="cricket">Cricket</option><option value=">Badminton</option></select>'
   }, 0);
+  var btn5 = document.getElementsByClassName("fc-SwitchView-button");
+  setTimeout(() => {
+    var elms = document.getElementsByClassName('fc-SwitchView-button').item(0)
+    elms.innerHTML = 'Switch to Court View'
+  }, 0);
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
@@ -55,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
       pricingAdd: {
         html: '<span class="material-symbols-rounded add_icon">add_circle</span><span>Add New</span>'
       },
+      SwitchView: {
+        html: 'SwitchtoCourtView',
+        click: function () {
+          calendar.changeView('timeGridDay')
+        },
+      },
     },
     buttonText: {
       week: 'Weekly',
@@ -63,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     headerToolbar: {
       left: 'title prev,next pricingfilter',
-      center: 'timeGridDay,timeGridWeek',
+      center: 'timeGridDay,timeGridWeek SwitchView',
       right: 'sportsDropdown listWeek pricingAdd',
     },
     initialView: 'timeGridWeek',
