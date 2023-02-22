@@ -3182,9 +3182,6 @@ header.active .side-nav-btn img {
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
   margin-left: 150px;
   margin-right: auto;
-  border-radius: 24px;
-  -webkit-box-shadow: inset 0px 0px 2px #00000029;
-          box-shadow: inset 0px 0px 2px #00000029;
 }
 
 @media (max-width: 1400px) {
@@ -3194,8 +3191,11 @@ header.active .side-nav-btn img {
 }
 
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group {
-  border-radius: 24px;
   background-color: #F8FAFB;
+  border-radius: 24px;
+  padding: 1px;
+  -webkit-box-shadow: inset 0px 0px 2px #00000029;
+          box-shadow: inset 0px 0px 2px #00000029;
 }
 
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button {
@@ -3229,6 +3229,16 @@ header.active .side-nav-btn img {
 
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button:hover {
   z-index: inherit;
+}
+
+.pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-primary {
+  border: 1px solid #764af3;
+  background: #ffffff;
+  border-radius: 23px;
+  color: #764af3;
+  padding: 10px 17px;
+  font-size: 10px;
+  line-height: 13px;
 }
 
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button {
