@@ -320,7 +320,7 @@ input[type="checkbox"] {
   font-size: 16px;
   line-height: 20px;
   padding: 11px 21px;
-  min-width: 100px;
+  min-width: 107px;
 }
 
 :not(.btn-check) + .btn:active {
@@ -7544,7 +7544,7 @@ header.active .side-nav-btn img {
 
 .onboarding_sidebar .top_block .schedule_form .form-group .switch span,
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group span {
-  margin: 0 14px;
+  margin: 0 6px;
 }
 
 @media (max-width: 1440px) {
@@ -7558,7 +7558,7 @@ header.active .side-nav-btn img {
 .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
   min-width: 70px;
   font-size: 12px;
-  padding: 9px 13px;
+  padding: 5px 2px;
 }
 
 @media (max-width: 1440px) {
@@ -7566,7 +7566,7 @@ header.active .side-nav-btn img {
   .onboarding_sidebar .top_block .schedule_form .form-group .input_group .time {
     width: 71px;
     font-size: 12px;
-    padding: 7px 7px;
+    padding: 5px 2px;
   }
 }
 
@@ -8369,5 +8369,9 @@ header.active .side-nav-btn img {
 
 .price_modal .modal .modal-dialog .modal-content .modal-body .text-black {
   color: #000000;
+}
+
+.onboarding_form .time_schedule_error {
+  margin-left: 0;
 }
 /*# sourceMappingURL=style.css.map */
