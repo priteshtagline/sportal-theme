@@ -1932,7 +1932,11 @@ header .navbar .nav-right .btn-group .profile-dropdown .profile_image {
 
 header .navbar .nav-right .btn-group .profile-dropdown span {
   margin-left: 10px;
+  width: 100px;
   text-transform: capitalize;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1200px) {
@@ -1961,6 +1965,9 @@ header .navbar .nav-right .btn-group .profile-dropdown-menu {
 
 header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item {
   padding: 6px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item img {
@@ -1993,6 +2000,7 @@ header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item.ad
 
 header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item:hover {
   background-color: #764af3;
+  color: #ffffff;
 }
 
 header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item:hover span,
