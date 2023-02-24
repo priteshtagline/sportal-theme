@@ -1905,6 +1905,7 @@ header .navbar .nav-right .btn-group .dropdown-menu {
 header .navbar .nav-right .btn-group .profile-dropdown {
   padding: 7px 10px;
   border-radius: 23px;
+  text-align: left;
   color: #764af3;
   border: 1px solid #764af3;
   display: -webkit-box;
@@ -3124,14 +3125,26 @@ header.active .side-nav-btn img {
   font-family: 'Outfit Semibold';
 }
 
+@media (max-width: 1250px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
+    min-width: 150px;
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 1024px) {
   .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-toolbar-title {
-    width: 150px;
     font-size: 16px;
     min-width: auto;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child .fc-button-group {
+    margin-left: 0px;
   }
 }
 
@@ -3187,6 +3200,12 @@ header.active .side-nav-btn img {
   margin-left: 5px;
 }
 
+@media (max-width: 1200px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:first-child button {
+    margin-left: 6px;
+  }
+}
+
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
   margin-left: 150px;
   margin-right: auto;
@@ -3195,6 +3214,12 @@ header.active .side-nav-btn img {
 @media (max-width: 1400px) {
   .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) {
+    margin-left: 6px;
   }
 }
 
@@ -3239,6 +3264,14 @@ header.active .side-nav-btn img {
   z-index: inherit;
 }
 
+@media (max-width: 1024px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-group button {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 7px 8px;
+  }
+}
+
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-primary {
   border: 1px solid #764af3;
   background: #ffffff;
@@ -3247,6 +3280,14 @@ header.active .side-nav-btn img {
   padding: 10px 17px;
   font-size: 10px;
   line-height: 13px;
+}
+
+@media (max-width: 1024px) {
+  .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) .fc-button-primary {
+    padding: 6px 8px;
+    font-size: 8px;
+    line-height: 12px;
+  }
 }
 
 .pricing-page #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listMonth-button {
@@ -7510,22 +7551,13 @@ header.active .side-nav-btn img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 38px;
 }
 
 .onboarding_sidebar .top_block .schedule_form .form-group.edit .switch,
 .onboarding_sidebar .top_block .schedule_form .form-group.edit .input_group,
 .onboarding_sidebar .top_block .schedule_form .form-group.edit .label {
   pointer-events: all;
-}
-
-.onboarding_sidebar .top_block .schedule_form .form-group .switch {
-  margin-top: -73px;
-}
-
-@media (max-width: 1440px) {
-  .onboarding_sidebar .top_block .schedule_form .form-group .switch {
-    margin-top: -26px;
-  }
 }
 
 .onboarding_sidebar .top_block .schedule_form .form-group .label {
@@ -7934,6 +7966,20 @@ header.active .side-nav-btn img {
   background-position: 68px center;
 }
 
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk .fc-sportsDropdown-button .sorting_select {
+    min-width: 80px;
+    padding: 6px 9px;
+    background-position: 58px center;
+  }
+}
+
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk .fc-sportsDropdown-button {
+    margin-left: 5px;
+  }
+}
+
 #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button {
   width: 30px;
   height: 30px;
@@ -7971,6 +8017,14 @@ header.active .side-nav-btn img {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-listWeek-button {
+    margin-left: 5px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
 #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -7992,38 +8046,51 @@ header.active .side-nav-btn img {
   line-height: 18px;
 }
 
-#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button span.add_icon {
-  margin-right: 10px;
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button span {
+    font-size: 10px;
+  }
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller {
+#pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button span.add_icon {
+  margin-right: 6px;
+}
+
+@media (max-width: 1024px) {
+  #pricing-calendar .fc-header-toolbar .fc-toolbar-chunk:last-child .fc-pricingAdd-button {
+    margin-left: 5px;
+    padding: 5px;
+  }
+}
+
+.fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller {
   overflow: hidden !important;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th {
+.fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th {
   border-left: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th:not(:last-child) {
+.fc-view-harness .fc-view.fc-daygrid table thead .fc-scrollgrid-section-header .fc-scroller th:not(:last-child) {
   border-right: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame {
   min-height: 120px;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
   font-size: 10px;
   color: #000000;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8031,27 +8098,27 @@ header.active .side-nav-btn img {
       flex-wrap: wrap;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
   margin-left: 15px;
   width: calc(50% - 15px);
 }
 
 @media (max-width: 1024px) {
-  #pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
+  .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness {
     width: 100%;
   }
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event {
   background-color: #ffffff;
   border: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap {
   position: relative;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap:before {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap:before {
   position: absolute;
   content: "";
   width: 4px;
@@ -8064,46 +8131,46 @@ header.active .side-nav-btn img {
   background-color: #DDECFF;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_blue_event::before {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_blue_event::before {
   background-color: #ddecff;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_pink_event::before {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_pink_event::before {
   background-color: #f1ddff;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_green_event::before {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap.light_green_event::before {
   background-color: #ddfff5;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event {
   padding: 0;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .time,
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .court_title,
-#pricing-calendar .fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .schedule_profile {
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .time,
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .court_title,
+.fc-view-harness .fc-view.fc-daygrid table tbody .fc-daygrid-day-frame .fc-daygrid-day-events .fc-daygrid-event-harness .fc-daygrid-event .schedule_event_wrap .schedule_event .schedule_profile {
   display: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th {
+.fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th {
   border-left: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
+.fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:not(:first-child) {
   border-right: none;
   width: 85px;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:first-child {
+.fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th:first-child {
   width: 91px;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis {
+.fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis {
   position: relative;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis::after {
+.fc-view-harness .fc-view.fc-timegrid thead .fc-scrollgrid-section-header th.fc-timegrid-axis::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -8117,25 +8184,25 @@ header.active .side-nav-btn img {
   margin: 0 auto;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-slot {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-slot {
   height: 50px;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col.fc-day-today {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col.fc-day-today {
   background-color: transparent;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events {
   margin: 0 0.3px 0;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event {
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main {
   cursor: pointer;
   padding: 0;
   display: -webkit-box;
@@ -8149,41 +8216,53 @@ header.active .side-nav-btn img {
           align-items: center;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event {
   text-align: center;
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event h6 {
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event h6 {
   font-size: 16px;
   font-family: 'Outfit SemiBold';
 }
 
-#pricing-calendar .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event p {
+@media (max-width: 1024px) {
+  .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event h6 {
+    font-size: 14px;
+  }
+}
+
+.fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event p {
   color: #ffffff;
   font-size: 12px;
   line-height: 14px;
 }
 
-#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {
+@media (max-width: 1024px) {
+  .fc-view-harness .fc-view.fc-timegrid tbody .fc-timegrid-body table tbody tr .fc-timegrid-col-frame .fc-timegrid-col-events .fc-timegrid-event .fc-event-main .pricing_event p {
+    font-size: 10px;
+  }
+}
+
+.fc-view-harness .fc-view thead .fc-scrollgrid-section-header th {
   border-left: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th:not(:first-child) {
+.fc-view-harness .fc-view thead .fc-scrollgrid-section-header th:not(:first-child) {
   border-right: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion {
+.fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion {
   padding: 26px 0 22px 0;
   font-size: 12px;
   color: #A4A9BC;
   position: relative;
 }
 
-#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion:hover {
+.fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion:hover {
   color: #764af3;
 }
 
-#pricing-calendar .fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion::before {
+.fc-view-harness .fc-view thead .fc-scrollgrid-section-header th .fc-col-header-cell-cushion::before {
   position: absolute;
   bottom: -5px;
   content: "";
@@ -8192,30 +8271,30 @@ header.active .side-nav-btn img {
   background-color: #764af3;
 }
 
-#pricing-calendar .fc-view-harness .fc-view tbody .fc-scrollgrid-section-body .fc-scrollgrid-shrink-cushion {
+.fc-view-harness .fc-view tbody .fc-scrollgrid-section-body .fc-scrollgrid-shrink-cushion {
   color: #A4A9BC;
   font-size: 12px;
 }
 
-#pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:first-child {
+.fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:first-child {
   width: 150px;
 }
 
-#pricing-calendar .fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:last-child {
+.fc-view-harness .fc-timeGridDay-view .fc-scroller-harness thead tr th:last-child {
   width: 594px !important;
 }
 
-#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table colgroup col {
+.fc-view-harness .fc-scroller-harness .fc-timegrid-body table colgroup col {
   width: 6% !important;
 }
 
-#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label {
+.fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label {
   width: 6%;
   border-style: none;
   position: relative;
 }
 
-#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label .fc-timegrid-slot-label-frame {
+.fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-label .fc-timegrid-slot-label-frame {
   text-align: center;
   position: absolute;
   left: 0;
@@ -8223,37 +8302,170 @@ header.active .side-nav-btn img {
   bottom: -15px;
 }
 
-#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane {
+.fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane {
   width: 94%;
 }
 
-#pricing-calendar .fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane.fc-timegrid-slot-minor {
+.fc-view-harness .fc-scroller-harness .fc-timegrid-body table tbody tr .fc-timegrid-slot-lane.fc-timegrid-slot-minor {
   border-style: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-day-cushion .fc-list-day-text {
+.fc-view-harness .fc-list-table .fc-list-day-cushion .fc-list-day-text {
   color: #000000;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-time {
   font-size: 14px;
+  vertical-align: middle;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title {
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title {
   padding: 12px;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_event h6 {
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_wrapper .pricing_event {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_wrapper .pricing_event h6 {
   margin-bottom: 0;
   font-size: 14px;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_event p {
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_wrapper .pricing_event p {
   display: none;
 }
 
-#pricing-calendar .fc-view-harness .fc-list-table .fc-list-event .fc-list-event-graphic {
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-title .pricing_wrapper .event-btns {
+  display: block;
+  position: relative;
+  width: auto;
+  padding: 0;
+}
+
+.fc-view-harness .fc-list-table .fc-list-event .fc-list-event-graphic {
   padding-left: 100px;
+  vertical-align: middle;
+}
+
+.fc-view-harness .fc-list-table .fc-list-event .btn.btn-edit {
+  background-color: #8bbcfa;
+}
+
+.fc-view-harness .fc-list-table .fc-list-event .btn.btn-view {
+  background-color: #764af3;
+}
+
+.pricing_wrapper .event-btns {
+  display: none;
+  margin-top: 0px;
+  padding: 6px;
+  border-left: 1px solid #ffffff;
+  margin-left: -1px;
+  margin-right: -1px;
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+  z-index: 999;
+  width: 101%;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1200px) {
+  .pricing_wrapper .event-btns {
+    padding: 2px 2px 6px;
+    margin-top: 2px;
+  }
+}
+
+.pricing_wrapper .event-btns .btn {
+  padding: 6px 12px;
+  min-width: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1500px) {
+  .pricing_wrapper .event-btns .btn {
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing_wrapper .event-btns .btn {
+    min-width: 49px;
+    padding: 3px 6px;
+  }
+}
+
+.pricing_wrapper .event-btns .btn span {
+  font-size: 9px;
+  color: #ffffff;
+  line-height: 11px;
+  margin-left: 5px;
+}
+
+@media (max-width: 1360px) {
+  .pricing_wrapper .event-btns .btn span {
+    font-size: 7px;
+    margin-left: 5px;
+  }
+}
+
+.pricing_wrapper .event-btns .btn.btn-edit {
+  border: 1px solid #ffffff;
+  background: transparent;
+}
+
+.pricing_wrapper .event-btns .btn.btn-cancel {
+  margin-left: 11px;
+  background-color: #ff6f6f;
+}
+
+@media (max-width: 1360px) {
+  .pricing_wrapper .event-btns .btn.btn-cancel {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing_wrapper .event-btns .btn.btn-cancel {
+    margin-left: 0px;
+  }
+}
+
+.pricing_wrapper .event-btns .btn.btn-view {
+  border: 1px solid #ffffff;
+  background: transparent;
+  padding: 6px 10px;
+}
+
+.pricing_wrapper .event-btns .btn.btn-view img {
+  width: 8px;
+}
+
+@media (max-width: 1500px) {
+  .pricing_wrapper .event-btns .btn.btn-view {
+    padding: 4px 7px;
+  }
 }
 
 .tournament-filter-popup,
@@ -8387,6 +8599,14 @@ header.active .side-nav-btn img {
 
 .price_modal .modal .modal-dialog .modal-content .modal-body .text-black {
   color: #000000;
+}
+
+.price_modal .modal .modal-dialog .modal-content .modal-body .day_group {
+  margin-bottom: 10px;
+}
+
+.price_modal .modal .modal-dialog .modal-content .modal-body .day_group label {
+  margin-bottom: 0;
 }
 
 .onboarding_form .time_schedule_error {

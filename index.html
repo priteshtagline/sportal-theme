@@ -369,7 +369,7 @@
             <button type="button" class="btn profile-dropdown dropdown-toggle" data-toggle="dropdown"
               data-display="static" aria-expanded="false">
               <img src="images/user-logo.png" alt="profile" class="profile_image">
-              <span>beach front</span>
+              <span>Downtown Pro ABC XYZ</span>
             </button>
             <ul class="dropdown-menu profile-dropdown-menu dropdown-menu-md-end">
               <li>
@@ -381,7 +381,7 @@
               <li>
                 <a class="dropdown-item" href="javascript:void(0)">
                   <img src="images/user-logo.png" alt="profile" class="profile_image">
-                  <span>Downtown Pro</span>
+                  <span>Downtown Pro ABC XYZ</span>
                 </a>
               </li>
               <li>
@@ -418,6 +418,17 @@
       </div>
     </nav>
   </header>
+
+  <div class="event-btns">
+    <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_schedule_modal">
+      <img src="images/edit.svg" alt="Cancel">
+      <span>Edit</span>
+    </a>
+    <a class="btn btn-sm btn-cancel radius-rounded">
+      <img src="images/cancel.svg" alt="Cancel">
+      <span>Cancel</span>
+    </a>
+  </div>
 
   <div id="sidebar">
     <button class="side-nav-btn" id="side_nav_btn">
@@ -8530,7 +8541,7 @@
                   </div>
                 </div>
                 <h6 class="form_label mt-2">Date & Time</h6>
-                <!-- <div class="row mt-2">
+                <div class="row mt-2">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="pricing_start_date" class="mt-0">Start Date</label>
@@ -8543,31 +8554,47 @@
                       <input id="pricing_end_date" type="date" autocomplete="off">
                     </div>
                   </div>
-                </div> -->
-                <div class="row mt-2">
+                </div>
+                <div class="row  mt-3">
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="pricing_start_time" class="mt-0">Start Time</label>
-                      <input id="pricing_start_time" type="text" class="time time-dropdown" autocomplete="off">
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
+                      <input type="checkbox" class="text-check" id="weekdays">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-monday" class="text-black" class="mt-0">Monday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-monday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-tuesday" class="text-black" class="mt-0">Tuesday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-tuesday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-wednesday" class="text-black" class="mt-0">Wednesday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-wednesday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-thursday" class="text-black" class="mt-0">Thursday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-thursday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-friday" class="text-black" class="mt-0">Friday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-friday">
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="pricing_end_time" class="mt-0">End Time</label>
-                      <input id="pricing_end_time" type="text" class="time time-dropdown" autocomplete="off">
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends" class="text-black" class="mt-0">Weekends</label>
+                      <input type="checkbox" class="text-check" id="weekends">
                     </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 d-flex justify-content-between">
-                    <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
-                    <input type="checkbox" class="text-check" id="weekdays">
-                  </div>
-                </div>
-                <div class="row mt-2">
-                  <div class="col-md-6 d-flex justify-content-between">
-                    <label for="weekends" class="text-black" class="mt-0">Weekends</label>
-                    <input type="checkbox" class="text-check" id="weekends">
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends-saturday" class="text-black" class="mt-0">Saturday</label>
+                      <input type="checkbox" class="text-check" id="weekends-saturday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends-sunday" class="text-black" class="mt-0">Sunday</label>
+                      <input type="checkbox" class="text-check" id="weekends-sunday">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -8589,7 +8616,7 @@
           <div class="modal-content">
             <form action="">
               <div class="modal-header">
-                <h4 class="modal-title" id="add_pricing_modalLabel">Add Price</h4>
+                <h4 class="modal-title" id="add_pricing_modalLabel">Edit Price</h4>
               </div>
               <div class="modal-body padding-body">
                 <h6 class="form_label mt-2 mb-0">Rules</h6>
@@ -8676,21 +8703,51 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6 d-flex justify-content-between">
-                    <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
-                    <input type="checkbox" class="text-check" id="weekdays">
+                <div class="row  mt-3">
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays" class="text-black" class="mt-0">Weekdays</label>
+                      <input type="checkbox" class="text-check" id="weekdays">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-monday" class="text-black" class="mt-0">Monday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-monday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-tuesday" class="text-black" class="mt-0">Tuesday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-tuesday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-wednesday" class="text-black" class="mt-0">Wednesday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-wednesday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-thursday" class="text-black" class="mt-0">Thursday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-thursday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekdays-friday" class="text-black" class="mt-0">Friday</label>
+                      <input type="checkbox" class="text-check" id="weekdays-friday">
+                    </div>
                   </div>
-                </div>
-                <div class="row mt-2">
-                  <div class="col-md-6 d-flex justify-content-between">
-                    <label for="weekends" class="text-black" class="mt-0">Weekends</label>
-                    <input type="checkbox" class="text-check" id="weekends">
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends" class="text-black" class="mt-0">Weekends</label>
+                      <input type="checkbox" class="text-check" id="weekends">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends-saturday" class="text-black" class="mt-0">Saturday</label>
+                      <input type="checkbox" class="text-check" id="weekends-saturday">
+                    </div>
+                    <div class="d-flex justify-content-between day_group">
+                      <label for="weekends-sunday" class="text-black" class="mt-0">Sunday</label>
+                      <input type="checkbox" class="text-check" id="weekends-sunday">
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="modal-footer padding-footer">
-                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Add Price">
+                <input type="submit" class="btn btn-primary mr-2" data-dismiss="modal" value="Update Price">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
               </div>
             </form>
@@ -8730,5 +8787,9 @@
     });
   </script>
 </body>
+
+<div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg"
+      alt="view"><span>View</span></span><a class="btn btn-sm btn-cancel radius-rounded"><img src="images/cancel.svg"
+      alt="Cancel"><span>Cancel</span></a>
 
 </html>

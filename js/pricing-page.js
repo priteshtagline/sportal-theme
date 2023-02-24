@@ -49,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (clicked_count == 1) {
             $(".fc-header-toolbar .fc-toolbar-chunk:first-child").append($("#pricing-filter-popup"));
           }
-
           localStorage.setItem("clicked", clicked_count)
-
         },
       },
       pricinglist: {
@@ -108,48 +106,56 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     events: [
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"><span class="btn btn-sm btn-view radius-rounded"><img src="images/view-icon.svg" alt="view"><span>View</span></span> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-13T00:00:00',
         end: '2023-02-13T04:00:00',
         color: "#764af3",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-13T04:00:00',
         end: '2023-02-13T06:30:00',
         color: "#42D599",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-14T00:00:00',
         end: '2023-02-14T08:00:00',
         color: "#764af3",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-15T00:00:00',
         end: '2023-02-15T08:00:00',
         color: "#764af3",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-16T00:00:00',
         end: '2023-02-16T08:00:00',
         color: "#764af3",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-17T00:00:00',
         end: '2023-02-17T02:00:00',
         color: "#764af3",
       },
       {
-        title: '<div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>',
+        title: '<div class="pricing_wrapper"><div class="pricing_event"><h6>50 AED</h6><p>10:00 am - 11:00 pm</p></div>  <div class="event-btns"> <a class="btn btn-sm btn-edit radius-rounded" data-toggle="modal" href="#edit_pricing_modal"> <img src="images/edit.svg" alt="Cancel"> <span>Edit</span> </a> <a class="btn btn-sm btn-cancel radius-rounded"> <img src="images/cancel.svg" alt="Cancel"> <span>Cancel</span> </a> </div></div>',
         start: '2023-02-17T03:00:00',
         end: '2023-02-17T08:00:00',
         color: "#764af3",
       },
     ],
+    eventMouseEnter: function (info) {
+      $(info.el).children("div.fc-event-main").children("div.pricing_wrapper").children("div.event-btns").show();
+      var background_color = $(info.el).css('background-color');
+      $(info.el).children("div.fc-event-main").children("div.pricing_wrapper").children("div.event-btns").css('background', background_color);
+    },
+    eventMouseLeave: function (info) {
+      $(info.el).children("div.fc-event-main").children("div.pricing_wrapper").children("div.event-btns").hide();
+    },
   });
   calendar.render();
 });

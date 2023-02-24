@@ -1789,6 +1789,7 @@ header {
         .profile-dropdown {
           padding: 7px 10px;
           border-radius: 23px;
+          text-align: left;
           color: $theme-primary-color;
           border: 1px solid $theme-primary-color;
           display: flex;
@@ -2883,13 +2884,23 @@ header {
             font-size: 20px;
             font-family: 'Outfit Semibold';
 
+            @media (max-width: 1250px) {
+              min-width: 150px;
+              font-size: 18px;
+            }
+
             @media (max-width: 1024px) {
-              width: 150px;
               font-size: 16px;
               min-width: auto;
               text-overflow: ellipsis;
               overflow: hidden;
               white-space: nowrap;
+            }
+          }
+
+          .fc-button-group {
+            @media (max-width: 1200px) {
+              margin-left: 0px;
             }
           }
 
@@ -2936,6 +2947,10 @@ header {
               margin-left: 5px;
 
             }
+
+            @media (max-width: 1200px) {
+              margin-left: 6px;
+            }
           }
         }
 
@@ -2945,6 +2960,10 @@ header {
 
           @media (max-width:1400px) {
             margin-left: auto;
+          }
+
+          @media (max-width:1024px) {
+            margin-left: 6px;
           }
 
           .fc-button-group {
@@ -2984,6 +3003,12 @@ header {
               &:hover {
                 z-index: inherit;
               }
+
+              @media (max-width: 1024px) {
+                font-size: 8px;
+                line-height: 10px;
+                padding: 7px 8px;
+              }
             }
           }
 
@@ -2995,6 +3020,12 @@ header {
             padding: 10px 17px;
             font-size: 10px;
             line-height: 13px;
+
+            @media (max-width:1024px) {
+              padding: 6px 8px;
+              font-size: 8px;
+              line-height: 12px;
+            }
           }
         }
 
@@ -3026,19 +3057,6 @@ header {
             svg {
               display: none;
             }
-
-            // &.fc-button-active {
-            //   background-color: $theme-primary-color;
-            //   color: $white;
-
-            //   span {
-            //     display: none;
-            //   }
-
-            //   svg {
-            //     display: block;
-            //   }
-            // }
           }
 
           .fc-addButton-button {
@@ -7165,6 +7183,7 @@ header {
         margin-bottom: 28px;
         display: flex;
         align-items: center;
+        min-height: 38px;
 
         &.edit {
 
@@ -7172,14 +7191,6 @@ header {
           .input_group,
           .label {
             pointer-events: all;
-          }
-        }
-
-        .switch {
-          margin-top: -73px;
-
-          @media (max-width: 1440px) {
-            margin-top: -26px;
           }
         }
 
@@ -7526,6 +7537,16 @@ header {
           background-image: url(../images/select_down.svg);
           background-repeat: no-repeat;
           background-position: 68px center;
+
+          @media (max-width: 1024px) {
+            min-width: 80px;
+            padding: 6px 9px;
+            background-position: 58px center;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          margin-left: 5px;
         }
       }
 
@@ -7557,6 +7578,12 @@ header {
           svg {
             display: none;
           }
+
+          @media (max-width: 1024px) {
+            margin-left: 5px;
+            width: 26px;
+            height: 26px;
+          }
         }
 
         .fc-pricingAdd-button {
@@ -7574,193 +7601,210 @@ header {
             font-size: 12px;
             line-height: 18px;
 
+            @media (max-width: 1024px) {
+              font-size: 10px;
+            }
+
             &.add_icon {
-              margin-right: 10px;
+              margin-right: 6px;
             }
           }
-        }
 
+          @media (max-width: 1024px) {
+            margin-left: 5px;
+            padding: 5px;
+          }
+        }
       }
+
     }
   }
+}
 
-  .fc-view-harness {
-    .fc-view {
-      &.fc-daygrid {
-        table {
-          thead {
-            .fc-scrollgrid-section-header {
-              .fc-scroller {
-                overflow: hidden !important;
-
-                th {
-                  border-left: none;
-
-                  &:not(:last-child) {
-                    border-right: none;
-                  }
-                }
-              }
-
-            }
-          }
-
-          tbody {
-            .fc-daygrid-day-frame {
-              min-height: 120px;
-
-              .fc-daygrid-day-top {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-
-                .fc-daygrid-day-number {
-                  font-size: 10px;
-                  color: $black;
-                }
-              }
-
-              .fc-daygrid-day-events {
-                display: flex;
-                flex-wrap: wrap;
-
-                .fc-daygrid-event-harness {
-                  margin-left: 15px;
-                  width: calc(50% - 15px);
-
-                  @media (max-width:1024px) {
-                    width: 100%;
-                  }
-
-                  .fc-daygrid-event {
-                    background-color: $white;
-                    border: none;
-
-                    .schedule_event_wrap {
-                      position: relative;
-
-                      &:before {
-                        position: absolute;
-                        content: "";
-                        width: 4px;
-                        height: 19px;
-                        border-radius: 8px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: -9px;
-                        background-color: #DDECFF;
-                      }
-
-                      &.light_blue_event::before {
-                        background-color: $light_blue_event;
-                      }
-
-                      &.light_pink_event::before {
-                        background-color: $light_pink_event;
-                      }
-
-                      &.light_green_event::before {
-                        background-color: $light_green_event;
-                      }
-
-                      .schedule_event {
-                        padding: 0;
-
-                        .time,
-                        .court_title,
-                        .schedule_profile {
-                          display: none;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-
-            }
-          }
-        }
-
-      }
-
-      &.fc-timegrid {
+.fc-view-harness {
+  .fc-view {
+    &.fc-daygrid {
+      table {
         thead {
           .fc-scrollgrid-section-header {
-            th {
-              border-left: none;
+            .fc-scroller {
+              overflow: hidden !important;
 
-              &:not(:first-child) {
-                border-right: none;
-                width: 85px;
-              }
+              th {
+                border-left: none;
 
-              &:first-child {
-                width: 91px;
-              }
-
-              &.fc-timegrid-axis {
-                position: relative;
-
-                &::after {
-                  position: absolute;
-                  content: "";
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 0;
-                  background-image: url(../images/time.svg);
-                  width: 26px;
-                  height: 26px;
-                  left: 0;
-                  margin: 0 auto;
+                &:not(:last-child) {
+                  border-right: none;
                 }
               }
             }
+
           }
         }
 
         tbody {
-          .fc-timegrid-body {
-            table {
-              tbody {
-                tr {
-                  .fc-timegrid-slot {
-                    height: 50px;
-                  }
+          .fc-daygrid-day-frame {
+            min-height: 120px;
 
-                  .fc-timegrid-col {
-                    &.fc-day-today {
-                      background-color: transparent;
+            .fc-daygrid-day-top {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+
+              .fc-daygrid-day-number {
+                font-size: 10px;
+                color: $black;
+              }
+            }
+
+            .fc-daygrid-day-events {
+              display: flex;
+              flex-wrap: wrap;
+
+              .fc-daygrid-event-harness {
+                margin-left: 15px;
+                width: calc(50% - 15px);
+
+                @media (max-width:1024px) {
+                  width: 100%;
+                }
+
+                .fc-daygrid-event {
+                  background-color: $white;
+                  border: none;
+
+                  .schedule_event_wrap {
+                    position: relative;
+
+                    &:before {
+                      position: absolute;
+                      content: "";
+                      width: 4px;
+                      height: 19px;
+                      border-radius: 8px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      left: -9px;
+                      background-color: #DDECFF;
+                    }
+
+                    &.light_blue_event::before {
+                      background-color: $light_blue_event;
+                    }
+
+                    &.light_pink_event::before {
+                      background-color: $light_pink_event;
+                    }
+
+                    &.light_green_event::before {
+                      background-color: $light_green_event;
+                    }
+
+                    .schedule_event {
+                      padding: 0;
+
+                      .time,
+                      .court_title,
+                      .schedule_profile {
+                        display: none;
+                      }
                     }
                   }
+                }
+              }
+            }
 
-                  .fc-timegrid-col-frame {
-                    .fc-timegrid-col-events {
-                      margin: 0 0.3px 0;
+          }
+        }
+      }
 
-                      .fc-timegrid-event {
-                        margin-bottom: 0;
-                        border: 0;
-                        border-radius: 0;
+    }
 
-                        .fc-event-main {
-                          cursor: pointer;
-                          padding: 0;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
+    &.fc-timegrid {
+      thead {
+        .fc-scrollgrid-section-header {
+          th {
+            border-left: none;
 
-                          .pricing_event {
-                            text-align: center;
+            &:not(:first-child) {
+              border-right: none;
+              width: 85px;
+            }
 
-                            h6 {
-                              font-size: 16px;
-                              font-family: 'Outfit SemiBold';
+            &:first-child {
+              width: 91px;
+            }
+
+            &.fc-timegrid-axis {
+              position: relative;
+
+              &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                background-image: url(../images/time.svg);
+                width: 26px;
+                height: 26px;
+                left: 0;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        .fc-timegrid-body {
+          table {
+            tbody {
+              tr {
+                .fc-timegrid-slot {
+                  height: 50px;
+                }
+
+                .fc-timegrid-col {
+                  &.fc-day-today {
+                    background-color: transparent;
+                  }
+                }
+
+                .fc-timegrid-col-frame {
+                  .fc-timegrid-col-events {
+                    margin: 0 0.3px 0;
+
+                    .fc-timegrid-event {
+                      margin-bottom: 0;
+                      border: 0;
+                      border-radius: 0;
+
+                      .fc-event-main {
+                        cursor: pointer;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .pricing_event {
+                          text-align: center;
+
+                          h6 {
+                            font-size: 16px;
+                            font-family: 'Outfit SemiBold';
+
+                            @media (max-width: 1024px) {
+                              font-size: 14px;
                             }
+                          }
 
-                            p {
-                              color: $white;
-                              font-size: 12px;
-                              line-height: 14px;
+                          p {
+                            color: $white;
+                            font-size: 12px;
+                            line-height: 14px;
+
+                            @media (max-width: 1024px) {
+                              font-size: 10px;
                             }
                           }
                         }
@@ -7771,125 +7815,135 @@ header {
               }
             }
           }
-
         }
 
       }
 
-      thead {
-        .fc-scrollgrid-section-header {
-          th {
-            border-left: none;
+    }
 
-            &:not(:first-child) {
-              border-right: none;
+    thead {
+      .fc-scrollgrid-section-header {
+        th {
+          border-left: none;
+
+          &:not(:first-child) {
+            border-right: none;
+          }
+
+          .fc-col-header-cell-cushion {
+            padding: 26px 0 22px 0;
+            font-size: 12px;
+            color: #A4A9BC;
+            position: relative;
+
+            &:hover {
+              color: $theme-primary-color;
             }
 
-            .fc-col-header-cell-cushion {
-              padding: 26px 0 22px 0;
-              font-size: 12px;
-              color: #A4A9BC;
+            &::before {
+              position: absolute;
+              bottom: -5px;
+              content: "";
+              width: 100%;
+              height: 2px;
+              background-color: $theme-primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      .fc-scrollgrid-section-body {
+        .fc-scrollgrid-shrink-cushion {
+          color: #A4A9BC;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .fc-timeGridDay-view {
+    .fc-scroller-harness {
+      thead {
+        tr {
+          th {
+            &:first-child {
+              width: 150px;
+            }
+
+            &:last-child {
+              width: 594px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fc-scroller-harness {
+    .fc-timegrid-body {
+      table {
+        colgroup {
+          col {
+            width: 6% !important;
+          }
+        }
+
+        tbody {
+          tr {
+            .fc-timegrid-slot-label {
+              width: 6%;
+              border-style: none;
               position: relative;
 
-              &:hover {
-                color: $theme-primary-color;
-              }
-
-              &::before {
+              .fc-timegrid-slot-label-frame {
+                text-align: center;
                 position: absolute;
-                bottom: -5px;
-                content: "";
-                width: 100%;
-                height: 2px;
-                background-color: $theme-primary-color;
+                left: 0;
+                right: 0;
+                bottom: -15px;
               }
             }
-          }
-        }
-      }
 
-      tbody {
-        .fc-scrollgrid-section-body {
-          .fc-scrollgrid-shrink-cushion {
-            color: #A4A9BC;
-            font-size: 12px;
-          }
-        }
-      }
-    }
+            .fc-timegrid-slot-lane {
+              width: 94%;
 
-    .fc-timeGridDay-view {
-      .fc-scroller-harness {
-        thead {
-          tr {
-            th {
-              &:first-child {
-                width: 150px;
-              }
-
-              &:last-child {
-                width: 594px !important;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .fc-scroller-harness {
-      .fc-timegrid-body {
-        table {
-          colgroup {
-            col {
-              width: 6% !important;
-            }
-          }
-
-          tbody {
-            tr {
-              .fc-timegrid-slot-label {
-                width: 6%;
+              &.fc-timegrid-slot-minor {
                 border-style: none;
-                position: relative;
-
-                .fc-timegrid-slot-label-frame {
-                  text-align: center;
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  bottom: -15px;
-                }
-              }
-
-              .fc-timegrid-slot-lane {
-                width: 94%;
-
-                &.fc-timegrid-slot-minor {
-                  border-style: none;
-                }
               }
             }
           }
         }
       }
     }
+  }
 
-    .fc-list-table {
-      .fc-list-day-cushion {
-        .fc-list-day-text {
-          color: $black;
-        }
+  .fc-list-table {
+    .fc-list-day-cushion {
+      .fc-list-day-text {
+        color: $black;
+      }
+    }
+
+    .fc-list-event {
+      .fc-list-event-time {
+        font-size: 14px;
+        vertical-align: middle;
       }
 
-      .fc-list-event {
-        .fc-list-event-time {
-          font-size: 14px;
-        }
+      .fc-list-event-title {
+        padding: 12px;
 
-        .fc-list-event-title {
-          padding: 12px;
+        .pricing_wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          vertical-align: middle;
 
           .pricing_event {
+            flex: 1;
+
             h6 {
               margin-bottom: 0;
               font-size: 14px;
@@ -7899,10 +7953,114 @@ header {
               display: none;
             }
           }
+
+          .event-btns {
+            display: block;
+            position: relative;
+            width: auto;
+            padding: 0;
+          }
         }
 
-        .fc-list-event-graphic {
-          padding-left: 100px;
+      }
+
+      .fc-list-event-graphic {
+        padding-left: 100px;
+        vertical-align: middle;
+      }
+
+      .btn {
+        &.btn-edit {
+          background-color: #8bbcfa;
+        }
+
+        &.btn-view {
+          background-color: #764af3;
+        }
+      }
+    }
+  }
+
+}
+
+.pricing_wrapper {
+  .event-btns {
+    display: none;
+    margin-top: 0px;
+    padding: 6px;
+    border-left: 1px solid #ffffff;
+    margin-left: -1px;
+    margin-right: -1px;
+    position: absolute;
+    bottom: 4px;
+    text-align: center;
+    z-index: 999;
+    width: 101%;
+    left: 0;
+    right: 0;
+
+    @media (max-width:1200px) {
+      padding: 2px 2px 6px;
+      margin-top: 2px;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      min-width: auto;
+      display: inline-flex;
+      align-items: center;
+
+
+      @media (max-width:1500px) {
+        padding: 3px 8px;
+      }
+
+      @media (max-width:1200px) {
+        min-width: 49px;
+        padding: 3px 6px;
+      }
+
+      span {
+        font-size: 9px;
+        color: #ffffff;
+        line-height: 11px;
+        margin-left: 5px;
+
+        @media (max-width:1360px) {
+          font-size: 7px;
+          margin-left: 5px;
+        }
+      }
+
+      &.btn-edit {
+        border: 1px solid #ffffff;
+        background: transparent;
+      }
+
+      &.btn-cancel {
+        margin-left: 11px;
+        background-color: #ff6f6f;
+
+        @media (max-width:1360px) {
+          margin-left: 5px;
+        }
+
+        @media (max-width:1200px) {
+          margin-left: 0px;
+        }
+      }
+
+      &.btn-view {
+        border: 1px solid #ffffff;
+        background: transparent;
+        padding: 6px 10px;
+
+        img {
+          width: 8px;
+        }
+
+        @media (max-width: 1500px) {
+          padding: 4px 7px;
         }
       }
     }
@@ -8020,6 +8178,14 @@ header {
 
           .text-black {
             color: #000000;
+          }
+
+          .day_group {
+            margin-bottom: 10px;
+
+            label {
+              margin-bottom: 0;
+            }
           }
         }
       }
