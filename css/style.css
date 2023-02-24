@@ -8371,25 +8371,6 @@ header.active .side-nav-btn img {
 
 .pricing_wrapper .event-btns {
   display: none;
-  margin-top: 0px;
-  padding: 6px;
-  border-left: 1px solid #ffffff;
-  margin-left: -1px;
-  margin-right: -1px;
-  position: absolute;
-  bottom: 4px;
-  text-align: center;
-  z-index: 999;
-  width: 101%;
-  left: 0;
-  right: 0;
-}
-
-@media (max-width: 1200px) {
-  .pricing_wrapper .event-btns {
-    padding: 2px 2px 6px;
-    margin-top: 2px;
-  }
 }
 
 .pricing_wrapper .event-btns .btn {
@@ -8430,11 +8411,6 @@ header.active .side-nav-btn img {
   }
 }
 
-.pricing_wrapper .event-btns .btn.btn-edit {
-  border: 1px solid #ffffff;
-  background: transparent;
-}
-
 .pricing_wrapper .event-btns .btn.btn-cancel {
   margin-left: 11px;
   background-color: #ff6f6f;
@@ -8449,22 +8425,6 @@ header.active .side-nav-btn img {
 @media (max-width: 1200px) {
   .pricing_wrapper .event-btns .btn.btn-cancel {
     margin-left: 0px;
-  }
-}
-
-.pricing_wrapper .event-btns .btn.btn-view {
-  border: 1px solid #ffffff;
-  background: transparent;
-  padding: 6px 10px;
-}
-
-.pricing_wrapper .event-btns .btn.btn-view img {
-  width: 8px;
-}
-
-@media (max-width: 1500px) {
-  .pricing_wrapper .event-btns .btn.btn-view {
-    padding: 4px 7px;
   }
 }
 
