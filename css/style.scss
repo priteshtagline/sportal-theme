@@ -7986,23 +7986,6 @@ header {
 .pricing_wrapper {
   .event-btns {
     display: none;
-    margin-top: 0px;
-    padding: 6px;
-    border-left: 1px solid #ffffff;
-    margin-left: -1px;
-    margin-right: -1px;
-    position: absolute;
-    bottom: 4px;
-    text-align: center;
-    z-index: 999;
-    width: 101%;
-    left: 0;
-    right: 0;
-
-    @media (max-width:1200px) {
-      padding: 2px 2px 6px;
-      margin-top: 2px;
-    }
 
     .btn {
       padding: 6px 12px;
@@ -8032,11 +8015,6 @@ header {
         }
       }
 
-      &.btn-edit {
-        border: 1px solid #ffffff;
-        background: transparent;
-      }
-
       &.btn-cancel {
         margin-left: 11px;
         background-color: #ff6f6f;
@@ -8047,20 +8025,6 @@ header {
 
         @media (max-width:1200px) {
           margin-left: 0px;
-        }
-      }
-
-      &.btn-view {
-        border: 1px solid #ffffff;
-        background: transparent;
-        padding: 6px 10px;
-
-        img {
-          width: 8px;
-        }
-
-        @media (max-width: 1500px) {
-          padding: 4px 7px;
         }
       }
     }
