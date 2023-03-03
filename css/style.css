@@ -7737,6 +7737,8 @@ header.active .side-nav-btn img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -7759,6 +7761,7 @@ header.active .side-nav-btn img {
 .onboarding_sidebar .top_block .check-group .group {
   position: relative;
   width: calc(50% - 16px);
+  margin-bottom: 10px;
 }
 
 .onboarding_sidebar .top_block .check-group input {

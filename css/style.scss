@@ -7330,6 +7330,7 @@ header {
     .check-group {
       position: relative;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .btn {
@@ -7348,6 +7349,7 @@ header {
       .group {
         position: relative;
         width: calc(50% - 16px);
+        margin-bottom: 10px;
       }
 
       input {
