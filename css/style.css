@@ -1962,6 +1962,8 @@ header .navbar .nav-right .btn-group .profile-dropdown-menu {
   border-radius: 11px;
   margin-top: 5px;
   padding-bottom: 0;
+  height: 220px;
+  overflow: auto;
 }
 
 header .navbar .nav-right .btn-group .profile-dropdown-menu li .dropdown-item {
@@ -8574,5 +8576,11 @@ header.active .side-nav-btn img {
 
 .onboarding_form .time_schedule_error {
   margin-left: 0;
+}
+
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
