@@ -1842,7 +1842,7 @@ header {
           padding-bottom: 8px;
 
           ul {
-            height: 210px;
+            max-height: 210px;
             overflow: auto;
 
             li {
