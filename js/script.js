@@ -365,6 +365,6 @@ $(document).ready(function () {
 
   // schedule
   $(".fc-pricingAdd-button").attr("data-toggle", "modal").attr("href", "#add_pricing_modal");
-});
 
+});
 
